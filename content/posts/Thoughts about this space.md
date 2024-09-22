@@ -3,6 +3,12 @@ title = 'Thoughts about this space'
 date = 2024-09-22
 draft = false
 +++
+**TLDR**: Closer to 40, I’ve learned a lot from payments, platform engineering,
+and team building. Writing helps me reflect, and I believe in sharing
+to help others grow too. Expect irregular posts on leadership, tech,
+and whatever’s on my mind.
+
+---
 
 As I get closer to 40, I’ve gathered some learnings and perspectives
 that shape how I approach my work every day. I’ve been fortunate to
