@@ -82,7 +82,7 @@ avatar = "avatar.jpg" # put the file in assets folder; also ensure that image ha
 # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
 intro = "A home away from home"
 name = "Stefan Christensen"
-description = "A place to store my scattered thoughts as I write for me, myself and I."
+description = "More to come one day..."
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
