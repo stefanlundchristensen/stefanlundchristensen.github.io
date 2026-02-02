@@ -93,6 +93,12 @@ enableEmoji = true
     weight = 20
 
   [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/"
+    weight = 25
+
+  [[menu.main]]
     identifier = "posts"
     name = "Blog"
     url = "/posts/"
