@@ -1,32 +1,11 @@
 ---
-title: "Stefan"
+title: "Stefan Christensen"
 ---
 
-# Stefan
+Physicist turned fintech leader. I build platforms, scale organizations, and help people do their best work.
 
-**SVP Product & Engineering at Pleo**
+Currently SVP at [Pleo](https://www.pleo.io), where I've spent the last five years scaling the company from 100 to 850+ people across payments, platform, and engineering.
 
-Builder and operator with consultant and quantum physicist background. Scaling organizations, products, teams and people. Authentic and self-aware leadership style with extreme sense of urgency, accountability and ownership. Deep payments expertise.
+Before that: McKinsey consultant, quantum physicist, and occasional atomic clock builder.
 
-## What I Do
-
-I focus on the hard problems—the ones that matter. My approach centers on making others better and empowering teams to excel.
-
-**Core Expertise:**
-- Card and Account-to-Account (A2A) payments
-- Core banking systems architecture
-- Product strategy and execution
-- People and organizational development
-- P&L management and business unit leadership
-
-**Deep Experience:**
-- Payment rails across European markets
-- Regulatory navigation and compliance
-- Digital platforms and data systems
-- Scaling from early growth to established scale
-
-I've been with Pleo since Series B, helping scale from 100 to 850 people as the company grew to become Europe's leading spend management platform.
-
-## Recent Writing
-
-Check out the [blog](/posts/) for thoughts on payments, scaling organizations, and building self-sufficient teams.
+Read more [about me](/about/) or check out my [experience](/experience/).
