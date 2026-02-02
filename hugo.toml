@@ -1,0 +1,73 @@
+baseURL = "https://stefanchristensen.me/"
+languageCode = "en-us"
+title = "Stefan Christensen - SVP Product & Engineering"
+theme = "hermit-v2"
+
+# GitHub Pages specific
+canonifyURLs = true
+
+[params]
+  dateFormat = "2 January 2006"
+
+  # Author information
+  author = "Stefan Christensen"
+  description = "SVP Product & Engineering at Pleo. Builder and operator scaling FinTech organizations across payments, product, and people. Deep European payments and regulatory expertise."
+
+  # Hermit V2 customization
+  homeSubtitle = "Builder and operator with consultant and quantum physicist background. Scaling organizations, products, teams and people."
+
+  # Monochrome theme (black and white)
+  themeColor = "#000000"
+
+  # Disable profile image/avatar
+  enableAvatar = false
+
+  # Social links
+  [[params.social]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/stefanlchristensen/"
+
+  [[params.social]]
+    name = "Email"
+    url = "mailto:stefan_christensen@protonmail.com"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Experience"
+    url = "/experience/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 30
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokailight"
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    anonymizeIP = true
+    respectDoNotTrack = true

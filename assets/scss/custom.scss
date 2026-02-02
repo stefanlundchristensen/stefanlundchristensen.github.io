@@ -1,0 +1,264 @@
+/* Scandinavian Minimalist Theme - Black & White Only */
+
+:root {
+  /* Strict monochrome palette */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --secondary-text: #333333;
+  --border-color: #e5e5e5;
+  --hover-bg: #f8f8f8;
+  --code-bg: #f5f5f5;
+  
+  /* Typography - refined and spacious */
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+  
+  /* Spacing - generous for executive feel */
+  --spacing-unit: 1.5rem;
+  --max-width: 720px;
+}
+
+/* Remove any default theme colors */
+* {
+  border-color: var(--border-color) !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Links - understated */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--text-color);
+}
+
+/* Remove colored accents from theme */
+a:visited {
+  color: var(--text-color);
+}
+
+/* Lists - clean spacing */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code blocks */
+code {
+  background-color: var(--code-bg);
+  color: var(--text-color);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: var(--code-bg);
+  padding: 1.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Main content container */
+.main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Navigation - minimal */
+nav {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+}
+
+nav a {
+  border-bottom: none;
+  margin-right: 2rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--secondary-text);
+}
+
+/* Posts listing */
+.post-item {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+  margin-top: 4rem;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--text-color);
+  padding-left: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  color: var(--secondary-text);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: 600;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 3rem 0;
+}
+
+/* Remove any colored backgrounds or gradients */
+.highlight, .hero, .banner, .card {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Social links */
+.social-links a {
+  border-bottom: none;
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .main {
+    padding: 2rem 1.5rem;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+  }
+}
+
+/* Ensure no profile images or avatars */
+.avatar, .profile-image, img.avatar {
+  display: none !important;
+}
+
+/* Strong emphasis for key points */
+strong {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Subtle hover states */
+button, .button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover, .button:hover {
+  opacity: 0.85;
+}
