@@ -7,7 +7,17 @@
 {{- else -}}
 <meta name="robots" content="{{ .Site.Params.allowRobots | default "index, follow" }}">
 {{- end -}}
-<meta name="author" content="{{ .Params.author | default .Site.Params.author.name }}">
+{{- $author := "" -}}
+{{- if .Params.author -}}
+  {{- $author = .Params.author -}}
+{{- else if .Site.Params.author -}}
+  {{- if reflect.IsMap .Site.Params.author -}}
+    {{- $author = .Site.Params.author.name -}}
+  {{- else -}}
+    {{- $author = .Site.Params.author -}}
+  {{- end -}}
+{{- end -}}
+<meta name="author" content="{{ $author }}">
 <meta name="description" content="{{ .Page.Params.description | default .Site.Params.description }}">
 {{- if or (fileExists "static/humans.txt") (templates.Exists "humans.txt") -}}<link rel="author" type="text/plain" href="{{"humans.txt" | relURL}}">{{- end -}}
 <link rel="manifest" href="{{"site.webmanifest" | relURL}}">
