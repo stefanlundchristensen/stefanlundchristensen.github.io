@@ -12,4 +12,4 @@ Read more [about me](/about/) or check out my [experience](/experience/).
 
 ---
 
-Let's connect: [LinkedIn](#) [Twitter](#)
+Let's connect: [LinkedIn](https://www.linkedin.com/in/stefanlchristensen/)
