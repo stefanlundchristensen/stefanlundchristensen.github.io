@@ -1,65 +1,109 @@
 baseURL = "https://stefanchristensen.me/"
 languageCode = "en-us"
-title = "Stefan Christensen - SVP Product & Engineering"
-theme = "hermit-v2"
+title = "Stefan Christensen"
+theme = "hello-friend-ng"
 
 # GitHub Pages specific
 canonifyURLs = true
 
-[params]
-  dateFormat = "2 January 2006"
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
 
-  # Author information
-  author = "Stefan Christensen"
-  description = "SVP Product & Engineering at Pleo. Builder and operator scaling FinTech organizations across payments, product, and people. Deep European payments and regulatory expertise."
+enableRobotsTXT = true
+enableEmoji = true
 
-  # Hermit V2 customization
-  homeSubtitle = "Builder and operator with consultant and quantum physicist background. Scaling organizations, products, teams and people."
-
-  # Monochrome theme (black and white)
-  themeColor = "#000000"
-
-  # Disable profile image/avatar
-  enableAvatar = false
-
-  # Social links
-  [[params.social]]
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/stefanlchristensen/"
-
-  [[params.social]]
-    name = "Email"
-    url = "mailto:stefan_christensen@protonmail.com"
-
-[menu]
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 10
-
-  [[menu.main]]
-    name = "Experience"
-    url = "/experience/"
-    weight = 20
-
-  [[menu.main]]
-    name = "Blog"
-    url = "/posts/"
-    weight = 30
+[pagination]
+  pagerSize = 10
 
 [taxonomies]
   tag = "tags"
   category = "categories"
 
-[build]
-  writeStats = true
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Metadata
+  description = "SVP Product & Engineering at Pleo. Builder and operator scaling FinTech organizations across payments, product, and people. Deep European payments and regulatory expertise."
+  keywords = "product, engineering, fintech, payments, leadership"
+
+  # Home subtitle
+  homeSubtitle = "Builder and operator with consultant and quantum physicist background. Scaling organizations, products, teams and people."
+
+  # Disable read other posts
+  disableReadOtherPosts = false
+
+  # Enable theme toggle (light/dark mode)
+  enableThemeToggle = true
+
+  # Enable sharing buttons
+  enableSharingButtons = false
+
+  # Enable reading time
+  enableReadingTime = true
+
+  # Global language menu
+  enableGlobalLanguageMenu = false
+
+  [params.author]
+    name = "Stefan Christensen"
+
+  [params.footer]
+    trademark = 2026
+    rss = true
+    copyright = true
+    author = true
+    topText = []
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
+    ]
+
+  [params.favicon.color]
+    mask = "#1b1c1d"
+    msapplication = "#1b1c1d"
+    theme = "#1b1c1d"
+
+  [params.logo]
+    logoMark = ">"
+    logoText = "$ cd /home/stefan"
+    logoHomeLink = "/"
+
+  # Social links
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/stefanlchristensen/"
+
+  [[params.social]]
+    name = "email"
+    url = "mailto:stefan_christensen@protonmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 30
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "monokailight"
+    style = "monokai"
     lineNos = false
 
 [outputs]
