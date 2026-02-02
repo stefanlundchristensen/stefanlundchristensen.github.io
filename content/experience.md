@@ -3,8 +3,6 @@ title: "Experience"
 date: 2026-02-01
 ---
 
-# Experience & CV
-
 ## Current Role
 
 **SVP Product & Engineering** | Pleo | Series C FinTech  

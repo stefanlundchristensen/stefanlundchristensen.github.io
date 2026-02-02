@@ -3,8 +3,6 @@ title: "About"
 date: 2026-02-01
 ---
 
-# About
-
 I've always been drawn to hard problems—the kind that require both technical depth and organizational finesse to solve. My career has been defined by a consistent thread: building things that scale and fixing things that matter.
 
 ## Background
