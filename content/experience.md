@@ -3,6 +3,10 @@ title: "Experience"
 date: 2026-02-02
 ---
 
+I started in a physics lab building atomic clocks, moved to McKinsey where I spent five years helping European banks solve their hardest problems, and have been at Pleo since 2019. The through-line? I've always been drawn to complex systems — whether that's quantum mechanics, payment infrastructure, or scaling organizations from 100 to 850 people. Each step taught me something the previous one couldn't: physics gave me rigor, consulting taught me to see the business, and operating gave me the scars that make you effective.
+
+---
+
 ## Pleo | Aug 2019 - Present
 
 *Joined at ~100 people to get hands-on after years in an advisory role. Drawn to Pleo for the growth, the learning, and a company without unnecessary layers of management.*
