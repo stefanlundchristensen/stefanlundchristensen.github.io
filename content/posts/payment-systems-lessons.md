@@ -8,7 +8,7 @@ categories: ["FinTech", "Payments"]
 
 Payment systems look deceptively simple from the outside. Integrate an API, money moves, done. But the gap between "it works in demo" and "it works at scale across markets with regulatory changes and partner drama" is where companies burn millions and lose years.
 
-These six habits come from my years scaling Pleo's payments infrastructure from startup to competitive moat, plus setting up payment infrastructure across multiple European banks at McKinsey. They're not comprehensive - you could write books on this - but they're the patterns that separate teams who build resilient systems from those who constantly fight fires.
+These six habits come from scaling Pleo's payments infrastructure from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
 
 ## 1. Draw the Money Map First
 
@@ -16,7 +16,7 @@ These six habits come from my years scaling Pleo's payments infrastructure from 
 
 **Why it matters:** Reconciliation breaks when you don't understand state changes. Customer disputes become nightmares. Regulatory reporting fails audits.
 
-**My learning:** I once spent three weeks debugging why our ledger didn't balance, only to discover a partner was holding funds in an intermediate account we didn't know existed. Three weeks of engineering time and customer support chaos - all because we hadn't mapped the complete flow upfront.
+**My learning:** I once spent three weeks debugging why our ledger didn't balance, only to discover a partner was holding funds in an intermediate account we didn't know existed. Three weeks of engineering time, customer support chaos, and a stressed finance team preparing for month-end close—all because we hadn't mapped the complete flow upfront.
 
 ## 2. Documentation Lies - Test the Real Thing
 
@@ -62,9 +62,9 @@ These six habits come from my years scaling Pleo's payments infrastructure from 
 
 ## The Common Thread
 
-These habits share a common thread: they're all about reducing assumptions and increasing visibility. Payment systems fail in the gaps - between what documentation says and what APIs do, between what sales promises and engineering can deliver, between what worked yesterday and what regulations require tomorrow.
+These habits share a common thread: they're all about reducing assumptions and increasing visibility. Payment systems fail in the gaps—between what documentation says and what APIs do, between what sales promises and engineering can deliver, between what worked yesterday and what regulations require tomorrow.
 
-The learning curve in payments is expensive. These habits won't eliminate the cost, but they'll reduce the tuition you pay while building expertise.
+The learning curve in payments is expensive. I've seen companies spend millions learning these lessons the hard way. These habits won't eliminate the cost, but they'll reduce the tuition you pay while building expertise.
 
 ---
 

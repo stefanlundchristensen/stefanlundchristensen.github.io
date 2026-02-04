@@ -6,9 +6,9 @@ tags: ["blog"]
 categories: ["General"]
 ---
 
-This section is under construction. More thoughtful pieces on leadership, scaling, product, and payments infrastructure coming soon.
+This section is under construction. More pieces on leadership, scaling, product, and payments infrastructure coming soon.
 
-I'm working on several deeper dives into topics that shaped my career:
+I'm writing deeper dives into topics that shaped my career:
 
 - **Organizational design** at scale - How to build teams that make fast decisions without constant escalation
 - **Payments infrastructure** - The hidden complexity behind the modern transaction rails

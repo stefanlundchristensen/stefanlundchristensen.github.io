@@ -14,7 +14,7 @@ And here's the uncomfortable part: we avoid assigning clear ownership because it
 
 I've made all these mistakes. There's a simpler approach that actually works.
 
-## Borriowing from the famoues 6 pager
+## Borrowing from the famous 6-pager
 
 Jesse Freeman's breakdown of [Amazon's 6-pager format](https://writingcooperative.com/the-anatomy-of-an-amazon-6-pager-fc79f31a41c9) describes how Amazon writes goals. It's disarmingly simple:
 
@@ -53,7 +53,7 @@ This is uncomfortable because it reveals organizational gaps. But that discomfor
 
 ### 3. Following up
 
-This is where goals die. You need a rhythm—monthly works for most teams. But start smaller: just ask about goals. In 1:1s. In team meetings. "How's the onboarding goal tracking?" This shows it matters.
+This is where goals die. You need a rhythm—I've found monthly works well, though some fast-moving startups need weekly, and larger orgs can do quarterly. But start smaller: just ask about goals. In 1:1s. In team meetings. "How's the onboarding goal tracking?" This shows it matters.
 
 Make updates easy. Spreadsheet or Word doc. Low tech wins. Avoid tool bureaucracy.
 
@@ -61,9 +61,9 @@ Track two things: progress and confidence. Progress is the metric. But confidenc
 
 Real-world goals don't progress linearly. Some sit at 0% for months while building infrastructure, then jump to 80% when you ship. If Sarah says "0% progress but highly confident—shipping in March," that's different from panic.
 
-And here's where psychological safety matters. If Sarah can't say she's not confident without fear, you won't get honest updates. Low confidence should trigger help, not blame.
+And here's where psychological safety matters. If Sarah can't say she's not confident without fear, you won't get honest updates. I've seen this fail: an engineer said "I'm behind" in a goal review, and the VP immediately asked "Should we find someone else to own this?" The engineer never gave honest updates again. Low confidence should trigger help, not blame.
 
-The hardest part: if you set an update cadence, respect it. Don't ask for adhoc updates. Don't Slack "give me an update on goal Y?" If you've asked for monthly updates, follow that schedule yourself. Otherwise you're teaching everyone the cadence doesn't matter.
+The other way to kill honest updates: ignore your own cadence. If you set an update cadence, respect it. Don't ask for adhoc updates. Don't Slack "give me an update on goal Y?" If you've asked for monthly updates, follow that schedule yourself. Otherwise you're teaching everyone the cadence doesn't matter.
 
 ## Putting It Together
 
