@@ -1,7 +1,7 @@
 ---
 title: "Building Self-Sufficient Business Units in High-Growth FinTech"
 date: 2026-01-15
-draft: false
+draft: true
 tags: ["leadership", "organizational-design", "scaling"]
 categories: ["FinTech", "Leadership"]
 ---

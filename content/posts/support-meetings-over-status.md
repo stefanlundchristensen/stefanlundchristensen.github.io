@@ -1,7 +1,7 @@
 ---
 title: "Support Meetings, Not Status Meetings: How Naming Changes Culture"
 date: 2026-02-03
-draft: false
+draft: true
 tags: ["leadership", "team-dynamics", "meetings", "culture"]
 categories: ["Leadership"]
 ---

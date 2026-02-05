@@ -98,11 +98,6 @@ enableEmoji = true
     url = "/posts/"
     weight = 30
 
-  [[menu.main]]
-    identifier = "now"
-    name = "Now"
-    url = "/now/"
-    weight = 40
 
 [markup]
   [markup.goldmark]

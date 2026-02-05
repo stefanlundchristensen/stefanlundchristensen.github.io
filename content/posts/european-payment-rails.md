@@ -1,7 +1,7 @@
 ---
 title: "Navigating European Payment Rails: What Every FinTech Builder Should Know"
 date: 2026-01-28
-draft: false
+draft: true
 tags: ["payments", "europe", "infrastructure"]
 categories: ["FinTech", "Payments"]
 ---
