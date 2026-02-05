@@ -1,7 +1,7 @@
 ---
 title: "Building Self-Sufficient Business Units in High-Growth FinTech"
 date: 2026-01-15
-draft: true
+draft: false
 tags: ["leadership", "organizational-design", "scaling"]
 categories: ["FinTech", "Leadership"]
 ---
@@ -50,9 +50,9 @@ As we scaled from 100 to 850 people at Pleo, this model proved essential. But it
 
 **Strong context-setting from leadership**: Quarterly all-hands where leadership shared company strategy, financial performance, and strategic priorities. Teams made better decisions when they understood the context. We shared revenue, burn rate, runway—real numbers, not sanitized summaries.
 
-**Investment in platform capabilities that all teams can leverage**: Authentication, payments infrastructure, data pipelines, compliance tooling—these lived in platform teams so product teams could focus on customer problems, not reinventing infrastructure.
+**Investment in platform capabilities that all teams can leverage**: Authentication, payments infrastructure, data pipelines, compliance tooling--these lived in platform teams so product teams could focus on customer problems, not reinventing infrastructure. (How those platform teams should be structured is a topic in itself--I wrote about [reorganizing platform teams from enablement to product focus](/posts/enabling-to-product-org-change/) and the difference it makes.)
 
-**A culture that rewards autonomy and accountability**: We celebrated teams that made bold decisions and learned from them. We didn't punish intelligent failures. But we did hold teams accountable for results.
+**A culture that rewards autonomy and accountability**: We celebrated teams that made bold decisions and learned from them. We didn't punish intelligent failures. But we did hold teams accountable for results. (I developed a [leadership scorecard](/posts/leadership-scorecard-beyond-single-team/) to track this kind of organizational maturity across multiple dimensions.)
 
 The result? Teams that moved fast, made good decisions, and didn't need permission to serve customers well. Feature velocity stayed high even as headcount grew 8x.
 

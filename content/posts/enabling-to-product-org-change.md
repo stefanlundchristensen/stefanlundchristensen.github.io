@@ -1,7 +1,7 @@
 ---
 title: "Reorganizing from Enablement to Product-Focused Platform Teams"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["organizational-design", "platform-engineering", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
 ---
@@ -76,7 +76,7 @@ The organizational structure actually *looked* similar before and after. But the
 - DevX (developer experience infrastructure as a product for all engineers)
 - Backend Core (backend infrastructure as a product for backend engineers)
 
-The teams themselves barely changed. But the question each team asked shifted from "How do we help people build?" to "What product do we own that helps people build?"
+The teams themselves barely changed. But the question each team asked shifted from "How do we help people build?" to "What product do we own that helps people build?" (I wrote more about the implementation details and principles behind this shift in [implementing platform engineering at scale](/posts/platform-engineering-approach/).)
 
 ## The Leadership Layer
 
@@ -111,9 +111,9 @@ Based on research, teams created roadmaps focused on their specific product. Thi
 
 ## What Worked
 
-**Clarity**: Teams knew what they owned. This was surprisingly powerful. Instead of "help people build," the mandate was "own the mobile platform, and measure success by whether teams can ship faster, more reliably."
+**Clarity**: Teams knew what they owned. This was surprisingly powerful. Instead of "help people build," the mandate was "own the mobile platform, and measure success by whether teams can ship faster, more reliably." This clarity is also what enables [self-sufficient business units](/posts/self-sufficient-teams/)--when platform teams own clear products, product teams can operate independently.
 
-**Agency**: Platform engineers could actually build things. Not maintain documentation—build products. This attracted different people and motivated the existing team.
+**Agency**: Platform engineers could actually build things. Not maintain documentation--build products. This attracted different people and motivated the existing team.
 
 **Impact visibility**: Instead of abstract "enablement," teams could point to concrete outcomes. "We shipped the deployment tool. Teams using it reduced deployment time by 40%. We're now working on X."
 

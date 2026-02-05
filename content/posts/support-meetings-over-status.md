@@ -1,7 +1,7 @@
 ---
 title: "Support Meetings, Not Status Meetings: How Naming Changes Culture"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["leadership", "team-dynamics", "meetings", "culture"]
 categories: ["Leadership"]
 ---
@@ -48,7 +48,7 @@ In practice, support meetings create different conditions:
 
 **For the relationship:**
 - Collaborative rather than hierarchical framing
-- Mutual accountability: leadership is accountable for creating conditions for success; teams are accountable for identifying what's needed
+- Mutual accountability: leadership is accountable for creating conditions for success; teams are accountable for identifying what's needed (this is one of the dimensions I track in my [leadership scorecard](/posts/leadership-scorecard-beyond-single-team/)--high expectations combined with genuine support)
 
 ## Making It Real
 
@@ -82,7 +82,7 @@ Organizations that pay attention to language tend to have healthier communicatio
 
 The support meeting framing can break down in a few ways:
 
-**If teams stop being honest**: If they learn that surfacing problems gets them blamed rather than helped, they'll stop surfacing them. Then you're back to discovery through dysfunction.
+**If teams stop being honest**: If they learn that surfacing problems gets them blamed rather than helped, they'll stop surfacing them. Then you're back to discovery through dysfunction. This same dynamic plays out in [goal setting](/posts/goal-setting/)--when people can't report low confidence without fear, you lose the honest signal you need.
 
 Patrick Lencioni identifies absence of trust as the most severe team dysfunction. Support meeting framing requires a trust foundation—without it, the language becomes manipulation. Teams must believe that surfacing problems leads to help, not blame.
 

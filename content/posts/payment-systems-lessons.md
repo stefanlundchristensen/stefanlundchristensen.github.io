@@ -1,7 +1,7 @@
 ---
 title: "Six Hard-Won Lessons from Building Payment Systems at Scale"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 ---
@@ -58,7 +58,7 @@ The account manager genuinely believed it was simple. They just didn't understan
 
 **Why it matters:** "Full coverage" in a sales deck doesn't mean "works for your use case." You'll discover limitations after integration, when it's expensive to switch.
 
-**My learning:** A partner promised pan-European payment coverage during procurement. After integration and launch, we discovered they only processed certain transactions on D+1 settlement rails. Not the instant transfers our product depended on.
+**My learning:** A partner promised pan-European payment coverage during procurement. After integration and launch, we discovered they only processed certain transactions on D+1 settlement rails. Not the instant transfers our product depended on. (The fragmentation of [European payment rails](/posts/european-payment-rails/) makes this especially common--what "coverage" means varies dramatically by country and payment method.)
 
 We built workarounds. Then added a second provider. Double the integration cost, double the operational complexity.
 
@@ -72,7 +72,7 @@ We built workarounds. Then added a second provider. Double the integration cost,
 
 We offboarded roughly 30% of our customer base.
 
-A modular architecture with proper abstraction layers would have let us add a second provider and migrate customers smoothly. Instead we lost them.
+A modular architecture with proper abstraction layers would have let us add a second provider and migrate customers smoothly. Instead we lost them. This is the same lesson we learned in [platform engineering](/posts/platform-engineering-approach/)--building opinionated defaults with clean abstraction layers isn't just good engineering practice, it's an insurance policy.
 
 Industry best practice is multi-provider resilience. Smart fintech builders layer orchestration, compliance, and redundancy into their payment architecture from the start rather than depending on a single PSP. The upfront investment in abstraction layers pays off when—not if—providers change terms or capabilities.
 

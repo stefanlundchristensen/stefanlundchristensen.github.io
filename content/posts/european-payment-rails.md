@@ -1,7 +1,7 @@
 ---
 title: "Navigating European Payment Rails: What Every FinTech Builder Should Know"
 date: 2026-01-28
-draft: true
+draft: false
 tags: ["payments", "europe", "infrastructure"]
 categories: ["FinTech", "Payments"]
 ---
@@ -57,10 +57,10 @@ If you're building payment infrastructure in Europe:
 
 1. **Start local, plan global**: Perfect one market, then expand systematically
 2. **Invest in compliance infrastructure**: It's table stakes, not a differentiator
-3. **Build abstraction layers**: Your product shouldn't know about payment rail complexity
+3. **Build abstraction layers**: Your product shouldn't know about payment rail complexity (this is also a core principle of [platform engineering](/posts/platform-engineering-approach/)--sensible defaults and opinionated paths over maximum optionality)
 4. **Monitor regulatory changes**: PSD3 is expected to be adopted in 2025-2026, expanding scope to BNPL, cryptocurrencies, and digital identities while mandating standardized APIs. The integration patterns you build today will need to adapt—plan for flexibility
 
-The complexity is real, but so is the opportunity. Europe's fragmentation creates defensible moats for those who build the right infrastructure.
+The complexity is real, but so is the opportunity. Europe's fragmentation creates defensible moats for those who build the right infrastructure. (For practical lessons on building that infrastructure--from mapping money flows to managing partner relationships--see my post on [hard-won lessons from building payment systems at scale](/posts/payment-systems-lessons/).)
 
 Modern payment platforms help manage this complexity. Providers like Stripe and Adyen support 250+ local payment methods through a single integration, handling the fragmentation so you can focus on your product. But even with these platforms, you still need to understand which methods to enable in which markets—technology can simplify integration, but it can't substitute for market knowledge.
 

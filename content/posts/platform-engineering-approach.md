@@ -1,7 +1,7 @@
 ---
 title: "From Enablement to Products: Implementing Platform Engineering at Scale"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["platform-engineering", "organizational-design", "infrastructure"]
 categories: ["Leadership", "Platform Engineering"]
 ---
@@ -45,7 +45,7 @@ Gregor Hohpe calls this the "Platform Paradox": standardization doesn't restrict
 
 3. **Active buy vs. build decisions** - Instead of building everything internally, evaluate what genuinely needs to be custom versus what should be purchased or integrated. Many organizations inherit a "build everything" mentality from their startup phase, but that doesn't scale.
 
-This product-focused approach requires a shift in mindset. It means saying "no" to some requests. It means having opinions.
+This product-focused approach requires a shift in mindset. It means saying "no" to some requests. It means having opinions. (I wrote about the organizational side of this transition--how to actually [reorganize from enablement to product-focused platform teams](/posts/enabling-to-product-org-change/)--in a companion post.)
 
 And it means staying close to your users—the engineers using your platform—to understand what actually helps them move faster.
 
@@ -120,7 +120,7 @@ The platform teams weren't context-switching between dozens of enablement reques
 
 - **Traditional product management approaches**: Techniques designed for external products with millions of users don't transfer well to internal platforms serving hundreds of engineers. A/B testing, statistical significance, complex experiments—these aren't the right tools for small user populations.
 - **Enablement mentality creeping back in**: It's easy to slip back into "define it and they will obey" thinking. They won't. Compliance through documentation is weak. Compliance through tooling that makes the right thing the easy thing is strong.
-- **Tracking % completion of OKRs**: Moving away from "how much of the OKR did we complete?" to "how confident are we that we'll complete this by end of quarter?" changed the conversation from arguments about estimation to discussions about dependencies and risk.
+- **Tracking % completion of OKRs**: Moving away from "how much of the OKR did we complete?" to "how confident are we that we'll complete this by end of quarter?" changed the conversation from arguments about estimation to discussions about dependencies and risk. (I explore this confidence-over-completion approach more in my post on [goal setting](/posts/goal-setting/).)
 
 ## When This Approach Doesn't Fit
 

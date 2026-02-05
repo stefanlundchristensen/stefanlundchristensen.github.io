@@ -1,7 +1,7 @@
 ---
 title: "Goal Setting Doesn't Need Another Framework"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["leadership", "goal-setting", "organizational-design"]
 categories: ["Leadership"]
 ---
@@ -73,7 +73,7 @@ Real-world goals don't progress linearly. Some sit at 0% for months while buildi
 
 If Sarah says "0% progress but highly confident—shipping in March," that's different from panic.
 
-And here's where psychological safety matters. If Sarah can't say she's not confident without fear, you won't get honest updates. I've seen this fail: an engineer said "I'm behind" in a goal review, and the VP immediately asked "Should we find someone else to own this?" The engineer never gave honest updates again. Low confidence should trigger help, not blame.
+And here's where psychological safety matters. If Sarah can't say she's not confident without fear, you won't get honest updates. I've seen this fail: an engineer said "I'm behind" in a goal review, and the VP immediately asked "Should we find someone else to own this?" The engineer never gave honest updates again. Low confidence should trigger help, not blame. (This is why I advocate for [support meetings over status meetings](/posts/support-meetings-over-status/)--the framing of the conversation shapes whether people tell you the truth.)
 
 Recent organizational research confirms this connection: meeting structure directly affects psychological safety, which then drives team performance. When goal reviews feel like interrogations rather than problem-solving sessions, people optimize for looking good over being honest. The cadence matters less than the culture it creates.
 
@@ -90,7 +90,7 @@ Yes, this is long. It might seem overly detailed. But the clarity is what makes 
 
 This tells you: what we're achieving, why it matters, where we are and where we're going, how we'll get there, who owns it.
 
-Sarah knows what she owns. The payments team knows they're affected. Leadership knows what success looks like and when. No ambiguity.
+Sarah knows what she owns. The payments team knows they're affected. Leadership knows what success looks like and when. No ambiguity. (If you're thinking about what to measure as a leader of leaders, I explore that broader question in [your leadership scorecard](/posts/leadership-scorecard-beyond-single-team/).)
 
 The frameworks will keep coming. Next year there'll be a new one. But you don't need it.
 

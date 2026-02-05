@@ -1,7 +1,7 @@
 ---
 title: "Your Leadership Scorecard: What to Own When You Lead Beyond a Single Team"
 date: 2026-02-05
-draft: true
+draft: false
 tags: ["leadership", "organizational-maturity", "management", "scale"]
 categories: ["Leadership"]
 ---
@@ -54,7 +54,7 @@ I learned a structure from Ebi Atawodi on Lenny's Podcast - telling direction as
 
 This isn't poetry. It's clarity. When you can tell your strategy as a story - with a clear before, during, and after - people can retell it. They can explain it to new hires. They can make decisions aligned with it.
 
-Then you connect the fairytale to concrete goals. (I wrote about this in [reference to goals post].) The narrative shows where we're going. The goals show how we measure progress.
+Then you connect the fairytale to concrete goals. (I wrote about [a practical approach to goal setting](/posts/goal-setting/) that pairs well with this narrative framing.) The narrative shows where we're going. The goals show how we measure progress.
 
 What changed: Direction became something people could understand and act on, not just read and forget.
 
@@ -112,7 +112,7 @@ I learned this differently: everyone needs to show leadership, not just me.
 
 Individual contributors who spot problems and drive solutions - that's leadership. Team leads who make hard calls without escalating everything - that's leadership. People who see gaps and fill them - that's leadership.
 
-Your job isn't to be the only leader. Your job is to create conditions where everyone exercises leadership in their role.
+Your job isn't to be the only leader. Your job is to create conditions where everyone exercises leadership in their role. This connects to how I think about [building self-sufficient business units](/posts/self-sufficient-teams/)--teams that have the authority and capability to lead within their domain.
 
 This means you explicitly expect it. You recognize it when you see it. You make space for it. You don't hoard decision-making or become the bottleneck for everything important.
 
@@ -130,7 +130,7 @@ They tell people what excellence looks like. They make the standards clear. They
 
 The bar is high, but you're on your own reaching it.
 
-I made a different commitment: high expectations, and I'm there to help.
+I made a different commitment: high expectations, and I'm there to help. (This principle also extends to how you run meetings--I explore how [framing meetings as support rather than status](/posts/support-meetings-over-status/) reinforces exactly this dynamic.)
 
 This means setting clear, ambitious standards. Not lowering the bar. Not accepting mediocrity. But when someone faces a hard problem, I'm available. When they're stuck, we pair on it. When they need coaching, I show up.
 
