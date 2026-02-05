@@ -1,15 +1,20 @@
 ---
-layout: post
 title: "From Enablement to Products: Implementing Platform Engineering at Scale"
 date: 2026-02-03
-categories: platform-engineering
+draft: true
+tags: ["platform-engineering", "organizational-design", "infrastructure"]
+categories: ["Leadership", "Platform Engineering"]
 ---
 
 # From Enablement to Products: Implementing Platform Engineering at Scale
 
-When internal platform teams focus on providing maximum optionality—every choice, every configuration, every possible path—something paradoxical happens. Engineers drown in choices. Documentation sprawls. The platform teams themselves burn out writing process guides instead of shipping code. And somehow, everyone feels like they're drowning.
+Your platform team offers engineers 12 different ways to deploy a service. Each option is documented. Each is "supported." You're being helpful.
 
-This was the starting point for reimagining platform engineering: moving from an enablement model that offered everything, to a product model that offered something specific and genuinely useful.
+Then you watch engineers spend three days choosing which option to use.
+
+When internal platform teams focus on maximum optionality—every choice, every configuration, every path—something paradoxical happens. Engineers drown in choices. Documentation sprawls. Platform teams burn out writing process guides instead of shipping code.
+
+Everyone feels like they're drowning.
 
 ## The Problem with "Maximum Optionality"
 
@@ -22,7 +27,9 @@ The results are predictable:
 - **Distraction**: Platform teams spend cycles writing documentation instead of understanding customer needs. They lose touch with what's actually frustrating their users.
 - **False satisfaction**: Everyone appears busy, but throughput doesn't improve. The system feels heavy.
 
-The fundamental mistake is treating the platform as a service that should minimize constraints, rather than a service that should maximize value.
+The fundamental mistake is treating the platform as a service that should minimize constraints.
+
+It should maximize value instead.
 
 ## The Shift: Platform as Product
 
@@ -34,25 +41,43 @@ This means:
 
 2. **Opinionated paths instead of open-ended choices** - The "golden path" isn't a limitation. It's the fastest, most reliable way to accomplish the task. Teams can deviate, but deviating is a decision, not the default.
 
+Gregor Hohpe calls this the "Platform Paradox": standardization doesn't restrict innovation—it enables it. By removing undifferentiated cognitive load (how do I deploy? which logging tool?), engineers can focus cognitive energy on solving actual business problems. Constraints create freedom.
+
 3. **Active buy vs. build decisions** - Instead of building everything internally, evaluate what genuinely needs to be custom versus what should be purchased or integrated. Many organizations inherit a "build everything" mentality from their startup phase, but that doesn't scale.
 
-This product-focused approach requires a shift in mindset. It means saying "no" to some requests. It means being willing to have opinions. And it means staying close to your users—the engineers and product managers using your platform—to understand what actually helps them move faster.
+This product-focused approach requires a shift in mindset. It means saying "no" to some requests. It means having opinions.
+
+And it means staying close to your users—the engineers using your platform—to understand what actually helps them move faster.
+
+Team Topologies explicitly advocates this shift: platforms should serve internal customers through curated experiences, treating developer platforms as products that require user research, clear value propositions, and iteration based on feedback. This isn't a new idea—but it's one most organizations still struggle to implement.
 
 ## Six Principles for Platform Products
 
 To guide this shift, we anchored the platform work in six principles:
 
 **1. Build for Humans**
-This sounds simple but isn't. It means understanding the actual workflows of your users. How do engineers onboard? What frustrates them? What could be smoother? It requires talking to users, embedding in teams, observing their work.
+
+This sounds simple but isn't. It means understanding actual workflows. How do engineers onboard? What frustrates them? What could be smoother?
+
+It requires talking to users, embedding in teams, observing their work. Not guessing from a conference room.
 
 **2. Focus on Impact (Outcome > Output)**
-Measure what matters: Did the change help teams move faster? Did it reduce toil? Did it improve reliability? Not: How many features did we ship?
+
+Measure what matters: Did the change help teams move faster? Did it reduce toil? Did it improve reliability?
+
+Not: How many features did we ship?
 
 **3. Build API-First**
-Whether internal tools or infrastructure, design for programmatic access first. This enables other teams to build on top of what you've created. It removes bottlenecks where teams have to wait for manual steps.
+
+Whether internal tools or infrastructure, design for programmatic access first. This enables other teams to build on top of what you've created.
+
+It removes bottlenecks where teams wait for manual steps.
 
 **4. Make Quality Your Business**
-Quality isn't something that happens after launch. It's foundational. Tests, observability, monitoring, alerting—these aren't afterthoughts. They're part of what the platform provides for free.
+
+Quality isn't something that happens after launch. It's foundational.
+
+Tests, observability, monitoring, alerting—these aren't afterthoughts. They're part of what the platform provides for free.
 
 **5. Treat Data as a Product**
 Data that's locked in one system has limited value. Data that's accessible, documented, and discoverable becomes a platform resource. This applies to metrics, logs, events, and structured data alike.
@@ -77,7 +102,11 @@ How do you know this approach is working? The obvious metrics are throughput and
 - **Throughput**: Work completed increased significantly. More PRs shipped. More features deployed.
 - **Cycle time**: Time from idea to production compressed. Average cycle times dropped from over 5 days to around 3 days, with fewer spikes.
 
-But these metrics alone don't tell the full story. The more important signal was that platform teams stopped being a bottleneck. Product teams could move forward independently. Questions got answered. Decisions happened faster. The platform teams weren't context-switching between dozens of enablement requests—they were focused on products that genuinely helped.
+But these metrics alone don't tell the full story.
+
+The more important signal was that platform teams stopped being a bottleneck. Product teams could move forward independently. Questions got answered. Decisions happened faster.
+
+The platform teams weren't context-switching between dozens of enablement requests—they were focused on products that genuinely helped.
 
 ## What Worked
 
@@ -93,6 +122,14 @@ But these metrics alone don't tell the full story. The more important signal was
 - **Enablement mentality creeping back in**: It's easy to slip back into "define it and they will obey" thinking. They won't. Compliance through documentation is weak. Compliance through tooling that makes the right thing the easy thing is strong.
 - **Tracking % completion of OKRs**: Moving away from "how much of the OKR did we complete?" to "how confident are we that we'll complete this by end of quarter?" changed the conversation from arguments about estimation to discussions about dependencies and risk.
 
+## When This Approach Doesn't Fit
+
+Platform-as-product isn't universal. Critics rightly point out that this approach can oversimplify organizational complexity—cognitive load isn't just about technology choices, and "sensible defaults" assumes relatively homogeneous use cases.
+
+This worked in our context: ~800 engineers, fintech domain, relatively mature engineering culture. Different contexts might need different approaches. If your teams have genuinely diverse requirements, or you're operating in research/experimentation mode, maximum optionality might be the right choice.
+
+The key is being intentional about the tradeoff: optionality increases flexibility but decreases velocity. Choose deliberately.
+
 ## Conclusion
 
 Platform engineering isn't about having the most sophisticated tools or the most options. It's about understanding what your internal customers actually need and building products that help them move faster and with more confidence.
@@ -106,3 +143,15 @@ The shift from enablement to product doesn't happen overnight. It requires:
 - Iterating based on feedback
 
 When you get it right, the platform becomes invisible in the best way—teams stop thinking about it and start thinking about what they're building.
+
+---
+
+## Further Reading
+
+Key resources on platform-as-product thinking:
+
+- **[Platform-as-a-Product Approach](https://teamtopologies.com/news-blogs-newsletters/2024/10/7/ready-to-transform-development-with-platform-as-a-product-approach)** by Team Topologies - How platforms serve internal customers through curated experiences
+- **[The Platform Paradox: How Standardization Drives Innovation](https://itrevolution.com/articles/the-platform-paradox-how-standardization-drives-innovation-in-enterprise-technology/)** by Gregor Hohpe - Why constraints enable innovation
+- **[How Team Topologies Supports Platform Engineering](https://thenewstack.io/how-team-topologies-supports-platform-engineering/)** by The New Stack - Distinction between platform teams and enabling teams
+
+*Implementing platform engineering in your organization? [Get in touch](/about/).*

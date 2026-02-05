@@ -1,16 +1,20 @@
 ---
-layout: post
 title: "Reorganizing from Enablement to Product-Focused Platform Teams"
 date: 2026-02-03
-categories: org-structure, platform-engineering
-status: draft
+draft: true
+tags: ["organizational-design", "platform-engineering", "leadership", "restructuring"]
+categories: ["Leadership", "Platform Engineering"]
 ---
 
 # Reorganizing from Enablement to Product-Focused Platform Teams
 
-Organizational restructuring is hard. It disrupts relationships, creates uncertainty, and almost always generates anxiety. But sometimes the structure itself is the problem, and no amount of process improvement will fix it.
+Organizational restructuring is hard. It disrupts relationships, creates uncertainty, generates anxiety.
+
+But sometimes the structure itself is the problem. No amount of process improvement will fix it.
 
 When we transitioned from an enablement-focused platform organization to a product-focused one, we weren't creating new teams—we were reframing their purpose. And that reframing mattered far more than we expected.
+
+This shift aligns with a broader industry trend. By 2026, 80% of large software organizations will have platform teams in place, up from 55% in 2025. But adoption alone doesn't guarantee success—the difference between effective and struggling platform teams often comes down to whether they think like product teams or enablement services.
 
 ## Why the Old Structure Didn't Work
 
@@ -19,16 +23,28 @@ The original platform organization was structured around "enablement." The manda
 In practice, this created a few problems:
 
 **1. No clear success metric**
-If you're "enabling" teams, how do you know you've succeeded? Did you provide enough options? Is it the right documentation? Are teams happy? These are vague. Teams optimized for what felt like activity—writing more guides, offering more choices, providing more options.
+
+If you're "enabling" teams, how do you know you've succeeded? Did you provide enough options? Is it the right documentation? Are teams happy?
+
+These are vague. Teams optimized for what felt like activity—writing more guides, offering more choices, providing more options.
 
 **2. Diffuse accountability**
-When your job is to "enable," there's no clear end state. You're successful if teams say they're enabled. But teams often don't know what they need until they try to do the work. So platform teams were always one step behind.
+
+When your job is to "enable," there's no clear end state. You're successful if teams say they're enabled.
+
+But teams often don't know what they need until they try to do the work. So platform teams were always one step behind.
 
 **3. Low agency for platform engineers**
-Platform team members were frustrated. Many joined to write code and build infrastructure, not maintain documentation or run workshops. The lack of concrete products meant the work felt abstract and endless.
+
+Platform team members were frustrated. Many joined to write code and build infrastructure, not maintain documentation or run workshops.
+
+The lack of concrete products meant the work felt abstract and endless.
 
 **4. Invisible impact**
-When your work is "enablement," it's hard to point to what you built. You wrote documentation (thousands of lines). You answered questions (hundreds). You helped ship features (indirectly). But none of this felt concrete.
+
+When your work is "enablement," it's hard to point to what you built. You wrote documentation (thousands of lines). You answered questions (hundreds). You helped ship features (indirectly).
+
+But none of this felt concrete.
 
 ## The Reframe: Platform as Product
 
@@ -41,6 +57,8 @@ A product has:
 - **Accountability**: Did the product solve the problem?
 
 This wasn't a reorganization that changed who reported to whom. It was a reframing that changed how we thought about the work.
+
+Evan Bottcher from ThoughtWorks describes platforms as "a foundation of self-service APIs, tools, services, knowledge and support, which are arranged as a compelling internal product." That word—compelling—is crucial. Not just functional. Not just available. Compelling enough that engineers choose to use it.
 
 ## What Changed Structurally
 
@@ -65,13 +83,15 @@ The teams themselves barely changed. But the question each team asked shifted fr
 One structural change was significant: **we put a product-focused leader in charge.**
 
 This person's mandate was different from a traditional infrastructure lead:
-- Think about these platforms like products
-- Do user research (talk to engineers, observe their workflows)
-- Make decisions about prioritization based on impact, not requests
-- Own the customer experience, not just the technical implementation
+- Think about platforms like products
+- Do user research—talk to engineers, observe workflows
+- Make prioritization decisions based on impact, not requests
+- Own customer experience, not just technical implementation
 - Iterate based on feedback
 
 This role required someone with product thinking, who could bridge between deep technical understanding and user empathy. It's a challenging role to hire for, because it's not quite a traditional product manager (those are often less technical) and not quite a technical leader (those often skip user research).
+
+The platform engineering community calls this "platform product thinking"—treating internal developer experience with the same rigor as external product experience. It means staying close to users (engineers), understanding their workflows through observation not just surveys, and making opinionated choices rather than maximizing optionality.
 
 ## Managing the Transition
 
@@ -141,4 +161,19 @@ Platform products don't need to be flawless. They need to be clear, useful, and 
 
 Reorganizing from enablement to product wasn't a top-down restructuring. It was a shift in how we framed the work, combined with the right leadership to make that framing real. It required discipline—saying no, staying focused, doing user research—but it unlocked a different kind of organization.
 
+That said, this reframing was part of a larger transformation. As we shifted platform thinking, we also had to evolve decision rights, funding models, and how we measured success. McKinsey research suggests these platform transformations succeed when organizations reimagine the entire tech operating model, not just team mandates. Our reframing was the catalyst, but the work extended beyond just naming.
+
 If your platform teams are stuck in abstractions, constantly overextended, or struggling with unclear success metrics, it might be time to ask: What if these teams owned products instead of enabling people? What would change?
+
+---
+
+## Further Reading
+
+The ideas in this post have been shaped by excellent work from the platform engineering community:
+
+- **[What is Platform as a Product? Clues from Team Topologies](https://teamtopologies.com/videos-slides/what-is-platform-as-a-product-clues-from-team-topologies)** by Manuel Pais - How platforms serve internal customers through curated experiences
+- **[Mind the Platform Execution Gap](https://martinfowler.com/articles/platform-prerequisites.html)** by Evan Bottcher - The definitive article on platforms as compelling internal products
+- **[Platform Engineering in 2026: 5 Shifts Driving the Rise](https://www.growin.com/blog/platform-engineering-2026/)** - Industry trends on platform team adoption and ROI measurement
+- **[The Big Product and Platform Shift](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-big-product-and-platform-shift-five-actions-to-get-the-transformation-right)** by McKinsey - Five actions for platform transformation including operating model changes
+
+*Interested in discussing platform team transformations? [Let's connect](/about/).*

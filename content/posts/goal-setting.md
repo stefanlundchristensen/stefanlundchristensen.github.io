@@ -6,11 +6,17 @@ tags: ["leadership", "goal-setting", "organizational-design"]
 categories: ["Leadership"]
 ---
 
-I've sat through OKR workshops. I've written SMART goals. I've seen BHAGs, MBOs, V2MOMs—and every year there's a new one that swears it's the answer.
+I've sat through OKR workshops. I've written SMART goals. I've seen BHAGs, MBOs, V2MOMs. Every year there's a new framework that promises to be the answer.
 
 Here's what I've learned: most goal-setting becomes corporate theater. We craft goals that sound impressive but are too fluffy to drive decisions. We keep them "short and to the point" but lose clarity and ownership in the process.
 
-And here's the uncomfortable part: we avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realize your teams aren't set up to be independent. Instead of fixing that, we assign ownership to "areas" or "the VP of Engineering." But areas don't do work. VPs don't write code. Real work happens at the team and IC level—they need to own these goals.
+Research on OKRs reveals the structural problem: they provide too much flexibility and too little guidance. Organizations report the system breaking down around 25-50 people, with complexity increasing exponentially as teams scale. The framework itself becomes the problem—not because it's wrong, but because it's so flexible that every organization implements it differently, leading to endless trial and error.
+
+And here's the uncomfortable part: we avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realize your teams aren't set up to be independent.
+
+Instead of fixing that, we assign ownership to "areas" or "the VP of Engineering."
+
+But areas don't do work. VPs don't write code. Real work happens at the team and IC level—they need to own these goals.
 
 I've made all these mistakes. There's a simpler approach that actually works.
 
@@ -30,7 +36,11 @@ Here's what this looks like:
 
 This forces clarity. You can't be vague. You can't hide behind aspirational language. You have to know where you are, where you're going, and by when.
 
-The baseline matters enormously. I've seen goals like "improve conversion by 40%" where no one can state the baseline. If you can't state your baseline, you don't know how to measure what you want. When Q2 arrives, does "conversion" mean signup? Purchase? Free-to-paid? Measured how? Without the baseline, you haven't defined the goal.
+The baseline matters enormously. I've seen goals like "improve conversion by 40%" where no one can state the baseline.
+
+If you can't state your baseline, you don't know how to measure what you want. When Q2 arrives, does "conversion" mean signup? Purchase? Free-to-paid? Measured how?
+
+Without the baseline, you haven't defined the goal.
 
 ## Three Critical Additions
 
@@ -59,9 +69,13 @@ Make updates easy. Spreadsheet or Word doc. Low tech wins. Avoid tool bureaucrac
 
 Track two things: progress and confidence. Progress is the metric. But confidence is more telling—how confident is the owner we'll hit this?
 
-Real-world goals don't progress linearly. Some sit at 0% for months while building infrastructure, then jump to 80% when you ship. If Sarah says "0% progress but highly confident—shipping in March," that's different from panic.
+Real-world goals don't progress linearly. Some sit at 0% for months while building infrastructure, then jump to 80% when you ship.
+
+If Sarah says "0% progress but highly confident—shipping in March," that's different from panic.
 
 And here's where psychological safety matters. If Sarah can't say she's not confident without fear, you won't get honest updates. I've seen this fail: an engineer said "I'm behind" in a goal review, and the VP immediately asked "Should we find someone else to own this?" The engineer never gave honest updates again. Low confidence should trigger help, not blame.
+
+Recent organizational research confirms this connection: meeting structure directly affects psychological safety, which then drives team performance. When goal reviews feel like interrogations rather than problem-solving sessions, people optimize for looking good over being honest. The cadence matters less than the culture it creates.
 
 The other way to kill honest updates: ignore your own cadence. If you set an update cadence, respect it. Don't ask for adhoc updates. Don't Slack "give me an update on goal Y?" If you've asked for monthly updates, follow that schedule yourself. Otherwise you're teaching everyone the cadence doesn't matter.
 
@@ -83,6 +97,8 @@ The frameworks will keep coming. Next year there'll be a new one. But you don't 
 You need clarity on what you're achieving. You need to know where you are and where you're going. You need someone to own it. You need tangible work to point to. And you need to actually follow up.
 
 That's it. No acronyms required.
+
+A final note: this post critiques framework proliferation, but the Amazon 6-pager format plus three additions IS a framework. The distinction isn't between having structure and not having it. It's between simple structure you can actually use versus complex frameworks that collapse under their own weight. Choose structure that clarifies rather than obscures.
 
 ---
 

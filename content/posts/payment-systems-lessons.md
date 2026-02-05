@@ -6,9 +6,13 @@ tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 ---
 
-Payment systems look deceptively simple from the outside. Integrate an API, money moves, done. But the gap between "it works in demo" and "it works at scale across markets with regulatory changes and partner drama" is where companies burn millions and lose years.
+Payment systems look deceptively simple. Integrate an API, money moves, done.
+
+Then you hit production. Reconciliation breaks. Partners change requirements. Regulations shift. The demo that worked perfectly now costs millions to fix.
 
 These six habits come from scaling Pleo's payments infrastructure from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
+
+Reconciliation at scale is such a universal challenge that 95% of finance leaders are now investing in AI to solve it. The learning curve is expensive across the industry—these lessons reduce the tuition you'll pay.
 
 ## 1. Draw the Money Map First
 
@@ -16,7 +20,11 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** Reconciliation breaks when you don't understand state changes. Customer disputes become nightmares. Regulatory reporting fails audits.
 
-**My learning:** I once spent three weeks debugging why our ledger didn't balance, only to discover a partner was holding funds in an intermediate account we didn't know existed. Three weeks of engineering time, customer support chaos, and a stressed finance team preparing for month-end close—all because we hadn't mapped the complete flow upfront.
+**My learning:** I spent three weeks debugging why our ledger didn't balance. Three weeks of engineering time, customer support chaos, stressed finance team preparing for month-end close.
+
+The problem? A partner was holding funds in an intermediate account we didn't know existed. We hadn't mapped the complete flow upfront.
+
+Modern payment infrastructure uses double-entry accounting not just for compliance, but as an infrastructure necessity. Every fund movement creates debits and credits across accounts. When you don't map these state changes completely—including intermediate accounts, holds, reversals, and fees—your ledger won't balance and reconciliation becomes manual detective work.
 
 ## 2. Documentation Lies - Test the Real Thing
 
@@ -24,7 +32,13 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** Partner documentation is aspirational. It describes what should work, not the edge cases, rate limits, or undocumented validation rules you'll hit in production.
 
-**My learning:** A partner's documentation said they supported instant transfers across Europe. We built our product roadmap around it. When we finally tested the actual APIs, we discovered "instant" meant "maybe same-day if submitted before 3 PM on weekdays, and only in certain markets." We had to redesign the customer experience and delay our launch.
+**My learning:** A partner's documentation said they supported instant transfers across Europe. We built our product roadmap around it.
+
+When we finally tested the APIs, "instant" meant "maybe same-day if submitted before 3 PM on weekdays, and only in certain markets."
+
+We redesigned the customer experience and delayed launch.
+
+That said, mature platforms like Stripe have earned trust through years of reliable documentation. The skill isn't blanket distrust—it's knowing when to verify everything (newer providers, complex integrations, custom requirements) versus when to trust (established platforms with strong track records). Start skeptical until a provider proves reliability.
 
 ## 3. Get Engineers Talking to Engineers
 
@@ -32,7 +46,11 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** Account managers are incentivized to make things sound simple and solvable. Engineers will tell you about the actual constraints, the undocumented quirks, and what really breaks in production.
 
-**My learning:** We wasted two months on a partnership evaluation where the account manager kept saying "yes, we can do that." When our engineers finally got on a call with their engineers, we learned half our requirements weren't possible without significant custom development that would take quarters, not weeks. The account manager genuinely believed it was simple - they just didn't understand the technical complexity.
+**My learning:** We spent two months evaluating a partnership. The account manager kept saying "yes, we can do that."
+
+When our engineers finally talked to their engineers, half our requirements weren't possible without custom development. Quarters of work, not weeks.
+
+The account manager genuinely believed it was simple. They just didn't understand the technical complexity.
 
 ## 4. Beware the Full-Service Promise
 
@@ -40,7 +58,9 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** "Full coverage" in a sales deck doesn't mean "works for your use case." You'll discover limitations after integration, when it's expensive to switch.
 
-**My learning:** A partner promised pan-European payment coverage during procurement. After we'd integrated and gone live, we discovered they could only process certain transactions on D+1 settlement rails, not the instant transfers our product experience depended on. We had to build workarounds and eventually add a second provider - doubling our integration cost and ongoing operational complexity.
+**My learning:** A partner promised pan-European payment coverage during procurement. After integration and launch, we discovered they only processed certain transactions on D+1 settlement rails. Not the instant transfers our product depended on.
+
+We built workarounds. Then added a second provider. Double the integration cost, double the operational complexity.
 
 ## 5. Modularity Is Your Insurance Policy
 
@@ -48,7 +68,13 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** Partners change. They update compliance requirements, shift their strategic focus, get acquired, or sunset products. If your system is tightly coupled to their specific implementation, you're at their mercy.
 
-**My learning:** A key partner changed their KYC requirements with 90 days notice. Because we'd built tight integration directly against their specific APIs throughout our codebase, we couldn't adapt quickly. We had to offboard roughly 30% of our customer base. A modular architecture with proper abstraction layers would have let us add a second provider and migrate customers smoothly instead of losing them.
+**My learning:** A key partner changed their KYC requirements with 90 days notice. We'd built tight integration directly against their APIs throughout our codebase. We couldn't adapt quickly.
+
+We offboarded roughly 30% of our customer base.
+
+A modular architecture with proper abstraction layers would have let us add a second provider and migrate customers smoothly. Instead we lost them.
+
+Industry best practice is multi-provider resilience. Smart fintech builders layer orchestration, compliance, and redundancy into their payment architecture from the start rather than depending on a single PSP. The upfront investment in abstraction layers pays off when—not if—providers change terms or capabilities.
 
 ## 6. Payments Is a Partnership Sport
 
@@ -56,7 +82,9 @@ These six habits come from scaling Pleo's payments infrastructure from Series A 
 
 **Why it matters:** Other teams aren't payment experts - they won't naturally think about how instant transfers, request-to-pay, or account-to-account payments could unlock new product experiences or reduce costs. If you stay in your silo, you miss opportunities and create misaligned expectations.
 
-**My learning:** Our sales team kept promising customers features that didn't exist because they didn't understand our payment constraints. Deals would get to the legal stage before we'd discover the commitments couldn't be fulfilled. When we started running regular education sessions and brought sales into early product discussions, they became better at selling what we could actually deliver - and they surfaced customer needs that shaped our roadmap in valuable ways.
+**My learning:** Our sales team kept promising features that didn't exist. They didn't understand our payment constraints. Deals reached the legal stage before we discovered the commitments couldn't be fulfilled.
+
+We started running regular education sessions. Brought sales into early product discussions. They got better at selling what we could deliver. And they surfaced customer needs that shaped our roadmap.
 
 ---
 
@@ -67,5 +95,14 @@ These habits share a common thread: they're all about reducing assumptions and i
 The learning curve in payments is expensive. I've seen companies spend millions learning these lessons the hard way. These habits won't eliminate the cost, but they'll reduce the tuition you pay while building expertise.
 
 ---
+
+## Further Reading
+
+Key resources on building resilient payment infrastructure:
+
+- **[How to Build a Real-Time Ledger with Double-Entry Accounting](https://finlego.com/tpost/c2pjjza3k1-designing-a-real-time-ledger-system-with)** by FinLego - Why double-entry ledgers are infrastructure necessity, not just compliance
+- **[The Architecture Behind Stripe's Global Payments](https://observabilityguy.medium.com/the-architecture-behind-stripes-global-payments-in-seconds-52c834dc3961)** - How Stripe tracks money movement and state changes at scale
+- **[Payments Infrastructure: Stripe, Adyen, and Beyond](https://insart.com/payments-infrastructure-stripe-adyen-multi-psp-guide/)** by INSART - Guide to multi-PSP strategies and when to use them
+- **[Market Insights 2025: Reconciliation Tech at Heart of Fintech](https://www.dialectica.io/community-hub/fintech-in-2025-ai-strategic-scaling-and-payment-dominance)** - Industry data on reconciliation challenges and AI solutions
 
 *Building payment infrastructure in your organization? [Let's connect on LinkedIn](https://www.linkedin.com/in/stefanlchristensen/).*
