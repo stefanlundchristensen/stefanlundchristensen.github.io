@@ -1,16 +1,18 @@
 ---
 title: "Six Hard-Won Lessons from Building Payment Systems at Scale"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 ---
 
 Payment systems look deceptively simple. Integrate an API, money moves, done.
 
-Then you hit production. Reconciliation breaks. Partners change requirements. Regulations shift. The demo that worked perfectly now costs millions to fix.
+Then you hit production. I've seen teams spend weeks debugging why ledgers don't balance. Not days—weeks. Engineering time, customer support chaos, finance teams scrambling before month-end close.
 
-These six habits come from scaling Pleo's payments infrastructure from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
+The problem? A payment partner was holding funds in an intermediate account that wasn't mapped upfront. The learning curve is expensive.
+
+These six habits come from scaling payments infrastructure at a high-growth FinTech from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
 
 Reconciliation at scale is such a universal challenge that 95% of finance leaders are now investing in AI to solve it. The learning curve is expensive across the industry—these lessons reduce the tuition you'll pay.
 
@@ -20,9 +22,7 @@ Reconciliation at scale is such a universal challenge that 95% of finance leader
 
 **Why it matters:** Reconciliation breaks when you don't understand state changes. Customer disputes become nightmares. Regulatory reporting fails audits.
 
-**My learning:** I spent three weeks debugging why our ledger didn't balance. Three weeks of engineering time, customer support chaos, stressed finance team preparing for month-end close.
-
-The problem? A partner was holding funds in an intermediate account we didn't know existed. We hadn't mapped the complete flow upfront.
+**My learning:** This lesson came from seeing teams struggle with reconciliation failures. The root cause is almost always incomplete money flow mapping—intermediate accounts, holds, or state changes that weren't documented upfront. Three weeks of debugging could have been prevented by three days of diagramming.
 
 Modern payment infrastructure uses double-entry accounting not just for compliance, but as an infrastructure necessity. Every fund movement creates debits and credits across accounts. When you don't map these state changes completely—including intermediate accounts, holds, reversals, and fees—your ledger won't balance and reconciliation becomes manual detective work.
 
@@ -32,11 +32,11 @@ Modern payment infrastructure uses double-entry accounting not just for complian
 
 **Why it matters:** Partner documentation is aspirational. It describes what should work, not the edge cases, rate limits, or undocumented validation rules you'll hit in production.
 
-**My learning:** A partner's documentation said they supported instant transfers across Europe. We built our product roadmap around it.
+**My learning:** I've seen cases where a partner's documentation promised instant transfers across Europe. Product roadmaps built around it. Marketing materials prepared. Sales teams trained.
 
-When we finally tested the APIs, "instant" meant "maybe same-day if submitted before 3 PM on weekdays, and only in certain markets."
+When teams finally tested the APIs, "instant" meant "maybe same-day if submitted before 3 PM on weekdays, and only in certain markets."
 
-We redesigned the customer experience and delayed launch.
+The result: redesigned customer experience and delayed launches. Test early, test everything.
 
 That said, mature platforms like Stripe have earned trust through years of reliable documentation. The skill isn't blanket distrust—it's knowing when to verify everything (newer providers, complex integrations, custom requirements) versus when to trust (established platforms with strong track records). Start skeptical until a provider proves reliability.
 
@@ -46,9 +46,9 @@ That said, mature platforms like Stripe have earned trust through years of relia
 
 **Why it matters:** Account managers are incentivized to make things sound simple and solvable. Engineers will tell you about the actual constraints, the undocumented quirks, and what really breaks in production.
 
-**My learning:** We spent two months evaluating a partnership. The account manager kept saying "yes, we can do that."
+**My learning:** I've seen organizations spend months evaluating partnerships where the account manager kept saying "yes, we can do that."
 
-When our engineers finally talked to their engineers, half our requirements weren't possible without custom development. Quarters of work, not weeks.
+When engineers finally talked to engineers, half the core requirements weren't possible without custom development. Quarters of work, not weeks.
 
 The account manager genuinely believed it was simple. They just didn't understand the technical complexity.
 
@@ -58,9 +58,9 @@ The account manager genuinely believed it was simple. They just didn't understan
 
 **Why it matters:** "Full coverage" in a sales deck doesn't mean "works for your use case." You'll discover limitations after integration, when it's expensive to switch.
 
-**My learning:** A partner promised pan-European payment coverage during procurement. After integration and launch, we discovered they only processed certain transactions on D+1 settlement rails. Not the instant transfers our product depended on. (The fragmentation of [European payment rails](/posts/european-payment-rails/) makes this especially common--what "coverage" means varies dramatically by country and payment method.)
+**My learning:** I've seen partnerships where "pan-European coverage" in procurement turned out to mean limited capabilities. After integration and launch, teams discovered only D+1 settlement rails were supported—not the instant transfers the product depended on. (The fragmentation of [European payment rails](/posts/european-payment-rails/) makes this especially common--what "coverage" means varies dramatically by country and payment method.)
 
-We built workarounds. Then added a second provider. Double the integration cost, double the operational complexity.
+The result: built workarounds, then added a second provider. Double the integration cost, double the operational complexity.
 
 ## 5. Modularity Is Your Insurance Policy
 
@@ -68,11 +68,11 @@ We built workarounds. Then added a second provider. Double the integration cost,
 
 **Why it matters:** Partners change. They update compliance requirements, shift their strategic focus, get acquired, or sunset products. If your system is tightly coupled to their specific implementation, you're at their mercy.
 
-**My learning:** A key partner changed their KYC requirements with 90 days notice. We'd built tight integration directly against their APIs throughout our codebase. We couldn't adapt quickly.
+**My learning:** When key partners change compliance requirements with minimal notice, tight coupling to their specific APIs becomes a critical vulnerability. Organizations that built integrations directly throughout their codebase can't adapt quickly.
 
-We offboarded roughly 30% of our customer base.
+The result can be significant customer impact—forced offboarding when systems lack the flexibility to onboard alternative providers quickly.
 
-A modular architecture with proper abstraction layers would have let us add a second provider and migrate customers smoothly. Instead we lost them. This is the same lesson we learned in [platform engineering](/posts/platform-engineering-approach/)--building opinionated defaults with clean abstraction layers isn't just good engineering practice, it's an insurance policy.
+A modular architecture with proper abstraction layers enables adding a second provider and migrating customers smoothly. Without it, you're at the mercy of every partner decision. This is the same lesson we learned in [platform engineering](/posts/platform-engineering-approach/)--building opinionated defaults with clean abstraction layers isn't just good engineering practice, it's an insurance policy.
 
 Industry best practice is multi-provider resilience. Smart fintech builders layer orchestration, compliance, and redundancy into their payment architecture from the start rather than depending on a single PSP. The upfront investment in abstraction layers pays off when—not if—providers change terms or capabilities.
 

@@ -1,7 +1,7 @@
 ---
 title: "Building Self-Sufficient Business Units in High-Growth FinTech"
 date: 2026-01-15
-draft: true
+draft: false
 tags: ["leadership", "organizational-design", "scaling"]
 categories: ["FinTech", "Leadership"]
 ---
@@ -30,7 +30,9 @@ Marty Cagan calls this "empowered product teams"—teams with authority to own d
 
 **Complete Teams**: Each unit needs product, engineering, design, data, and go-to-market capabilities. No dependency on shared services for critical path work.
 
-We had teams that shipped complete features—customer research, design, development, analytics, launch—without waiting on anyone. Shared platform services existed for authentication, payments infrastructure, data pipelines. But not for critical path decisions.
+We had teams that shipped complete features—customer research, design, development, analytics, launch—without waiting on anyone. One team shipped a complete invoicing feature in six weeks: customer interviews, design mocks, backend API, frontend UI, analytics dashboard, launch email. No dependencies on shared services except authentication. They moved fast because they didn't wait.
+
+Shared platform services existed for authentication, payments infrastructure, data pipelines. But not for critical path decisions.
 
 **Clear Metrics**: Teams need to know what success looks like and measure it themselves. Not vanity metrics from above, but metrics the team owns and can move.
 

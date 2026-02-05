@@ -1,14 +1,18 @@
 ---
 title: "Support Meetings, Not Status Meetings: How Naming Changes Culture"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["leadership", "team-dynamics", "meetings", "culture"]
 categories: ["Leadership"]
 ---
 
 # Support Meetings, Not Status Meetings: How Naming Changes Culture
 
-There's a subtle but profound difference between a "status meeting" and a "support meeting."
+You call it a "status meeting." Your team hears "come prepared to defend your work."
+
+You call it a "support meeting." Your team hears "we're here to help."
+
+Same agenda. Different world.
 
 In a status meeting, the implicit message is: *Report on what you've done. Explain your progress. Account for your time.*
 
@@ -60,6 +64,8 @@ This means:
 - **Following up**: If a team identifies an obstacle, leadership actually removes it or explains why they can't.
 - **Not using the meeting as surveillance**: The goal isn't to catch problems. It's to surface them early so they can be solved.
 - **Making decisions quickly**: Teams raise concerns; leadership responds with decisions or clear next steps, not "let me think about it and get back to you."
+
+Here's what this looked like in practice: A team raised that they were blocked on legal review for a new payment feature. Instead of "why didn't you start legal review earlier?", the question was "what do you need from legal?" We escalated to legal leadership that day. Legal added capacity. Feature unblocked within a week.
 
 Kim Scott's Radical Candor framework applies here: support meetings embody "care personally" while maintaining "challenge directly." You're helping people while keeping standards high. It's not about lowering the bar—it's about being present when people push themselves to meet it.
 

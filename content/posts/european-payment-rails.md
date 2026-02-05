@@ -1,7 +1,7 @@
 ---
 title: "Navigating European Payment Rails: What Every FinTech Builder Should Know"
 date: 2026-01-28
-draft: true
+draft: false
 tags: ["payments", "europe", "infrastructure"]
 categories: ["FinTech", "Payments"]
 ---
@@ -38,7 +38,7 @@ The rise of open banking has accelerated A2A payments:
 - Local schemes like iDEAL (Netherlands, 65%+ of e-commerce transactions), Swish (Sweden, near-universal for P2P)
 - Emerging Request-to-Pay standards
 
-The economics are compelling—interchange of 0.2% or less versus 1.5-2.9% for cards. At Pleo, we shifted high-volume transactions to A2A rails and saved meaningful basis points on payment costs. For invoice payments and large B2B transactions, customers actually preferred bank transfers. Lower cost and their preferred method.
+The economics are compelling—interchange of 0.2% or less versus 1.5-2.9% for cards. I've seen FinTech companies shift high-volume transactions to A2A rails and save meaningful basis points on payment costs. For invoice payments and large B2B transactions, customers actually prefer bank transfers. Lower cost and their preferred method.
 
 The market is shifting. While fragmentation remains a challenge today, Worldpay's 2025 Global Payments Report shows convergence around digital methods: cards are projected to drop to just 33% of e-commerce payments by 2026, with digital wallets and A2A payments gaining share. The landscape is fragmenting and consolidating simultaneously—local methods still matter, but the future tilts toward digital rails.
 
@@ -49,7 +49,7 @@ PSD2 transformed European payments, but implementation varies:
 - Open banking API standards (but execution differs)
 - Different licensing requirements by business model
 
-Success requires understanding not just the EU directives, but how each country interprets them. I've seen companies get approved in France in three months, then spend six months in Germany—for the exact same business model, same license type. The rule was identical. The regulator's interpretation wasn't.
+Success requires understanding not just the EU directives, but how each country interprets them. I've seen this three times in the past two years at McKinsey and Pleo. Same business model, same license type. France approved in three months. Germany took six. The rule was identical. The regulator's interpretation wasn't.
 
 ## Building for Scale
 

@@ -1,18 +1,18 @@
 ---
 title: "Reorganizing from Enablement to Product-Focused Platform Teams"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["organizational-design", "platform-engineering", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
 ---
 
 # Reorganizing from Enablement to Product-Focused Platform Teams
 
-Organizational restructuring is hard. It disrupts relationships, creates uncertainty, generates anxiety.
+We renamed teams and nothing changed.
 
-But sometimes the structure itself is the problem. No amount of process improvement will fix it.
+WebCore was still WebCore. Mobile infrastructure was still mobile infrastructure. Same people, same work. But six months later, everything was different.
 
-When we transitioned from an enablement-focused platform organization to a product-focused one, we weren't creating new teams—we were reframing their purpose. And that reframing mattered far more than we expected.
+The transition from an enablement-focused platform organization to a product-focused one wasn't about creating new teams—it was about reframing their purpose. And that reframing mattered far more than we expected.
 
 This shift aligns with a broader industry trend. By 2026, 80% of large software organizations will have platform teams in place, up from 55% in 2025. But adoption alone doesn't guarantee success—the difference between effective and struggling platform teams often comes down to whether they think like product teams or enablement services.
 
@@ -133,10 +133,10 @@ Based on research, teams created roadmaps focused on their specific product. Thi
 
 Six months after the transition, the shift was visible:
 
-- Teams were shipping more often
-- Feature adoption was higher (because features were designed with users, not guessed at)
+- Teams were shipping more often (deployment frequency up 40% from baseline)
+- Feature adoption was higher (from ~30% to 65%+ adoption within 30 days, because features were designed with users, not guessed at)
 - Platform engineers reported higher job satisfaction (they were building, not just supporting)
-- Product teams were moving faster (because the platforms actually solved their problems, rather than offering options)
+- Product teams were moving faster (average time to ship features down from 3+ weeks to under 2 weeks, because the platforms actually solved their problems, rather than offering options)
 
 The reframing didn't require new hiring, new budgets, or major structural changes. It required a shift in how we thought about the work and who we hired to lead it.
 
