@@ -1,7 +1,7 @@
 ---
 title: "From Enablement to Products: Implementing Platform Engineering at Scale"
 date: 2026-02-03
-draft: false
+draft: true
 tags: ["platform-engineering", "organizational-design", "infrastructure"]
 categories: ["Leadership", "Platform Engineering"]
 ---

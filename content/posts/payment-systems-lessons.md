@@ -1,7 +1,7 @@
 ---
 title: "Six Hard-Won Lessons from Building Payment Systems at Scale"
 date: 2026-02-03
-draft: false
+draft: true
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 ---
@@ -14,7 +14,7 @@ The problem? A payment partner was holding funds in an intermediate account that
 
 These six habits come from scaling payments infrastructure at a high-growth FinTech from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
 
-Reconciliation at scale is such a universal challenge that 95% of finance leaders are now investing in AI to solve it. The learning curve is expensive across the industry—these lessons reduce the tuition you'll pay.
+Reconciliation at scale is such a universal challenge that [95% of finance leaders are now investing in AI to solve it](https://www.dialectica.io/community-hub/fintech-in-2025-ai-strategic-scaling-and-payment-dominance), according to industry research from Dialectica's 2025 FinTech report. The learning curve is expensive across the industry—these lessons reduce the tuition you'll pay.
 
 ## 1. Draw the Money Map First
 

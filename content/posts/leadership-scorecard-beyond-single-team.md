@@ -40,7 +40,7 @@ If you're building your own scorecard: pick dimensions you can own that help the
 
 People can't execute on slides and goals alone.
 
-I watched this pattern repeatedly: leadership creates a strategy deck, sets OKRs, communicates them at all-hands. Everyone nods. Then people go back to their desks and ask "So what are we actually doing?"
+I've seen this countless times as a consultant: leadership creates a strategy deck, sets OKRs, communicates them at all-hands. Everyone nods. Then people go back to their desks and ask "So what are we actually doing?"
 
 The problem isn't that people don't understand the words. The problem is they can't see what changes in the world.
 
@@ -54,7 +54,7 @@ I learned a structure from Ebi Atawodi on Lenny's Podcast - telling direction as
 
 This isn't poetry. It's clarity. When you can tell your strategy as a story - with a clear before, during, and after - people can retell it. They can explain it to new hires. They can make decisions aligned with it.
 
-Then you connect the fairytale to concrete goals. (I wrote about [a practical approach to goal setting](/posts/goal-setting/) that pairs well with this narrative framing.) The narrative shows where we're going. The goals show how we measure progress.
+Then you connect the fairytale to concrete goals. The narrative shows where we're going. The goals show how we measure progress.
 
 What changed: Direction became something people could understand and act on, not just read and forget.
 
@@ -71,6 +71,8 @@ Improvement requires consistency and structure. It requires knowing who does wha
 This became my operating principle: clear cadences, structured agendas, clear roles, clear expectations.
 
 Not exciting. Not innovative. But foundational.
+
+**These foundations work for teams, but they also work for you.** When you're starting in a new area or taking on a new leadership role, you need to balance focus: roughly 60% on establishing team structures and 40% on your own understanding and learning. In the early months, you might even skew more toward yourself—observing patterns, understanding the domain, building relationships. The cadences and structures aren't just for your teams; they're scaffolding for your own effectiveness.
 
 When people know there's a weekly leadership sync, and it always has the same structure, and everyone knows their role - that predictability creates space for actual work. When you establish a rhythm for how decisions get made, for how information flows, for how problems surface - improvement becomes possible.
 
@@ -90,15 +92,17 @@ When you lead multiple teams, it's easy to think "the teams seem okay" and move 
 
 Making this explicit on your scorecard means you're actually doing the work. You're spending time talking and listening to people - not just the people who report directly to you. You're measuring systematically. You're tracking trends.
 
-I like tools like Spotify's team health check, Teamprature, or measuring against the 5 dysfunctions. But honestly? The specific framework matters less than two things:
+I like tools like [Spotify's team health check](https://engineering.atspotify.com/2014/09/squad-health-check-model/), [Teamprature](https://www.teamprature.com/), or measuring against [Lencioni's 5 dysfunctions](https://www.tablegroup.com/topics-and-resources/teamwork-5-dysfunctions/). But honestly? The specific framework matters less than two things:
 
 **You look for trends.** This is a months and quarters thing, not days and weeks. One bad survey result isn't a crisis. A declining trend over three months is.
 
 **You respect that teams are different.** Don't compare across teams. Team A's scores don't mean Team B is failing. Different contexts, different challenges, different starting points.
 
-What changed: From assumed to measured. From "teams seem okay" to "here's the trend and here's what we're doing about it."
+**You create space to discuss the hard topics.** The real value of systematic measurement is that it gives you a structured way to talk about talent with your leadership peers and your own leaders. You need to celebrate the high performers, yes—but you also need to discuss the individuals who are struggling and need help. And sometimes, you need to talk about people who might need to part ways with the organization. Without a structured approach built on data and trends, these conversations never happen with the clarity and honesty they require.
 
-Your scorecard question: Can you show how team health has improved under your leadership? Or are you just hoping it's fine?
+What changed: From assumed to measured. From "teams seem okay" to "here's the trend and here's what we're doing about it." From avoiding difficult talent conversations to having them with structure and compassion.
+
+Your scorecard question: Can you show how team health has improved under your leadership? And can you talk honestly about individual performance—both excellent and struggling—with supporting data?
 
 ## 4. Leadership Is a Team Game
 
@@ -112,7 +116,7 @@ I learned this differently: everyone needs to show leadership, not just me.
 
 Individual contributors who spot problems and drive solutions - that's leadership. Team leads who make hard calls without escalating everything - that's leadership. People who see gaps and fill them - that's leadership.
 
-Your job isn't to be the only leader. Your job is to create conditions where everyone exercises leadership in their role. This connects to how I think about [building self-sufficient business units](/posts/self-sufficient-teams/)--teams that have the authority and capability to lead within their domain.
+Your job isn't to be the only leader. Your job is to create conditions where everyone exercises leadership in their role.
 
 This means you explicitly expect it. You recognize it when you see it. You make space for it. You don't hoard decision-making or become the bottleneck for everything important.
 
@@ -130,7 +134,7 @@ They tell people what excellence looks like. They make the standards clear. They
 
 The bar is high, but you're on your own reaching it.
 
-I made a different commitment: high expectations, and I'm there to help. (This principle also extends to how you run meetings--I explore how [framing meetings as support rather than status](/posts/support-meetings-over-status/) reinforces exactly this dynamic.)
+I made a different commitment: high expectations, and I'm there to help.
 
 This means setting clear, ambitious standards. Not lowering the bar. Not accepting mediocrity. But when someone faces a hard problem, I'm available. When they're stuck, we pair on it. When they need coaching, I show up.
 

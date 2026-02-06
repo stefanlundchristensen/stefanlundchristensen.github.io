@@ -1,7 +1,7 @@
 ---
 title: "Reorganizing from Enablement to Product-Focused Platform Teams"
 date: 2026-02-03
-draft: false
+draft: true
 tags: ["organizational-design", "platform-engineering", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
 ---
