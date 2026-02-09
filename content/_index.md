@@ -2,11 +2,13 @@
 title: "Stefan Christensen"
 ---
 
-I build the systems that turn complexity into advantage. Whether it's organizational structure, scaling teams, payments infrastructure, or technical systems - I create the foundations that let companies move fast as they grow.
+SVP Product & Engineering at [Pleo](https://www.pleo.io). I lead 100+ people across platform engineering, payments infrastructure, and core banking integrations.
 
-Currently SVP at [Pleo](https://www.pleo.io), where I've spent five years scaling the platform organization from 100 to 850+ people. We turned payments infrastructure into a competitive moat.
+Over five years I've helped scale Pleo from 100 to 850+ people—building the payment systems, platform teams, and organizational structures that let a FinTech move fast without breaking money.
 
-Before that: McKinsey consultant focused on financial institutions, and a PhD physicist who built atomic clocks.
+European payment rails, card issuing, real-time settlement, regulatory complexity across 15+ markets. That's my day job.
+
+Before Pleo: McKinsey (financial institutions), and a PhD in quantum physics building atomic clocks.
 
 Read more [about me](/about/) or check out my [experience](/experience/).
 
