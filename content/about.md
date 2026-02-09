@@ -17,9 +17,9 @@ At Pleo, I've focused on building platforms and organizations that scale — des
 
 A few things I've learned the hard way and now hold as strong convictions:
 
-- **Platform teams should be product teams.** If your platform org measures success by "enabling others," you've already lost. Platform teams need their own users, their own metrics, and their own product roadmaps. I've written about [what this looks like in practice](/posts/enabling-to-product-org-change/).
+- **Platform teams should be product teams.** If your platform org measures success by "enabling others," you've already lost. Platform teams need their own users, their own metrics, and their own product roadmaps. I've written about [what this looks like in practice](/posts/platform-engineering-approach/).
 
-- **European payment fragmentation is a competitive advantage — for those who understand it.** Everyone complains about the complexity. The companies that win are the ones that build for it instead of around it. I cover this in [navigating European payment rails](/posts/european-payment-rails/).
+- **European payment fragmentation is a competitive advantage — for those who understand it.** Everyone complains about the complexity. The companies that win are the ones that build for it instead of around it. I cover this in [why "do you support Faster Payments?" is the wrong question](/posts/european-payment-rails/).
 
 - **The best organizational structures are the ones that make good decisions happen without you in the room.** If your team needs you for every call, you haven't built an organization — you've built a dependency.
 

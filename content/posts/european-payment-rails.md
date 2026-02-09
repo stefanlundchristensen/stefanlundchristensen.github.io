@@ -1,78 +1,144 @@
 ---
-title: "Navigating European Payment Rails: What Every FinTech Builder Should Know"
+title: "Why 'Do You Support Faster Payments?' Is the Wrong Question"
 date: 2026-01-28
 draft: true
-tags: ["payments", "europe", "infrastructure"]
+tags: ["payments", "europe", "infrastructure", "fintech", "banking"]
 categories: ["FinTech", "Payments"]
 ---
 
-Your checkout works perfectly in the US. Then you launch in Germany and conversion drops 40%.
+We did everything right.
 
-You integrated Stripe. You handle Visa and Mastercard. What's the problem?
+At Pleo, when we selected a UK bank for Faster Payments, we ran a proper RFP. We asked if they supported Faster Payments. We validated their answers in writing. We got confirmation from their partnerships team.
 
-The problem is that Germans use Girocard, and you don't support it. Your Dutch customers expect iDEAL. Your French customers want Cartes Bancaires. The payment method you've never heard of is the one everyone in that market actually uses.
+They said yes. We signed contracts. We completed months of compliance reviews.
 
-Building payment infrastructure across Europe isn't just different from the US—it's fundamentally fragmented in ways that seem irrational until you've operated there.
+Then, during implementation, we started testing across different hours of the day.
 
-## The European Payment Ecosystem
+Faster Payments worked perfectly at 2pm on a Tuesday.
 
-Unlike the relatively unified US market, Europe has:
-- 27+ different regulatory regimes (though harmonized by PSD2/PSD3)
-- Multiple card networks with varying market share by country
-- Diverse Account-to-Account (A2A) payment schemes
-- Wildly different customer preferences—Germans expect direct debit (Lastschrift), the Dutch expect iDEAL, Swedes won't use cards for person-to-person transfers
+At 9pm? Customer tries to move money into their Pleo account. Nothing happens.
 
-### Card Payments
+Saturday? Nothing.
 
-While Visa and Mastercard dominate, local schemes control significant volume:
-- Cartes Bancaires in France (the majority of card transactions)
-- Girocard in Germany (used more than Visa/Mastercard at physical POS)
-- Bancontact in Belgium (near-universal for local payments)
+Bank holiday? Nothing.
 
-At McKinsey, we analyzed a retailer losing 15-20% of German transactions. They supported Visa and Mastercard. Customers reached checkout, saw no Girocard option, and left. The fix wasn't better marketing or pricing—it was adding the payment method Germans actually use.
+What should have been 24/7/365 instant payments worked weekdays during business hours. That's it.
 
-### A2A Payments
+## The Bank Didn't Know Either
 
-The rise of open banking has accelerated A2A payments:
-- SEPA Instant for real-time transfers (mandatory as of January 9, 2025 for receiving payments; October 2025 for sending—all eurozone banks must process payments within 10 seconds, 24/7)
-- Local schemes like iDEAL (Netherlands, 65%+ of e-commerce transactions), Swish (Sweden, near-universal for P2P)
-- Emerging Request-to-Pay standards
+When we raised this with the bank, they apologized. They didn't fully understand their own limitations.
 
-The economics are compelling—interchange of 0.2% or less versus 1.5-2.9% for cards. I've seen FinTech companies shift high-volume transactions to A2A rails and save meaningful basis points on payment costs. For invoice payments and large B2B transactions, customers actually prefer bank transfers. Lower cost and their preferred method.
+Think about that for a moment.
 
-The market is shifting. While fragmentation remains a challenge today, Worldpay's 2025 Global Payments Report shows convergence around digital methods: cards are projected to drop to just 33% of e-commerce payments by 2026, with digital wallets and A2A payments gaining share. The landscape is fragmenting and consolidating simultaneously—local methods still matter, but the future tilts toward digital rails.
+The bank's payments team—the people we asked during diligence—didn't know their Faster Payments implementation had time restrictions.
 
-## Regulatory Navigation
+If the bank doesn't know, what chance do you have of asking the right question?
 
-PSD2 transformed European payments, but implementation varies:
-- Strong Customer Authentication (SCA) requirements
-- Open banking API standards (but execution differs)
-- Different licensing requirements by business model
+## We Were Locked In
 
-Success requires understanding not just the EU directives, but how each country interprets them. I've seen this three times in the past two years at McKinsey and Pleo. Same business model, same license type. France approved in three months. Germany took six. The rule was identical. The regulator's interpretation wasn't.
+By the time we discovered this, we'd spent months on compliance, legal review, and integration. We had binding contracts. We couldn't just walk away.
 
-## Building for Scale
+So we operated with a broken setup for six to nine months.
 
-If you're building payment infrastructure in Europe:
+During that time:
+- Customers couldn't move money into Pleo outside business hours
+- Support had to explain why "instant payments" weren't actually instant
+- We built workarounds and monitoring to catch failures
+- We started searching for a second banking partner
 
-1. **Start local, plan global**: Perfect one market, then expand systematically
-2. **Invest in compliance infrastructure**: It's table stakes, not a differentiator
-3. **Build abstraction layers**: Your product shouldn't know about payment rail complexity (this is also a core principle of [platform engineering](/posts/platform-engineering-approach/)--sensible defaults and opinionated paths over maximum optionality)
-4. **Monitor regulatory changes**: PSD3 is expected to be adopted in 2025-2026, expanding scope to BNPL, cryptocurrencies, and digital identities while mandating standardized APIs. The integration patterns you build today will need to adapt—plan for flexibility
+Eventually, when other needs arose, we implemented another bank. We ran two banking relationships because we couldn't exit the first one fast enough.
 
-The complexity is real, but so is the opportunity. Europe's fragmentation creates defensible moats for those who build the right infrastructure. (For practical lessons on building that infrastructure--from mapping money flows to managing partner relationships--see my post on [hard-won lessons from building payment systems at scale](/posts/payment-systems-lessons/).)
+## What We Changed
 
-Modern payment platforms help manage this complexity. Providers like Stripe and Adyen support 250+ local payment methods through a single integration, handling the fragmentation so you can focus on your product. But even with these platforms, you still need to understand which methods to enable in which markets—technology can simplify integration, but it can't substitute for market knowledge.
+When we selected the second bank, we changed our approach entirely.
 
----
+**We stopped talking to payments teams. We started talking to cash managers.**
 
-## Further Reading
+The lesson wasn't about finding the perfect phrasing. It was about talking to the people who actually operate the systems, not the people who sell them.
 
-Key resources on European payment infrastructure and regulations:
+The bank's payments team gave us answers they believed were true. But they didn't understand the operational details of how Faster Payments worked across different account types and time windows.
 
-- **[EU Instant Payments: Challenges and Compliance](https://www.ey.com/en_gl/insights/financial-services/emeia/eu-instant-payments-regulation-five-key-hurdles-for-banks-to-clear)** by EY - Five key hurdles including AML checks within 10 seconds
-- **[European Payment Landscape 2025: Data-Driven Report](https://www.tembi.io/blog/payment-providers-in-european-e-commerce-a-country-by-country-analysis)** by Tembi - Country-by-country analysis of payment method market share
-- **[Worldpay Global Payments Report 2025](https://www.worldpay.com/en/global-payments-report)** - Comprehensive data on payment trends, showing card share dropping to 33% by 2026
-- **[From PSD2 to PSD3: What's Changing in Europe](https://www.trustbuilder.com/en/psd2-psd3-directive-future-payments-europe/)** by TrustBuilder - Overview of PSD3's expanded scope and timeline
+The people who know those details? Cash managers. Operations teams. The people who investigate failed payments every day.
+
+We started asking to speak with operational experts, not just partnerships teams. We started testing exhaustively during implementation—mornings, evenings, weekends, bank holidays—before we were contractually locked in.
+
+## The Questions That Would Have Helped
+
+Not one magic question. A different approach:
+
+**Instead of:** "Do you support Faster Payments?"
+
+**Ask:**
+- "Are you a direct participant in the Faster Payments Scheme?"
+- "Do payment notifications and account updates work 24/7/365, including bank holidays?"
+- "For virtual IBANs specifically, is there any difference in processing compared to standard accounts?"
+- "What is the end-to-end latency from payment initiation to account balance update? Does this vary by time of day or day of week?"
+- **"Can we test this in UAT during off-hours and bank holidays before signing contracts?"**
+
+That last one is key. We should have required exhaustive testing across all time windows before finalizing contracts. The tests would have revealed what the bank's payments team didn't know.
+
+## Why This Matters Beyond the UK
+
+This isn't unique to Faster Payments or the UK.
+
+I've seen this pattern with SEPA Instant in Germany, with virtual IBANs in France, with real-time payments in Sweden. Across Europe, the gap between what banks say they support and what actually works in production is larger than builders expect—especially if you're coming from the US market.
+
+This is especially true when you're doing something slightly non-standard:
+- Virtual IBANs instead of regular accounts
+- High transaction volumes
+- Real-time requirements
+- Operating outside standard business hours
+
+The sales answer is "yes, we support that." The operational reality is often more complex.
+
+## What We'd Tell Our Past Selves
+
+If we were selecting banking partners today:
+
+**1. Talk to operations teams, not just partnerships teams**
+
+The people who handle failed payments know where the edge cases are. The people who sell partnerships know what's in the marketing deck.
+
+**2. Test exhaustively before signing contracts**
+
+Weekday morning, weekday evening, Saturday, Sunday, bank holiday. Test every scenario that matters to your business. Make this a contractual requirement.
+
+**3. Understand the difference between "we support X" and "X works 24/7/365 for your specific use case"**
+
+Generic support and production-ready support for your exact scenario are different things.
+
+**4. Build in exit clauses**
+
+Assume you'll discover limitations during implementation. Negotiate terms that let you exit if critical functionality doesn't work as specified.
+
+**5. Plan for multiple banking partners from day one**
+
+Don't assume one bank will meet all your needs. We ended up with two banks anyway—we just paid the cost of running them in parallel for longer than necessary.
+
+## The Broader Pattern
+
+European payment infrastructure is fragmented. PSD2 created regulatory harmonization, but implementation varies wildly. What works in one country doesn't automatically work in another. What works for one account type doesn't automatically work for another.
+
+The companies that succeed in Europe are the ones who:
+- Accept that they'll need deep technical diligence, not just commercial conversations
+- Test assumptions exhaustively before committing
+- Talk to operational experts, not just business development teams
+- Plan for complexity and variation, not harmonization
+
+The companies that struggle are the ones who assume "we support X" means the same thing everywhere.
+
+We learned this the expensive way. You don't have to.
+
+## Before You Sign Your Next Banking Contract
+
+Three questions:
+
+**Are you talking to the people who operate the systems, or the people who sell them?** If you haven't spoken to cash managers or operations teams, you're getting sales answers.
+
+**Have you tested at 9pm on a Saturday?** If your testing happened during business hours, you don't know if it actually works when your customers need it.
+
+**What happens when you discover limitations after signing?** If you don't have exit clauses or contractual protection, you're betting the bank knows their own infrastructure better than ours did.
+
+For more on building payment infrastructure that actually works at scale, see my post on [hard-won lessons from building payment systems](/posts/payment-systems-lessons/).
 
 *Building payment infrastructure in Europe? [Let's discuss](/about/).*
