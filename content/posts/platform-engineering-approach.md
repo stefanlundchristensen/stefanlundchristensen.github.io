@@ -1,7 +1,7 @@
 ---
 title: "From Twelve Options to One Command: How We Transformed Platform Engineering at Pleo"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["platform-engineering", "organizational-design", "infrastructure", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
 ---

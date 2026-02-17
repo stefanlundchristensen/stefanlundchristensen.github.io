@@ -1,7 +1,7 @@
 ---
 title: "Why 'Do You Support Faster Payments?' Is the Wrong Question"
 date: 2026-01-28
-draft: true
+draft: false
 tags: ["payments", "europe", "infrastructure", "fintech", "banking"]
 categories: ["FinTech", "Payments"]
 ---

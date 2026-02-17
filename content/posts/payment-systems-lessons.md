@@ -1,7 +1,7 @@
 ---
 title: "Six Hard-Won Lessons from Building Payment Systems at Scale"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 ---

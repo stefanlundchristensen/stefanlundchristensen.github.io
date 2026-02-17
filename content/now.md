@@ -1,7 +1,7 @@
 ---
 title: "Now"
 date: 2026-02-05
-draft: true
+draft: false
 ---
 
 *This is a [now page](https://nownownow.com/about). It's a snapshot of what I'm focused on right now.*
@@ -25,7 +25,7 @@ I'm writing about the things I've learned building and scaling at Pleo — organ
 Posts I'm most proud of right now:
 - [Six Hard-Won Lessons from Building Payment Systems at Scale](/posts/payment-systems-lessons/)
 - [Your Leadership Scorecard: What to Own When You Lead Beyond a Single Team](/posts/leadership-scorecard-beyond-single-team/)
-- [Navigating European Payment Rails](/posts/european-payment-rails/)
+- [Why "Do You Support Faster Payments?" Is the Wrong Question](/posts/european-payment-rails/)
 
 ## Exploring
 

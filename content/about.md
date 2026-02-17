@@ -35,4 +35,8 @@ I'm drawn to the intersection of a few shifts happening at the same time: how AI
 
 Outside of work, I'm usually at a show, listening to music, or just being a dad. Those things keep me grounded.
 
-If you're building in payments, scaling a platform org, or thinking about leadership at growth-stage — I'm always up for a conversation. Reach out on [LinkedIn](https://www.linkedin.com/in/stefanlchristensen/) or [email me](mailto:stefan_christensen@protonmail.com).
+---
+
+If you're building in payments, scaling a platform org, or thinking about leadership at growth-stage — I'm always up for a conversation.
+
+[Connect on LinkedIn](https://www.linkedin.com/in/stefanlchristensen/) · [Email me](mailto:stefan_christensen@protonmail.com) · [See what I'm working on now](/now/)
