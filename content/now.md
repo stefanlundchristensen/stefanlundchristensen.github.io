@@ -23,9 +23,8 @@ I'm SVP at [Pleo](https://www.pleo.io), leading platform, data, IT, and our AI i
 I'm writing about the things I've learned building and scaling at Pleo — organizational design, payments infrastructure, platform engineering, and leadership. You can find it all on the [blog](/posts/).
 
 Posts I'm most proud of right now:
-- [Six Hard-Won Lessons from Building Payment Systems at Scale](/posts/payment-systems-lessons/)
-- [Your Leadership Scorecard: What to Own When You Lead Beyond a Single Team](/posts/leadership-scorecard-beyond-single-team/)
-- [Why "Do You Support Faster Payments?" Is the Wrong Question](/posts/european-payment-rails/)
+- [Goal Setting Doesn't Need Another Framework](/posts/goal-setting/)
+- [Support Meetings, Not Status Meetings](/posts/support-meetings-over-status/)
 
 ## Exploring
 

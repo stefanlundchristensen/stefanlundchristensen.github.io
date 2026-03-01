@@ -14,11 +14,11 @@ Suddenly the guidance gets vague. "Build organizational capability." "Develop yo
 
 As I grew as a leader, I lacked a structured way to show how I improved things beyond "teams deliver and people are happy." Those matter. But when you're responsible for multiple teams, for an entire area of the business, there's supposed to be something more. Everyone says so. Nobody tells you what.
 
-## The Fixer
+## The Pattern
 
-At Pleo, I became known as "the fixer." When new people joined, others would say: "You should talk to Stefan. He's our fixer. We give him an area and he just takes it and makes it better, more mature, more standalone."
+Over the past several years, I've taken on the same challenge repeatedly: walk into a new area — different domain, different team, different problems — and make it work better. More mature. More standalone.
 
-I did this multiple times. Different areas, different problems, but the same pattern emerged. I developed a repeatable way of thinking about what maturity actually means when you're responsible for more than a single team.
+Different areas, different problems, but the same pattern emerged. I developed a repeatable way of thinking about what maturity actually means when you're responsible for more than a single team.
 
 These five dimensions became my scorecard. Not because I read them in a book, but because they were the areas where I could take responsibility and show concrete progress over time.
 
@@ -120,9 +120,9 @@ Your job isn't to be the only leader. Your job is to create conditions where eve
 
 This means you explicitly expect it. You recognize it when you see it. You make space for it. You don't hoard decision-making or become the bottleneck for everything important.
 
-When people introduced me as "the fixer," the real work was making sure I wasn't the only person who could fix things. We all had a part to play in leading.
+When people see you as the person who turns things around, the real work is making sure you're not the only person who can do it. Everyone has a part to play in leading.
 
-What changed: From "Stefan fixes things" to "we all lead." Leadership capacity scaled across the group - not just the leadership team, but ICs, managers, everyone.
+What changed: From one person driving improvement to the whole group leading. Leadership capacity scaled across the organization — not just the leadership team, but ICs, managers, everyone.
 
 Your scorecard question: Can you point to examples of leadership at every level? Or does everything important still run through you?
 
@@ -150,7 +150,7 @@ Your scorecard question: When people on your teams face hard challenges, are you
 
 ## Your Scorecard
 
-These five dimensions became my scorecard at Pleo.
+These five dimensions became my scorecard.
 
 Not because they're universal. Not because I found them in a leadership book. But because they were the areas where I could take full responsibility and demonstrate concrete progress over time.
 

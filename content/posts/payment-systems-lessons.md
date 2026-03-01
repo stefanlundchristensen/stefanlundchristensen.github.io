@@ -12,7 +12,7 @@ Then you hit production. I've seen teams spend weeks debugging why ledgers don't
 
 The problem? A payment partner was holding funds in an intermediate account that wasn't mapped upfront. The learning curve is expensive.
 
-These six habits come from scaling payments infrastructure at a high-growth FinTech from Series A to unicorn (100 to 850 people), plus setting up payment infrastructure across multiple European banks at McKinsey. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
+These six habits come from scaling payments infrastructure at a high-growth European FinTech through rapid expansion, plus setting up payment infrastructure across multiple European banks as a consultant. They're the patterns that separate teams who build resilient systems from those who constantly fight fires.
 
 Reconciliation at scale is such a universal challenge that [95% of finance leaders are now investing in AI to solve it](https://www.dialectica.io/community-hub/fintech-in-2025-ai-strategic-scaling-and-payment-dominance), according to industry research from Dialectica's 2025 FinTech report. The learning curve is expensive across the industry—these lessons reduce the tuition you'll pay.
 
@@ -58,7 +58,7 @@ The account manager genuinely believed it was simple. They just didn't understan
 
 **Why it matters:** "Full coverage" in a sales deck doesn't mean "works for your use case." You'll discover limitations after integration, when it's expensive to switch.
 
-**My learning:** I've seen partnerships where "pan-European coverage" in procurement turned out to mean limited capabilities. After integration and launch, teams discovered only D+1 settlement rails were supported—not the instant transfers the product depended on. (The fragmentation of [European payment rails](/posts/european-payment-rails/) makes this especially common--what "coverage" means varies dramatically by country and payment method.)
+**My learning:** I've seen partnerships where "pan-European coverage" in procurement turned out to mean limited capabilities. After integration and launch, teams discovered only D+1 settlement rails were supported—not the instant transfers the product depended on. The fragmentation of European payment rails makes this especially common — what "coverage" means varies dramatically by country and payment method.
 
 The result: built workarounds, then added a second provider. Double the integration cost, double the operational complexity.
 
@@ -72,7 +72,7 @@ The result: built workarounds, then added a second provider. Double the integrat
 
 The result can be significant customer impact—forced offboarding when systems lack the flexibility to onboard alternative providers quickly.
 
-A modular architecture with proper abstraction layers enables adding a second provider and migrating customers smoothly. Without it, you're at the mercy of every partner decision. This is the same lesson we learned in [platform engineering](/posts/platform-engineering-approach/)--building opinionated defaults with clean abstraction layers isn't just good engineering practice, it's an insurance policy.
+A modular architecture with proper abstraction layers enables adding a second provider and migrating customers smoothly. Without it, you're at the mercy of every partner decision. Building opinionated defaults with clean abstraction layers isn't just good engineering practice — it's an insurance policy.
 
 Industry best practice is multi-provider resilience. Smart fintech builders layer orchestration, compliance, and redundancy into their payment architecture from the start rather than depending on a single PSP. The upfront investment in abstraction layers pays off when—not if—providers change terms or capabilities.
 

@@ -20,9 +20,8 @@ Read more [about me](/about/), check out my [experience](/experience/), or see [
 
 I write about scaling organizations, payments infrastructure, and platform engineering. Here's what I'm thinking about:
 
-- [Why "Do You Support Faster Payments?" Is the Wrong Question](/posts/european-payment-rails/) — What we learned at Pleo about banking partnerships the hard way
-- [From Twelve Options to One Command](/posts/platform-engineering-approach/) — How we transformed platform engineering at Pleo
-- [Building Self-Sufficient Business Units](/posts/self-sufficient-teams/) — Scaling from 100 to 850 people without adding coordination layers
+- [Goal Setting Doesn't Need Another Framework](/posts/goal-setting/) — Why follow-through discipline beats perfect OKRs every time
+- [Support Meetings, Not Status Meetings](/posts/support-meetings-over-status/) — How naming changes culture
 
 See all posts on the [blog](/posts/).
 
