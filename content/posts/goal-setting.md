@@ -1,6 +1,6 @@
 ---
 title: "Goal Setting Doesn't Need Another Framework"
-date: 2026-02-03
+date: 2026-03-01
 draft: false
 tags: ["leadership", "goal-setting", "organizational-design"]
 categories: ["Leadership"]

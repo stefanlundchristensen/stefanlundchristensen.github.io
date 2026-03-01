@@ -15,73 +15,82 @@ Physics → Payments → Platform. Different domains, same muscle: building syst
 
 ## Pleo | Aug 2019 - Present
 
-*Joined at ~100 people to get hands-on after years in an advisory role. Drawn to Pleo for the growth, the learning, and a company without unnecessary layers of management.*
+*Pleo is a corporate spend management platform — Series C/D, ~850 employees, operating across 18+ European markets. Joined at ~100 people to get hands-on after years in an advisory role.*
 
 **Head of Platform, Senior Vice President** *(Sep 2024 - Present)*
 
-Same role, broader mandate. As the platform organization matured, took on increased responsibilities across the company and into our regulated entities.
+- Led ~70 people across platform engineering, data, AI infrastructure, and regulated entities
+- Achieved 70% reduction in card scheme costs through strategic renegotiation in a duopoly market
+- Drove company-wide AI agenda: internal productivity tooling and infrastructure for future product capabilities
+- Formal accountability to UK financial regulator (EMD license); member of executive committee and risk committee
+- Spun out mature teams while maintaining delivery — shrinking scope intentionally as proof the foundation works
 
-Orchestrated 70% reduction in card scheme costs through strategic renegotiation in a duopoly market. The kind of negotiation that requires craft at the highest level—when you have limited leverage, execution is everything.
+As the platform organization matured, the mandate expanded beyond engineering into cross-entity governance. Orchestrated the card scheme cost reduction through craft negotiation—when you have limited leverage in a duopoly, execution is everything. Drove the AI agenda both bottom-up (internal tooling that changed how teams work) and top-down (infrastructure for product capabilities that haven't shipped yet).
 
-Spun out teams as they matured, bringing the organization from 100+ to ~70 people while maintaining delivery. Drove company-wide AI agenda—both grassroots movement on internal tooling and infrastructure for future product capabilities.
+Taking on regulatory accountability changed how I think about scale. When you're answerable to a regulator, "move fast and break things" isn't a tradeoff—it's a failure mode. The goal isn't to own everything; it's to build organizations that work without you.
 
-Took on formal responsibilities in Pleo's UK financial services entity: accountable to regulators (EMD license), member of executive committee and risk committee. Increased role in board orchestration and cross-entity coordination.
-
-What operating at scale teaches you: Building is one thing. Spinning out is another. The goal isn't to own everything—it's to build organizations that work without you. And when you're accountable to regulators, there's no such thing as "move fast and break things."
+---
 
 **Head of Platform, Vice President** *(Aug 2023 - Sep 2024)*
 
-Expanded scope beyond payments. Clear leadership gaps across data and core engineering teams were slowing the company down. Partnered with CTO and VP Engineering to rebuild these organizations.
+- Led 100+ people across payments, data analytics, developer experience, core infrastructure, security, and TechOps
+- Part of the transformation that delivered 300% increase in engineering throughput with flat headcount
+- Hired VP Data; rebuilt underperforming organizations into predictable delivery engines
+- Built the platform systems that product teams depend on to ship fast
 
-Led 100+ people across payments, data analytics, developer experience, core product infrastructure, security, and TechOps. Took underperforming areas and turned them into predictable delivery engines. Hired new VP Data and established foundational capabilities. Built the platform systems that product teams depend on to ship fast.
+Expanded scope beyond payments when clear leadership gaps across data and core engineering were slowing the company down. Partnered with CTO and VP Engineering to rebuild these organizations from the ground up.
 
-Part of the transformation that delivered 300% increase in engineering throughput with the same headcount. The unlock wasn't adding people—it was removing friction.
+The unlock wasn't adding people—it was removing friction. Platform teams fail when they optimize for optionality. They succeed when they own products with clear users and outcomes. Spinning out a VP Data hire isn't losing scope—it's proof the foundation works.
 
-What I learned: Platform teams fail when they optimize for optionality. They succeed when they own products with clear users and outcomes. Spinning out leaders (like VP Data) isn't losing scope—it's proof the foundation works.
+---
 
 **Head of Payments, Vice President** *(Jun 2021 - Aug 2023)*
 
-Built Pleo's payments organization from the ground up. Led ~25 people across engineering, partnerships, compliance, and operations. Turned payment infrastructure into a competitive moat.
+- Built Pleo's payments organization from scratch — ~25 people across engineering, partnerships, compliance, and operations
+- Scaled from 5 to 15 markets in 11 months
+- Restructured partnerships with JPMorgan, BankingCircle, and Yapily to support multi-market expansion
+- Shifted engineering from end-to-end features to modular platform architecture
 
-Restructured partnerships with JPMorgan, BankingCircle, and Yapily to support multi-market expansion. Built the foundation that enabled Pleo to scale from 5 to 15 markets in 11 months. Navigated regulatory complexity across Europe—different rails, different rules, different customer expectations. Unlocked new product capabilities like invoice payments by building with compliance and regulatory constraints as architecture, not afterthoughts.
+Turned payment infrastructure into a competitive moat. Navigated regulatory complexity across Europe—different rails, different rules, different customer expectations. Unlocked new product capabilities like invoice payments by building with compliance and regulatory constraints as architecture, not afterthoughts.
 
-Shifted engineering from end-to-end features to modular platform architecture. Built the systems that let Pleo issue cards, move money in real-time, and handle settlement across fragmented European payment infrastructure. Speed went up. Stability went up. The team could ship payment capabilities without rebuilding the entire stack every time.
+Built the systems that let Pleo issue cards, move money in real-time, and handle settlement across fragmented European payment infrastructure. Speed went up. Stability went up. The team could ship payment capabilities without rebuilding the entire stack every time.
 
-What scaling payments taught me: You can't debug in production when you're moving real money. Modularity isn't elegance—it's survival. Compliance is infrastructure. And the companies that win in European FinTech are the ones who build for fragmentation, not against it.
+You can't debug in production when you're moving real money. Modularity isn't elegance—it's survival. The companies that win in European FinTech are the ones who build for fragmentation, not against it.
+
+---
 
 **Head of Business Development, Director** *(Jan 2021 - Jun 2021)*
 
-Pleo's payment infrastructure was scattered across teams. No one owned the full stack. I spent six months building the business case for why payments needed to be a standalone organization—and proving we could operate it.
+- Built the business case and initial operating model for Pleo's standalone payments organization
+- Key member of our Series C round
+- Three team members from this period later became directors
 
-Built the initial team and operating model. Defined what a payments org at scale would look like: engineering, partnerships, compliance, and operations under one roof. Hired the foundation of what became Pleo's corporate development team. Served as key member of our Series C round.
+Pleo's payment infrastructure was scattered across teams. No one owned the full stack. Spent six months proving payments needed to be its own organization—and that we could operate it. Six months later, we got the mandate.
 
-Three team members from this period later became directors. The goal was to make payments infrastructure a competitive moat, not a cost center. Six months later, we got the mandate.
+---
 
 **Entrepreneur in Residence** *(Aug 2019 - Jan 2021)*
 
-*Joined Pleo at ~100 people. Wanted to get my hands dirty after five years advising. First operator role.*
+- Migrated 20,000+ corporate customers to a new payment processor; unlocked 20 percentage point margin uplift
+- Led a cross-functional team of 15 through PSD2 compliance on a compressed timeline
+- Increased book size per representative by 2–3x by building systems that scaled without adding headcount
 
-Migrated 20,000+ corporate customers to a new payment processor—unlocked 20 percentage point margin uplift and laid the foundation for leading-edge customer experiences. Led a cross-functional team of 15 through PSD2 compliance on a compressed timeline. Regulatory deadlines don't care about your tech debt.
-
-Redesigned customer lifecycle operations to enable product-led growth before it was a thing. Increased book size per representative by 2-3x by building systems that scaled without adding headcount.
-
-What I learned: Moving money in production is different than modeling it in PowerPoint. Scaling means working across business functions—payments, product, ops, compliance—and building systems that work when you're not in the room.
+First operator role after five years advising. Moving money in production is different than modeling it in PowerPoint. Scaling means working across business functions—payments, product, ops, compliance—and building systems that work when you're not in the room.
 
 ---
 
 ## McKinsey & Company | Jan 2014 - Aug 2019
 
-*Five years advising European financial institutions. Learned how banking works, what regulators care about, and why most transformations fail. Also learned how to work a boardroom. Decided I wanted to build, not advise.*
+*Five years advising European financial institutions. Learned how banking works, what regulators care about, and why most transformations fail. Decided I wanted to build, not advise.*
 
-**Engagement Manager** *(final role)*
+**Engagement Manager** *(~2017 - Aug 2019)*
 
-Led the founding of a pan-European payment infrastructure company—board composition, regulator strategy across 5+ jurisdictions, vendor selection, executive hiring. Presented directly to bank CEOs and supervisory boards across multiple countries. The kind of complexity where one wrong regulatory decision kills the entire business model.
+- Led the founding of a pan-European payment infrastructure company across 5+ jurisdictions — board composition, regulator strategy, vendor selection, executive hiring
+- Built AML transformation programs and payment product roadmaps for Tier 1 banks across the Nordics and Western Europe
+- 3 of 7 payment concepts ideated for a Tier 1 bank became real products in the following years
+- Presented directly to bank CEOs and supervisory boards across multiple countries
 
-Built AML transformation programs, digital strategies, and payment product roadmaps for Tier 1 banks across the Nordics and Western Europe. Delivered outcomes in weeks that became repeatable methodologies across engagements.
-
-Learned to see payment rails not as constraints but as building blocks. SEPA, card schemes, real-time settlement—the infrastructure already exists. The innovation is in how you translate it. Crafted and ideated innovative payment solutions for a Tier 1 bank. Three out of seven concepts became real products over the following years.
-
-What I learned: European payment rails are fragmented for reasons. Regulatory compliance is architecture, not process. Executive presence comes from knowing the details cold, not hiding behind slides. And advisory work teaches you what's possible—operating teaches you what actually works.
+European payment rails are fragmented for reasons. Regulatory compliance is architecture, not process. Executive presence comes from knowing the details cold, not hiding behind slides. Advisory work teaches you what's possible—operating teaches you what actually works.
 
 ---
 

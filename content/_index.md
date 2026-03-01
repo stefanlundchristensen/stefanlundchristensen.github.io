@@ -16,12 +16,26 @@ Read more [about me](/about/), check out my [experience](/experience/), or see [
 
 ---
 
+## What colleagues say
+
+> "Stefan is one of the strongest colleagues I have ever worked with. He navigates gnarly migrations, is an excellent org designer, and is a leader everyone wants to follow — because he genuinely cares for every individual on his team. Adding Stefan to any company will make it better."
+>
+> — VP Engineering, Pleo
+
+> "What stands out about Stefan is his ability to keep the broader picture in view while the rest of us are deep in the weeds. His calm and structured guidance helped us ask better questions and move forward with confidence. A technology leader who leads by example and helps teams get excited about finding better ways to work."
+>
+> — Senior Software Engineer, Pleo
+
+---
+
 ## Recent Writing
 
-I write about scaling organizations, payments infrastructure, and platform engineering. Here's what I'm thinking about:
+I write about the things most engineering leaders avoid thinking about: payment infrastructure complexity, how platform teams actually fail, and what it takes to build organizations that work without you in the room.
 
 - [Goal Setting Doesn't Need Another Framework](/posts/goal-setting/) — Why follow-through discipline beats perfect OKRs every time
 - [Support Meetings, Not Status Meetings](/posts/support-meetings-over-status/) — How naming changes culture
+- [Your Leadership Scorecard: Beyond a Single Team](/posts/leadership-scorecard-beyond-single-team/) — Five dimensions of leadership maturity
+- [Six Hard-Won Lessons from Building Payment Systems](/posts/payment-systems-lessons/) — What actually matters when you're moving real money
 
 See all posts on the [blog](/posts/).
 

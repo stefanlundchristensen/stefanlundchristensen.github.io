@@ -18,6 +18,7 @@ enableEmoji = true
 [taxonomies]
   tag = "tags"
   category = "categories"
+  series = "series"
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -56,9 +57,7 @@ enableEmoji = true
     copyright = true
     author = true
     topText = []
-    bottomText = [
-      "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
-    ]
+    bottomText = []
 
   [params.favicon.color]
     mask = "#1b1c1d"
