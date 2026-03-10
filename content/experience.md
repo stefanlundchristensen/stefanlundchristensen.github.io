@@ -15,7 +15,7 @@ Physics → Payments → Platform. Different domains, same muscle: building syst
 
 ## Pleo | Aug 2019 - Present
 
-*Pleo is a corporate spend management platform — Series C/D, ~850 employees, operating across 18+ European markets. Joined at ~100 people to get hands-on after years in an advisory role.*
+*Pleo is a corporate spend management platform — Series C, ~850 employees, operating across 15+ European markets. Joined at ~100 people to get hands-on after years in an advisory role. Scal;ed though hyper growth*
 
 **Head of Platform, Senior Vice President** *(Sep 2024 - Present)*
 
@@ -23,9 +23,9 @@ Physics → Payments → Platform. Different domains, same muscle: building syst
 - Achieved 70% reduction in card scheme costs through strategic renegotiation in a duopoly market
 - Drove company-wide AI agenda: internal productivity tooling and infrastructure for future product capabilities
 - Formal accountability to UK financial regulator (EMD license); member of executive committee and risk committee
-- Spun out mature teams while maintaining delivery — shrinking scope intentionally as proof the foundation works
+- Spun out mature groups teams while maintaining delivery, shrinking scope intentionally as proof the foundation works
 
-As the platform organization matured, the mandate expanded beyond engineering into cross-entity governance. Orchestrated the card scheme cost reduction through craft negotiation—when you have limited leverage in a duopoly, execution is everything. Drove the AI agenda both bottom-up (internal tooling that changed how teams work) and top-down (infrastructure for product capabilities that haven't shipped yet).
+As the platform organization matured, the mandate expanded beyond engineering into cross-entity governance. Orchestrated the card scheme cost reduction through craft negotiation with limited leverage in a duopoly, execution is everything. Drove the AI agenda both bottom-up (internal tooling that changed how teams work) and top-down (infrastructure for product capabilities that haven't shipped yet).
 
 Taking on regulatory accountability changed how I think about scale. When you're answerable to a regulator, "move fast and break things" isn't a tradeoff—it's a failure mode. The goal isn't to own everything; it's to build organizations that work without you.
 
@@ -37,7 +37,9 @@ Taking on regulatory accountability changed how I think about scale. When you're
 - Part of the transformation that delivered 300% increase in engineering throughput with flat headcount
 - Hired VP Data; rebuilt underperforming organizations into predictable delivery engines
 - Built the platform systems that product teams depend on to ship fast
-
+- Ongoing engagement and support "outside of role" on orgnizational design, operating models etc
+- Delivered 3x thoughput increase in the engineering function
+ 
 Expanded scope beyond payments when clear leadership gaps across data and core engineering were slowing the company down. Partnered with CTO and VP Engineering to rebuild these organizations from the ground up.
 
 The unlock wasn't adding people—it was removing friction. Platform teams fail when they optimize for optionality. They succeed when they own products with clear users and outcomes. Spinning out a VP Data hire isn't losing scope—it's proof the foundation works.
@@ -46,7 +48,7 @@ The unlock wasn't adding people—it was removing friction. Platform teams fail 
 
 **Head of Payments, Vice President** *(Jun 2021 - Aug 2023)*
 
-- Built Pleo's payments organization from scratch — ~25 people across engineering, partnerships, compliance, and operations
+- Built Pleo's payments organization from scratch with ~25 people across engineering, partnerships, compliance, and operations
 - Scaled from 5 to 15 markets in 11 months
 - Restructured partnerships with JPMorgan, BankingCircle, and Yapily to support multi-market expansion
 - Shifted engineering from end-to-end features to modular platform architecture
