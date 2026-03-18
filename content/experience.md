@@ -92,7 +92,6 @@ First operator role after five years advising. Moving money in production is dif
 - 3 of 7 payment concepts ideated for a Tier 1 bank became real products in the following years
 - Presented directly to bank CEOs and supervisory boards across multiple countries
 
-European payment rails are fragmented for reasons. Regulatory compliance is architecture, not process. Executive presence comes from knowing the details cold, not hiding behind slides. Advisory work teaches you what's possible—operating teaches you what actually works.
 
 ---
 
