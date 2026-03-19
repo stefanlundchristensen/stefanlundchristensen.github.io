@@ -1,5 +1,5 @@
 ---
-title: "From Twelve Options to One Command: How We Transformed Platform Engineering at Pleo"
+title: "From Twelve Options to One Command: How We Transformed Platform Engineering"
 date: 2026-02-03
 draft: true
 tags: ["platform-engineering", "organizational-design", "infrastructure", "leadership", "restructuring"]
@@ -10,7 +10,7 @@ Your platform team offers engineers 12 different ways to deploy a service. Each 
 
 Then you watch an engineer spend three days choosing which option to use.
 
-This was us at Pleo. Our platform teams wrote thousands of lines of documentation. Engineers read almost none of it. Everyone felt like they were working hard. Throughput barely moved.
+This was us. Our platform teams wrote thousands of lines of documentation. Engineers read almost none of it. Everyone felt like they were working hard. Throughput barely moved.
 
 We tried renaming teams. "Developer Enablement" became "Platform Products."
 
@@ -28,15 +28,13 @@ Platform teams believed the best way to enable others was to offer maximum flexi
 
 **Engineers faced decision paralysis.** Three days choosing a deployment option. Hours researching which logging tool to use. Sprint planning sessions debating infrastructure choices that had nothing to do with customer problems.
 
-**Platform teams burned out writing docs instead of code.** Many joined Pleo to build infrastructure, not maintain wikis. The work felt abstract and endless. One engineer told me: "I spend 80% of my time writing guides that 20% of engineers read."
+**Platform teams burned out writing docs instead of code.** Many joined to build infrastructure, not maintain wikis. The work felt abstract and endless. One engineer told me: "I spend 80% of my time writing guides that 20% of engineers read."
 
-**Nobody could measure success.** If your job is to "enable," how do you know you've succeeded? We measured workshops run, documentation pages created, support tickets answered. Activity metrics. None of them told us whether engineers were actually moving faster.
+**Nobody could measure success.** If your job is to "enable," how do you know you've succeeded? We measured workshops run, documentation pages created, support tickets answered. Activity metrics. None of them told us whether engineers were moving faster.
 
-**Platform teams were always one step behind.** When your mandate is enablement, there's no clear end state. Teams don't know what they need until they try to do the work. So platform teams were reactive—responding to requests instead of solving problems proactively.
+**Platform teams were always one step behind.** When your mandate is enablement, there's no clear end state. Teams don't know what they need until they try to do the work. So platform teams were reactive — responding to requests instead of solving problems proactively.
 
-The fundamental mistake: treating the platform as a service that should minimize constraints.
-
-It should maximize value instead.
+Treating the platform as a service designed to minimize constraints was the mistake. It should maximize value instead.
 
 ## The Reframe: Products, Not Processes
 
@@ -51,17 +49,13 @@ This wasn't a reorganization. Nobody changed reporting lines. The teams themselv
 **Before:** "How do we help people build?"
 **After:** "What product do we own, and does it actually help people build?"
 
-That sounds like a subtle distinction. It changed everything.
+The distinction sounds subtle. The shift was total.
 
 ## What Actually Changed
 
 ### The Teams
 
-The org chart looked almost identical before and after:
-
-**Before:** WebCore, Mobile Infrastructure, DevEx, Infrastructure—all working on "developer enablement."
-
-**After:** The same teams, but each now owned a specific product. WebCore owned the frontend platform. Mobile Core owned the mobile platform. DevX owned developer experience tooling. Backend Core owned backend infrastructure.
+The org chart looked almost identical before and after. The same teams — WebCore, Mobile Infrastructure, DevEx, Backend Infrastructure — had all been working on "developer enablement." After, each owned a specific product. WebCore owned the frontend platform. Mobile Core owned the mobile platform. DevX owned developer experience tooling. Backend Core owned backend infrastructure.
 
 Same people. Different mandate.
 
@@ -77,11 +71,9 @@ This was hard to hire for. The role doesn't have a standard career ladder. We ha
 
 The biggest practical change was moving from documentation to implementation.
 
-**Before:** "Here are 12 ways to deploy a service, each with a guide."
+Before, we offered twelve ways to deploy a service, each with its own guide. After, running our deploy command gave you automated build, canary deployment with automatic rollback, monitoring dashboards, error tracking, performance metrics, and security scanning — all configured with sensible defaults.
 
-**After:** "Run `pleo deploy`. You get automated build, canary deployment with automatic rollback, monitoring dashboards, error tracking, performance metrics, and security scanning. All configured with sensible defaults."
-
-We called these "golden paths." Not documentation describing best practices—actual tools that implemented best practices as defaults.
+We called these "golden paths." Not documentation describing best practices — actual tools that implemented best practices as defaults.
 
 Ninety percent of teams never customized anything. They got production-ready deployment without thinking about it. The 10% who needed something different could customize, but deviating was a deliberate choice, not the default.
 
@@ -97,11 +89,11 @@ Six principles guided what we built:
 
 **Outcome over output.** We stopped tracking how many features platform teams shipped. We started tracking whether product teams moved faster. Did deployment frequency increase? Did cycle time decrease? Did fewer things break?
 
-**Sensible defaults over maximum optionality.** If there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation—it's the fastest, most reliable way to get to production. Constraints create freedom.
+**Sensible defaults over maximum optionality.** If there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation — it's the fastest, most reliable way to get to production. Constraints create freedom.
 
 **API-first everything.** Internal tools designed for programmatic access first. This removes bottlenecks where teams wait for manual steps and lets other teams build on top of platform capabilities.
 
-**Quality is the product.** Tests, observability, monitoring, alerting—these aren't afterthoughts bolted onto the platform. They're part of what the platform provides by default. When you run `pleo deploy`, you don't add monitoring separately. It's already there.
+**Quality is the product.** Tests, observability, monitoring, alerting — these aren't afterthoughts bolted onto the platform. They're part of what the platform provides by default. You don't add monitoring separately. It's already there.
 
 **Security and compliance built in.** Regulatory requirements aren't constraints imposed on the platform. They're core capabilities the platform provides. Teams build fast *and* safely because the golden path handles compliance requirements they'd otherwise need to figure out themselves.
 
@@ -111,9 +103,9 @@ The actual shift happened in four phases over six months. It wasn't smooth.
 
 ### Months 1-2: Reframing
 
-We ran sessions with each platform team explaining what product thinking meant for their work. Not "your job is now different"—but "our platform is becoming a product, and that changes how we make decisions."
+We ran sessions with each platform team explaining what product thinking meant for their work. Not "your job is now different" — but "our platform is becoming a product, and that changes how we make decisions."
 
-Some teams got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work—but that wasn't obvious from the inside.
+Some teams got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work — but that wasn't obvious from the inside.
 
 ### Months 2-3: Getting Specific
 
@@ -135,7 +127,7 @@ Based on research, teams created roadmaps focused on their specific product. Thi
 
 Liberating for some teams. Unsettling for others. Teams used to saying "yes" to every request now had to make hard prioritization decisions. A platform engineer came to me and said: "I got three requests this week that are all reasonable. But they don't fit our product roadmap. Am I allowed to say no?"
 
-Yes. That's the point.
+That's the job.
 
 ## What Worked
 
@@ -149,53 +141,36 @@ Yes. That's the point.
 
 ## What Didn't Work
 
-**Traditional product management techniques.** A/B testing, statistical significance, conversion funnels—these are designed for millions of users. We had hundreds of engineers. We needed qualitative research and direct observation, not quantitative experimentation.
+**Traditional product management techniques.** A/B testing, statistical significance, conversion funnels — these are designed for millions of users. We had hundreds of engineers. We needed qualitative research and direct observation, not quantitative experimentation.
 
 **Enablement mentality creeping back.** It's easy to slip. A team gets a flood of requests and starts saying yes to everything again. Compliance through documentation is weak. Compliance through tooling that makes the right thing the easy thing is strong. We had to constantly reinforce the product mindset.
 
 **Tracking OKR completion percentages.** Measuring "how much of the OKR did we complete?" led to arguments about estimation. We shifted to "how confident are we that we'll complete this by end of quarter?" That changed the conversation from defense to problem-solving.
 
-**Feature creep.** Once you're shipping a product engineers love, everyone wants features. Saying no to good requests is harder than saying no to bad ones. Every feature adds complexity and maintenance burden. We under-estimated how much discipline this required.
+**Feature creep.** Once you're shipping a product engineers love, everyone wants features. Saying no to good requests is harder than saying no to bad ones. Every feature adds complexity and maintenance burden. We underestimated how much discipline this required.
 
 ## Six Months Later
 
-The shift was visible across the organization:
+The shift was visible across the organization. Platform teams were building products, not documentation — deployment frequency was up 40% and job satisfaction went with it, because engineers were writing code instead of wikis. Product teams felt it differently: feature delivery time dropped from over three weeks to under two, and platform feature adoption jumped from 30% to 65%+ within 30 days of launch. Less time debating infrastructure, more time on customer problems.
 
-**For platform teams:**
-- Deployment frequency up 40%
-- Building products, not documentation
-- Higher job satisfaction—engineers were writing code, not wikis
-
-**For product teams:**
-- Feature delivery time dropped from 3+ weeks to under 2 weeks
-- Platform feature adoption jumped from 30% to 65%+ within 30 days of launch
-- Less time debating infrastructure, more time solving customer problems
-
-**For the organization:**
-- Feature velocity stayed high even as headcount grew
-- Platform investment had clear, measurable ROI
-- Engineering culture shifted toward "sensible defaults" thinking
+For the organization as a whole, feature velocity stayed high even as headcount grew. Platform investment had clear, measurable ROI. The engineering culture shifted toward sensible-defaults thinking — teams started asking "is there a golden path for this?" rather than starting from scratch.
 
 The reframing didn't require new hiring, new budgets, or major structural changes. It required a shift in how we thought about the work and who we hired to lead it.
 
 ## When This Doesn't Work
 
-This approach assumes relatively homogeneous use cases. If your teams have genuinely diverse requirements—a machine learning team, a mobile team, and a hardware team all on different stacks—sensible defaults might not exist across all of them.
+This approach assumes relatively homogeneous use cases. If your teams have diverse requirements — a machine learning team, a mobile team, and a hardware team all on different stacks — sensible defaults might not exist across all of them.
 
 It also assumes you're past pure experimentation phase. If you're still figuring out your architecture, premature standardization will slow you down.
 
 The tradeoff is real: optionality increases flexibility but decreases velocity. Choose deliberately.
 
-## Before You Transform Your Platform Team
+## The Test
 
-**Are your platform teams measuring activity or impact?** If they count docs written or workshops run, they're in enablement mode. If they measure adoption rates and engineer velocity, they're in product mode.
+Are your platform teams measuring activity or impact? If they count docs written or workshops run, they're in enablement mode. If they measure adoption rates and engineer velocity, they're in product mode.
 
-**Can engineers use your platform without reading documentation?** If the answer is no, you're optimizing for optionality over usability. Good platform products make the right thing the easy thing.
+Can engineers use your platform without reading documentation? If the answer is no, you're optimizing for optionality over usability. Good platform products make the right thing the easy thing.
 
-**Do your platform teams say no?** If every request becomes a commitment, you're building a service desk, not a product organization. Product teams need the authority to focus.
+Do your platform teams say no? If every request becomes a commitment, you're building a service desk, not a product organization.
 
-The shift from enablement to product doesn't happen overnight. But when it clicks—when engineers stop thinking about the platform and start thinking about what they're building—you'll know it worked.
-
----
-
-*Interested in discussing platform team transformations? [Let's connect](/about/).*
+When engineers stop thinking about the platform and start thinking about what they're building — you'll know it worked.

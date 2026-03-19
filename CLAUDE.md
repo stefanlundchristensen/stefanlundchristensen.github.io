@@ -137,3 +137,50 @@ Based on existing content, the site emphasizes:
 - Organizational scaling and leadership
 - Builder/operator identity with consultant and quantum physicist background
 - Authentic voice, avoiding excessive promotion
+
+## Writing Style for Blog Posts
+
+### Benchmark
+`content/posts/approximations-underrated-in-business.md` is the quality benchmark. When in doubt, check against it.
+
+### Format
+- **Essay, not listicle.** No bullet lists in body text — convert all lists to prose.
+- No structured sections with bold lead-ins acting as list substitutes (e.g., **Lesson 1:** ...). Exception: named dimensions or principles where each gets a full `##` heading with a substantial prose section.
+- Short technical lists (specific questions to ask, commands, step sequences) are acceptable. Lessons, takeaways, and arguments are not.
+
+### Content rules
+- **No "Further Reading" sections** — no external link citations at the end of posts.
+- **No LinkedIn/contact CTAs** — no `*Want to discuss X? [Get in touch](/about/).*`
+- **No inline cross-links** to other blog posts.
+- **No company names** — write as first-person experience: "we", "I had a product manager". Not even "a high-growth European FinTech".
+- Named frameworks (Conway's Law, Team Topologies) may be referenced inline — no citation blocks or attributed quotes.
+
+### Voice and structure
+- First-person personal essay. Real stories, real failures, real examples.
+- One unifying frame per post. The through-line should be stateable in a sentence.
+- **Opening:** problem or paradox — not context-setting or definition.
+- **Closing:** identity, not summary. End on what kind of person or leader does this thing well.
+
+### AI signal removal (required before publishing)
+
+**Punctuation:**
+- Em dash count: target 1–3 per post. Double em dash parentheticals `—X—` are the strongest signal — use commas or restructure.
+
+**Sentence patterns to eliminate:**
+- Two-sentence contrast: `"It's not X. It's Y."` — AI's default contrast move; rephrase or merge.
+- Triple parallels: three sentences in a row with identical structure — thin to two.
+- Punchy short closers used as a default: `"That's it."` / `"Yes. That's the point."` / `"Because it is."` — cut or vary.
+- Section-label sentences: `"What changed:"` / `"The lesson:"` / `"The test:"` as labels before a sentence — rewrite as prose.
+
+**Phrases to avoid:**
+- `optimize for` — AI business speak
+- `surface` as a verb (surface problems, surface issues) → `raise` / `find`
+- `show up` figuratively → `be there` / `be present`
+- `turn out to be` / `comes down to one thing` → rephrase
+- `create conditions where` / `make space for` → rephrase
+- `reframing` / `reframe` as a business noun/gerund → `the shift` / `looking for the right frame`
+- `structural incentive problem` / `trust foundation` and similar AI compound nouns → simplify
+- `Think about that for a moment` — AI pause device, cut entirely
+
+**Qualifiers to watch (flag if used 3+ times per post):**
+- `actually`, `genuinely`, `deliberately`, `explicitly`, `remarkably`, `fundamentally`
