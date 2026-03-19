@@ -26,7 +26,7 @@ Platform teams need the opposite orientation. They should rarely be thinking abo
 
 ## The Two-Quarter Rule
 
-Here's the test I've come to use: if a platform team's roadmap is primarily driven by requests from stream-aligned teams, the platform is running at least two quarters behind.
+If a platform team's roadmap is primarily driven by requests from stream-aligned teams, the platform is running at least two quarters behind.
 
 That's not a sustainable position. It means the platform is reacting rather than anticipating. Every time a product team needs something, they have to wait for the platform team to build it — or worse, they build it themselves because they can't wait.
 
@@ -34,7 +34,7 @@ Platform teams should be building what stream-aligned teams will need, not what 
 
 This is almost never practiced consistently. Platform teams are pulled into the present by requests that feel urgent and reasonable. Saying no is uncomfortable. Being helpful is a natural instinct.
 
-But saying no to feature requests is the job. The platform team that says yes to everything never builds the things that are actually hard and actually important.
+But saying no to feature requests is the job. The platform team that says yes to everything never builds the things that are hard and important.
 
 ## The Internal Customer Problem
 
@@ -54,21 +54,19 @@ A stream-aligned team for a payments product asks: "What do our customers need t
 
 A platform team for payments infrastructure asks: "What capabilities will every payment-related team need over the next year, and how do we build them once?"
 
-A stream-aligned team's success metric is customer adoption and retention. A platform team's success metric is whether the teams depending on them ship faster and break less.
-
-A stream-aligned team prioritizes based on customer pain and business impact. A platform team prioritizes based on what creates the most leverage across the most teams — even when no individual team is asking for it yet.
+The success metrics and priorities follow from those questions. Stream-aligned teams measure customer adoption and retention. Platform teams measure whether dependent teams ship faster and break less — impact that's real but diffuse, often invisible at the individual team level. Platform teams that let current requests drive their roadmap are doing stream-aligned work under a different name.
 
 The mindsets are different. Not better or worse. You can't expect someone whose instinct is "what does the customer need now?" to suddenly think "what will every team need in six months?" It requires a different orientation, and often different people.
 
 ## The Accountability Gap
 
-Here's the part the Team Topologies literature doesn't fully address: platform teams are often difficult to hold accountable.
+What the Team Topologies literature doesn't fully address: platform teams are often difficult to hold accountable.
 
 Stream-aligned teams have clear success metrics. Did customer adoption go up? Did revenue grow? Did churn decrease? You can see it.
 
 Platform teams have indirect impact. They make other teams faster. They reduce incidents. They enable things that would have been hard. That impact is real, but it's diffuse. When a product team ships something quickly, they take the credit. The platform team's contribution is invisible.
 
-This creates a structural problem. Platform teams that drift toward visible work tend to drift toward features: things they can point to, things that generate gratitude. The teams doing the right work — deep infrastructure investment, reliability work, capability building — often have less to show in a quarterly review.
+This creates a structural problem. Platform teams that drift toward visible work tend to drift toward features: things they can point to, things that generate gratitude. The teams doing the right work (deep infrastructure investment, reliability work, capability building) often have less to show in a quarterly review.
 
 Good leaders of platform teams understand this and fight against it explicitly. They measure the right things even when those metrics are harder to explain. They resist the pull toward visible short-term deliverables.
 
@@ -78,6 +76,6 @@ You don't have a platform team.
 
 You have a very expensive shared service.
 
-The fix isn't structural — it's philosophical. Platform teams need to understand that their job is to anticipate, not to respond. That saying no is not failing at their job. That being two quarters ahead is the goal, not a nice-to-have.
+The fix isn't structural: it's philosophical. Platform teams need to understand that their job is to anticipate, not to respond. That saying no is not failing at their job. That being two quarters ahead is the goal, not a nice-to-have.
 
 That's a different conversation than most platform teams are having. But it's the right one.

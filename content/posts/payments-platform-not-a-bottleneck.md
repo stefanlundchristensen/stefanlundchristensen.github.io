@@ -66,7 +66,7 @@ Twelve months after committing to the model, the teams were operating differentl
 
 Product teams knew where to go. They weren't routing requests around hoping to find the right person. The interfaces were clear enough that they could build against them without pulling the platform team into every conversation.
 
-The payments platform teams had roadmaps that were actually theirs. They were investing in reliability, scalability, compliance infrastructure: things that had always been important but kept getting deprioritized by more urgent requests.
+The payments platform teams had roadmaps that were theirs. They were investing in reliability, scalability, compliance infrastructure: things that had always been important but kept getting deprioritized by more urgent requests.
 
 And crucially, when something broke or needed to change in the payment layer, there was a team that unambiguously owned it. Ownership was real.
 

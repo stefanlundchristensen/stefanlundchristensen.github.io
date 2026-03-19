@@ -22,13 +22,13 @@ Saturday? Nothing.
 
 Bank holiday? Nothing.
 
-What should have been 24/7/365 instant payments worked weekdays during business hours. That's it.
+What should have been 24/7/365 instant payments worked weekdays during business hours, and nothing outside them.
 
 ## The Bank Didn't Know Either
 
 When we raised this with the bank, they apologized. They didn't fully understand their own limitations.
 
-The bank's payments team — the people we asked during diligence — didn't know their Faster Payments implementation had time restrictions. If the bank doesn't know, what chance do you have of asking the right question?
+The bank's payments team, the people we asked during diligence, didn't know their Faster Payments implementation had time restrictions. If the bank doesn't know, what chance do you have of asking the right question?
 
 ## We Were Locked In
 
@@ -48,7 +48,7 @@ The lesson wasn't about finding the perfect phrasing. It was about talking to th
 
 The bank's payments team gave us answers they believed were true. But they didn't understand the operational details of how Faster Payments worked across different account types and time windows. The people who know those details are cash managers, operations teams, the people who investigate failed payments every day.
 
-We started asking to speak with operational experts, not just partnerships teams. We started testing exhaustively during implementation — mornings, evenings, weekends, bank holidays — before we were contractually locked in.
+We started asking to speak with operational experts, not just partnerships teams. We started testing exhaustively during implementation: mornings, evenings, weekends, bank holidays, before any contracts were signed.
 
 ## The Questions That Would Have Helped
 
@@ -62,19 +62,17 @@ The most important question of all: can we test this in UAT during off-hours and
 
 The same gap shows up with SEPA Instant, with virtual IBANs across different European markets, with real-time payment rails that behave differently on weekends. Across Europe, the distance between what banks say they support and what works in production is larger than builders expect — especially coming from the US market, where banking infrastructure tends to be more standardized.
 
-The pattern is consistent: generic support and production-ready support for your exact scenario are different things. It's especially pronounced when you're doing something slightly non-standard — virtual IBANs, high transaction volumes, real-time requirements, operating outside standard business hours. The sales answer is "yes, we support that." The operational reality requires a different conversation.
+The pattern is consistent: generic support and production-ready support for your exact scenario are different things. It's especially pronounced when you're doing something slightly non-standard: virtual IBANs, high transaction volumes, real-time requirements, operating outside standard business hours. The sales answer is "yes, we support that." The operational reality requires a different conversation.
 
 ## What We'd Tell Our Past Selves
 
 The practical changes came down to a few things we'd do differently from day one.
 
-Talk to operations teams, not just partnerships teams. The people who handle failed payments know where the edge cases live. The people who sell partnerships know what's in the marketing deck.
+The most important shift was in who we talked to. Operations teams, the people who investigate failed payments every day, know where the edge cases live. Partnerships teams know what's in the marketing deck. They're not the same conversation, and we'd learned to ask for the former.
 
-Test exhaustively before signing contracts. Weekday morning, weekday evening, Saturday, Sunday, bank holiday. Make this a contractual requirement, not an afterthought.
+We'd also treat testing as a contract requirement, not an afterthought. Exhaustive testing across hours and days: mornings, evenings, weekends, bank holidays, before commitments are made. The tests reveal what the conversations don't.
 
-Build in exit clauses. Assume you'll discover limitations during implementation. Negotiate terms that let you exit if critical functionality doesn't work as specified. We couldn't, and we paid for it.
-
-Plan for multiple banking partners from day one. We ended up with two banks anyway — we just paid the cost of running them in parallel for longer than necessary. The assumption that one bank will meet all your needs is optimistic in a fragmented payments market.
+On contracting: we couldn't exit our first banking relationship quickly enough to avoid the cost of running two in parallel. Negotiate exit clauses at the start, when you have leverage. Assume limitations will surface during implementation. Assume you'll eventually need a second partner anyway (we did) and plan for it rather than discovering it under pressure.
 
 ## The Broader Pattern
 

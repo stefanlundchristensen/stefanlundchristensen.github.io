@@ -1,5 +1,5 @@
 ---
-title: "What Setting a High Bar Actually Requires"
+title: "What Setting a High Bar Requires"
 date: 2026-02-26
 draft: true
 tags: ["leadership", "management", "performance", "team-health"]
@@ -8,7 +8,7 @@ categories: ["Leadership"]
 
 High standards without support isn't leadership. It's just pressure.
 
-Most leaders who think they hold a high bar actually hold half of one. They're clear on expectations. They're less clear on what it means to actually help someone meet them.
+Most leaders who think they hold a high bar hold half of one. They're clear on expectations. They're less clear on what it means to help someone meet them.
 
 ## The Bar Is a Contract
 
@@ -20,7 +20,7 @@ I've had and experienced both failure modes across many companies, including dur
 
 Neither works. Both are half a deal.
 
-## What "Being There" Actually Means
+## What "Being There" Means
 
 Most leaders think being there means checking in. Asking how it's going. Saying "let me know if you need anything."
 
@@ -32,23 +32,23 @@ The problem was that documents have to work without your voice. People read befo
 
 I tried explaining this. It didn't land. The PM was polite about it but didn't really believe the investment was worth it.
 
-So we sat down together. Several hours in one week, working through an actual document, line by line. Not pair programming. Pair writing. Think of a parent sitting with a kid at the kitchen table, working through an essay together. Not writing it for them. Not reading it and handing back comments. Actually sitting there, working through the argument, finding where it breaks down, figuring out how to fix it. Unglamorous. Slow. Necessary.
+So we sat down together. Several hours in one week, working through an actual document, line by line. Not pair programming. Pair writing. Think of a parent sitting with a kid at the kitchen table, working through an essay together. Not writing it for them. Not reading it and handing back comments. Sitting there, working through the argument, finding where it breaks down, figuring out how to fix it. Unglamorous. Slow. Necessary.
 
 ## The Moment the Bar Becomes Real
 
 You can't convince someone a standard matters by arguing for it. At some point they have to see it.
 
-The meeting that followed was different. Instead of status updates, there were real discussions. Challenges surfaced. Decisions got made. Recognition happened naturally because the situation was clear. What had been a hard, often unfocused meeting, the kind that drains everyone, became the kind of meeting that actually moves things forward. The quality of the written prep is a big part of what determines which one you get.
+The meeting that followed was different. Instead of status updates, there were real discussions. Challenges came into the open. Decisions got made. Recognition happened naturally because the situation was clear. What had been a hard, often unfocused meeting, the kind that drains everyone, became the kind of meeting that moves things forward. The quality of the written prep is a big part of what determines which one you get.
 
-The second-order effects were what really landed. People who hadn't been in the room came afterward asking questions, not to complain, but because the document had surfaced things clearly enough that they could engage with them. Work got unblocked. Things that had been murky became clear. The clarity propagated.
+The second-order effects were what really landed. People who hadn't been in the room came afterward asking questions, not to complain, but because the document had made things clear enough that they could engage with them. Work got unblocked. Things that had been murky became clear. The clarity propagated.
 
 That's when the PM understood why the bar was where it was. Not because I'd explained it better, but because they'd experienced it.
 
 ## The Calibration Problem
 
-Here's the honest part: you can't offer that level of support to everyone at the same time.
+You can't offer that level of support to everyone at the same time.
 
-You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar isn't uniform across everyone. It's calibrated to how much you can actually show up for each person right now.
+You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar isn't uniform across everyone. It's calibrated to how much you can be there for each person right now.
 
 That's not lowering standards. It's being honest about the deal you're offering.
 

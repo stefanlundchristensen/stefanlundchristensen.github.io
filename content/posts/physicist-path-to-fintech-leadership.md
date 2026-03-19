@@ -10,7 +10,7 @@ Nobody told me a PhD in quantum physics would be useful in FinTech. I had to fig
 
 The connection isn't obvious from the outside. Physics is about particles and fields and mathematical structure. FinTech is about products, users, regulation, and revenue. The vocabulary doesn't overlap. The training looks completely different.
 
-But the underlying skills prove transferable in ways that aren't obvious from the outside: how you approach a problem, how you reason under uncertainty, what you do when you're staring at something hard.
+But the underlying skills prove transferable: how you approach a problem, how you reason under uncertainty, what you do when you're staring at something hard.
 
 ## The Lab Trains You to Think in Systems
 
@@ -20,9 +20,9 @@ Most problems, presented naively, are complicated. The variables interact in mes
 
 You learn this not as an abstract principle but as a daily practice. You do it with differential equations. You do it with quantum states. You do it with experimental data. After years of this, it becomes instinctive: when you encounter a hard problem, the first question isn't "what's the answer?" — it's "what frame makes this tractable?"
 
-That instinct is unusually useful in business. Most business problems look complicated because they're poorly framed. The team is fighting about tactics when they haven't agreed on what success looks like. The roadmap feels impossible until you separate what's urgent from what's important. The organizational dysfunction resolves when you see that it's actually a misalignment on ownership, not a culture problem.
+That instinct is unusually useful in business. Most business problems look complicated because they're poorly framed. The team is fighting about tactics when they haven't agreed on what success looks like. The roadmap feels impossible until you separate what's urgent from what's important. The organizational dysfunction resolves when you see that it's a misalignment on ownership, not a culture problem.
 
-I find myself doing this constantly. Looking for the right frame before trying to solve. Finding the representation that makes the problem tractable.
+I find myself doing this constantly. Looking for the right frame before trying to solve. Finding the representation that makes the structure clear.
 
 ## Reasoning by Orders of Magnitude
 
@@ -36,9 +36,9 @@ Most people I work with don't have this instinct. They're trained to want precis
 
 ## McKinsey Was the Translation Layer
 
-After my PhD, I went to McKinsey. I didn't go because I had a clear plan. I went because it seemed like the fastest way to learn how business actually worked.
+After my PhD, I went to McKinsey. I didn't go because I had a clear plan. I went because it seemed like the fastest way to learn how business worked.
 
-The transition was harder than I expected — not intellectually, but practically.
+The transition was harder than I expected, not intellectually but practically.
 
 The lab trains you to be precise when business often needs you to be fast. To be rigorous when the situation calls for a judgment call. To present results with every caveat and assumption explicit when an audience needs a clear recommendation, not a paper.
 
@@ -74,7 +74,7 @@ Learning to match my intellectual precision to what the situation required took 
 
 Looking back, the path from atomic clocks to McKinsey to payments leadership wasn't planned. But it wasn't a detour either.
 
-The PhD built a set of instincts — systems thinking, order-of-magnitude reasoning, comfort with uncertainty, looking for elegant structure in hard problems — that proved unusually applicable to the domain I ended up in.
+The PhD built a set of instincts that proved unusually applicable to the domain I ended up in: systems thinking, order-of-magnitude reasoning, comfort with uncertainty, looking for elegant structure in hard problems.
 
 The question isn't whether a non-linear background is an asset or a liability. It's whether you learn to use it consciously.
 

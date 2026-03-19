@@ -26,15 +26,11 @@ Sounds reasonable. In practice, it created a trap.
 
 Platform teams believed the best way to enable others was to offer maximum flexibility. Every tool, every option, every possible configuration. Twelve deployment options because different teams had different preferences.
 
-**Engineers faced decision paralysis.** Three days choosing a deployment option. Hours researching which logging tool to use. Sprint planning sessions debating infrastructure choices that had nothing to do with customer problems.
+The trap had four dimensions. Engineers spent days choosing between deployment options: three days on a single decision, hours researching which logging tool to use, sprint planning sessions debating infrastructure choices that had nothing to do with customer problems. The platform teams, meanwhile, burned out writing documentation instead of building. One engineer told me: "I spend 80% of my time writing guides that 20% of engineers read." Many had joined to build infrastructure, not maintain wikis.
 
-**Platform teams burned out writing docs instead of code.** Many joined to build infrastructure, not maintain wikis. The work felt abstract and endless. One engineer told me: "I spend 80% of my time writing guides that 20% of engineers read."
+Measuring success was impossible. When your job is to "enable," how do you know you've succeeded? We tracked workshops run, documentation pages created, support tickets answered: activity metrics, none of which told us whether engineers were moving faster. And without a clear end state, platform teams were permanently reactive, responding to whatever came next instead of building what they needed to build.
 
-**Nobody could measure success.** If your job is to "enable," how do you know you've succeeded? We measured workshops run, documentation pages created, support tickets answered. Activity metrics. None of them told us whether engineers were moving faster.
-
-**Platform teams were always one step behind.** When your mandate is enablement, there's no clear end state. Teams don't know what they need until they try to do the work. So platform teams were reactive — responding to requests instead of solving problems proactively.
-
-Treating the platform as a service designed to minimize constraints was the mistake. It should maximize value instead.
+The mistake was treating the platform as a service designed to minimize constraints rather than maximize value.
 
 ## The Reframe: Products, Not Processes
 
@@ -44,24 +40,21 @@ A product has users, clear value, iteration cycles, and accountability. "Using t
 
 "We support teams in building things" is not a product. It's a mandate so broad it means almost nothing.
 
-This wasn't a reorganization. Nobody changed reporting lines. The teams themselves barely changed. But the question each team asked shifted:
+This wasn't a reorganization. Nobody changed reporting lines. The teams themselves barely changed. But the question each team asked shifted.
 
-**Before:** "How do we help people build?"
-**After:** "What product do we own, and does it actually help people build?"
-
-The distinction sounds subtle. The shift was total.
+The old question was "How do we help people build?" The new one: "What product do we own, and does it help people build?" Asking it that way, and meaning it, changed almost everything about how the teams prioritized.
 
 ## What Actually Changed
 
 ### The Teams
 
-The org chart looked almost identical before and after. The same teams — WebCore, Mobile Infrastructure, DevEx, Backend Infrastructure — had all been working on "developer enablement." After, each owned a specific product. WebCore owned the frontend platform. Mobile Core owned the mobile platform. DevX owned developer experience tooling. Backend Core owned backend infrastructure.
+The org chart looked almost identical before and after. The same teams (WebCore, Mobile Infrastructure, DevEx, Backend Infrastructure) had all been working on "developer enablement." After, each owned a specific product. WebCore owned the frontend platform. Mobile Core owned the mobile platform. DevX owned developer experience tooling. Backend Core owned backend infrastructure.
 
 Same people. Different mandate.
 
 ### The Leadership
 
-One change was critical: **we hired leaders who thought like product managers.**
+One change was critical: we hired leaders who thought like product managers.
 
 Not traditional infrastructure leads who optimized for technical elegance. Not traditional product managers who lacked technical depth. People who could do user research with engineers, make opinionated prioritization decisions, and say no to requests that didn't fit the product vision.
 
@@ -71,9 +64,9 @@ This was hard to hire for. The role doesn't have a standard career ladder. We ha
 
 The biggest practical change was moving from documentation to implementation.
 
-Before, we offered twelve ways to deploy a service, each with its own guide. After, running our deploy command gave you automated build, canary deployment with automatic rollback, monitoring dashboards, error tracking, performance metrics, and security scanning — all configured with sensible defaults.
+Before, we offered twelve ways to deploy a service, each with its own guide. After, running our deploy command gave you automated build, canary deployment with automatic rollback, monitoring dashboards, error tracking, performance metrics, and security scanning, all configured with sensible defaults.
 
-We called these "golden paths." Not documentation describing best practices — actual tools that implemented best practices as defaults.
+We called these "golden paths." Not documentation describing best practices but actual tools that implemented them as defaults.
 
 Ninety percent of teams never customized anything. They got production-ready deployment without thinking about it. The 10% who needed something different could customize, but deviating was a deliberate choice, not the default.
 
@@ -93,7 +86,7 @@ Six principles guided what we built:
 
 **API-first everything.** Internal tools designed for programmatic access first. This removes bottlenecks where teams wait for manual steps and lets other teams build on top of platform capabilities.
 
-**Quality is the product.** Tests, observability, monitoring, alerting — these aren't afterthoughts bolted onto the platform. They're part of what the platform provides by default. You don't add monitoring separately. It's already there.
+**Quality is the product.** Tests, observability, monitoring, alerting: not afterthoughts bolted onto the platform. They're part of what the platform provides by default. You don't add monitoring separately. It's already there.
 
 **Security and compliance built in.** Regulatory requirements aren't constraints imposed on the platform. They're core capabilities the platform provides. Teams build fast *and* safely because the golden path handles compliance requirements they'd otherwise need to figure out themselves.
 
@@ -103,9 +96,9 @@ The actual shift happened in four phases over six months. It wasn't smooth.
 
 ### Months 1-2: Reframing
 
-We ran sessions with each platform team explaining what product thinking meant for their work. Not "your job is now different" — but "our platform is becoming a product, and that changes how we make decisions."
+We ran sessions with each platform team explaining what product thinking meant for their work. Not "your job is now different." Instead: "Our platform is becoming a product, and that changes how we make decisions."
 
-Some teams got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work — but that wasn't obvious from the inside.
+Some teams got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work, though that wasn't obvious from the inside.
 
 ### Months 2-3: Getting Specific
 
@@ -131,35 +124,35 @@ That's the job.
 
 ## What Worked
 
-**Sensible defaults with free benefits.** "Do it this way and you get monitoring, alerting, logging, scaling for free" was our most effective pitch. Engineers didn't need to be convinced. They just used the tool and got better infrastructure than they could have built themselves.
+The most effective thing we did was make the right path the easy path. "Do it this way and you get monitoring, alerting, logging, and scaling for free" required no persuasion. Engineers used the tools and got better infrastructure than they could have built themselves. Adoption followed the value.
 
-**Building before documenting.** We stopped writing guides about how to do things and started building tools that did things. Adoption always went up when we replaced documentation with implementation.
+We also learned to build rather than document. Every time we replaced a guide with a tool, adoption went up. Stopping writing and starting building was the right call, even when the documentation felt more thorough.
 
-**User research, even informal.** Embedding in teams for a day. Watching an engineer onboard. Sitting next to someone during a deploy. Small user populations mean you can do high-touch research. Ten conversations gave us more signal than any survey.
+User research was more valuable than we expected, even at small scale. Embedding with teams for a day, watching an engineer onboard, sitting next to someone during a deploy — ten conversations gave us more signal than any survey. Small user populations enable high-touch research; you just have to do it.
 
-**One front door.** Instead of teams figuring out which sub-team owned what, we created a single entry point. Engineers didn't need to know platform team org charts. They needed to get their work done.
+One structural change that helped: a single entry point. Engineers didn't need to know which sub-team owned what. They needed to get their work done.
 
 ## What Didn't Work
 
-**Traditional product management techniques.** A/B testing, statistical significance, conversion funnels — these are designed for millions of users. We had hundreds of engineers. We needed qualitative research and direct observation, not quantitative experimentation.
+Traditional product management techniques don't translate. A/B testing, statistical significance, and conversion funnels are built for millions of users. We had hundreds of engineers. We needed direct observation, not quantitative experimentation.
 
-**Enablement mentality creeping back.** It's easy to slip. A team gets a flood of requests and starts saying yes to everything again. Compliance through documentation is weak. Compliance through tooling that makes the right thing the easy thing is strong. We had to constantly reinforce the product mindset.
+The enablement mentality kept creeping back. A team gets a flood of requests and starts saying yes to everything again. Compliance through documentation is weak; compliance through tooling that makes the right thing the easy thing is strong. We had to actively reinforce the product mindset, more than once.
 
-**Tracking OKR completion percentages.** Measuring "how much of the OKR did we complete?" led to arguments about estimation. We shifted to "how confident are we that we'll complete this by end of quarter?" That changed the conversation from defense to problem-solving.
+We also learned to measure differently. Tracking OKR completion percentages led to arguments about estimation. Shifting to "how confident are we that we'll complete this by end of quarter?" changed the conversation from defense to problem-solving.
 
-**Feature creep.** Once you're shipping a product engineers love, everyone wants features. Saying no to good requests is harder than saying no to bad ones. Every feature adds complexity and maintenance burden. We underestimated how much discipline this required.
+Feature creep was harder to resist than expected. Saying no to good requests is harder than saying no to bad ones. Every feature adds complexity and maintenance burden. We underestimated how much discipline this required.
 
 ## Six Months Later
 
-The shift was visible across the organization. Platform teams were building products, not documentation — deployment frequency was up 40% and job satisfaction went with it, because engineers were writing code instead of wikis. Product teams felt it differently: feature delivery time dropped from over three weeks to under two, and platform feature adoption jumped from 30% to 65%+ within 30 days of launch. Less time debating infrastructure, more time on customer problems.
+The shift was visible across the organization. Platform teams were building products, not documentation. Deployment frequency was up 40% and job satisfaction went with it, because engineers were writing code instead of wikis. Product teams felt it differently: feature delivery time dropped from over three weeks to under two, and platform feature adoption jumped from 30% to 65%+ within 30 days of launch. Less time debating infrastructure, more time on customer problems.
 
-For the organization as a whole, feature velocity stayed high even as headcount grew. Platform investment had clear, measurable ROI. The engineering culture shifted toward sensible-defaults thinking — teams started asking "is there a golden path for this?" rather than starting from scratch.
+For the organization as a whole, feature velocity stayed high even as headcount grew. Platform investment had clear, measurable ROI. The engineering culture shifted toward sensible-defaults thinking: teams started asking "is there a golden path for this?" rather than starting from scratch.
 
-The reframing didn't require new hiring, new budgets, or major structural changes. It required a shift in how we thought about the work and who we hired to lead it.
+The shift didn't require new hiring, new budgets, or major structural changes. It required a change in how we thought about the work and who we hired to lead it.
 
 ## When This Doesn't Work
 
-This approach assumes relatively homogeneous use cases. If your teams have diverse requirements — a machine learning team, a mobile team, and a hardware team all on different stacks — sensible defaults might not exist across all of them.
+This approach assumes relatively homogeneous use cases. If your teams have diverse requirements (a machine learning team, a mobile team, and a hardware team all on different stacks) sensible defaults might not exist across all of them.
 
 It also assumes you're past pure experimentation phase. If you're still figuring out your architecture, premature standardization will slow you down.
 
