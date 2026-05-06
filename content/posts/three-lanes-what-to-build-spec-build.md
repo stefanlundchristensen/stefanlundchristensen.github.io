@@ -6,9 +6,11 @@ tags: ["ai-native-product-development", "ai", "product-development", "operating-
 categories: ["Leadership"]
 ---
 
-Most AI-native operating-model writing is abstract. Familiar phrases include "cross-functional pods of three to five," "humans plus agents in a seamless blend," and "speed to market." All true at some altitude, none of it operational. None of it tells a small team what to do on Monday morning.
+There is no operating model that just works.
 
-This post is concrete. It's the operating model I keep coming back to when I work with small teams running AI-native development. Three lanes, with explicit owners, with artifacts crossing the boundaries instead of meetings. It works for a three-to-five-person team. It generalizes upward, with more lanes per layer, but the shape is the same.
+That's the thing nobody who sells you a methodology wants to say out loud. SAFe will tell you it scales agile to the enterprise. Scrum's promise is that the ceremonies get you there. Every pod-based reorg deck claims the structure is the answer. The deck never says "this depends entirely on your team's people and talent and the work in front of them," but it does, and it always has.
+
+In an earlier post I argued that the way to find out what your AI-native lifecycle should look like is to take one feature, walk it through your current process end to end, and find the bottlenecks. This post is what that exercise produced for one small team I worked with. The output, for that team in that context, was a three-lane operating model: what to build, spec built, build. The model fits a three-to-five-person team well. It probably generalizes upward. It almost certainly doesn't fit your team exactly, and that's the point. The shape and the principles are useful. Adapting them to your team is the work.
 
 ## The Three Lanes
 
@@ -78,9 +80,9 @@ There's a third handover that teams often miss. When something ships, the loop h
 
 When the artifact is good, the lanes work without much coordination. When the artifact is thin, you have to add meetings, and meetings turn the operating model back into the old shape.
 
-## Why Lanes Work Better Than Roles
+## Why Lanes Work Better Than Roles for This Team
 
-The cleaner thing about lanes versus roles is that lanes don't depend on having three role buckets to fill.
+The cleaner thing about lanes versus roles, for the team this came from, was that lanes don't depend on having three role buckets to fill.
 
 A small team probably doesn't have a dedicated PM, a dedicated designer, a dedicated implementation lead, plus a quality engineer, plus a customer-research lead. The three-lane model can still work, because the lanes are about work, not about job titles. On a five-person team, one person might own "what to build" alongside their other work, another might own "spec built," and the build lane is probably split across two engineers, with one acting as conductor for any given project.
 
@@ -100,7 +102,7 @@ The other common failure mode is engineers who can't or won't make the conductor
 
 ## Setting It Up
 
-For a team starting from scratch, the order that works is to set up one lane at a time, finishing each before moving to the next.
+For a team this shape fits, the order that works is to set up one lane at a time, finishing each before moving to the next.
 
 Start with what to build. Pick the call-recording or customer-feedback tool the team will use. Audit what's already captured and where the gaps are. Stand up a project or view in the tracker for customer signal, with structure that makes "what's most-requested" and "who asked for it" obvious at a glance. Run an AI pass weekly that summarizes and clusters. None of this is glamorous, and it's the foundation everything else sits on.
 
@@ -110,12 +112,24 @@ Move to build last. Increase test coverage so tests can carry weight as a merge 
 
 The whole sequence takes weeks for a small team that's focused on it, months for a team that's doing it alongside everything else. Either is fine. What doesn't work is trying to stand all three lanes up at once. The team doesn't have enough hours, and partially-set-up lanes are worse than no lanes at all.
 
+## No Operating Model Just Works
+
+The promise SAFe makes is that scaled agile is a system you adopt. Scrum's promise is that the ceremonies, run faithfully, will get you to high-functioning. Every pod-based reorg deck claims the structure is the answer. None of those promises are honest.
+
+An organization is people and talent. The shape that works is the one that fits the people you have and the work they're doing, not the one that fit the team in the case study. That has always been true. AI doesn't change it. If anything, AI makes it more obvious, because the lifecycle is changing fast enough that anyone selling you a fixed model is selling you something already out of date.
+
+The three-lane model in this post is a real artifact from a real team. The team it came from has specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. They might not fit you at all because your team's bottleneck is somewhere this model doesn't address.
+
+What carries across teams isn't the model; it's the diagnostic. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves. The shape that emerges from that exercise will look like your team, not like the team in the case study.
+
+If that's annoying, it's annoying for the same reason every other consultant-flavored promise is hollow. Organizations are not interchangeable. They never were.
+
 ## What Good Looks Like
 
-The thing that separates teams that talk about AI-native development from teams that run it in practice is operating-model discipline.
+The thing that separates teams that talk about AI-native development from teams that run it in practice is operating-model discipline. That discipline isn't picking the right model; it's doing the diagnostic, finding what fits the team in front of you, and running it well.
 
-Most teams have someone on them who can use Claude Code. That's not the differentiator. Most teams have a CLAUDE.md file in the repo. That's not the differentiator either. The differentiator is whether the team has a way of working that takes advantage of those tools: a structured way of figuring out what to build, a way of turning that into a tangible plan, a way of executing on the plan with agents in the loop and humans in the right places.
+Most teams have someone on them who can use Claude Code. That's not the differentiator. Most teams have a CLAUDE.md file in the repo. That's not the differentiator either. The differentiator is whether the team has a way of working that takes advantage of those tools and that fits the people doing the work.
 
-The three lanes are one shape that works. The shape isn't sacred. What's sacred is the principle: artifacts, not meetings, cross the lanes; each lane has an owner; the lanes are independent enough to be set up one at a time. A team that picks a different shape but holds those principles will probably do better than a team that copies the lanes exactly without holding them.
+The three lanes were one shape that fit one team. The principles underneath them are more durable than the lanes themselves: artifacts cross between lanes, each piece of work has an owner, each part of the system can be improved on its own. The leaders I see getting this right aren't the ones who picked the right framework; they're the ones who walked their own team's work end to end, figured out what fit, and built around it.
 
-The reason most teams aren't running this way isn't that the model is hard to understand; it's that standing it up requires real changes to how the team works, and those changes are uncomfortable. The teams that get there are the ones whose leadership is willing to be uncomfortable for the few weeks it takes to set the lanes up, and then run them with discipline once they exist.
+The reason most teams aren't running anything good is that the diagnostic takes more honesty than picking a model off a shelf. The model is comforting because it tells you what to do. The diagnostic tells you that you have to look at your own team and decide. That's the harder work, and it's the work that matters.
