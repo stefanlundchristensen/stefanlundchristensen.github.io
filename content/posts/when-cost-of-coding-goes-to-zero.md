@@ -2,7 +2,7 @@
 title: "When the Cost of Coding Goes to Zero, Everything Else Has to Change"
 date: 2026-05-06
 draft: true
-tags: ["ai", "product-development", "leadership", "engineering-management"]
+tags: ["ai-native-product-development", "ai", "product-development", "leadership", "engineering-management"]
 categories: ["Leadership"]
 ---
 
@@ -14,73 +14,47 @@ Getting into the entry zone is easy. The next mile is brutal — the curve gets 
 
 ## The Easy Mile
 
-The first mile of AI adoption is mostly a tooling story. Engineers use Copilot or Cursor. PMs use a chat tool to draft specs. Designers use image models to mock things up. Productivity goes up by some amount that's hard to measure precisely but everyone agrees is real.
+The first mile of AI adoption is mostly a tooling story. Engineers use Copilot or Cursor, PMs draft specs in a chat tool, designers mock things up with image models. Productivity goes up by some amount that's hard to measure precisely but everyone agrees is real.
 
 This is where most companies are, and there's nothing wrong with it. The problem is mistaking it for the destination.
 
-What this version of AI adoption doesn't change is the shape of the lifecycle. PMs still write tickets that engineers pick up. Sprints still assume work is sized in days. Code review is still the main quality gate. Specialists still hand artifacts to other specialists.
+What this version of AI adoption doesn't change is the shape of the lifecycle. PMs still write tickets that engineers pick up, sprints still assume work is sized in days, code review is still the main quality gate, and specialists still hand artifacts to other specialists.
 
-Faster is still faster. But it's faster on the same shape. The outliers have a different shape.
+Faster is still faster, but it's faster on the same shape. The outliers have a different shape.
 
 ## The Assumption That Changes Everything
 
 Underneath all of this is one assumption: the cost of coding is going to zero.
 
-Not literally zero. But on a trajectory where the time and human attention required to turn an idea into running software keeps falling, and the trajectory looks more like a step change than a smooth curve. Better models. Better agents. Better integration with the tools that actually run the work. Each generation pushes the floor further down.
+Not literally zero. But on a trajectory where the time and human attention required to turn an idea into running software keeps falling, and the trajectory looks more like a step change than a smooth curve. Better models, better agents, better integration with the tools that run the work. Each generation pushes the floor further down.
 
-If you take that assumption seriously, you have to look at every artifact in your product development lifecycle and ask what it was designed for. Most of those artifacts were designed for a world where coding was the expensive step. The ticket. The sprint. The PM-to-engineer ratio. The code review. The design-to-engineering handoff. They all encode the same scarcity. When the scarcity goes away, the artifacts stop making sense.
+If you take that assumption seriously, you have to look at every artifact in your product development lifecycle and ask what it was designed for. Most of those artifacts were designed for a world where coding was the expensive step. The ticket, the sprint, the PM-to-engineer ratio, the code review, the design-to-engineering handoff. They all encode the same scarcity. When the scarcity goes away, the artifacts stop making sense.
 
-The companies pulling ahead aren't the ones with better tools. They're the ones who took this assumption seriously and started rebuilding their lifecycle around it.
+The companies pulling ahead got there by taking this assumption seriously and rebuilding their lifecycle around it. Better tools alone don't do it.
 
-## The PM-to-Engineer Ratio Was Always Artificial
+## Human Judgment Moves Left and Up
 
-The classic ratio was one PM for five to ten engineers. It came from a world where engineers were the constraint. You needed enough of them to keep the build going, and you couldn't afford a PM per engineer because that wasn't the bottleneck.
+The unifying shift, the one all the artifact changes are downstream of, is that human judgment moves left and up.
 
-That ratio is going to change, and probably more than people are ready for. There aren't many products where you need ten engineers per PM if the engineers are working with strong AI tooling. That's a hard thing to say out loud in a leadership meeting, but the underlying math is straightforward.
+Left means earlier in the process. The expensive judgment used to live at code review, when the work was almost done. Now it lives at the spec, before the work has started. The earlier you place the judgment, the more downstream value depends on it being good.
 
-The cleaner frame, the one I keep coming back to, is to stop separating product manager from engineer at all. A small group owns a product. They decide what to build, they build it, they ship it. The line between specifying and implementing gets thinner because both ends of it are cheaper.
+Up means higher in abstraction. The expensive judgment used to be "is this implementation correct?" It becomes "is this the right thing to build, and is the brief good enough that the agent will produce something correct?" The unit of attention rises from line of code to outcome and constraint.
 
-Once that frame lands, a lot of the artifacts that exist to coordinate across the line stop being valuable. The labels on the ticket, the right fields filled in, which sprint it belongs to — these matter when the ticket is the contract between people. When the same group owns both ends, the contract is internal, and you can just write the code.
+Take that one shift seriously and the rest follows. The lifecycle's old artifacts were built around a different distribution of where judgment lived. Each of them has to be rethought.
 
-## Tickets Get Bigger
+## What This Breaks in the Lifecycle
 
-I used to think a well-sized ticket was about a day of work for one engineer. That was the right unit because a day was about as much as a person could hold in their head before needing to coordinate.
+A lot of the artifacts you've built your career on stop making sense once judgment moves left and up.
 
-That isn't the right unit anymore. With AI doing more of the typing and more of the boilerplate thinking, what one engineer can carry forward in a coherent piece of work has shifted upward. The handoff point, the place where the work has to be written down and passed to someone else, moves higher.
+The PM-to-engineer ratio was sized for a world where engineers were the constraint. They aren't anymore. The right number of PMs per engineer becomes context-dependent in ways the old ratio never was, and the cleaner question is whether you should be separating the two roles at all.
 
-In the old shape, a lot of the energy went into the conversation between tickets. Was this ticket sized right? Did it have the right acceptance criteria, and was it blocked on something else? When you have multiple people coordinating across small chunks of work, those questions matter. When the same person can carry a much larger piece end-to-end with AI assistance, the conversation moves up a level. You're talking about epics, not tickets. Outcomes, not implementation steps.
+Tickets were the right unit when a day was about as much as one engineer could carry without coordinating. AI changes how much one engineer can carry, and the unit moves up. Project specs and agent instruction files start replacing tickets as the durable artifact teams work from.
 
-The teams that get this right spend less time grooming a backlog of tickets and more time framing the next epic well enough that one person and their tools can take it from problem to shipped change.
+Code review used to be where quality lived, because that was where expensive mistakes got caught. When agents are writing meaningful chunks of the code, the gate moves to the inputs: the spec, the standards, the tests that exist before work starts, the context the agent has access to. Spec review starts to matter more than PR review.
 
-## Quality Lives in the Inputs Now
+Single-threaded craft used to be the safe career shape — great PM, great designer, great engineer, each role deep in its own domain. That's harder to make work now. The people pulling ahead have craft plus an adjacent dimension: engineers with product taste, PMs who can prototype, designers who can ship.
 
-Code review used to be the place where quality happened. Two engineers, a diff, a back-and-forth about edge cases.
-
-When agents are writing meaningful chunks of the code, the review still matters but it stops being the main gate. The main gate moves earlier. The quality of the spec, the clarity of the description, the tests that exist before the work starts, the standards the agent has been given to follow, the context it has access to: these become the levers. The output is roughly as good as the input. So the work shifts toward making the input good enough that the output is too.
-
-This is uncomfortable for organizations that have spent years building review culture. The instinct is to do more review, more carefully, because there's now more code to review. The better answer is to push the work upstream. Better tests, better standards, better agent context. Less code that needs careful review in the first place because the structure of the work made bad code unlikely.
-
-This is also a craft shift. Writing clear specs and good tests has always mattered. It now matters more, because more downstream value depends on it.
-
-## You Try More Ideas Now
-
-When building something cost a week, you tried five ideas before picking one to ship. When it costs a day, you try fifty.
-
-That sounds like a quantitative change, but it lands as a qualitative one. The bottleneck stops being "what can we afford to build" and becomes "what's worth picking out of everything we just built." Selection replaces construction as the hard problem.
-
-Most product development processes are not built for this. They assume getting to a working prototype is expensive, so they spend a lot of effort deciding what to prototype. Once that decision is cheap, the value of all the deciding-what-to-prototype work goes down. The discipline that matters is what you do with fifty live options, not how you narrow the list before building.
-
-This is one of the places where the easy mile and the hard mile look very different. The easy mile speeds up the existing funnel. The hard mile redesigns the funnel because the shape it had assumed building was the bottleneck.
-
-## Single-Threaded Craft Isn't Enough
-
-For a long time you could be excellent at one thing and have a successful career. Great PM, great designer, great engineer. The narrowness was the point.
-
-That's harder to make work now. The people I see succeeding in AI-native teams have craft plus an adjacent dimension. Engineers with product taste — the ability to feel whether a feature is the right feature, not just whether it's built well. PMs who can prototype themselves and read the technical implications of a design choice. Designers who can ship working code instead of throwing a Figma over the wall.
-
-Craft still matters. I want to be precise about that. The bar on each individual skill hasn't dropped. What's changed is that the surrounding skills matter much more, because the boundary between roles is thinner and the cost of crossing it is lower.
-
-The career advice that follows from this is uncomfortable for specialists. You can stay narrow and still be good. The people pulling ahead aren't.
+Each of these is its own essay. Together they answer what going further looks like in practice.
 
 ## How to Find What to Change
 
@@ -99,5 +73,7 @@ By the time you've walked one feature end to end with that question in mind, you
 The companies pulling ahead with AI aren't the ones with the most expensive tooling or the largest AI budget; they're the ones willing to pull their own process apart.
 
 That's a leadership move, not a tooling move. It means looking at artifacts you've built your career on, like the way tickets are written, the way teams are sized, the way reviews work, and being willing to say that some of them were designed for a world that's leaving. It means tolerating the discomfort of not knowing what the new shape is yet, while you walk through your own work to find it.
+
+Each of those strands deserves its own treatment, and I'll come back to them: the ratio shift, the new unit of work, the move from PR review to spec review, and the way agents are becoming users in their own right. They're all downstream of the same shift this post described.
 
 The easy mile is buying tools and pointing them at the existing process. The next mile is admitting the existing process is the thing that has to change. The leaders who can say that out loud, and then do the slow concrete work of redesigning, are the ones whose teams will be on the steep part of the curve.
