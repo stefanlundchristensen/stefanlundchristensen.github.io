@@ -1,0 +1,199 @@
+---
+import Base from '../layouts/Base.astro';
+import RailClient from '../components/RailClient.tsx';
+import SectionObserver from '../components/SectionObserver.astro';
+import { STEFAN } from '../data/stefan';
+import { getCollection } from 'astro:content';
+
+const s = STEFAN;
+
+const allPosts = await getCollection('posts');
+const publishedPosts = allPosts
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function estimateReadingTime(body: string): string {
+  const words = body.split(/\s+/).length;
+  const mins = Math.max(1, Math.round(words / 250));
+  return `${mins} min`;
+}
+
+const featured = publishedPosts[0];
+const restPosts = publishedPosts.slice(1);
+
+function formatDate(d: Date): string {
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+}
+---
+
+<Base isHome>
+  <div class="home-grid" id="home-root">
+    <RailClient client:load />
+
+    <main style="max-width: 720px;">
+      <div class="lbl" style="margin-bottom: 18px;">An introduction</div>
+      <p class="h-display" style="font-size: 34px; line-height: 1.24; margin: 0 0 22px;">
+        {s.tagline}
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span class="pill"><b>17 yrs</b> in fintech</span>
+        <span class="pill"><b>100+</b> engineers led</span>
+        <span class="pill"><b>Pleo · McKinsey · Physics</b></span>
+        <span class="pill pill--accent">Open to advisory</span>
+      </div>
+
+      <div class="rule"></div>
+
+      <section id="about" class="fade-section">
+        <div class="lbl" style="margin-bottom: 16px;">About</div>
+        <p style="margin: 0 0 18px;">
+          <span class="dropcap-a">{s.longBio[0].charAt(0)}</span>
+          {s.longBio[0].slice(1)}
+        </p>
+        <p style="margin: 0;">{s.longBio[1]}</p>
+      </section>
+
+      <div class="rule"></div>
+
+      <section id="now" class="fade-section">
+        <div class="lbl" style="margin-bottom: 16px;">What I'm doing now</div>
+        {s.now.map((n, i) => (
+          <div
+            style={`display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 14px 0;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}
+          >
+            <div class="lbl" style="padding-top: 4px; color: var(--ink-70);">{n.label}</div>
+            <div>{n.body}</div>
+          </div>
+        ))}
+      </section>
+
+      <div class="rule"></div>
+
+      <section id="work" class="fade-section">
+        <div class="lbl" style="margin-bottom: 16px;">The path here</div>
+        <p style="margin: 0 0 18px;">
+          I've been at Pleo since 2019, joining at around 100 people to get hands-on after five years advising banks at McKinsey. What started as an operator-in-residence gig — migrating 20,000 customers to a new payment processor, unlocking a 20-point margin uplift — turned into building Pleo's entire payments organisation from scratch. We went from five European markets to fifteen in eleven months.
+        </p>
+        <p style="margin: 0 0 18px;">
+          As the platform matured, the scope grew. I took on data, developer experience, infrastructure, security — eventually leading 100+ people through a period where we tripled engineering throughput without adding headcount. The unlock wasn't more people; it was removing friction and treating platform teams as product teams with real users and real outcomes.
+        </p>
+        <p style="margin: 0 0 18px;">
+          Today I lead ~70 people across platform engineering, data, AI infrastructure, and regulated entities. The recent win I'm proudest of: a 70% reduction in card scheme costs through negotiation in a duopoly market where you have almost no leverage. Execution was everything.
+        </p>
+        <p style="margin: 0 0 24px;">
+          Before Pleo: McKinsey, advising Tier 1 European banks on payments and regulatory strategy. Before that: a PhD in physics at the University of Copenhagen, building atomic clocks beyond the quantum limit. Different domains, same muscle — solving problems nobody's solved before.
+        </p>
+        <a class="link" href="/experience/" style="font-size: 14px;">Full experience →</a>
+      </section>
+
+      <div class="rule"></div>
+
+      <section id="advisory" class="fade-section">
+        <div class="lbl" style="margin-bottom: 16px;">How I help</div>
+        {s.proposition.map((p, i) => (
+          <div style={`padding: 18px 0;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}>
+            <div class="h-display" style="font-size: 21px; margin-bottom: 6px;">{p.title}</div>
+            <div style="color: var(--ink-78);">{p.body}</div>
+          </div>
+        ))}
+      </section>
+
+      <div class="rule"></div>
+
+      <section id="testimonials" class="fade-section">
+        <div class="lbl" style="margin-bottom: 16px;">What colleagues say</div>
+        {s.testimonials.map((t) => (
+          <div class="testimonial">
+            <blockquote>"{t.quote}"</blockquote>
+            <cite>{t.cite}</cite>
+          </div>
+        ))}
+      </section>
+
+      <div class="rule"></div>
+
+      <section id="writing" class="fade-section">
+        <div class="lbl" style="margin-bottom: 18px;">Writing</div>
+
+        {featured && (
+          <a class="featured" href={`/posts/${featured.id}/`}>
+            <div style="width: 56px;">
+              <div class="lbl" style="color: var(--accent); margin-bottom: 6px;">Latest</div>
+              <div class="num h-display" style="font-size: 26px; color: var(--ink-30);">01</div>
+            </div>
+            <div>
+              <div class="h-display" style="font-size: 26px; line-height: 1.18; margin-bottom: 8px;">
+                {featured.data.title}
+              </div>
+              {featured.data.description && (
+                <div style="color: var(--ink-70); font-size: 15px; margin-bottom: 10px;">
+                  {featured.data.description}
+                </div>
+              )}
+              <div style="display: flex; gap: 14px; font-size: 11.5px;">
+                {featured.data.categories?.[0] && (
+                  <span class="lbl" style="color: var(--accent);">{featured.data.categories[0]}</span>
+                )}
+                <span class="lbl">{formatDate(featured.data.date)}</span>
+                <span class="lbl">{estimateReadingTime(featured.body ?? '')}</span>
+              </div>
+            </div>
+          </a>
+        )}
+
+        {restPosts.map((w, i) => (
+          <a
+            href={`/posts/${w.id}/`}
+            style={`display: block; padding: 20px 0; color: inherit;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}
+          >
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 4px;">
+              <div class="h-display" style="font-size: 21px;">{w.data.title}</div>
+              <div class="num" style="font-size: 12px; color: var(--ink-50); white-space: nowrap;">
+                {formatDate(w.data.date)}
+              </div>
+            </div>
+            {w.data.description && (
+              <div style="color: var(--ink-65); font-size: 15px; margin-bottom: 6px;">
+                {w.data.description}
+              </div>
+            )}
+            <div style="display: flex; gap: 14px;">
+              {w.data.categories?.[0] && (
+                <span class="lbl" style="color: var(--accent);">{w.data.categories[0]}</span>
+              )}
+              <span class="lbl">{estimateReadingTime(w.body ?? '')}</span>
+            </div>
+          </a>
+        ))}
+      </section>
+    </main>
+  </div>
+  <SectionObserver />
+</Base>
+
+<style>
+  .home-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: var(--rail-width-open) 1fr;
+    column-gap: var(--column-gap-open);
+    padding: var(--page-pt) var(--page-pr) var(--page-pb) var(--page-pl);
+    transition: var(--rail-transition);
+  }
+
+  :global([data-rail='collapsed']) .home-grid {
+    grid-template-columns: var(--rail-width-collapsed) 1fr;
+    column-gap: var(--column-gap-collapsed);
+  }
+
+  @media (max-width: 719px) {
+    .home-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+</style>

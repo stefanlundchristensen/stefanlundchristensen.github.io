@@ -1,12 +1,10 @@
-# Hugo
-/public/
-/resources/_gen/
-/assets/jsconfig.json
-hugo_stats.json
+# Astro
+dist/
+node_modules/
+.astro/
 
 # Temporary files
 .DS_Store
-.hugo_build.lock
 
 # IDE
 .vscode/

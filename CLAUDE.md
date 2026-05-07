@@ -4,183 +4,98 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a personal professional website for Stefan Christensen, built with Hugo static site generator and the "hello-friend-ng" theme. The site is deployed to GitHub Pages with a custom domain (stefanchristensen.me) and focuses on executive positioning in FinTech/payments leadership.
+Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The design is "AB1 v2 — Anchored Column": a warm editorial layout with a sticky collapsible left identity rail and a generous serif reading column. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
 
 ## Development Commands
 
-### Local Development Server
 ```bash
-hugo server -D
-```
-Visit http://localhost:1313 to preview the site. The `-D` flag includes draft posts.
+# Local development server
+npm run dev
 
-### Build for Production
-```bash
-hugo --gc --minify
-```
-Output goes to `public/` directory. The `--gc` flag runs garbage collection, `--minify` optimizes assets.
+# Build for production (output to dist/)
+npm run build
 
-### Create New Content
-```bash
-# Create a new blog post
-hugo new posts/post-title.md
-
-# Or manually create in content/posts/ with proper frontmatter
+# Preview production build locally
+npm run preview
 ```
 
 ## Architecture
 
+### Framework
+Astro with React islands for interactive components. Static output deployed to GitHub Pages.
+
 ### Content Structure
-- **Homepage**: `content/_index.md` - Landing page with professional bio
-- **About Page**: `content/about.md` - Extended narrative and philosophy
-- **Experience Page**: `content/experience.md` - CV/work history
-- **Blog Posts**: `content/posts/*.md` - Thought leadership articles
+- **Blog posts**: `src/content/posts/*.md` — standard markdown with frontmatter (title, date, draft, tags, categories, description)
+- **Site data**: `src/data/stefan.ts` — bio, experience, contact, propositions
+- **Static pages**: `src/pages/about.astro`, `experience.astro`, `now.astro` — HTML content in Astro components
 
-All content uses markdown with Hugo frontmatter (YAML between `---` delimiters).
-
-### Theme Architecture
-Uses "hello-friend-ng" theme as a git submodule at `themes/hello-friend-ng/`. The theme is NOT "hermit-v2" as mentioned in README.md - the actual theme configured in `hugo.toml` is "hello-friend-ng".
-
-**Important**: When cloning or pulling updates, always use:
-```bash
-git submodule update --init --recursive
+### Key Directories
+```
+src/
+  content/posts/     ← markdown blog posts (content collection)
+  content.config.ts  ← collection schema
+  data/stefan.ts     ← site-wide content data
+  components/        ← Rail, TagFilter (React islands)
+  layouts/           ← Base, Post, Page (Astro layouts)
+  pages/             ← routes (index, posts/[slug], about, experience, now)
+  styles/            ← tokens.css (design tokens), global.css (styles)
+public/              ← CNAME, robots.txt, cv.json, files/
 ```
 
-### Configuration
-Main configuration in `hugo.toml`:
-- Site metadata (title, description, keywords)
-- Theme selection and parameters
-- Menu structure (About, Experience, Blog)
-- Social links (LinkedIn, Email)
-- Syntax highlighting settings
-- Privacy settings
+### Interactive Components (React Islands)
+- `RailClient.tsx` — collapsible rail with section tracking (client:load)
+- `TagFilter.tsx` — writing section tag filter chips (client:visible)
 
-### Deployment Pipeline
-GitHub Actions workflow at `.github/workflows/hugo.yaml`:
-1. Triggers on push to `main` branch or manual dispatch
-2. Uses Hugo v0.128.0 Extended
-3. Initializes theme submodule
-4. Builds with `--gc --minify`
-5. Deploys to GitHub Pages
+### Design Tokens
+Defined in `src/styles/tokens.css` as CSS custom properties:
+- Colors: `--bg` (#f5f3ee), `--ink` (#1a1a1a), `--accent` (#c2410c), plus opacity variants
+- Typography: `--font-display` (Fraunces), `--font-body` (Inter)
+- Spacing: page padding, rail widths, section gaps
+- Motion: rail transition, hover speeds
 
-The workflow handles submodule initialization automatically, so theme files are always available during CI builds.
+### Deployment
+GitHub Actions workflow at `.github/workflows/astro.yaml`:
+1. Triggers on push to `main` or manual dispatch
+2. `npm ci` → `npx astro build`
+3. Deploys `dist/` to GitHub Pages
 
-### Custom Domain
-- Domain configured via `static/CNAME`: `stefanchristensen.me`
-- DNS should point to GitHub Pages IPs
-- HTTPS enforced via GitHub Pages settings
-
-## Content Frontmatter Pattern
-
-All content pages should include:
-```yaml
----
-title: "Page Title"
-date: 2026-02-01
-draft: false  # Set to true to exclude from production builds
-tags: ["tag1", "tag2"]
-categories: ["Category"]
----
-```
-
-Posts with `draft: true` are only visible when running `hugo server -D`.
-
-## Key Files to Know
-
-- `hugo.toml` - All site configuration (URLs, menus, theme params, social links)
-- `static/CNAME` - Custom domain configuration
-- `.github/workflows/hugo.yaml` - Deployment automation
-- `.gitmodules` - Theme submodule reference
-
-## Hugo-Specific Patterns
-
-### URL Structure
-- Hugo generates URLs based on content organization
-- `content/_index.md` → `/` (homepage)
-- `content/about.md` → `/about/`
-- `content/posts/post-name.md` → `/posts/post-name/`
-
-### Menu Configuration
-Navigation menu items are defined in `hugo.toml` under `[menu]` sections, NOT derived from content automatically.
-
-### Taxonomies
-Site uses two taxonomies (defined in `hugo.toml`):
-- Tags: For topical categorization
-- Categories: For higher-level grouping
-
-## Theme Limitations
-
-The hello-friend-ng theme is a minimal theme with specific constraints:
-- Limited built-in shortcodes
-- Custom CSS would need to override theme styles
-- Layout changes require creating override files in `layouts/` directory
-
-To update the theme:
-```bash
-git submodule update --remote themes/hello-friend-ng
-git add themes/hello-friend-ng
-git commit -m "Update hello-friend-ng theme"
-```
-
-## Deployment Notes
-
-- Site automatically deploys on push to `main` branch
-- GitHub Actions build can be monitored in the "Actions" tab
-- DNS changes can take 24-48 hours to propagate
-- HTTPS certificate is managed automatically by GitHub Pages
+Custom domain: `stefanchristensen.me` (configured via `public/CNAME`)
 
 ## Content Guidelines
 
-Based on existing content, the site emphasizes:
-- Executive-level positioning (SVP Product & Engineering)
-- Deep expertise in FinTech, payments, European payment rails
-- Organizational scaling and leadership
-- Builder/operator identity with consultant and quantum physicist background
-- Authentic voice, avoiding excessive promotion
+### Blog Post Frontmatter
+```yaml
+---
+title: "Post Title"
+date: 2026-02-01
+draft: false
+tags: ["tag1", "tag2"]
+categories: ["Category"]
+description: "Brief description for SEO and post listings."
+---
+```
 
-## Writing Style for Blog Posts
+Posts with `draft: true` are excluded from production builds.
 
-### Benchmark
-`content/posts/approximations-underrated-in-business.md` is the quality benchmark. When in doubt, check against it.
+### Writing Style
+- Essay format, not listicles — no bullet lists in body text
+- No "Further Reading" sections, no LinkedIn/contact CTAs
+- No company names — first-person experience ("we", "I")
+- First-person personal essay with real stories
+- Opening: problem or paradox. Closing: identity, not summary.
 
-### Format
-- **Essay, not listicle.** No bullet lists in body text — convert all lists to prose.
-- No structured sections with bold lead-ins acting as list substitutes (e.g., **Lesson 1:** ...). Exception: named dimensions or principles where each gets a full `##` heading with a substantial prose section.
-- Short technical lists (specific questions to ask, commands, step sequences) are acceptable. Lessons, takeaways, and arguments are not.
+### AI Signal Removal
+- Em dashes: target 1–3 per post
+- Avoid: `optimize for`, `surface` as verb, `show up` figuratively, `reframing`
+- Avoid: two-sentence contrast ("It's not X. It's Y."), triple parallels, punchy short closers
+- Watch qualifiers: `actually`, `genuinely`, `deliberately` (flag if 3+ per post)
 
-### Content rules
-- **No "Further Reading" sections** — no external link citations at the end of posts.
-- **No LinkedIn/contact CTAs** — no `*Want to discuss X? [Get in touch](/about/).*`
-- **No inline cross-links** to other blog posts.
-- **No company names** — write as first-person experience: "we", "I had a product manager". Not even "a high-growth European FinTech".
-- Named frameworks (Conway's Law, Team Topologies) may be referenced inline — no citation blocks or attributed quotes.
+## Analytics
+GoatCounter (privacy-focused): `superhuman.goatcounter.com`
 
-### Voice and structure
-- First-person personal essay. Real stories, real failures, real examples.
-- One unifying frame per post. The through-line should be stateable in a sentence.
-- **Opening:** problem or paradox — not context-setting or definition.
-- **Closing:** identity, not summary. End on what kind of person or leader does this thing well.
-
-### AI signal removal (required before publishing)
-
-**Punctuation:**
-- Em dash count: target 1–3 per post. Double em dash parentheticals `—X—` are the strongest signal — use commas or restructure.
-
-**Sentence patterns to eliminate:**
-- Two-sentence contrast: `"It's not X. It's Y."` — AI's default contrast move; rephrase or merge.
-- Triple parallels: three sentences in a row with identical structure — thin to two.
-- Punchy short closers used as a default: `"That's it."` / `"Yes. That's the point."` / `"Because it is."` — cut or vary.
-- Section-label sentences: `"What changed:"` / `"The lesson:"` / `"The test:"` as labels before a sentence — rewrite as prose.
-
-**Phrases to avoid:**
-- `optimize for` — AI business speak
-- `surface` as a verb (surface problems, surface issues) → `raise` / `find`
-- `show up` figuratively → `be there` / `be present`
-- `turn out to be` / `comes down to one thing` → rephrase
-- `create conditions where` / `make space for` → rephrase
-- `reframing` / `reframe` as a business noun/gerund → `the shift` / `looking for the right frame`
-- `structural incentive problem` / `trust foundation` and similar AI compound nouns → simplify
-- `Think about that for a moment` — AI pause device, cut entirely
-
-**Qualifiers to watch (flag if used 3+ times per post):**
-- `actually`, `genuinely`, `deliberately`, `explicitly`, `remarkably`, `fundamentally`
+## URL Structure
+- `/` — homepage (single-page with all sections)
+- `/about/`, `/experience/`, `/now/` — static pages
+- `/posts/` — writing index
+- `/posts/[slug]/` — individual posts
+- `/rss.xml` — RSS feed
