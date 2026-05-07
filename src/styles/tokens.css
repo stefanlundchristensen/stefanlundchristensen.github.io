@@ -1,0 +1,94 @@
+:root {
+  /* Colors — light */
+  --bg: #f5f3ee;
+  --ink: #1a1a1a;
+  --accent: #c2410c;
+
+  --ink-78: rgba(26, 26, 26, 0.78);
+  --ink-70: rgba(26, 26, 26, 0.7);
+  --ink-65: rgba(26, 26, 26, 0.65);
+  --ink-60: rgba(26, 26, 26, 0.6);
+  --ink-55: rgba(26, 26, 26, 0.55);
+  --ink-50: rgba(26, 26, 26, 0.5);
+  --ink-45: rgba(26, 26, 26, 0.45);
+  --ink-30: rgba(26, 26, 26, 0.3);
+  --ink-20: rgba(26, 26, 26, 0.2);
+  --ink-15: rgba(26, 26, 26, 0.15);
+  --ink-10: rgba(26, 26, 26, 0.1);
+  --ink-05: rgba(26, 26, 26, 0.05);
+  --ink-04: rgba(26, 26, 26, 0.04);
+  --white-glaze: rgba(255, 255, 255, 0.4);
+
+  --bg-wash-1: rgba(180, 160, 130, 0.06);
+  --bg-wash-2: rgba(120, 100, 80, 0.05);
+
+  /* Typography */
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'Inter Variable', -apple-system, sans-serif;
+
+  /* Spacing */
+  --page-pt: 64px;
+  --page-pr: 80px;
+  --page-pb: 96px;
+  --page-pl: 56px;
+  --section-gap: 56px;
+  --rail-width-open: 260px;
+  --rail-width-collapsed: 56px;
+  --column-gap-open: 64px;
+  --column-gap-collapsed: 40px;
+  --content-max: 720px;
+
+  /* Motion */
+  --rail-transition: grid-template-columns 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  --hover-speed: 0.12s;
+}
+
+/* Dark mode */
+[data-theme='dark'] {
+  --bg: #1a1a1a;
+  --ink: #e8e4dc;
+  --accent: #e07a3a;
+
+  --ink-78: rgba(232, 228, 220, 0.78);
+  --ink-70: rgba(232, 228, 220, 0.7);
+  --ink-65: rgba(232, 228, 220, 0.65);
+  --ink-60: rgba(232, 228, 220, 0.6);
+  --ink-55: rgba(232, 228, 220, 0.55);
+  --ink-50: rgba(232, 228, 220, 0.5);
+  --ink-45: rgba(232, 228, 220, 0.45);
+  --ink-30: rgba(232, 228, 220, 0.3);
+  --ink-20: rgba(232, 228, 220, 0.2);
+  --ink-15: rgba(232, 228, 220, 0.15);
+  --ink-10: rgba(232, 228, 220, 0.1);
+  --ink-05: rgba(232, 228, 220, 0.05);
+  --ink-04: rgba(232, 228, 220, 0.04);
+  --white-glaze: rgba(40, 38, 34, 0.5);
+
+  --bg-wash-1: rgba(60, 50, 40, 0.15);
+  --bg-wash-2: rgba(50, 45, 35, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --rail-transition: none;
+    --hover-speed: 0s;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --page-pt: 40px;
+    --page-pr: 40px;
+    --page-pb: 64px;
+    --page-pl: 40px;
+  }
+}
+
+@media (max-width: 719px) {
+  :root {
+    --page-pt: 32px;
+    --page-pr: 24px;
+    --page-pb: 48px;
+    --page-pl: 24px;
+  }
+}

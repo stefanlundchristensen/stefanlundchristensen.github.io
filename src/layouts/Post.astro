@@ -1,0 +1,208 @@
+---
+import Base from './Base.astro';
+import ReadingProgress from '../components/ReadingProgress.tsx';
+import { STEFAN } from '../data/stefan';
+
+interface Props {
+  title: string;
+  description?: string;
+  date?: Date;
+  tags?: string[];
+  categories?: string[];
+  readingTime?: string;
+  morePosts?: Array<{ slug: string; title: string; description?: string; date: string }>;
+}
+
+const s = STEFAN;
+const { title, description, date, tags, categories, readingTime, morePosts } = Astro.props;
+
+const formattedDate = date
+  ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  : undefined;
+
+const initials = s.name
+  .split(' ')
+  .map((p: string) => p[0])
+  .join('');
+---
+
+<Base title={title} description={description}>
+  <ReadingProgress client:load />
+  <div class="post-page">
+    <header class="post-topbar">
+      <a href="/" class="h-display" style="font-size: 17px;">{s.name}</a>
+      <a href="/#writing" class="lbl" style="text-decoration: none;">← Back to writing</a>
+    </header>
+
+    <article class="post-article">
+      {categories?.[0] && (
+        <div class="lbl" style="margin-bottom: 18px; color: var(--accent);">
+          {categories[0]}
+        </div>
+      )}
+
+      <h1 class="h-display post-title">{title}</h1>
+
+      {description && (
+        <p class="h-display post-dek">{description}</p>
+      )}
+
+      {formattedDate && (
+        <div class="post-meta">
+          <span>By {s.name}</span>
+          <span>{formattedDate}</span>
+          {readingTime && <span>{readingTime}</span>}
+        </div>
+      )}
+
+      <div class="post-body">
+        <slot />
+      </div>
+
+      <div class="post-author">
+        <div class="post-avatar">{initials}</div>
+        <div>
+          <div class="h-display" style="font-size: 18px; margin-bottom: 4px;">{s.name}</div>
+          <div style="font-size: 15px; color: var(--ink-70); margin-bottom: 12px; max-width: 540px;">
+            {s.short}
+          </div>
+          <div style="display: flex; gap: 18px; font-size: 13px;">
+            <a class="link" href={`mailto:${s.contact.email}`}>{s.contact.email}</a>
+            <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
+              {s.contact.linkedin}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {morePosts && morePosts.length > 0 && (
+        <div class="post-more">
+          <div class="lbl" style="margin-bottom: 16px;">More writing</div>
+          <div style="display: grid; gap: 14px;">
+            {morePosts.map((w) => (
+              <a href={`/posts/${w.slug}/`} class="post-more-item">
+                <div>
+                  <div class="h-display" style="font-size: 18px; margin-bottom: 2px;">{w.title}</div>
+                  {w.description && (
+                    <div style="font-size: 14px; color: var(--ink-60);">{w.description}</div>
+                  )}
+                </div>
+                <div style="font-size: 12px; color: var(--ink-50); white-space: nowrap;">
+                  {w.date}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </article>
+  </div>
+</Base>
+
+<style>
+  .post-page {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 64px 64px 96px;
+  }
+
+  .post-topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 880px;
+    margin: 0 auto 64px;
+  }
+
+  .post-article {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .post-title {
+    font-size: 56px;
+    line-height: 1.06;
+    margin: 0 0 22px;
+  }
+
+  .post-dek {
+    font-size: 24px;
+    line-height: 1.36;
+    color: var(--ink-70);
+    margin: 0 0 36px;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 28px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid var(--ink-15);
+    font-size: 13px;
+    color: var(--ink-60);
+  }
+
+  .post-author {
+    margin-top: 64px;
+    padding-top: 36px;
+    border-top: 1px solid var(--ink-15);
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+  }
+
+  .post-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 24px;
+  }
+
+  .post-more {
+    margin-top: 48px;
+  }
+
+  .post-more-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 12px 0;
+    border-top: 1px solid var(--ink-10);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (max-width: 719px) {
+    .post-page {
+      padding: 32px 24px 48px;
+    }
+
+    .post-title {
+      font-size: 36px;
+    }
+
+    .post-dek {
+      font-size: 20px;
+    }
+
+    .post-author {
+      grid-template-columns: 1fr;
+    }
+
+    .post-more-item {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+</style>

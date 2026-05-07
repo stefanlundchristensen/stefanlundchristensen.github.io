@@ -1,0 +1,69 @@
+---
+import Base from './Base.astro';
+import { STEFAN } from '../data/stefan';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const s = STEFAN;
+const { title, description } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <div class="page-wrap">
+    <header class="page-topbar">
+      <a href="/" class="h-display" style="font-size: 17px;">{s.name}</a>
+      <a href="/" class="lbl" style="text-decoration: none;">← Home</a>
+    </header>
+
+    <article class="page-article">
+      <h1 class="h-display page-title">{title}</h1>
+      <div class="page-body">
+        <slot />
+      </div>
+    </article>
+  </div>
+</Base>
+
+<style>
+  .page-wrap {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 64px 64px 96px;
+  }
+
+  .page-topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 880px;
+    margin: 0 auto 64px;
+  }
+
+  .page-article {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .page-title {
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0 0 36px;
+  }
+
+  @media (max-width: 719px) {
+    .page-wrap {
+      padding: 32px 24px 48px;
+    }
+
+    .page-title {
+      font-size: 30px;
+    }
+  }
+</style>

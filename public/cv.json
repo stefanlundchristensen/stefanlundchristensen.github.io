@@ -1,0 +1,282 @@
+{
+  "$schema": "https://rxresu.me/schema.json",
+  "version": "5.0.0",
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 0,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Stefan Christensen",
+    "headline": "Senior Vice President | Platform Engineering, Payments & AI | FinTech Executive",
+    "email": "stefan_christensen@protonmail.com",
+    "phone": "+45 21725185",
+    "location": "Copenhagen, Denmark",
+    "website": {
+      "url": "https://www.stefanchristensen.me",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Summary",
+    "columns": 1,
+    "hidden": false,
+    "content": "<p>Physics → Payments → Platform. Started in a physics lab building atomic clocks beyond the quantum limit. Five years at McKinsey advising Tier 1 European banks on payments, regulatory strategy, and digital transformation. At Pleo since 2019, scaling from 100 to 850+ people while building payment infrastructure across 15+ European markets.</p><p>Quantum mechanics taught me to work with ambiguity. Consulting taught me how to navigate boardrooms and regulatory regimes. Operating taught me how to build customer-centric solutions on top of legacy infrastructure and technical constraints — whether that's fragmented European payment rails or regulatory complexity across markets.</p><p>What I build: highly scalable, modular systems that turn constraints into competitive advantages. The kind that work in production when nobody's watching.</p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profiles",
+      "columns": 1,
+      "hidden": true,
+      "items": [
+        {
+          "id": "mgxzhkio9hz0kzxgrlaeq4un",
+          "hidden": false,
+          "icon": "linkedin",
+          "network": "LinkedIn",
+          "username": "stefanlchristensen",
+          "website": {
+            "url": "https://www.linkedin.com/in/stefanlchristensen/",
+            "label": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "jghnvt1u6ffwhd8igcvpek3m",
+          "hidden": false,
+          "company": "Pleo",
+          "position": "",
+          "location": "",
+          "period": "Aug 2019 - Present",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p><u>Head of Platform, Senior Vice President</u> <em>(Sep 2024 - Present)</em></p><ul><li><p>Led ~70 people across platform engineering, data, AI infrastructure, and regulated entities</p></li><li><p>Achieved 70% reduction in card scheme costs through strategic renegotiation in a duopoly market</p></li><li><p>Drove company-wide AI agenda: internal productivity tooling and infrastructure for future product capabilities</p></li><li><p>Formal accountability to UK financial regulator (EMD license); member of executive committee and risk committee</p></li><li><p>Spun out mature teams while maintaining delivery, shrinking scope intentionally as proof the foundation works</p></li></ul><p><u>Head of Platform, Vice President</u> <em>(Aug 2023 - Sep 2024)</em></p><ul><li><p>Led 100+ people across payments, data analytics, developer experience, core infrastructure, security, and TechOps</p></li><li><p>Part of the transformation that delivered 300% increase in engineering throughput with flat headcount</p></li><li><p>Hired VP Data; rebuilt underperforming organizations into predictable delivery engines</p></li><li><p>Built the platform systems that product teams depend on to ship fast</p></li><li><p>Delivered 3x throughput increase in the engineering function</p></li></ul><p><u>Head of Payments, Vice President</u> <em>(Jun 2021 - Aug 2023)</em></p><ul><li><p>Built Pleo's payments organization from scratch with ~25 people across engineering, partnerships, compliance, and operations</p></li><li><p>Scaled from 5 to 15 markets in 11 months</p></li><li><p>Restructured partnerships with JPMorgan, BankingCircle, and Yapily to support multi-market expansion</p></li><li><p>Shifted engineering from end-to-end features to modular platform architecture</p></li></ul><p><u>Head of Business Development, Director</u> <em>(Jan 2021 - Jun 2021)</em></p><ul><li><p>Built the business case and initial operating model for Pleo's standalone payments organization</p></li><li><p>Key member of our Series C round</p></li><li><p>Three team members from this period later became directors</p></li></ul><p><u>Entrepreneur in Residence</u> <em>(Aug 2019 - Jan 2021)</em></p><ul><li><p>Migrated 20,000+ corporate customers to a new payment processor; unlocked 20 percentage point margin uplift</p></li><li><p>Led a cross-functional team of 15 through PSD2 compliance on a compressed timeline</p></li><li><p>Increased book size per representative by 2–3x by building systems that scaled without adding headcount</p></li></ul>",
+          "roles": []
+        },
+        {
+          "id": "xmm1rxd97xwcjw3j3iuza704",
+          "hidden": false,
+          "company": "McKinsey & Company",
+          "position": "",
+          "location": "",
+          "period": "Jan 2014 - Aug 2019",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p><u>Engagement Manager</u></p><ul><li><p>Led the founding of a pan-European payment infrastructure company across 5+ jurisdictions — board composition, regulator strategy, vendor selection, executive hiring</p></li><li><p>Built AML transformation programs and payment product roadmaps for Tier 1 banks across the Nordics and Western Europe</p></li><li><p>3 of 7 payment concepts ideated for a Tier 1 bank became real products in the following years</p></li><li><p>Presented directly to bank CEOs and supervisory boards across multiple countries</p></li></ul><p><u>Associate</u></p><ul><li><p>Led development of product delivery roadmaps for a leading Nordic bank's top-priority payments product incl. go-to-market, partnership strategy, business model, and product features.</p></li><li><p>Co-led client team of 10+ people to deliver on Advanced Analytics (predictive maintenance). Achieved direct financial impact in 3 weeks. Agile working methodology replicated in 3+ other engagements.</p></li><li><p>Led a cross-functional 7-person team to develop and implement a tailored Next-Product-to-Buy model. Pilot deployment in direct email channel improved conversion rate and revenue by 10-20%.</p></li></ul><p><u>Jnr. Associate</u></p><ul><li><p>Led technology-driven innovation effort around payments for a leading Nordic bank. Resulted in setup of new Corporate payments unit with 15+ people</p></li></ul>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "l91fgjpn7oqsxx17d845t7p7",
+          "hidden": false,
+          "school": "University of Copenhagen",
+          "degree": "",
+          "area": "PhD in Physics",
+          "grade": "",
+          "location": "",
+          "period": "2014",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": "<p>Built atomic clocks beyond the quantum limit and foundational components for quantum computing networks.</p>"
+        },
+        {
+          "id": "qnx4pg48zlt30ef428lajz1b",
+          "hidden": false,
+          "school": "University of Copenhagen",
+          "degree": "",
+          "area": "M.Sc of Physics. GPA of 11.3",
+          "grade": "",
+          "location": "",
+          "period": "2011",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        },
+        {
+          "id": "o21ealhjb0bwsurx85qfx4dd",
+          "hidden": false,
+          "school": "University of Copenhagen",
+          "degree": "",
+          "area": "B.Sc of Physics. GPA 8.7",
+          "grade": "",
+          "location": "",
+          "period": "2009",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "skills": {
+      "title": "Skills",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "languages": {
+      "title": "Languages",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "interests": {
+      "title": "Interests",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "awards": {
+      "title": "Awards",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "publications": {
+      "title": "Publications",
+      "columns": 1,
+      "hidden": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "columns": 1,
+      "hidden": true,
+      "items": []
+    },
+    "references": {
+      "title": "References",
+      "columns": 1,
+      "hidden": false,
+      "items": [
+        {
+          "id": "019c1d71-7e50-702f-88ce-dd0edd695d69",
+          "hidden": false,
+          "options": {
+            "showLinkInTitle": false
+          },
+          "name": "Available upon request",
+          "position": "",
+          "website": {
+            "url": "",
+            "label": ""
+          },
+          "phone": "",
+          "description": "<p>Includes McKinsey Partners, FinTech executives, Team members</p>"
+        }
+      ]
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "bronzor",
+    "layout": {
+      "sidebarWidth": 28.38,
+      "pages": [
+        {
+          "fullWidth": true,
+          "main": [
+            "summary",
+            "profiles",
+            "education",
+            "experience",
+            "awards",
+            "languages",
+            "volunteer",
+            "references",
+            "projects",
+            "skills",
+            "interests",
+            "certifications",
+            "publications"
+          ],
+          "sidebar": []
+        }
+      ]
+    },
+    "css": {
+      "enabled": false,
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}"
+    },
+    "page": {
+      "gapX": 2,
+      "gapY": 4,
+      "marginX": 10,
+      "marginY": 10,
+      "format": "a4",
+      "locale": "en-US",
+      "hideIcons": false
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(87, 83, 78, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "Roboto Condensed",
+        "fontWeights": [
+          "400"
+        ],
+        "fontSize": 9,
+        "lineHeight": 1.15
+      },
+      "heading": {
+        "fontFamily": "Roboto Condensed",
+        "fontWeights": [
+          "600"
+        ],
+        "fontSize": 11,
+        "lineHeight": 1
+      }
+    },
+    "notes": ""
+  }
+}

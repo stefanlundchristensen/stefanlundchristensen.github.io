@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from 'astro:content';
+import Post from '../../layouts/Post.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts
+    .filter((p) => !p.data.draft)
+    .map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const allPosts = await getCollection('posts');
+const published = allPosts
+  .filter((p) => !p.data.draft && p.id !== post.id)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const morePosts = published.slice(0, 3).map((p) => ({
+  slug: p.id,
+  title: p.data.title,
+  description: p.data.description,
+  date: p.data.date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+}));
+
+function estimateReadingTime(body: string): string {
+  const words = body.split(/\s+/).length;
+  const mins = Math.max(1, Math.round(words / 250));
+  return `${mins} min read`;
+}
+
+const readingTime = estimateReadingTime(post.body ?? '');
+---
+
+<Post
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+  tags={post.data.tags}
+  categories={post.data.categories}
+  readingTime={readingTime}
+  morePosts={morePosts}
+>
+  <Content />
+</Post>
