@@ -14,13 +14,13 @@ Getting into the entry zone is easy. The next mile is brutal — the curve gets 
 
 ## The Easy Mile
 
-The first mile of AI adoption is mostly a tooling story. Engineers use Copilot or Cursor, PMs draft specs in a chat tool, designers mock things up with image models. Productivity goes up by some amount that's hard to measure precisely but everyone agrees is real.
+The first mile of AI adoption is mostly a tooling story. Engineers use Copilot or Cursor, PMs draft specs in a chat tool, designers mock things up with image models. Productivity goes up. DX's [Q4 2025 impact report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/) puts the average at 3.6 hours saved per developer per week, with daily users saving more, and the number has roughly doubled in a year.
 
 This is where most companies are, and there's nothing wrong with it. The problem is mistaking it for the destination.
 
 What this version of AI adoption doesn't change is the shape of the lifecycle. PMs still write tickets that engineers pick up, sprints still assume work is sized in days, code review is still the main quality gate, and specialists still hand artifacts to other specialists.
 
-Faster is still faster, but it's faster on the same shape. The outliers have a different shape.
+Faster is still faster, but it's faster on the same shape. DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) names the gap directly: individual-level metrics improve sharply, but organizational delivery metrics stay flat. They call it the AI productivity paradox. The paradox is the easy mile. The outliers have a different shape.
 
 ## The Assumption That Changes Everything
 

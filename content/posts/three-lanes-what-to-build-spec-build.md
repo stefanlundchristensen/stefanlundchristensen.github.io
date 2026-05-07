@@ -118,6 +118,8 @@ The promise SAFe makes is that scaled agile is a system you adopt. Scrum's promi
 
 An organization is people and talent. The shape that works is the one that fits the people you have and the work they're doing, not the one that fit the team in the case study. That has always been true. AI doesn't change it. If anything, AI makes it more obvious, because the lifecycle is changing fast enough that anyone selling you a fixed model is selling you something already out of date.
 
+DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) catalogues seven distinct team profiles, from "harmonious high-achievers" to teams stuck in a "legacy bottleneck." Different profiles need different paths forward. Most prescriptive operating models address only a couple of those profiles well, even when their decks claim to cover all of them.
+
 The three-lane model in this post is a real artifact from a real team. The team it came from has specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. They might not fit you at all because your team's bottleneck is somewhere this model doesn't address.
 
 What carries across teams isn't the model; it's the diagnostic. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves. The shape that emerges from that exercise will look like your team, not like the team in the case study.

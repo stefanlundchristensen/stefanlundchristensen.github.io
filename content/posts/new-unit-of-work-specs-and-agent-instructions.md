@@ -98,6 +98,8 @@ The shift has to be deliberate. Specs need to be reviewed with the same seriousn
 
 PR review still happens, but it changes character. It's checking that the implementation matches the spec, not that the implementation is sensibly designed in the abstract. Sensible design is now the spec's job. The PR review is closer to a regression check.
 
+DX's [Q4 2025 impact report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/) found this dichotomy directly in the data. Some organizations see code quality improve as AI usage rises; others see real degradation. The split tracks engineering hygiene and the AI practices that were in place before adoption. Teams that already had strong tests, conventions, and review discipline got better outcomes from AI; teams that didn't got worse ones. The implication for spec review is the same shape as the implication for tests and conventions. Quality moved earlier in the process; the teams investing earlier are the teams getting paid for it.
+
 The teams that don't make this shift end up with a worst-of-both-worlds setup: agents writing more code than the team can carefully PR-review, and specs that haven't been reviewed because the team's review muscle is still aimed at the PR. That setup ships fast and ships fragile.
 
 ## What Good Looks Like
