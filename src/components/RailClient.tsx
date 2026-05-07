@@ -52,6 +52,11 @@ export default function RailClient() {
 
   useEffect(() => {
     const onScroll = () => {
+      const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 2;
+      if (atBottom) {
+        setActive(SECTION_IDS[SECTION_IDS.length - 1]);
+        return;
+      }
       let best = SECTION_IDS[0];
       let bestTop = -Infinity;
       for (const id of SECTION_IDS) {
@@ -80,7 +85,7 @@ export default function RailClient() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <div>
             <div className="h-display" style={{ fontSize: 22, lineHeight: 1.1 }}>{s.name}</div>
-            <div style={{ fontSize: 13, color: 'var(--ink-60)' }}>{s.role}</div>
+            <div style={{ fontSize: 13, color: 'var(--ink-60)' }}>{s.subtitle}</div>
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
             <ThemeToggle />
@@ -125,11 +130,8 @@ export default function RailClient() {
           <h1 className="h-display" style={{ fontSize: 30, lineHeight: 1.05, margin: 0 }}>
             {s.name}
           </h1>
-          <div className="h-display" style={{ fontSize: 16, color: 'var(--ink-60)', marginBottom: 4 }}>
-            {s.role}
-          </div>
-          <div className="lbl" style={{ marginBottom: 24 }}>
-            2009 → now · 17 yrs
+          <div style={{ fontSize: 14, color: 'var(--ink-60)', marginBottom: 24, lineHeight: 1.4 }}>
+            {s.subtitle}
           </div>
 
           <div style={{ marginBottom: 28 }}>

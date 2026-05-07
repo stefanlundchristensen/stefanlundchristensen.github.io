@@ -1,15 +1,16 @@
 export const STEFAN = {
   name: 'Stefan Christensen',
   role: 'SVP Product & Engineering',
+  subtitle: 'Builder of teams. Fixer. Operator.',
   city: 'Copenhagen',
   tagline:
     'Executive operator who scales fintech teams, payment infrastructure, and the organisations around them.',
   longBio: [
-    'I lead platform organisations at growth-stage fintechs — the engine room where payments, infrastructure, risk and developer experience converge. My focus is the boring-but-decisive work of turning a clever product into a company that can take the next ten years.',
-    'Most of my career has been spent in Copenhagen, scaling teams from a handful to hundreds, taking products from early design partners to nine-figure volumes, and rebuilding the operating cadence underneath both. Before that: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.',
+    'I am a generalist who builds teams and gets things working. At Pleo I built the payments platform from scratch, scaled it across fifteen European markets, and then took on everything around it: data, infrastructure, security, developer experience. When something is broken or missing, I go fix it.',
+    'Most of my career has been in Copenhagen, scaling teams from a handful to hundreds and taking products from early design partners to nine-figure volumes. Before fintech: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.',
   ],
   short:
-    'I help fintech leaders scale platform teams and the businesses they hold up. Currently SVP Product & Engineering at Pleo; previously McKinsey and a PhD in quantum physics.',
+    'I build and fix platform teams and the businesses they hold up. Currently SVP Product & Engineering at Pleo; previously McKinsey and a PhD in physics.',
   contact: {
     email: 'stefan_christensen@protonmail.com',
     linkedin: 'linkedin.com/in/stefanlchristensen',
@@ -31,7 +32,7 @@ export const STEFAN = {
     },
     {
       label: 'Reading',
-      body: 'Fewer newsletters, more books. Trying to keep the ratio honest.',
+      body: 'Fewer newsletters, more books.',
     },
   ],
   experience: [
@@ -73,11 +74,11 @@ export const STEFAN = {
     },
     {
       title: 'Traditional to AI-first',
-      body: "I'm in the middle of this transition right now — building AI infrastructure at a company that started as a card programme. Not the chatbot layer, but the hard part: rearchitecting data pipelines, compliance automation, and internal tooling so that AI becomes the default way the organisation works. I know what it takes to move a real company, not a greenfield experiment.",
+      body: "I'm in the middle of this transition right now, building AI infrastructure at a company that started as a card programme. Not the chatbot layer, but rearchitecting data pipelines, compliance automation, and internal tooling so that AI becomes the default way the organisation works. I know what it takes to move a real company, not a greenfield experiment.",
     },
     {
       title: 'Scaling platform organisations',
-      body: "Building the engine room — and the operating cadence that keeps it running. Strongest when you're crossing the 50–200 engineer threshold, where the org chart starts to become the product roadmap whether you want it to or not.",
+      body: "Building the teams and operating cadence that keep the platform running. Strongest when you're crossing the 50 to 200 engineer threshold, where org structure starts driving the product roadmap.",
     },
     {
       title: 'Advisory & board',
