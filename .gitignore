@@ -6,6 +6,9 @@ node_modules/
 # Temporary files
 .DS_Store
 
+# OG image generation cache
+scripts/.fonts/
+
 # IDE
 .vscode/
 .idea/

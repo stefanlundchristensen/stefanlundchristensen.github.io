@@ -26,45 +26,26 @@ function formatDate(d: Date): string {
     <RailClient client:load />
 
     <main style="max-width: 720px;">
-      <div class="lbl" style="margin-bottom: 18px;">An introduction</div>
-      <p class="h-display" style="font-size: 34px; line-height: 1.24; margin: 0 0 22px;">
-        {s.tagline}
+      <p class="h-display" style="font-size: 32px; line-height: 1.18; margin: 0 0 22px;">
+        {s.headline}
       </p>
-      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-        <span class="pill"><b>~15 yrs</b> in fintech</span>
-        <span class="pill"><b>100+</b> engineers led</span>
-        <span class="pill"><b>Pleo · McKinsey · Physics</b></span>
-        <span class="pill pill--accent">Open to advisory</span>
+      <p style="margin: 0 0 28px; color: var(--ink-70); max-width: 620px;">
+        Fifteen years in European fintech. Pleo, McKinsey, and a PhD in physics before that.
+      </p>
+
+      <div class="metric-strip" aria-label="Selected outcomes">
+        {s.metrics.map((m) => (
+          <div class="metric-cell">
+            <div class="metric-value">{m.value}</div>
+            <div class="metric-label">{m.label}</div>
+          </div>
+        ))}
       </div>
 
       <div class="rule"></div>
 
-      <section id="about" class="fade-section">
-        <div class="lbl" style="margin-bottom: 16px;">About</div>
-        <p style="margin: 0 0 18px;">
-          {s.longBio[0]}
-        </p>
-        <p style="margin: 0;">{s.longBio[1]}</p>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="now" class="fade-section">
-        <div class="lbl" style="margin-bottom: 16px;">What I'm doing now</div>
-        {s.now.map((n, i) => (
-          <div
-            style={`display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 14px 0;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}
-          >
-            <div class="lbl" style="padding-top: 4px; color: var(--ink-70);">{n.label}</div>
-            <div>{n.body}</div>
-          </div>
-        ))}
-      </section>
-
-      <div class="rule"></div>
-
       <section id="work" class="fade-section">
-        <div class="lbl" style="margin-bottom: 16px;">The path here</div>
+        <h2 class="section-head">The path here</h2>
         <p style="margin: 0 0 18px;">
           I joined Pleo in 2019 at around 100 people, looking to get hands-on after five years advising banks at McKinsey. My first job was migrating 20,000 customers to a new payment processor and unlocking a 20-point margin uplift. That turned into building the entire payments platform from scratch. We went from five European markets to fifteen in eleven months.
         </p>
@@ -82,8 +63,18 @@ function formatDate(d: Date): string {
 
       <div class="rule"></div>
 
+      <section id="about" class="fade-section">
+        <h2 class="section-head">About</h2>
+        <p style="margin: 0 0 18px;">
+          {s.longBio[0]}
+        </p>
+        <p style="margin: 0;">{s.longBio[1]}</p>
+      </section>
+
+      <div class="rule"></div>
+
       <section id="advisory" class="fade-section">
-        <div class="lbl" style="margin-bottom: 16px;">How I help</div>
+        <h2 class="section-head">Where I'm strongest</h2>
         {s.proposition.map((p, i) => (
           <div style={`padding: 18px 0;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}>
             <div class="h-display" style="font-size: 21px; margin-bottom: 6px;">{p.title}</div>
@@ -95,7 +86,7 @@ function formatDate(d: Date): string {
       <div class="rule"></div>
 
       <section id="testimonials" class="fade-section">
-        <div class="lbl" style="margin-bottom: 16px;">What colleagues say</div>
+        <h2 class="section-head">Colleagues</h2>
         {s.testimonials.map((t) => (
           <div class="testimonial">
             <blockquote>"{t.quote}"</blockquote>
@@ -107,7 +98,7 @@ function formatDate(d: Date): string {
       <div class="rule"></div>
 
       <section id="writing" class="fade-section">
-        <div class="lbl" style="margin-bottom: 18px;">Writing</div>
+        <h2 class="section-head">Writing</h2>
 
         {featured && (
           <a class="featured" href={`/posts/${featured.id}/`}>
@@ -160,6 +151,13 @@ function formatDate(d: Date): string {
           </a>
         ))}
       </section>
+
+      <footer class="site-footer">
+        <a class="link" href={`mailto:${s.contact.email}`}>{s.contact.email}</a>
+        <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="/rss.xml">RSS</a>
+        <span class="footer-meta">© 2026 {s.name} · {s.contact.location}</span>
+      </footer>
     </main>
   </div>
   <SectionObserver />

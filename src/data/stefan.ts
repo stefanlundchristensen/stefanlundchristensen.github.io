@@ -1,12 +1,13 @@
 export const STEFAN = {
   name: 'Stefan Christensen',
   role: 'SVP Product & Engineering',
-  subtitle: 'Builder of teams. Fixer. Operator.',
+  subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
   city: 'Copenhagen',
+  headline: 'I run product and engineering at Pleo.',
   tagline:
-    'Executive operator who scales fintech teams, payment infrastructure, and the organisations around them.',
+    'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
-    'I am a generalist who builds teams and gets things working. At Pleo I built the payments platform from scratch, scaled it across fifteen European markets, and then took on everything around it: data, infrastructure, security, developer experience. When something is broken or missing, I go fix it.',
+    'I run product and engineering at Pleo — ~70 people across platform, data, AI infrastructure, and our regulated entities. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
     'Most of my career has been in Copenhagen, scaling teams from a handful to hundreds and taking products from early design partners to nine-figure volumes. Before fintech: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.',
   ],
   short:
@@ -17,23 +18,11 @@ export const STEFAN = {
     writing: 'stefanchristensen.me/posts',
     location: 'Copenhagen, DK',
   },
-  now: [
-    {
-      label: 'Day job',
-      body: 'SVP Product & Engineering at Pleo. Leading platform, data, IT, and AI infrastructure across 100+ people.',
-    },
-    {
-      label: 'Building',
-      body: 'AI infrastructure for product capabilities, renegotiating card scheme partnerships, and growing seven direct leaders into autonomous decision-makers.',
-    },
-    {
-      label: 'Writing',
-      body: 'Essays on org design, payments infrastructure, and what it takes to build organisations that work without you in the room.',
-    },
-    {
-      label: 'Reading',
-      body: 'Fewer newsletters, more books.',
-    },
+  metrics: [
+    { value: '5 → 15', label: 'European markets, 11 months' },
+    { value: '3×', label: 'Engineering throughput, flat headcount' },
+    { value: '70%', label: 'Card scheme cost reduction' },
+    { value: '~70', label: 'On the team today, platform + data + AI' },
   ],
   experience: [
     {
@@ -69,20 +58,16 @@ export const STEFAN = {
   ],
   proposition: [
     {
-      title: 'Payments & financial infrastructure',
-      body: "I've built payment organisations from scratch, negotiated card scheme contracts in duopoly markets, and scaled from five European markets to fifteen in under a year. If you're navigating European payment rails, processor migrations, or the regulatory layer underneath — that's where I've spent the last decade.",
+      title: 'European payments, end-to-end',
+      body: "Built Pleo's payments platform from scratch, scaled it from 5 to 15 markets in 11 months, and took 70% out of card scheme costs in a duopoly through direct negotiation. The work no one wants to own and that determines whether the company can scale at all.",
     },
     {
-      title: 'Traditional to AI-first',
-      body: "I'm in the middle of this transition right now, building AI infrastructure at a company that started as a card programme. Not the chatbot layer, but rearchitecting data pipelines, compliance automation, and internal tooling so that AI becomes the default way the organisation works. I know what it takes to move a real company, not a greenfield experiment.",
+      title: 'Traditional companies going AI-first',
+      body: "I'm in the middle of this transition right now: rearchitecting data pipelines, compliance automation, and internal tooling at a company that started as a card programme. Not the chatbot layer — the work that decides whether AI becomes the default way an organisation operates or stays a side project.",
     },
     {
-      title: 'Scaling platform organisations',
-      body: "Building the teams and operating cadence that keep the platform running. Strongest when you're crossing the 50 to 200 engineer threshold, where org structure starts driving the product roadmap.",
-    },
-    {
-      title: 'Advisory & board',
-      body: 'Open to one or two advisory seats in payments, embedded finance, or B2B fintech infrastructure. Hands-on for the first hundred days, then a steady hand.',
+      title: 'Platform organisations crossing 50 → 200 engineers',
+      body: 'Tripled engineering throughput on flat headcount in the last cycle. The unlock was treating platform teams as product teams with real users and real outcomes. This is the threshold where org structure starts driving the product roadmap, and where most companies break.',
     },
   ],
   testimonials: [
@@ -90,11 +75,6 @@ export const STEFAN = {
       quote:
         'Stefan is one of the strongest colleagues I have ever worked with. He navigates gnarly migrations, is an excellent org designer, and is a leader everyone wants to follow — because he genuinely cares for every individual on his team.',
       cite: 'VP Engineering, Pleo',
-    },
-    {
-      quote:
-        'What stands out about Stefan is his ability to keep the broader picture in view while the rest of us are deep in the weeds. His calm and structured guidance helped us ask better questions and move forward with confidence.',
-      cite: 'Senior Software Engineer, Pleo',
     },
   ],
 } as const;
