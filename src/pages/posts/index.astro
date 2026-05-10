@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { STEFAN } from '../../data/stefan';
 import { getCollection } from 'astro:content';
+import { readingTime } from '../../lib/readingTime';
 
 const s = STEFAN;
 
@@ -35,9 +36,12 @@ const posts = allPosts
           {post.data.description && (
             <div style="color: var(--ink-65); font-size: 15px; margin-bottom: 6px;">{post.data.description}</div>
           )}
-          {post.data.categories[0] && (
-            <span class="lbl" style="color: var(--accent);">{post.data.categories[0]}</span>
-          )}
+          <div style="display: flex; gap: 14px;">
+            {post.data.categories[0] && (
+              <span class="lbl" style="color: var(--accent);">{post.data.categories[0]}</span>
+            )}
+            <span class="lbl">{readingTime(post.body ?? '')}</span>
+          </div>
         </a>
       ))}
     </div>

@@ -4,6 +4,7 @@ import RailClient from '../components/RailClient.tsx';
 import SectionObserver from '../components/SectionObserver.astro';
 import { STEFAN } from '../data/stefan';
 import { getCollection } from 'astro:content';
+import { readingTime } from '../lib/readingTime';
 
 const s = STEFAN;
 
@@ -11,12 +12,6 @@ const allPosts = await getCollection('posts');
 const publishedPosts = allPosts
   .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
-
-function estimateReadingTime(body: string): string {
-  const words = body.split(/\s+/).length;
-  const mins = Math.max(1, Math.round(words / 250));
-  return `${mins} min`;
-}
 
 const featured = publishedPosts[0];
 const restPosts = publishedPosts.slice(1);
@@ -134,7 +129,7 @@ function formatDate(d: Date): string {
                   <span class="lbl" style="color: var(--accent);">{featured.data.categories[0]}</span>
                 )}
                 <span class="lbl">{formatDate(featured.data.date)}</span>
-                <span class="lbl">{estimateReadingTime(featured.body ?? '')}</span>
+                <span class="lbl">{readingTime(featured.body ?? '')}</span>
               </div>
             </div>
           </a>
@@ -160,7 +155,7 @@ function formatDate(d: Date): string {
               {w.data.categories?.[0] && (
                 <span class="lbl" style="color: var(--accent);">{w.data.categories[0]}</span>
               )}
-              <span class="lbl">{estimateReadingTime(w.body ?? '')}</span>
+              <span class="lbl">{readingTime(w.body ?? '')}</span>
             </div>
           </a>
         ))}

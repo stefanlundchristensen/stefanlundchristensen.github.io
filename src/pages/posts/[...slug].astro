@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Post from '../../layouts/Post.astro';
+import { readingTime } from '../../lib/readingTime';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -24,13 +25,6 @@ const morePosts = published.slice(0, 3).map((p) => ({
   date: p.data.date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
 }));
 
-function estimateReadingTime(body: string): string {
-  const words = body.split(/\s+/).length;
-  const mins = Math.max(1, Math.round(words / 250));
-  return `${mins} min read`;
-}
-
-const readingTime = estimateReadingTime(post.body ?? '');
 ---
 
 <Post
@@ -39,7 +33,7 @@ const readingTime = estimateReadingTime(post.body ?? '');
   date={post.data.date}
   tags={post.data.tags}
   categories={post.data.categories}
-  readingTime={readingTime}
+  readingTime={readingTime(post.body ?? '')}
   morePosts={morePosts}
 >
   <Content />
