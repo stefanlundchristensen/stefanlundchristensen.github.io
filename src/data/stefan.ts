@@ -8,7 +8,7 @@ export const STEFAN = {
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
     'I run product and engineering at Pleo — ~70 people across platform, data, AI infrastructure, and our regulated entities. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
-    'Most of my career has been in Copenhagen, scaling teams from a handful to hundreds and taking products from early design partners to nine-figure volumes. Before fintech: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.',
+    "Most of what I've owned at Pleo started as something nobody else wanted to own — a payment-processor migration, a regulatory deadline, a market launch with weeks of runway. The pattern: go in, ship the unsexy thing, leave a team that doesn't need me anymore. Before Pleo: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.",
   ],
   short:
     'I build and fix platform teams and the businesses they hold up. Currently SVP Product & Engineering at Pleo; previously McKinsey and a PhD in physics.',
@@ -63,11 +63,11 @@ export const STEFAN = {
     },
     {
       title: 'Traditional companies going AI-first',
-      body: "I'm in the middle of this transition right now: rearchitecting data pipelines, compliance automation, and internal tooling at a company that started as a card programme. Not the chatbot layer — the work that decides whether AI becomes the default way an organisation operates or stays a side project.",
+      body: "I'm in the middle of this transition right now: rearchitecting data pipelines, compliance automation, and internal tooling at a company that started as a card programme. Not the chatbot layer — the work that decides whether AI becomes the default way an organisation operates or stays a side project. Most of it isn't sexy.",
     },
     {
       title: 'Platform organisations crossing 50 → 200 engineers',
-      body: 'Tripled engineering throughput on flat headcount in the last cycle. The unlock was treating platform teams as product teams with real users and real outcomes. This is the threshold where org structure starts driving the product roadmap, and where most companies break.',
+      body: 'Tripled engineering throughput on flat headcount in the last cycle. The unlock was treating platform teams as product teams with real users and real outcomes — and being willing to sit in the org-politics rooms nobody else wanted to be in. This is the threshold where org structure starts driving the product roadmap, and where most companies break.',
     },
   ],
   testimonials: [
