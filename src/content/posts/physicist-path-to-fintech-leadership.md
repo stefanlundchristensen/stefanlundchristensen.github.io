@@ -1,7 +1,7 @@
 ---
 title: "The Physicist's Path to FinTech Leadership"
 date: 2026-02-26
-draft: true
+draft: false
 tags: ["career", "physics", "fintech", "leadership", "payments"]
 categories: ["Leadership"]
 description: "The connection between quantum physics and FinTech leadership isn't obvious. But the instincts transfer: systems thinking, order-of-magnitude reasoning, finding the right frame."

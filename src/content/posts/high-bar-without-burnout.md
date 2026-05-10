@@ -1,7 +1,7 @@
 ---
 title: "What Setting a High Bar Requires"
 date: 2026-02-26
-draft: true
+draft: false
 tags: ["leadership", "management", "performance", "team-health"]
 categories: ["Leadership"]
 description: "The bar is a contract, not a demand. What it takes to hold high standards and actually help people meet them."
