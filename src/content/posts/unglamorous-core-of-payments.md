@@ -1,7 +1,7 @@
 ---
 title: "The Unglamorous Core of Payments"
 date: 2026-04-26
-draft: true
+draft: false
 tags: ["payments", "infrastructure", "settlement", "clearing", "fintech"]
 categories: ["FinTech", "Payments"]
 description: "The smooth checkout is an illusion. The unglamorous infrastructure work behind it is where payments actually live."
