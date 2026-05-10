@@ -35,7 +35,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
   <text x="80" y="200" font-family="Fraunces" font-size="84" font-weight="500" letter-spacing="-2" fill="#1a1a1a">Stefan Christensen</text>
   <text x="80" y="252" font-family="Inter" font-size="28" font-weight="500" fill="rgba(26,26,26,0.72)">SVP Product &amp; Engineering · Pleo</text>
   <line x1="80" y1="306" x2="164" y2="306" stroke="#c2410c" stroke-width="3"/>
-  <text x="80" y="362" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0.9" fill="rgba(26,26,26,0.62)">5–15 MARKETS  ·  3× THROUGHPUT  ·  70% SCHEME COST  ·  70+ TEAM</text>
+  <text x="80" y="362" font-family="Inter" font-size="18" font-weight="500" letter-spacing="0.9" fill="rgba(26,26,26,0.62)">5–15 MARKETS  ·  3× THROUGHPUT  ·  70% SCHEME COST  ·  20PP MARGIN</text>
   <text x="1120" y="595" font-family="Inter" font-size="14" font-weight="400" fill="rgba(26,26,26,0.5)" text-anchor="end">stefanchristensen.me</text>
 </svg>`;
 

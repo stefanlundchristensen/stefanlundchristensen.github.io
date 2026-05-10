@@ -3,11 +3,11 @@ export const STEFAN = {
   role: 'SVP Product & Engineering',
   subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
   city: 'Copenhagen',
-  headline: 'I run product and engineering at Pleo.',
+  headline: 'I lead platform, data, and AI infrastructure at Pleo.',
   tagline:
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
-    'I run product and engineering at Pleo — ~70 people across platform, data, AI infrastructure, and our regulated entities. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
+    'I lead platform, data, AI infrastructure, and our regulated entities at Pleo — about 70 people. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
     "Most of what I've owned at Pleo started as something nobody else wanted to own — a payment-processor migration, a regulatory deadline, a market launch with weeks of runway. The pattern: go in, ship the unsexy thing, leave a team that doesn't need me anymore. Before Pleo: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.",
   ],
   short:
@@ -22,7 +22,7 @@ export const STEFAN = {
     { value: '5 → 15', label: 'European markets, 11 months' },
     { value: '3×', label: 'Engineering throughput, flat headcount' },
     { value: '70%', label: 'Card scheme cost reduction' },
-    { value: '~70', label: 'On the team today, platform + data + AI' },
+    { value: '20pp', label: 'Margin uplift on a processor migration' },
   ],
   experience: [
     {
@@ -68,6 +68,10 @@ export const STEFAN = {
     {
       title: 'Platform organisations crossing 50 → 200 engineers',
       body: 'Tripled engineering throughput on flat headcount in the last cycle. The unlock was treating platform teams as product teams with real users and real outcomes — and being willing to sit in the org-politics rooms nobody else wanted to be in. This is the threshold where org structure starts driving the product roadmap, and where most companies break.',
+    },
+    {
+      title: 'Building product organisations through growth-stage',
+      body: "Joined Pleo at 100 people; helped take it past 850. Six years inside the product engine of a Series C fintech, plus five years at McKinsey before that advising European banks on payments and digital transformation. Product at growth-stage isn't the discovery loop — it's pricing, packaging, regulatory readiness, market launches with weeks of runway, and saying no to the things that don't compound. The companies that get this right keep momentum past Series B; the ones that don't, stall.",
     },
   ],
   testimonials: [

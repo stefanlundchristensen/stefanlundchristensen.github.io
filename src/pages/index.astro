@@ -42,10 +42,6 @@ function formatDate(d: Date): string {
         ))}
       </div>
 
-      <blockquote class="hero-credo">
-        Most of the work that mattered was the work nobody wanted to own.
-      </blockquote>
-
       <div class="rule"></div>
 
       <section id="work" class="fade-section">
@@ -90,7 +86,6 @@ function formatDate(d: Date): string {
       <div class="rule"></div>
 
       <section id="testimonials" class="fade-section">
-        <h2 class="section-head">Colleagues</h2>
         {s.testimonials.map((t) => (
           <div class="testimonial">
             <blockquote>"{t.quote}"</blockquote>
@@ -157,7 +152,6 @@ function formatDate(d: Date): string {
       </section>
 
       <footer class="site-footer">
-        <a class="link" href={`mailto:${s.contact.email}`}>{s.contact.email}</a>
         <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="link" href="/rss.xml">RSS</a>
         <span class="footer-meta">© 2026 {s.name} · {s.contact.location}</span>

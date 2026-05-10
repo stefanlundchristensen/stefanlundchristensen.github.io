@@ -136,9 +136,6 @@ export default function RailClient() {
           <div style={{ marginBottom: 28 }}>
             <div className="lbl" style={{ marginBottom: 10 }}>Contact</div>
             <div style={{ display: 'grid', gap: 6, fontSize: 13 }}>
-              <a className="link" href={`mailto:${s.contact.email}`}>
-                {s.contact.email}
-              </a>
               <a className="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
                 {s.contact.linkedin}
               </a>

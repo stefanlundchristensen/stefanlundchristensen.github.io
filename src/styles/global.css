@@ -141,20 +141,6 @@ body::before {
   color: var(--ink-55);
 }
 
-.hero-credo {
-  margin: 28px 0 0;
-  padding: 4px 0 4px 22px;
-  border-left: 3px solid var(--accent);
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 1.4;
-  letter-spacing: -0.005em;
-  color: var(--ink-78);
-  max-width: 620px;
-}
-
 .site-footer .footer-meta {
   margin-left: auto;
   font-family: var(--font-body);
