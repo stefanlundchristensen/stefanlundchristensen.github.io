@@ -1,7 +1,7 @@
 ---
 title: "Your Leadership Scorecard: What to Own When You Lead Beyond a Single Team"
 date: 2026-01-22
-draft: false
+draft: true
 tags: ["leadership", "organizational-maturity", "management", "scale"]
 categories: ["Leadership"]
 ---

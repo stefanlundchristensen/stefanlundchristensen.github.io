@@ -2,17 +2,18 @@
 title: "Goal Setting Doesn't Need Another Framework"
 date: 2026-03-01
 draft: false
-tags: ["leadership", "goal-setting", "organizational-design"]
+tags: ["leadership", "goal-setting", "organisational-design"]
 categories: ["Leadership"]
+description: "OKRs, SMART, BHAGs, V2MOMs. The framework isn't the point. A goal needs a clear achievement, a baseline, an owner, tangible work you can point to, and a cadence you keep."
 ---
 
-I've sat through OKR workshops. I've written SMART goals. I've seen BHAGs, MBOs, V2MOMs. Every year there's a new framework that promises to be the answer.
+OKR workshops, SMART goals, BHAGs, MBOs, V2MOMs. Every year there's a new framework that promises to be the answer.
 
 Most goal-setting becomes corporate theater. We craft goals that sound impressive but are too fluffy to drive decisions. We keep them "short and to the point" but lose clarity and ownership in the process.
 
-The structural problem with OKRs: they provide too much flexibility and too little guidance. Organizations report the system breaking down around 25-50 people, with complexity increasing exponentially as teams scale. The framework itself becomes the problem — not because it's wrong, but because it's so flexible that every organization implements it differently, leading to endless trial and error.
+The structural problem with OKRs: they provide too much flexibility and too little guidance. In my experience, OKR systems start breaking down around 25–50 people. Complexity grows fast once teams need to coordinate across teams. The framework itself becomes the problem, not because it's wrong, but because it's so flexible that every organisation implements it differently, leading to endless trial and error.
 
-What nobody wants to say: we avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realize your teams aren't set up to be independent.
+What nobody wants to say: we avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realise your teams aren't set up to be independent.
 
 Instead of fixing that, we assign ownership to "areas" or "the VP of Engineering."
 
@@ -59,7 +60,7 @@ Assign to a specific person, not a team, not an area.
 
 **Owner:** Sarah Chen
 
-It's uncomfortable because it exposes organizational gaps. But that discomfort is useful—it forces you to fix the structure or acknowledge the constraint.
+It's uncomfortable because it exposes organisational gaps. But that discomfort is useful. It forces you to fix the structure or acknowledge the constraint.
 
 ### 3. Following up
 
@@ -79,17 +80,4 @@ Meeting structure affects psychological safety, which drives performance. When g
 
 The other way to kill it: ignore your own cadence. If you set an update cadence, respect it. Don't ask for adhoc updates. Don't Slack "give me an update on goal Y?" If you've asked for monthly updates, follow that schedule yourself. Otherwise you're teaching everyone the cadence doesn't matter.
 
-## Putting It Together
-
-Here's a complete goal:
-
-**Reduce customer onboarding time.** New customers currently take too long to complete their first transaction, leading to drop-off and support burden. We will measure our improvement by reducing the average time to first transaction from 4.2 days (Q4 2025) to 1.5 days (Q2 2026), a 64% reduction, by e.g., automated account setup flow, eliminating manual bank verification steps, pre-filling company data via integrations.
-**Owner:** Sarah Chen
-
-Yes, it's long. But the clarity is what makes it work.
-
-It covers: what we're achieving, why it matters, where we are and where we're going, how we'll get there, who owns it.
-
-Sarah knows what she owns. The payments team knows they're affected. Leadership knows what success looks like and when. No ambiguity.
-
-The things a good goal needs are few: a clear statement of what you're achieving, a baseline you can point to, a person who owns it, tangible work that shows how you'll get there, and a cadence you keep. Most of the frameworks people reach for are ways of arriving at exactly these things. If you already have them, the framework is overhead. If you don't, no framework will give them to you — you have to do the thinking yourself.
+The things a good goal needs are few: a clear statement of what you're achieving, a baseline you can point to, a person who owns it, tangible work that shows how you'll get there, and a cadence you keep. Most of the frameworks people reach for are ways of arriving at exactly these things. If you already have them, the framework is overhead. If you don't, no framework will give them to you. You have to do the thinking yourself.
