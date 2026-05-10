@@ -9,18 +9,17 @@ const initials = s.name
   .join('');
 
 const NAV_ITEMS = [
-  { id: 'about', n: '01', label: 'About' },
-  { id: 'now', n: '02', label: "What I'm doing now" },
-  { id: 'work', n: '03', label: 'The path here' },
-  { id: 'advisory', n: '04', label: 'How I help' },
-  { id: 'writing', n: '05', label: 'Writing' },
+  { id: 'work', n: '01', label: 'The path here' },
+  { id: 'about', n: '02', label: 'About' },
+  { id: 'advisory', n: '03', label: "Where I'm strongest" },
+  { id: 'writing', n: '04', label: 'Writing' },
 ];
 
 const SECTION_IDS = NAV_ITEMS.map((it) => it.id);
 
 export default function RailClient() {
   const [railOpen, setRailOpen] = useState(true);
-  const [active, setActive] = useState('about');
+  const [active, setActive] = useState('work');
   const [isMobile, setIsMobile] = useState(false);
   const initialized = useRef(false);
 
@@ -31,7 +30,7 @@ export default function RailClient() {
       if (mobile) {
         setRailOpen(false);
       } else {
-        const stored = localStorage.getItem('siteRailOpen');
+        const stored = localStorage.getItem('stefanRailOpen');
         if (stored !== null) setRailOpen(stored === 'true');
         else if (window.innerWidth < 1024) setRailOpen(false);
       }
@@ -45,7 +44,7 @@ export default function RailClient() {
 
   useEffect(() => {
     if (!isMobile) {
-      localStorage.setItem('siteRailOpen', String(railOpen));
+      localStorage.setItem('stefanRailOpen', String(railOpen));
     }
     document.documentElement.setAttribute('data-rail', railOpen ? 'open' : 'collapsed');
   }, [railOpen, isMobile]);
@@ -175,10 +174,7 @@ export default function RailClient() {
             </button>
           </div>
           <div className="h-display" style={{ fontSize: 26, lineHeight: 1, color: 'var(--ink)' }}>
-            {initials.charAt(0)}
-            <span style={{ color: 'var(--accent)' }}>.</span>
-            {initials.charAt(1)}
-            <span style={{ color: 'var(--accent)' }}>.</span>
+            {initials}
           </div>
           <div className="vname">{s.name}</div>
           <nav style={{ display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'center', marginTop: 8 }}>
