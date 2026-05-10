@@ -4,6 +4,7 @@ date: 2026-05-06
 draft: true
 tags: ["ai-native-product-development", "ai", "product-development", "leadership", "engineering-management"]
 categories: ["Leadership"]
+description: "Most companies are getting productivity uplift from AI. The outliers have a different lifecycle shape, not just a faster one."
 ---
 
 Most companies aren't getting much from AI in product development. A few are pulling away, fast.
@@ -52,7 +53,7 @@ Tickets were the right unit when a day was about as much as one engineer could c
 
 Code review used to be where quality lived, because that was where expensive mistakes got caught. When agents are writing meaningful chunks of the code, the gate moves to the inputs: the spec, the standards, the tests that exist before work starts, the context the agent has access to. Spec review starts to matter more than PR review.
 
-Single-threaded craft used to be the safe career shape — great PM, great designer, great engineer, each role deep in its own domain. That's harder to make work now. The people pulling ahead have craft plus an adjacent dimension: engineers with product taste, PMs who can prototype, designers who can ship.
+Single-threaded craft used to be the safe career shape — one role deep in its own domain, a clean career ladder within it. That's harder to make work now. The people pulling ahead have craft plus an adjacent dimension: engineers with product taste, PMs who can prototype, designers who can ship.
 
 Each of these is its own essay. Together they answer what going further looks like in practice.
 
@@ -76,4 +77,4 @@ That's a leadership move, not a tooling move. It means looking at artifacts you'
 
 Each of those strands deserves its own treatment, and I'll come back to them: the ratio shift, the new unit of work, the move from PR review to spec review, and the way agents are becoming users in their own right. They're all downstream of the same shift this post described.
 
-The easy mile is buying tools and pointing them at the existing process. The next mile is admitting the existing process is the thing that has to change. The leaders who can say that out loud, and then do the slow concrete work of redesigning, are the ones whose teams will be on the steep part of the curve.
+The easy mile is buying tools and pointing them at the existing process. Going further means admitting the process itself is what has to change, and then doing the slow, concrete work of redesigning it one feature at a time, with the people who run it, in ways that survive contact with the next quarter.

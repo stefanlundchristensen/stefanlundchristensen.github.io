@@ -4,6 +4,7 @@ date: 2026-02-03
 draft: true
 tags: ["platform-engineering", "organizational-design", "infrastructure", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
+description: "Our platform teams wrote thousands of lines of documentation. Engineers read almost none of it. Here's what we changed."
 ---
 
 Your platform team offers engineers 12 different ways to deploy a service. Each option is documented. Each is "supported." You're being helpful.
@@ -36,9 +37,7 @@ The mistake was treating the platform as a service designed to minimize constrai
 
 The shift came from a question: **What if platform teams owned products instead of providing services?**
 
-A product has users, clear value, iteration cycles, and accountability. "Using this tool, you get deployment with monitoring, alerting, and rollback for free" is a product.
-
-"We support teams in building things" is not a product. It's a mandate so broad it means almost nothing.
+A product has users, clear value, iteration cycles, and accountability. "Using this tool, you get deployment with monitoring, alerting, and rollback for free" is a product. "We support teams in building things" is a mandate so broad it means almost nothing.
 
 This wasn't a reorganization. Nobody changed reporting lines. The teams themselves barely changed. But the question each team asked shifted.
 
@@ -46,21 +45,9 @@ The old question was "How do we help people build?" The new one: "What product d
 
 ## What Actually Changed
 
-### The Teams
+The org chart looked almost identical before and after. The same teams had all been working on "developer enablement." After, each owned a specific product. Same people, different mandate.
 
-The org chart looked almost identical before and after. The same teams (WebCore, Mobile Infrastructure, DevEx, Backend Infrastructure) had all been working on "developer enablement." After, each owned a specific product. WebCore owned the frontend platform. Mobile Core owned the mobile platform. DevX owned developer experience tooling. Backend Core owned backend infrastructure.
-
-Same people. Different mandate.
-
-### The Leadership
-
-One change was critical: we hired leaders who thought like product managers.
-
-Not traditional infrastructure leads who optimized for technical elegance. Not traditional product managers who lacked technical depth. People who could do user research with engineers, make opinionated prioritization decisions, and say no to requests that didn't fit the product vision.
-
-This was hard to hire for. The role doesn't have a standard career ladder. We had some misfires. But getting this right shaped everything downstream.
-
-### The Work
+One change was critical: we hired leaders who thought like product managers. Not infrastructure leads who valued technical elegance above all, and not traditional product managers who lacked technical depth. People who could do user research with engineers, make opinionated prioritization decisions, and say no to requests that didn't fit the product vision. This was hard to hire for. The role doesn't have a standard career ladder. We had some misfires. But getting this right shaped everything downstream.
 
 The biggest practical change was moving from documentation to implementation.
 
@@ -76,51 +63,21 @@ That's the difference between enablement and product thinking. Enablement says "
 
 ## The Principles Behind the Products
 
-Six principles guided what we built:
+Two ideas ran through everything we built. The first was sensible defaults over maximum optionality: if there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation — it's the fastest, most reliable way to get to production, and it handles compliance requirements the team would otherwise need to figure out themselves. Constraints create freedom.
 
-**Build for humans.** Not in the abstract. Literally embed with engineering teams. Watch them work. See where they get frustrated, confused, or stuck. One observation session is worth ten surveys.
-
-**Outcome over output.** We stopped tracking how many features platform teams shipped. We started tracking whether product teams moved faster. Did deployment frequency increase? Did cycle time decrease? Did fewer things break?
-
-**Sensible defaults over maximum optionality.** If there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation — it's the fastest, most reliable way to get to production. Constraints create freedom.
-
-**API-first everything.** Internal tools designed for programmatic access first. This removes bottlenecks where teams wait for manual steps and lets other teams build on top of platform capabilities.
-
-**Quality is the product.** Tests, observability, monitoring, alerting: not afterthoughts bolted onto the platform. They're part of what the platform provides by default. You don't add monitoring separately. It's already there.
-
-**Security and compliance built in.** Regulatory requirements aren't constraints imposed on the platform. They're core capabilities the platform provides. Teams build fast *and* safely because the golden path handles compliance requirements they'd otherwise need to figure out themselves.
+The second was building for humans, not in the abstract but by embedding with engineering teams. Watch them work. See where they get frustrated, confused, or stuck. One observation session is worth ten surveys. We stopped tracking how many features platform teams shipped and started tracking whether product teams moved faster — deployment frequency, cycle time, breakage rate. Outcome over output, measured by sitting with the people doing the work.
 
 ## How We Made the Transition
 
 The actual shift happened in four phases over six months. It wasn't smooth.
 
-### Months 1-2: Reframing
+The first two months were reframing: running sessions with each team on what product thinking meant for their work. Some got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work, though that wasn't obvious from the inside.
 
-We ran sessions with each platform team explaining what product thinking meant for their work. Not "your job is now different." Instead: "Our platform is becoming a product, and that changes how we make decisions."
+Then each team had to articulate what their product was. Not vague ("developer enablement") but concrete ("the web framework that handles routing, state management, and deployment, giving teams X for free"). This was harder than expected. Some teams needed four or five attempts before the answer was specific enough to build against.
 
-Some teams got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work, though that wasn't obvious from the inside.
+Months three through six were user research, and this was the uncomfortable part. Teams that had been operating in abstract space now had to sit with engineers and watch them work. What they learned surprised them. The deployment tool that platform teams were proud of? Engineers avoided it because the error messages were incomprehensible. Nobody had told them because nobody thought it would change.
 
-### Months 2-3: Getting Specific
-
-Each team had to articulate what their product was. Not vague ("developer enablement") but concrete ("the web framework that handles routing, state management, and deployment, giving teams X for free").
-
-This was harder than expected. First attempts were still too abstract. We iterated until each team could answer three questions: What product do we own? Who uses it? What specific value does it provide?
-
-Some teams needed four or five attempts before the answer was concrete enough.
-
-### Months 3-6: User Research
-
-This was the uncomfortable part. Teams that had been operating in abstract space now had to sit with engineers and watch them work.
-
-What they learned surprised them. Problems they'd never considered were causing significant friction. Features they thought mattered didn't. The deployment tool that platform teams were proud of? Engineers avoided it because the error messages were incomprehensible. Nobody had told them because nobody thought it would change.
-
-### Month 6+: Roadmap Shift
-
-Based on research, teams created roadmaps focused on their specific product. This meant saying "no" to things that didn't fit the product vision.
-
-Liberating for some teams. Unsettling for others. Teams used to saying "yes" to every request now had to make hard prioritization decisions. A platform engineer came to me and said: "I got three requests this week that are all reasonable. But they don't fit our product roadmap. Am I allowed to say no?"
-
-That's the job.
+The roadmap shift followed. Teams created roadmaps focused on their specific product, which meant saying "no" to things that didn't fit. A platform engineer came to me and said: "I got three requests this week that are all reasonable. But they don't fit our product roadmap. Am I allowed to say no?" That's the job.
 
 ## What Worked
 
@@ -150,20 +107,14 @@ For the organization as a whole, feature velocity stayed high even as headcount 
 
 The shift didn't require new hiring, new budgets, or major structural changes. It required a change in how we thought about the work and who we hired to lead it.
 
-## When This Doesn't Work
-
-This approach assumes relatively homogeneous use cases. If your teams have diverse requirements (a machine learning team, a mobile team, and a hardware team all on different stacks) sensible defaults might not exist across all of them.
-
-It also assumes you're past pure experimentation phase. If you're still figuring out your architecture, premature standardization will slow you down.
-
-The tradeoff is real: optionality increases flexibility but decreases velocity. Choose deliberately.
+This approach assumes relatively homogeneous use cases and teams that are past the pure experimentation phase. If your teams have wildly diverse stacks or you're still figuring out your architecture, premature standardization will slow you down. The tradeoff between optionality and velocity is real, and the choice should be conscious.
 
 ## The Test
 
 Are your platform teams measuring activity or impact? If they count docs written or workshops run, they're in enablement mode. If they measure adoption rates and engineer velocity, they're in product mode.
 
-Can engineers use your platform without reading documentation? If the answer is no, you're optimizing for optionality over usability. Good platform products make the right thing the easy thing.
+Can engineers use your platform without reading documentation? If the answer is no, you've chosen optionality over usability. Good platform products make the right thing the easy thing.
 
 Do your platform teams say no? If every request becomes a commitment, you're building a service desk, not a product organization.
 
-When engineers stop thinking about the platform and start thinking about what they're building — you'll know it worked.
+When engineers stop thinking about the platform and start thinking about what they're building, that's the outcome the whole shift was after. We got close. It took longer than the six months suggest, and we're still reinforcing it, but the teams that came through it build differently now — and the ones who joined after don't know it was ever any other way.

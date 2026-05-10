@@ -3,6 +3,8 @@ title: "The Bottleneck Was Always Me"
 date: 2026-03-21
 draft: true
 tags: ["ai", "craft", "personal"]
+categories: ["Leadership"]
+description: "I built AI coaching tools to encode my own judgment about executive communication. The bottleneck was always my calendar."
 ---
 
 Most people I know use AI to move faster. Write the first draft, summarize the doc, clean up the email. The output arrives sooner; the quality is roughly the same. I tried the obvious version of this first — give people tools that could just produce the document for them. It didn't help. The draft arrived faster and the structure was still wrong.

@@ -4,6 +4,7 @@ date: 2026-01-28
 draft: true
 tags: ["payments", "europe", "infrastructure", "fintech", "banking"]
 categories: ["FinTech", "Payments"]
+description: "We asked the bank if they supported Faster Payments. They said yes. Then we tested it at 9pm on a Saturday."
 ---
 
 We did everything right.
@@ -66,13 +67,9 @@ The pattern is consistent: generic support and production-ready support for your
 
 ## What We'd Tell Our Past Selves
 
-The practical changes came down to a few things we'd do differently from day one.
+The most important shift was in who we talked to. Operations teams, the people who investigate failed payments every day, know where the edge cases live. Partnerships teams know what's in the marketing deck. Those aren't the same conversation, and learning to ask for the former changed everything downstream.
 
-The most important shift was in who we talked to. Operations teams, the people who investigate failed payments every day, know where the edge cases live. Partnerships teams know what's in the marketing deck. They're not the same conversation, and we'd learned to ask for the former.
-
-We'd also treat testing as a contract requirement, not an afterthought. Exhaustive testing across hours and days: mornings, evenings, weekends, bank holidays, before commitments are made. The tests reveal what the conversations don't.
-
-On contracting: we couldn't exit our first banking relationship quickly enough to avoid the cost of running two in parallel. Negotiate exit clauses at the start, when you have leverage. Assume limitations will surface during implementation. Assume you'll eventually need a second partner anyway (we did) and plan for it rather than discovering it under pressure.
+We'd also treat testing as a contract requirement, not an afterthought — exhaustive testing across hours and days, mornings, evenings, weekends, bank holidays, before commitments are made. And we'd negotiate exit clauses at the start, when you have leverage. We couldn't exit our first banking relationship quickly enough to avoid the cost of running two in parallel. Assume you'll eventually need a second partner anyway (we did) and plan for it rather than discovering it under pressure.
 
 ## The Broader Pattern
 
@@ -82,4 +79,4 @@ The companies that navigate this well accept the diligence cost upfront. They tr
 
 The companies that struggle assume "we support X" means the same thing everywhere.
 
-We learned this the expensive way. You don't have to.
+We learned this the expensive way, and the lesson has held in every market we've entered since.

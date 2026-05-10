@@ -4,6 +4,7 @@ date: 2026-06-03
 draft: true
 tags: ["ai-native-product-development", "ai", "product-design", "api-design", "agent-experience"]
 categories: ["Leadership"]
+description: "Agents consume products differently than humans. Most teams don't have anyone whose job it is to think about that."
 ---
 
 There's a new user type in your system, and you probably aren't designing for them.
@@ -74,15 +75,9 @@ The hardest version of this is when human and agent users want different things.
 
 ## The Structural Advantage
 
-There's a strategic dimension here that most teams haven't internalized.
+The companies that design well for agents become platforms that other agents build on. If your API and documentation are structured to be reliably consumed by agents, then any team building an agent that needs your kind of capability picks you. You become the dependency, the way every web platform built value on top of the early HTTP and HTML conventions that made the web composable.
 
-The companies that design well for agents become platforms that other agents build on. If your API, your product, your documentation are all structured to be reliably consumed by agents, then any team building an agent that needs your kind of capability picks you. You become the dependency. They build their value on top of yours, the way every web platform built value on top of the early HTTP and HTML conventions that made the web composable.
-
-The companies that don't design for agents leave that opportunity on the table. They might still have great products for human users, but they're a worse choice for any agent-mediated workflow, and over time more workflows are agent-mediated. The competitive position softens slowly, in ways that are hard to detect from quarterly metrics alone, until one day a competitor with a more agent-friendly product takes a piece of the market that the agent-unfriendly company didn't even know was at risk.
-
-This is the kind of advantage that compounds. Each agent that successfully uses your product becomes an example. Each example reduces friction for the next agent. The product accumulates an agent-friendly reputation, and that reputation is hard to attack from a less-friendly position.
-
-Most current adopters underrate this. The conversation tends to be about productivity gains in your own development process — which is real but smaller. The bigger lever is being the kind of product that other people's agents prefer to use, in a world where agents are increasingly the consumers.
+This compounds. Each agent that successfully uses your product reduces friction for the next. The companies that don't design for agents leave that advantage on the table — their competitive position softens slowly, in ways that are hard to detect from quarterly metrics alone. Most current adopters underrate this because the conversation tends to be about productivity gains in your own development process, which is real but smaller. The bigger lever is being the kind of product that other people's agents prefer to use.
 
 ## A Concrete Test
 
@@ -96,7 +91,7 @@ This is a useful exercise even if you don't yet have a strategy for agents as us
 
 The teams that run this exercise once tend to run it regularly after that. Once you've watched an agent struggle with something a human handles in seconds, you start noticing that struggle in features you used to call shipped.
 
-## What Good Looks Like
+## The Mobile Parallel
 
 The teams that take this seriously will look in a few years like the teams that took mobile seriously in 2009.
 

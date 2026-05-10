@@ -92,22 +92,4 @@ It covers: what we're achieving, why it matters, where we are and where we're go
 
 Sarah knows what she owns. The payments team knows they're affected. Leadership knows what success looks like and when. No ambiguity.
 
-The frameworks will keep coming. Next year there'll be a new one. You don't need it.
-
-You need clarity on what you're achieving, a baseline, someone who owns it, tangible work to point to, and a cadence you actually keep.
-
-No acronyms required.
-
-One last thing: this post critiques framework proliferation, but the Amazon 6-pager format plus three additions is a framework. The distinction isn't between having structure and not having it. It's between simple structure you can actually use versus complex frameworks that collapse under their own weight. Choose structure that clarifies rather than obscures.
-
----
-
-## Further Reading
-
-The ideas above have been shaped by excellent writing on goal-setting from others:
-
-- **[The Anatomy of an Amazon 6-Pager](https://writingcooperative.com/the-anatomy-of-an-amazon-6-pager-fc79f31a41c9)** by Jesse Freeman - The foundation for the goal format described here
-- **[TBM 36/8: Goals Take Practice](https://cutlefish.substack.com/p/tbm-368-goals-take-practice)** by John Cutler - On why goal-setting is a continuous skill that requires practice across multiple timeframes
-- **[TBM 115/2: Healthy Goals](https://cutlefish.substack.com/p/tbm-1152-healthy-goals)** by John Cutler - On psychological safety, trust, and why the "why" behind goals matters more than the framework
-
-*Want to discuss goal-setting or organizational scaling? [Get in touch](/about/).*
+The things a good goal needs are few: a clear statement of what you're achieving, a baseline you can point to, a person who owns it, tangible work that shows how you'll get there, and a cadence you keep. Most of the frameworks people reach for are ways of arriving at exactly these things. If you already have them, the framework is overhead. If you don't, no framework will give them to you — you have to do the thinking yourself.

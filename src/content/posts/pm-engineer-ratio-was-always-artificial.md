@@ -4,6 +4,7 @@ date: 2026-05-13
 draft: true
 tags: ["ai-native-product-development", "ai", "product-management", "organizational-design", "leadership"]
 categories: ["Leadership"]
+description: "The 1:5 PM-to-engineer ratio was a coordination tax, not a physics constant. AI made that tax optional, and the cleaner frame is to stop separating the roles."
 ---
 
 The 1:5 PM-to-engineer ratio wasn't a physics constant. It was a coordination tax, and AI just made that tax optional.
@@ -36,11 +37,7 @@ The shape of the lesson isn't "the ratio widens" or "the ratio narrows"; it's th
 
 Productivity numbers are easy to talk about because they're countable. What doesn't scale is harder to put on a dashboard.
 
-Taste doesn't scale. The judgment about whether a feature is the right feature, whether a tradeoff is the right tradeoff, whether a moment is the right moment — that judgment is a function of context and exposure that doesn't 10x because the model gets better. A PM with deep customer context calls things one way; a PM with shallow context calls them another way; no amount of agent assistance changes that.
-
-Customer-research depth has a similar ceiling. You can run more interviews per quarter, but the quality of the listening, the ability to spot a real signal in a noisy session, the connections you make to prior conversations: those are still bound by how much of the customer's world a single person can hold in their head. Tooling helps a little. It doesn't multiply by ten.
-
-Hard-call judgment is the third one. When a team has a real decision to make, the kind that affects the next year, no amount of LLM context throws extra judgment at it. You still need a person whose intuition is calibrated by having lived through similar calls before, and that person's bandwidth is a real number.
+Taste doesn't scale. The judgment about whether a feature is the right feature, whether a tradeoff is the right tradeoff — that judgment is a function of context and exposure that doesn't 10x because the model gets better. A PM with deep customer context calls things one way; a PM with shallow context calls them another way; no amount of agent assistance changes that. The same ceiling applies to customer-research depth: you can run more interviews per quarter, but the quality of the listening, the connections to prior conversations, the ability to spot a real signal in a noisy session are still bound by how much of the customer's world a single person can hold in their head. Tooling helps a little with both. It doesn't multiply either by ten.
 
 So when someone says "one PM can cover fifty engineers," a careful reading is: one PM can cover fifty engineers' worth of throughput, but not fifty engineers' worth of judgment surface. Those are different units, and conflating them is how teams over-stretch their PM coverage and find out three quarters later that the work shipped quickly but pointed in the wrong direction.
 
@@ -72,15 +69,11 @@ The levelling implication is harder still. If you assess senior PMs only on PM-c
 
 The right question isn't "what's the new ratio?"; it's "what path gets the team from where it is to where it needs to be?" Headcount moves are usually the wrong starting point.
 
-The mistake is moving the ratio first. You change PM headcount, the new shape exposes how much coordination work the old PMs were doing, and the engineering teams suddenly feel adrift. Three months later you're hiring back PMs, but with worse morale and more confused org design.
+The mistake is moving the ratio first. You change PM headcount, the new shape exposes how much coordination work the old PMs were doing, and the engineering teams feel adrift. Three months later you're hiring back PMs, but with worse morale and more confused org design.
 
-The order that works better is the reverse. First, extend the surface area each existing PM can cover by giving them the tooling and the agent stack to do the coordination work that used to fill their day. See what they can hold when the coordination tax is paid by the tools, not by their hours. The headcount you have starts to feel like more headcount.
+The order that works is the reverse: extend the surface area each existing PM can cover by giving them the tooling and the agent stack to do the coordination work that used to fill their day. See what they can hold when the coordination tax is paid by the tools, not by their hours. Then, if the work allows, re-org around the new shape — fewer role boundaries, engineers closer to customers, the spec co-owned rather than handed off. The ratio sorts itself when the role boundaries soften, and you get somewhere the headcount move alone can't reach.
 
-Then, if the work allows, re-org around the new shape. Not the old shape with thinner staffing. The new shape, where the team has fewer role boundaries, where engineers are closer to customers, where the spec is co-owned rather than handed off. The ratio sorts itself when the role boundaries soften.
-
-This is slower than the headcount move. It's also less likely to break the team. And it gets you somewhere the headcount move alone can't, because you're not just changing the math; you're changing the shape the math describes.
-
-## What Good Looks Like
+## Beyond the Ratio
 
 The leaders who navigate this aren't the ones who land on the right new ratio; they're the ones willing to stop fighting about the number and ask what the team should look like instead.
 

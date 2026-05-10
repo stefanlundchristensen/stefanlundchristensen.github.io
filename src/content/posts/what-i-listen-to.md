@@ -3,6 +3,8 @@ title: "What I Listen To"
 date: 2026-03-21
 draft: true
 tags: ["music", "personal"]
+categories: ["Personal"]
+description: "From my father's vinyl to Sufjan Stevens on headphones. The thread is music that doesn't hedge."
 ---
 
 Most of what I like, I was given before I knew I had a choice.

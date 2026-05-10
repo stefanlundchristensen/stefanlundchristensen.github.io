@@ -4,6 +4,7 @@ date: 2026-05-20
 draft: true
 tags: ["ai-native-product-development", "ai", "product-development", "engineering-management", "spec-driven-development"]
 categories: ["Leadership"]
+description: "Tickets were the right unit when a day was the right scope. AI changes the scope, and the unit moves up to project specs and agent instruction files."
 ---
 
 The ticket was the right unit when a day was about as much as one engineer could carry before needing to coordinate with someone else. The unit hasn't been right for a while now, and it's about to stop being the unit at all.
@@ -102,7 +103,7 @@ DX's [Q4 2025 impact report](https://getdx.com/blog/ai-assisted-engineering-q4-i
 
 The teams that don't make this shift end up with a worst-of-both-worlds setup: agents writing more code than the team can carefully PR-review, and specs that haven't been reviewed because the team's review muscle is still aimed at the PR. That setup ships fast and ships fragile.
 
-## What Good Looks Like
+## The Shift Starts With One Project
 
 The teams that get this right don't write fewer artifacts. They write different artifacts.
 

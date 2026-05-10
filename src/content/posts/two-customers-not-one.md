@@ -3,7 +3,7 @@ title: "Two Customers, Not One"
 date: 2026-05-09
 draft: true
 tags: ["fintech", "compliance", "leadership"]
-categories: ["FinTech", "Leadership"]
+categories: ["FinTech", "Leadership", "Payments"]
 description: "Running product inside a licensed entity means serving the regulator alongside the user. Treat them as a customer, not a tax."
 ---
 
@@ -19,7 +19,7 @@ The first lesson is the discomfort itself. Habits you can't shake are usually a 
 
 ## Two Customers
 
-The framing that helped me most came from a product team I worked alongside [NAME — to confirm]. They put it simply: in a licensed entity, you have two customers, not one.
+The framing that helped me most came from Mayur Kamat on Lenny's podcast. He put it simply: in a licensed entity, you have two customers, not one.
 
 Customer one is the person paying for the product. Everything most product people learn is about this customer: their needs, their workflows, their willingness to pay, the gap between what they say and what they do.
 
