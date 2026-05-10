@@ -55,4 +55,4 @@ The best partners I have worked with pass this test easily. The names come quick
 
 The leaders who are good at this are not the ones with the biggest partner rosters or the slickest integrations. They are the ones who walk away from the better-looking demo when the compliance answer is thin, who maintain real ownership of what the partner is doing on their behalf, and who know the humans on the other side of the API before anything is on fire.
 
-Partnerships aren't infrastructure you procure; they're infrastructure you build, in the relationship, not the integration.
+The leaders who build durable partnerships are the ones who understood early that the relationship is the infrastructure, and that the integration is just the part you can see from the outside.

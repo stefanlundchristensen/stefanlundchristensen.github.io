@@ -4,6 +4,7 @@ date: 2026-05-03
 draft: true
 tags: ["organizational-design", "leadership", "team-topologies", "platform-engineering"]
 categories: ["Leadership"]
+description: "Every org design framework is right, and they each point you somewhere different. What to do when the answers don't match."
 ---
 
 There is no clean way to design an organization. Every framework you can pick up is right, and they each point you somewhere different.
@@ -106,7 +107,7 @@ I've watched org redesigns that got the structure right and then ignored the cad
 
 Org design has two layers: the shape and the rhythm. The shape is what people draw. The rhythm is what makes the shape work. Looking at one without the other is the most common mistake I see, and it is the one I most often have to remind myself not to make.
 
-## What Good Looks Like
+## The Shape and the Rhythm
 
 The leaders I've watched do this well aren't the ones who pick the cleanest framework and apply it.
 

@@ -4,6 +4,7 @@ date: 2026-02-26
 draft: true
 tags: ["career", "physics", "fintech", "leadership", "payments"]
 categories: ["Leadership"]
+description: "The connection between quantum physics and FinTech leadership isn't obvious. But the instincts transfer: systems thinking, order-of-magnitude reasoning, finding the right frame."
 ---
 
 Nobody told me a PhD in quantum physics would be useful in FinTech. I had to figure that out myself, mostly by watching the instincts kick in and then realizing where they came from.
@@ -80,4 +81,4 @@ The question isn't whether a non-linear background is an asset or a liability. I
 
 The instincts are there either way. The choice is whether you apply them with awareness, knowing when the physics frame is useful and when it's getting in your way, or let them run on autopilot and hope for the best.
 
-I'm still learning to use it deliberately. But I've stopped apologizing for the background.
+I'm still learning when to lean into the physics instinct and when to set it aside. But I stopped apologizing for the background a long time ago, and the further I get from the lab, the more I understand what it gave me.

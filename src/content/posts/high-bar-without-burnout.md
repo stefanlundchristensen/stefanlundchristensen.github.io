@@ -4,9 +4,10 @@ date: 2026-02-26
 draft: true
 tags: ["leadership", "management", "performance", "team-health"]
 categories: ["Leadership"]
+description: "The bar is a contract, not a demand. What it takes to hold high standards and actually help people meet them."
 ---
 
-High standards without support isn't leadership. It's just pressure.
+High standards without support is just pressure wearing a leadership title.
 
 Most leaders who think they hold a high bar hold half of one. They're clear on expectations. They're less clear on what it means to help someone meet them.
 
@@ -66,10 +67,8 @@ That's not kindness. It's avoidance. And it's unfair to the person, who deserves
 
 ## The Real Standard
 
-High standards without support is just performance. It looks like leadership from the outside. It isn't.
+High standards without support looks like leadership from the outside, but the people inside it know it's just performance.
 
 The harder thing, the thing that develops people, is holding the bar and then doing the work alongside them. Not doing it for them. Not reviewing their work from a distance. Sitting down and working through it together, in the unglamorous way, until the standard becomes something they've experienced rather than something they've been told about.
 
-When both halves of that are true, people do the best work of their careers. Not because you've extracted it from them, but because you've given them a clear direction and a real partner in getting there.
-
-The bar is only fair when the support is real. That's the whole deal.
+When both halves of that are true, people do the best work of their careers, not because you've extracted it from them, but because you've given them a clear direction and a real partner in getting there. I keep learning this the same way every time: by being too far on one side, noticing the gap, and walking back toward the middle.

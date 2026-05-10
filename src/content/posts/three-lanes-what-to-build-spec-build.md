@@ -4,6 +4,7 @@ date: 2026-05-27
 draft: true
 tags: ["ai-native-product-development", "ai", "product-development", "operating-model", "engineering-management"]
 categories: ["Leadership"]
+description: "A three-lane operating model for a small AI-native team: what to build, spec built, build. The shape fits one team. The diagnostic fits all of them."
 ---
 
 There is no operating model that just works.
@@ -112,23 +113,11 @@ Move to build last. Increase test coverage so tests can carry weight as a merge 
 
 The whole sequence takes weeks for a small team that's focused on it, months for a team that's doing it alongside everything else. Either is fine. What doesn't work is trying to stand all three lanes up at once. The team doesn't have enough hours, and partially-set-up lanes are worse than no lanes at all.
 
-## No Operating Model Just Works
+## Operating-Model Discipline
 
-The promise SAFe makes is that scaled agile is a system you adopt. Scrum's promise is that the ceremonies, run faithfully, will get you to high-functioning. Every pod-based reorg deck claims the structure is the answer. None of those promises are honest.
+The three-lane model in this post is a real artifact from a real team with specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) catalogues seven distinct team profiles, from "harmonious high-achievers" to teams stuck in a "legacy bottleneck," and most prescriptive operating models address only a couple of those profiles well. What carries across teams isn't the model; it's the diagnostic. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves.
 
-An organization is people and talent. The shape that works is the one that fits the people you have and the work they're doing, not the one that fit the team in the case study. That has always been true. AI doesn't change it. If anything, AI makes it more obvious, because the lifecycle is changing fast enough that anyone selling you a fixed model is selling you something already out of date.
-
-DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) catalogues seven distinct team profiles, from "harmonious high-achievers" to teams stuck in a "legacy bottleneck." Different profiles need different paths forward. Most prescriptive operating models address only a couple of those profiles well, even when their decks claim to cover all of them.
-
-The three-lane model in this post is a real artifact from a real team. The team it came from has specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. They might not fit you at all because your team's bottleneck is somewhere this model doesn't address.
-
-What carries across teams isn't the model; it's the diagnostic. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves. The shape that emerges from that exercise will look like your team, not like the team in the case study.
-
-If that's annoying, it's annoying for the same reason every other consultant-flavored promise is hollow. Organizations are not interchangeable. They never were.
-
-## What Good Looks Like
-
-The thing that separates teams that talk about AI-native development from teams that run it in practice is operating-model discipline. That discipline isn't picking the right model; it's doing the diagnostic, finding what fits the team in front of you, and running it well.
+The thing that separates teams that talk about AI-native development from teams that run it in practice is discipline about the operating model. That discipline isn't picking the right model; it's doing the diagnostic, finding what fits the team in front of you, and running it well.
 
 Most teams have someone on them who can use Claude Code. That's not the differentiator. Most teams have a CLAUDE.md file in the repo. That's not the differentiator either. The differentiator is whether the team has a way of working that takes advantage of those tools and that fits the people doing the work.
 

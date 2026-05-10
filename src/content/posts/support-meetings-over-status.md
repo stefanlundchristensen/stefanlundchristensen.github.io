@@ -48,11 +48,11 @@ Changing the name is necessary but not sufficient. It only works if leadership a
 
 This means asking different questions—"What's blocking you?" not "Why is this late?" It means following up: if a team identifies an obstacle, leadership removes it or explains clearly why they can't. It means not using the meeting as surveillance—the goal isn't to catch problems, it's to find them early so they can be solved. And it means making decisions quickly: teams raise concerns, leadership responds with decisions or clear next steps, not "let me think about it."
 
-A team raised that they were blocked on legal review for a new payment feature. Instead of "why didn't you start legal review earlier?", the question was "what do you need from legal?" We escalated to legal leadership that day. Legal added capacity. Feature unblocked within a week.
+A team raised that they were blocked on legal review for a new payment feature. In a status meeting, the reflex would have been "why didn't you start legal review earlier?" Instead, the question was "what do you need from legal?" We escalated to legal leadership that day. Legal added capacity. Feature unblocked within a week.
 
-Kim Scott's Radical Candor framework applies here: support meetings embody "care personally" while maintaining "challenge directly." You're helping people while keeping standards high. It's not about lowering the bar—it's about being present when people push themselves to meet it.
+The distinction matters because support doesn't mean softness. The bar stays high. You're still expecting excellent work, still pushing back when something isn't good enough. What changes is whether you're standing next to the person while they push, or watching from across the table while they explain why they fell short.
 
-If leadership uses "support meetings" as a cover for the same old monitoring, just with softer language, the naming change will feel like manipulation — because it is. But when the framing genuinely represents the intent, it transforms how teams engage with their leadership.
+If leadership uses "support meetings" as a cover for the same old monitoring, just with softer language, the naming change will feel like manipulation — because it is. I've seen this happen: a leader renamed every meeting, changed nothing about how they ran them, and the team became more cynical than before. The naming only works when the behavior matches it.
 
 ## The Deeper Pattern
 
@@ -60,18 +60,16 @@ There's a bigger pattern here. The words we use in organizational structures don
 
 ## When This Breaks Down
 
-The support meeting framing can break down in a few ways.
+I've watched the framing break in three specific ways, including once in my own organization.
 
-If teams learn that raising problems gets them blamed rather than helped, they stop being honest. Then you're back to discovery through dysfunction. It requires a foundation of trust. Teams must believe that raising problems leads to help, not blame. Without that, the language becomes manipulation.
+The first is when raising problems gets you blamed. An engineer said "I'm behind" in a goal review, and the leader immediately asked "Should we find someone else to own this?" That engineer never gave an honest update again. One moment can undo months of trust-building.
 
-If leadership is too busy to actually help, teams raise obstacles and nothing changes. The message becomes: "This is called a support meeting, but we're not actually going to support you." The framing becomes cynical.
+The second is when leadership is too busy to follow through. A team raises a blocker, leadership nods sympathetically, and nothing happens. After two or three rounds of that, the team stops raising things. The message they've received is: "This is called a support meeting, but we're not going to support you."
 
-If it becomes a tool for blame — "we supported you, so your failure is on you" — the language becomes weaponized. These failures happen when the intent behind the naming isn't genuine. How much energy leadership invests in removing obstacles — that's it.
+The third is when the framing becomes a weapon: "We gave you support, so your failure is on you." That's worse than a status meeting, because it adds betrayal to the accountability.
 
-## Conclusion
+## What I Learned From Running Them
 
-Language is a lever — not the only one, but underrated.
+The most surprising thing about running support meetings wasn't what changed in the meetings. It was what changed between them. People started raising problems earlier, in Slack, in 1:1s, in passing — because the framing had taught them that raising a problem was asking for help, not admitting failure. The meeting was the signal. The culture shift happened everywhere else.
 
-Renaming status meetings to support meetings is a simple change that can shift the entire dynamic of how leadership and teams interact, but only when the actual behavior matches it.
-
-Leaders who genuinely run support meetings learn something: they find out what's really happening, because people finally tell them. And they become the kind of leader people want to work for. Those aren't two different outcomes. They're the same one.
+Leaders who genuinely run support meetings learn something about themselves, too: they find out what's really happening, because people finally tell them. That's uncomfortable at first. You hear things you didn't know were broken. But it's the only version of leadership where you're working from the real picture rather than the polished one.
