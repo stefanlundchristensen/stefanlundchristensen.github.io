@@ -5,6 +5,18 @@ draft: false
 tags: ["decision-making", "strategy", "mental-models", "physics"]
 categories: ["Leadership"]
 description: "A physicist's case for approximation as a deliberate tool, and why back-of-envelope thinking beats false precision in business decisions."
+linkedinPost: |
+  We were setting geographic expansion strategy. The "proper" approach would have taken weeks: entity structures, bottom-up market sizing, employee modeling.
+
+  Instead we looked at where the money was already moving. The majority of cross-border volume sat between Europe and the US. That single number made the call. Everything else was a rounding error at that stage.
+
+  The detailed analysis would have arrived at the same answer eventually, and introduced enough complexity to slow it down. Approximation got us there faster, with less noise.
+
+  Most business decisions don't need precision. They need the right order of magnitude, and the confidence to act on it.
+twitterPost: |
+  Most business decisions don't need precision. They need the right order of magnitude.
+
+  When we set our geographic expansion strategy, a back-of-envelope look at the money flows answered it in an afternoon. The full model would have taken weeks and reached the same place.
 ---
 
 The most useful skill in business isn't precision. It's knowing when precision doesn't matter.

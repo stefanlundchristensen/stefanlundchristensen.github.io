@@ -5,6 +5,22 @@ draft: false
 tags: ["payments", "infrastructure", "settlement", "clearing", "fintech"]
 categories: ["FinTech", "Payments"]
 description: "The smooth checkout is an illusion. The unglamorous infrastructure work behind it is where payments actually live."
+linkedinPost: |
+  The customer expected €110.37. What they saw was €81.22.
+
+  The team spent weeks, not days, tracing where €29.15 had gone. Through systems they thought they understood, through partner integrations they'd signed off on, through ledger entries that nearly balanced.
+
+  This is what most of the work in payments actually looks like. Not the smooth checkout. A customer wanting to know why their money looks wrong, and the long quiet effort to give them a real answer.
+
+  The mental model most people carry is wrong. Money doesn't move at the speed of the API call. TIPS has roughly 123 direct participants. T2 sits in the low thousands. Whichever rail you look at, a small core of institutions settles on its own schedule while an enormous population is layered on top.
+
+  The smooth UX is real. The money movement underneath is not. Forgetting which is which is how you end up explaining €29.15 line by line on a Tuesday.
+twitterPost: |
+  The customer expected €110.37. They saw €81.22.
+
+  The team spent weeks tracing €29.15 through six systems, partner integrations, and ledger entries that nearly balanced.
+
+  This is what most of payments actually looks like. Not the smooth checkout. The long effort behind it.
 ---
 
 The customer expected €110.37 in their account. What they saw was €81.22.

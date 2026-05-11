@@ -5,6 +5,20 @@ draft: false
 tags: ["leadership", "management", "performance", "team-health"]
 categories: ["Leadership"]
 description: "The bar is a contract, not a demand. What it takes to hold high standards and actually help people meet them."
+linkedinPost: |
+  "High standards" is the easy half. The harder half is holding the bar and doing the work alongside the person you're holding to it.
+
+  I had a PM whose documents were written for the meeting, not the reader. Ten bullets, enough to run the room. I tried explaining why it mattered. It didn't land. So we sat down together. Several hours that week, line by line, working through an actual document. Pair writing, like a parent at the kitchen table with a kid's essay.
+
+  The standard became real when they experienced it, not when I argued for it.
+
+  I've erred on the softer side more than I'd like. High standards without support is just pressure wearing a leadership title.
+twitterPost: |
+  The bar is a contract, not a demand.
+
+  Most leaders who think they hold a high bar hold half of one: clear on expectations, less clear on what it takes to help someone meet them.
+
+  High standards without real support is just pressure wearing a leadership title.
 ---
 
 High standards without support is just pressure wearing a leadership title.

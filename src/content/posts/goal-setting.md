@@ -5,6 +5,14 @@ draft: false
 tags: ["leadership", "goal-setting", "organisational-design"]
 categories: ["Leadership"]
 description: "OKRs, SMART, BHAGs, V2MOMs. The framework isn't the point. A goal needs a clear achievement, a baseline, an owner, tangible work you can point to, and a cadence you keep."
+linkedinPost: |
+  OKRs, SMART, BHAGs, V2MOMs. Every year a new framework promises to be the answer.
+
+  What a goal actually needs is unglamorous: a clear achievement, a baseline you can point to, one named owner (a person, not an "area"), tangible deliverables, and a cadence you keep. The frameworks people reach for are ways of arriving at those things. If you already have them, the framework is overhead. If you don't, no framework will give them to you.
+twitterPost: |
+  OKRs, SMART, BHAGs. The framework isn't the point.
+
+  A goal needs a clear achievement, a baseline, one named owner, tangible deliverables, and a cadence you keep. Have those, and the framework is overhead. Don't have them, and no framework will rescue you.
 ---
 
 OKR workshops, SMART goals, BHAGs, MBOs, V2MOMs. Every year there's a new framework that promises to be the answer.

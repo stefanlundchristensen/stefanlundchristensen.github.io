@@ -5,6 +5,16 @@ draft: false
 tags: ["leadership", "team-dynamics", "meetings", "culture"]
 categories: ["Leadership"]
 description: "A 'status meeting' says your job is to account for yourself. A 'support meeting' says our job is to help you succeed. Same calendar slot, different culture."
+linkedinPost: |
+  A "status meeting" says your job is to account for yourself. A "support meeting" says our job is to help you succeed. Same calendar slot, different culture.
+
+  The most surprising thing about running support meetings wasn't what changed in the meetings. It was what changed between them. People started raising problems earlier, in Slack, in 1:1s, in passing, because the framing had taught them that raising a problem was asking for help, not admitting failure.
+
+  The naming only works if leadership actually behaves like they're there to help. Otherwise it's manipulation, and people see through it fast.
+twitterPost: |
+  A "status meeting" says your job is to account for yourself. A "support meeting" says our job is to help you succeed. Same calendar slot, different culture.
+
+  The real shift happens between the meetings, once people learn it's safe to raise things early.
 ---
 
 A "status meeting" says your job is to account for yourself. A "support meeting" says our job is to help you succeed. Same calendar, same agenda, different culture.

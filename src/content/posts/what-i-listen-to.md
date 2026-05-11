@@ -5,6 +5,16 @@ draft: false
 tags: ["music", "personal"]
 categories: ["Personal"]
 description: "From my father's vinyl to Sufjan Stevens on headphones. The thread is music that doesn't hedge."
+linkedinPost: |
+  Most of what I like, I was given before I knew I had a choice.
+
+  My father played records the way other people read. Neil Young, Pink Floyd, Bruce Springsteen. He'd sit through a full side of vinyl without talking. I absorbed more from that than I realized at the time.
+
+  The thread from his records to what I listen to now, mostly Sufjan Stevens on headphones, is music that doesn't hedge. Made by people who put something real into a song and trust you to meet them there. I've never been able to get interested in music designed to be liked.
+twitterPost: |
+  Most of what I like, I was given before I knew I had a choice.
+
+  My father played records the way other people read. The thread from his vinyl to what I listen to now is music that doesn't hedge: made by people who put something real in and trust you to meet them there.
 ---
 
 Most of what I like, I was given before I knew I had a choice.
