@@ -5,6 +5,20 @@ draft: false
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 description: "Payment systems look simple until you hit production. The learning curve is expensive, and most of the lessons live in the gaps between what documentation says and what APIs do."
+linkedinPost: |
+  Payment systems look deceptively simple. Integrate an API, money moves, done.
+
+  Then you hit production. I've watched teams spend weeks, not days, debugging why a ledger wouldn't balance, only to discover a partner was holding funds in an intermediate account nobody had mapped. Three weeks of debugging usually means three days of diagramming were skipped.
+
+  A few other lessons that cost real time to learn. Talk to the partner's engineers, not their account managers. Account managers are incentivised to make things sound simple. Engineers will tell you what actually breaks in production.
+
+  Build for the partner you'll need next, not the one you have. Partners change terms, get acquired, sunset products. Tight coupling turns that into a crisis.
+
+  And know enough about the domain to ask the right questions. A single wrong parameter in a chip card profile can break your product in market. The partner will answer what you ask. They won't fill in what you didn't know to ask.
+twitterPost: |
+  Payment systems look simple until you hit production.
+
+  Lessons that cost real time to learn: diagram every fund movement before you build, talk to partner engineers (not account managers), and know enough about the domain to ask the questions you don't yet know to ask.
 ---
 
 Payment systems look deceptively simple. Integrate an API, money moves, done.

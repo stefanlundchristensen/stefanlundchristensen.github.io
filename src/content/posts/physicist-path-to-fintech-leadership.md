@@ -5,6 +5,18 @@ draft: false
 tags: ["career", "physics", "fintech", "leadership", "payments"]
 categories: ["Leadership"]
 description: "The connection between quantum physics and FinTech leadership isn't obvious. But the instincts transfer: systems thinking, order-of-magnitude reasoning, finding the right frame."
+linkedinPost: |
+  Nobody told me a PhD in quantum physics would be useful in FinTech. I had to figure that out by watching the instincts kick in.
+
+  The vocabulary doesn't overlap. The training looks completely different. But the underlying skills transfer: how you approach a hard problem, how you reason under uncertainty, what you do when you're staring at something complicated.
+
+  Three things in particular. Looking for the frame that makes a hard problem tractable before trying to solve it. Comfort with orders of magnitude and the willingness to commit to an approximate answer when more precision wouldn't change the call. Treating architecture like experimental design, where getting the structure right early matters more than moving fast later.
+
+  The lab also held me back in ways I had to correct: too many caveats, too much rigour for situations that needed a recommendation. McKinsey forced that adaptation. The PhD wasn't a detour. It was the lens.
+twitterPost: |
+  Nobody told me a PhD in quantum physics would be useful in FinTech.
+
+  The vocabulary doesn't overlap, but the instincts transfer: finding the frame that makes a hard problem tractable, comfort with orders of magnitude, treating architecture like experimental design.
 ---
 
 Nobody told me a PhD in quantum physics would be useful in FinTech. I had to figure that out myself, mostly by watching the instincts kick in and then realizing where they came from.
