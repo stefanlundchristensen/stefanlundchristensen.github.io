@@ -1,7 +1,7 @@
 ---
 title: "From Twelve Options to One Command: How We Transformed Platform Engineering"
 date: 2026-02-03
-draft: true
+draft: false
 tags: ["platform-engineering", "organizational-design", "infrastructure", "leadership", "restructuring"]
 categories: ["Leadership", "Platform Engineering"]
 description: "Our platform teams wrote thousands of lines of documentation. Engineers read almost none of it. Here's what we changed."
@@ -63,7 +63,7 @@ That's the difference between enablement and product thinking. Enablement says "
 
 ## The Principles Behind the Products
 
-Two ideas ran through everything we built. The first was sensible defaults over maximum optionality: if there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation — it's the fastest, most reliable way to get to production, and it handles compliance requirements the team would otherwise need to figure out themselves. Constraints create freedom.
+Two ideas ran through everything we built. The first was sensible defaults over maximum optionality: if there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation, it's the fastest, most reliable way to get to production, and it handles compliance requirements the team would otherwise need to figure out themselves. Constraints create freedom.
 
 The second was building for humans, not in the abstract but by embedding with engineering teams. Watch them work. See where they get frustrated, confused, or stuck. One observation session is worth ten surveys. We stopped tracking how many features platform teams shipped and started tracking whether product teams moved faster — deployment frequency, cycle time, breakage rate. Outcome over output, measured by sitting with the people doing the work.
 
@@ -71,7 +71,7 @@ The second was building for humans, not in the abstract but by embedding with en
 
 The actual shift happened in four phases over six months. It wasn't smooth.
 
-The first two months were reframing: running sessions with each team on what product thinking meant for their work. Some got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work, though that wasn't obvious from the inside.
+The first two months were spent resetting how each team saw their work: running sessions on what product thinking meant in practice. Some got it immediately. Others were skeptical. "We've always done enablement. Why change something that works?" It didn't work, though that wasn't obvious from the inside.
 
 Then each team had to articulate what their product was. Not vague ("developer enablement") but concrete ("the web framework that handles routing, state management, and deployment, giving teams X for free"). This was harder than expected. Some teams needed four or five attempts before the answer was specific enough to build against.
 

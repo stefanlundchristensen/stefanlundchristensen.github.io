@@ -1,7 +1,7 @@
 ---
 title: "The Physicist's Path to FinTech Leadership"
 date: 2026-02-26
-draft: true
+draft: false
 tags: ["career", "physics", "fintech", "leadership", "payments"]
 categories: ["Leadership"]
 description: "The connection between quantum physics and FinTech leadership isn't obvious. But the instincts transfer: systems thinking, order-of-magnitude reasoning, finding the right frame."
@@ -19,7 +19,7 @@ Physics is fundamentally about finding the coordinate system that makes a proble
 
 Most problems, presented naively, are complicated. The variables interact in messy ways. The dynamics are hard to track. But if you choose the right frame, the right representation and decomposition, the structure becomes clear. What looked like noise becomes signal.
 
-You learn this not as an abstract principle but as a daily practice. You do it with differential equations. You do it with quantum states. You do it with experimental data. After years of this, it becomes instinctive: when you encounter a hard problem, the first question isn't "what's the answer?" — it's "what frame makes this tractable?"
+You learn this not as an abstract principle but as a daily practice. You do it with differential equations. You do it with quantum states. You do it with experimental data. After years of this, it becomes instinctive: when you encounter a hard problem, the first question isn't "what's the answer?". It's "what frame makes this solvable?"
 
 That instinct is unusually useful in business. Most business problems look complicated because they're poorly framed. The team is fighting about tactics when they haven't agreed on what success looks like. The roadmap feels impossible until you separate what's urgent from what's important. The organizational dysfunction resolves when you see that it's a misalignment on ownership, not a culture problem.
 
@@ -67,9 +67,9 @@ The physicist instinct also held me back in ways I had to consciously correct.
 
 The lab trains you to present results with every uncertainty quantified, every assumption stated, every limitation acknowledged. That's good science. In business, it often reads as indecision. Leaders who hedge everything don't create conviction. Early in my career I communicated with too many caveats and not enough recommendation.
 
-Physics also trains you to care about whether things are exactly right. That's appropriate when you're running an experiment where systematic errors matter. It's not always appropriate when you're deciding whether to invest in a new product area and the answer is "probably yes, with these risks" — not "yes, precisely, to four significant figures."
+Physics also trains you to care about whether things are exactly right. That's appropriate when you're running an experiment where systematic errors matter. It's not always appropriate when you're deciding whether to invest in a new product area and the answer is "probably yes, with these risks", not "yes, precisely, to four significant figures."
 
-Learning to match my intellectual precision to what the situation required took time. I still catch myself doing too much rigorous analysis when a confident approximation would have served better.
+Learning to match my desire for precision to what the situation required took time. I still catch myself doing too much rigorous analysis when a confident approximation would have served better.
 
 ## The Background Is the Lens
 
