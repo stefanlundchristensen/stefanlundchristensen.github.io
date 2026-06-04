@@ -1,7 +1,7 @@
 ---
 title: "Designing an Organization When Every Framework Says Something Different"
 date: 2026-05-03
-draft: true
+draft: false
 tags: ["organizational-design", "leadership", "team-topologies", "platform-engineering"]
 categories: ["Leadership"]
 description: "Every org design framework is right, and they each point you somewhere different. What to do when the answers don't match."
@@ -79,7 +79,7 @@ The compromise has to be stated in a way that's defensible six months later, whe
 
 Then you have to staff it.
 
-This is where the paper version meets the people you actually have, and the design starts to bend in ways you didn't predict on paper.
+This is where the paper version meets the people you have, and the design starts to bend in ways you didn't predict on paper.
 
 A strong leader can hold more complexity than the framework suggests. They can run a wider span, manage more interfaces, sit in a hybrid team type and still ship. Another leader, equally good in their own way, can't. Putting them in the same role on paper produces two different organizations in practice. The paper doesn't know that. You do.
 
@@ -111,7 +111,7 @@ Org design has two layers: the shape and the rhythm. The shape is what people dr
 
 The leaders I've watched do this well aren't the ones who pick the cleanest framework and apply it.
 
-What they share is something else. They hold a clear vision of where the organization is going, and they test it against what they actually see in their customers, their people, and their technology. They name the trade-offs out loud instead of pretending they don't exist, stay close enough to the staffing reality that the design can survive contact with the people in it, and pair the structure with a rhythm that lets the teams operate.
+What they share is something else. They hold a clear vision of where the organization is going, and they test it against what they see in their customers, their people, and their technology. They name the trade-offs out loud instead of pretending they don't exist, stay close enough to the staffing reality that the design can survive contact with the people in it, and pair the structure with a rhythm that lets the teams operate.
 
 The rhythm is the part that gets dropped most often, because it is the least visible part of the work. It is also the part that decides whether the design lives.
 

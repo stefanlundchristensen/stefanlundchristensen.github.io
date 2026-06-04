@@ -1,7 +1,7 @@
 ---
 title: "How We Kept the Payments Platform from Becoming a Bottleneck"
 date: 2026-02-26
-draft: true
+draft: false
 tags: ["payments", "platform-engineering", "organizational-design", "fintech"]
 categories: ["Payments", "Leadership"]
 description: "Every payments platform reaches the same crisis point: you become the team everything routes through. How we committed to APIs-only and held the line."

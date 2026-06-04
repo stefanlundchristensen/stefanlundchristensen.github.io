@@ -1,7 +1,7 @@
 ---
 title: "The Best Tech Is Not the Best Partner"
 date: 2026-04-22
-draft: true
+draft: false
 tags: ["fintech", "partnerships", "compliance", "leadership"]
 categories: ["Leadership"]
 description: "Why partner selection in FinTech comes down to compliance posture and relationship depth, not which integration looks cleanest."

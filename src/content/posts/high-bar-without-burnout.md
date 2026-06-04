@@ -29,7 +29,7 @@ Most leaders who think they hold a high bar hold half of one. They're clear on e
 
 When you tell someone you expect a lot from them, you're making a commitment.
 
-The bar isn't just a demand — it's a deal. You're saying: I believe you're capable of this, and I'll be there to help you get there. When you set the bar and then disappear, you've broken your half of the deal.
+The bar isn't just a demand, it's a deal. You're saying: I believe you're capable of this, and I'll be there to help you get there. When you set the bar and then disappear, you've broken your half of the deal.
 
 I've had and experienced both failure modes across many companies, including during my consulting years at McKinsey. Leaders who held people to an extremely high standard while offering no real support. The team delivered, for a while, until the best people started leaving. And leaders so careful not to push too hard that the bar quietly dropped. Everyone felt cared for. Very little excellent work was produced.
 
@@ -43,7 +43,7 @@ That's signaling availability without providing it.
 
 I had a product manager: technically excellent, great instincts, strong on outcomes. But their written documents were written for the meeting, not for the reader. Ten bullets. Enough to run the room.
 
-The problem was that documents have to work without your voice. People read before deciding whether to attend. The document is often the thing that determines who's in the room and whether the right people come prepared. A document that only works when you're there to explain it isn't a document — it's speaker notes.
+The problem was that documents have to work without your voice. People read before deciding whether to attend. The document is often the thing that determines who's in the room and whether the right people come prepared. A document that only works when you're there to explain it isn't a document, it's your personal speaker notes.
 
 I tried explaining this. It didn't land. The PM was polite about it but didn't really believe the investment was worth it.
 
@@ -53,7 +53,7 @@ So we sat down together. Several hours in one week, working through an actual do
 
 You can't convince someone a standard matters by arguing for it. At some point they have to see it.
 
-The meeting that followed was different. Instead of status updates, there were real discussions. Challenges came into the open. Decisions got made. Recognition happened naturally because the situation was clear. What had been a hard, often unfocused meeting, the kind that drains everyone, became the kind of meeting that moves things forward. The quality of the written prep is a big part of what determines which one you get.
+The meeting that followed was different. Instead of status updates, there were real discussions. Challenges came into the open. Decisions got made. Recognition happened naturally because the situation was clear. What had been a hard, often unfocused meeting, the kind that drains everyone, became the kind of meeting that moves things forward.
 
 The second-order effects were what really landed. People who hadn't been in the room came afterward asking questions, not to complain, but because the document had made things clear enough that they could engage with them. Work got unblocked. Things that had been murky became clear. The clarity propagated.
 
@@ -63,11 +63,11 @@ That's when the PM understood why the bar was where it was. Not because I'd expl
 
 You can't offer that level of support to everyone at the same time.
 
-You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar isn't uniform across everyone. It's calibrated to how much you can be there for each person right now.
+You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar for growth isn't uniform across everyone. It's calibrated to how much you can be there for each person right now.
 
 That's not lowering standards. It's being honest about the deal you're offering.
 
-If I'm giving someone significant time and attention this quarter, I can hold them to a very high standard and they know I mean it. If someone is relatively independent and not taking much of my attention, the bar I can fairly hold them to is correspondingly lower. I haven't earned the right to demand more.
+If I'm giving someone significant time and attention this quarter, I can hold them to a very high standard and they know I mean it. If someone is relatively independent and not taking much of my attention, the growth bar I can fairly hold them to is correspondingly lower. I haven't earned the right to demand more.
 
 This sounds uncomfortable because we're trained to believe standards should apply equally. But equal standards with unequal support is unfair.
 
