@@ -80,5 +80,10 @@ export const STEFAN = {
         'Stefan is one of the strongest colleagues I have ever worked with. He navigates gnarly migrations, is an excellent org designer, and is a leader everyone wants to follow — because he genuinely cares for every individual on his team.',
       cite: 'VP Engineering, Pleo',
     },
+    {
+      quote:
+        "We were already using AI extensively in our coding, but we knew we'd only scratched the surface. Stefan helped us take the next step — not just by shaping a clear strategy, but by being genuinely hands-on. That credibility was exactly what our development team needed to move past their hesitations and commit to the direction.",
+      cite: 'Start-up founder',
+    },
   ],
 } as const;
