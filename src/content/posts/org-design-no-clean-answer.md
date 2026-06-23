@@ -41,8 +41,6 @@ It doesn't have to be a slogan, but it does have to be a clear statement of wher
 
 For us, that meant getting honest about whether we were a service function for the rest of the company or a force pulling the technology stack toward something better. Those two answers produce very different organizations. One is shaped to absorb requests. The other is shaped to set direction. We had to pick.
 
-The vision is the spine. It drives the business forward, and the rest of the org design has to align to it: every team boundary, every leadership choice, every cadence. If the spine bends, everything else does too.
-
 ## A First Cut on Customers, People, and Technology
 
 The vision is necessary but not sufficient. The next thing is a first view on the three things the vision has to live inside: customers, people, and technology.
@@ -54,6 +52,8 @@ A first view on people means knowing the leaders you have, the strengths they br
 A first view on technology means understanding what you've inherited and where it's going. Which systems are converging, which ones are being deprecated, where the boundaries are firming up and where they're still soft. The org you design has to live on top of the architecture you have, not the one in someone's whitepaper.
 
 These aren't side exercises; they're inputs the vision has to be tested against. The vision drives. Customers, people, and technology constrain. If any of the three is missing from the picture when you start drawing teams, the design that comes out of it is fiction.
+
+None of this happens in one pass. As you dig into the customers, the people, and the technology, you'll learn things that don't fit the vision you started with, and when that happens you go back and change it. The vision shapes the buckets you sort customers and work into, and the buckets, once you've drawn them, sometimes tell you the vision was wrong. Don't be precious about any of it. A first cut on customers that survives contact with the second week is rare. Iterating the vision against what you find, and re-cutting the groups when they stop holding, isn't a sign you got it wrong the first time. It's the only way the design ends up true.
 
 ## The Paper Exercise
 
@@ -75,6 +75,8 @@ If you can't say which compromise you're choosing, you haven't designed an organ
 
 The compromise has to be stated in a way that's defensible six months later, when someone asks why a particular team has the shape it does. "We chose this because the technology lives here and we're willing to take the span-of-control hit" is a defensible answer. "It just worked out that way" is not.
 
+There's a trap waiting at the level above the individual team. It's tempting to optimize each team for whatever dimension it's strongest on, one for customer proximity, one for the architecture, one for the leader you have, and call the whole thing done because every team is locally sensible. An org built that way pulls in a dozen directions. Teams that should share a platform build their own. Work that should flow across two teams gets handed off four times. The same problem gets solved three ways because nobody agreed on which way the organization solves it. You need a thread of consistency running through the teams, a few dimensions you hold the same everywhere even when a particular team would be slightly better off doing its own thing, because the shared benefit of teams working the same way is worth more than the local gain. Pick the compromises team by team, but check that they add up to something coherent across the whole.
+
 ## Where Reality Hits
 
 Then you have to staff it.
@@ -86,6 +88,8 @@ A strong leader can hold more complexity than the framework suggests. They can r
 There's also the retention question. Some of the people you most need are also the ones with the most options. If a leader has been running a piece of the org for years and is good at it, the design that takes that piece away from them might be the right design on paper and the wrong one in practice, because they leave. You end up accommodating part of what they want, keeping a scope they care about, giving them the path they've been promised, not because the paper says so but because losing them costs more than the design imperfection.
 
 This is the part that makes org design feel uncomfortable to people who like clean answers. You're trading a small amount of structural elegance for execution capacity. That looks like compromise, and it is. It is also how the work gets done.
+
+It helps to separate where you want to be from what you can stand up next month. You can have the right long-term shape on paper, the one you'd defend to anyone, and still be unable to implement it now because the people to run it aren't in the building yet. That's a different kind of compromise from the ones above. It isn't that the design is wrong; it's that you can't execute it yet. So you stand up an interim shape that the team in front of you can run, and you're explicit that it's interim: this team is bigger than it should be until we hire the second leader, this scope sits here for now because the person who should own it hasn't joined. The long-term design stays on the wall as the thing you're moving toward. Confusing the two is how people either freeze, waiting for a structure they can't yet staff, or ship the interim version and forget it was ever meant to change.
 
 ## Don't Do It Alone
 
@@ -104,6 +108,8 @@ The other thing the frameworks don't talk about much is that the org chart is on
 The other half is how the organization runs once you've drawn the boxes. What cadences do teams have? What decisions do they make on their own and which ones come up to you? How do problems get raised? How does information move sideways between teams that depend on each other? If the structure is good and the operating cadence is bad, the structure won't save you. Teams either drift, because they have too much space and no rhythm, or they stall, because they have too little space and every decision goes through the leader.
 
 I've watched org redesigns that got the structure right and then ignored the cadence question, and the new org performed worse than the old one. The boxes weren't wrong. The problem was that nobody had thought through how decisions moved through the new boxes, and the teams were waiting for permission they used to have, on shapes of problems they used to handle without escalating.
+
+There's a third thing sitting next to the shape and the rhythm, which is how you tell people about it. The same design lands completely differently depending on whether someone hears the reasoning behind their new team or just finds their name in a new box. How you communicate a reorg, what you say, in what order, to whom first, is its own piece of work, and a good design can be wasted by a bad rollout. That's a post on its own, so I'll leave it here.
 
 Org design has two layers: the shape and the rhythm. The shape is what people draw. The rhythm is what makes the shape work. Looking at one without the other is the most common mistake I see, and it is the one I most often have to remind myself not to make.
 
