@@ -11,15 +11,17 @@ The customer expected €110.37 in their account. What they saw was €81.22.
 
 The call came in to support, then to operations, then to engineering. The team spent weeks — not days, weeks — tracing where €29.15 had gone. Through systems they thought they understood. Through partner integrations they had signed off on. Through ledger entries that nearly balanced.
 
-This is what most of the work in payments looks like. Not the smooth checkout. Not the elegant card. A customer wanting to know why their money looks wrong, and the long quiet effort to give them a real answer.
+This is what most of the work in payments looks like. Not the smooth checkout. Not the elegant card. A customer wanting to know why their balance or transaction values looks off, and the long quiet effort to give them a real answer.
 
 This is also why payments is unforgiving in a way most software isn't. The customer cares about €29.15 of their own money more than they care about almost anything you'll ship this quarter. There is no graceful degradation, no "we'll get to it next sprint" that the customer will accept. The number is wrong, and the number is theirs, and they want it to be right today.
+
+And it isn't only the customer. When you run payments, the books have to balance. Not approximately, not by end of quarter — continuously. When they don't, the customer loses trust in your product, the partner loses trust in your operations, and the regulator loses trust in your controls. Reconciliation failures are not bugs in the usual sense. They are the moment the business stops being credible. A product team can ship a broken feature and fix it next week. A payments team that can't reconcile its own money has a different kind of problem, one that compounds every day it goes unanswered.
 
 ## Where Money Actually Moves
 
 Most people who build on top of payments rarely think about where money truly moves. The instinct is to imagine money flowing the way information does, through some abstract network, settling at the speed of the API call. That isn't what happens.
 
-Money, the actual currency, the kind you can't just journal in a database, moves between a small number of institutions that hold accounts at a central bank. In Europe, the ECB's instant payment settlement system, TIPS, has roughly 123 direct participants. The wholesale euro system, T2, sits in the low thousands. Card schemes settle through a handful of designated banks. Whichever rail you look at, the picture is similar: a small core of direct participants, and an enormous population of fintechs, processors, and indirect banks layered on top of them.
+Money, the actual currency, the kind you can't just journal in a database, moves between a small number of institutions that hold accounts at a central bank. In Europe, the ECB's instant payment settlement system, TIPS, has some 100 direct participants. The wholesale euro system, T2, sits in the low thousands. Card schemes settle through a handful of designated banks. Whichever rail you look at, the picture is similar: a small core of direct participants, and an enormous population of fintechs, processors, and indirect banks layered on top of them.
 
 Inside that core, currency moves on a schedule. Some rails settle once a day. Some a few times a day. The instant rails come close to continuous, but still inside discrete cycles with their own cut-offs and operating windows. The smooth UX you see at checkout, in the app, on the receipt: none of that is the moment money moves. That moment happens later, somewhere else, between parties most of your customers will never hear of.
 
@@ -47,7 +49,9 @@ The other reasons live in the same place. A field in a payment message that the 
 
 ## The Ledger You Didn't Build
 
-Here is the contrarian view that follows from all of this. Almost every fintech, at almost any size, is too late to start building a proper ledger. By the time the team agrees they need one, they have been running for years on a patchwork of partner reports, internal reconciliations, and brittle batch jobs. The cost of building it then is much higher than the cost of having built it earlier. And the product is shipping money on top of a system nobody can fully see.
+Here is the contrarian view that follows from all of this. The ledger most teams need is not a record of money movements. It is a granular ledger that captures the full lifecycle: the authorisation, the clearing, the settlement, and every state in between. It follows the money flow end to end — from the moment a card is tapped or a payment is initiated, through every intermediary and fee, to the point where currency actually settles between institutions. That granularity is what matters, because the €29.15 gap lives in the space between authorisation and settlement, not in the final posting.
+
+Almost every fintech, at almost any size, is too late to start building one. By the time the team agrees they need it, they have been running for years on a patchwork of partner reports, internal reconciliations, and brittle batch jobs. The cost of building it then is much higher than the cost of having built it earlier. And the product is shipping money on top of a system nobody can fully see.
 
 A ledger is the only honest record of how money is moving through your business, and treating it as plumbing you can defer is the misread that gets the most teams in trouble. It tells you, in real time, what you owe whom, what you are holding, what has not settled yet, what is at risk if a partner falls over tomorrow. Without it, you have a smooth UX on top and a fog underneath. Customers occasionally call about the fog.
 
