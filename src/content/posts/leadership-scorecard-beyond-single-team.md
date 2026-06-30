@@ -1,9 +1,10 @@
 ---
 title: "Your Leadership Scorecard: What to Own When You Lead Beyond a Single Team"
 date: 2026-01-22
-draft: true
+draft: false
 tags: ["leadership", "organizational-maturity", "management", "scale"]
 categories: ["Leadership"]
+description: "Five dimensions I track when I'm responsible for more than a single team. Not from a book — from doing the same thing in different areas and watching what moved."
 ---
 
 When you become a leader of leaders, the guidance gets vague. "Build organizational capability." "Develop your people." "Create strategy." I lacked a structured way to show how I improved things beyond "teams deliver and people are happy." Everyone says there's supposed to be something more when you're responsible for an entire area of the business. Nobody tells you what.
@@ -12,15 +13,15 @@ When you become a leader of leaders, the guidance gets vague. "Build organizatio
 
 Over the past several years, I've taken on the same challenge repeatedly: walk into a new area, each time a different domain, a different team, different problems, and make it work better. More mature. More standalone.
 
-Different areas, different problems, but the same pattern emerged. I developed a repeatable way of thinking about what maturity actually means when you're responsible for more than a single team.
+Different areas, different problems, but the same pattern emerged. I developed a repeatable way of thinking about what maturity means when you're responsible for more than a single team.
 
-These five dimensions became my scorecard. Not from a book. From doing the same thing in different areas and watching what actually moved things.
+These five dimensions became my scorecard. Not from a book. From doing the same thing in different areas and watching what moved things.
 
 ## Why These Five?
 
 Not every dimension of organizational performance belongs on your scorecard. You can't own the market or control the CEO's decisions. You can't take credit for luck.
 
-Two filters held across every area I've led. The dimension had to be within my control — something I could take action on and see results from, not something that depended on other parts of the company. And it had to help the collective, not just me — improving the group's capability as a whole, not my individual performance.
+Two filters held across every area I've led. The dimension had to be within my control, something I could take action on and see results from, not something that depended on other parts of the company. And it had to help the collective, not just me, improving the group's capability as a whole, not my individual performance.
 
 When someone asked "What did you improve?" I had a real answer for each of these five. That's what made them real.
 
@@ -38,7 +39,7 @@ Then you connect the story to concrete goals. The narrative shows where we're go
 
 ## Foundations: Who Does What When
 
-I've watched leaders try to fix organizations with one big initiative — a transformation program, a major reorganization, a new framework. They declare things fixed. Six months later, nothing has changed.
+I've watched leaders try to fix organizations with one big initiative: a transformation program, a major reorganization, a new framework. They declare things fixed. Six months later, nothing has changed.
 
 Improvement requires consistency. Clear cadences, structured agendas, clear roles, clear expectations. Unglamorous, but foundational.
 
@@ -66,7 +67,7 @@ When people see you as the person who turns things around, the real work is maki
 
 Many leaders set high expectations and then disappear. They make the standards clear and hold people accountable. Then when someone struggles, they're nowhere to be found.
 
-I made a different commitment: high expectations, and I'm there to help. Not as a safety net, but as someone who shows up when people are pushing themselves — for the hard conversations, the technical problems, the decisions that matter.
+I made a different commitment: high expectations, and I'm there to help. Not as a safety net, but as someone who is there when people are pushing themselves — for the hard conversations, the technical problems, the decisions that matter.
 
 The version that worked was scaling this across the organization, not just from me. Everyone in the area held the same commitment: ambitious standards, active support. People knew the expectations were high and knew they wouldn't be alone reaching them. That's a different experience from the "demand excellence and disappear" model, and the teams that had it produced work they were proud of.
 

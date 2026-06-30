@@ -1,7 +1,7 @@
 ---
 title: "Five lessons I wish someone told me before about building in payments"
 date: 2025-12-10
-draft: false
+draft: true
 tags: ["payments", "infrastructure", "fintech"]
 categories: ["FinTech", "Payments"]
 description: "Payment systems look simple until you hit production. The learning curve is expensive, and most of the lessons live in the gaps between what documentation says and what APIs do."
