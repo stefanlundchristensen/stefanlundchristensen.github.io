@@ -84,12 +84,22 @@ function formatDate(d: Date): string {
       <div class="rule"></div>
 
       <section id="testimonials" class="fade-section">
-        {s.testimonials.map((t) => (
-          <div class="testimonial">
-            <blockquote>"{t.quote}"</blockquote>
-            <cite>{t.cite}</cite>
-          </div>
-        ))}
+        <h2 class="section-head">Working with me</h2>
+        <div>
+          {s.testimonials.map((t) => (
+            <div class="testimonial">
+              <blockquote>"{t.quote}"</blockquote>
+              <cite>{t.cite}</cite>
+            </div>
+          ))}
+        </div>
+        <a
+          class="link"
+          href={`https://${s.contact.linkedin}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style="font-size: 14px;"
+        >More on LinkedIn →</a>
       </section>
 
       <div class="rule"></div>

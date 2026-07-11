@@ -80,5 +80,25 @@ export const STEFAN = {
         'Stefan is one of the strongest colleagues I have ever worked with. He navigates gnarly migrations, is an excellent org designer, and is a leader everyone wants to follow — because he genuinely cares for every individual on his team.',
       cite: 'VP Engineering, Pleo',
     },
+    {
+      quote:
+        "He doesn't just solve technical problems; he solves business problems with technology. On complex decisions, Stefan brings both the technical rigor and the business judgment needed to get the right outcome.",
+      cite: 'Senior Finance Business Partner, cross-functional partner',
+    },
+    {
+      quote:
+        'One of the most capable leaders I have encountered in fintech engineering. When we were stuck, he made the tough decisions that moved us forward immediately — but never at the expense of long-term stability.',
+      cite: 'Staff Engineer & Architect, worked in his organisation',
+    },
+    {
+      quote:
+        'A true force multiplier. Stefan knew how to ask the right questions and provide the right guidance. He empowered people to do their best work rather than stepping in to do it for them.',
+      cite: 'Data Lead, direct report',
+    },
+    {
+      quote:
+        'He knows when to coach, when to challenge, and when to roll up his sleeves and help. Stefan combines strong strategic thinking with deep empathy for the people around him — a rare combination in leadership.',
+      cite: 'Product Lead, direct report',
+    },
   ],
 } as const;

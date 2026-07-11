@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    text { fill: #1a1a1a; }
+    @media (prefers-color-scheme: dark) {
+      text { fill: #e8e4dc; }
+    }
+  </style>
+  <text x="8" y="49" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-size="48" font-weight="600" letter-spacing="-2">S<tspan fill="#c2410c">.</tspan></text>
+</svg>
