@@ -32,8 +32,8 @@ function formatDate(d: Date): string {
       <p style="margin: 0 0 18px; color: var(--ink-70); max-width: 620px;">
         SVP Product &amp; Engineering at Pleo. Fifteen years in European fintech. Most of what I do is the work nobody else wants to own — the migrations, the cleanups, the org designs that decide whether a company scales or stalls.
       </p>
-      <p style="margin: 0 0 28px; max-width: 620px;">
-        <strong>Open to what's next:</strong> executive product and engineering roles in fintechs and scale-ups hitting the growth problems I know how to solve.
+      <p style="margin: 0 0 28px; max-width: 620px; font-size: 13.5px; color: var(--ink-55);">
+        Open to what's next: executive product and engineering roles in fintechs and scale-ups facing the growth problems I know how to solve.
       </p>
 
       <div class="metric-strip" aria-label="Selected outcomes">
@@ -89,9 +89,9 @@ function formatDate(d: Date): string {
       <section id="testimonials" class="fade-section">
         <h2 class="section-head">Working with me</h2>
         <div>
-          {s.testimonials.map((t) => (
+          {s.testimonials.map((t, i) => (
             <div class="testimonial">
-              <blockquote>"{t.quote}"</blockquote>
+              <blockquote style={i === 0 ? 'font-size: 23px; line-height: 1.42; color: var(--ink);' : undefined}>"{t.quote}"</blockquote>
               <cite>{t.cite}</cite>
             </div>
           ))}

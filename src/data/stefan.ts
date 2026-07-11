@@ -3,14 +3,12 @@ export const STEFAN = {
   role: 'SVP Product & Engineering',
   subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
   city: 'Copenhagen',
-  headline: 'I build the people, technology, and processes that let fintechs scale.',
-  openTo:
-    "I'm open to what's next — executive product and engineering roles in fintechs and scale-ups hitting the growth problems I know how to solve.",
+  headline: 'I build the platforms — and the organisations — that fintechs run on.',
   tagline:
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
-    'I lead platform, data, AI infrastructure, and our regulated entities at Pleo — about 70 people. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
-    "Most of what I've owned at Pleo started as the problem everyone else was happy to leave on the table — a payment-processor migration, a regulatory deadline, a market launch with weeks of runway. The pattern: go in, ship the hard thing, leave a team that doesn't need me anymore. Before Pleo: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.",
+    "I'm drawn to problems that sit between disciplines — where the cleanest technical answer and the right business answer pull in opposite directions, and someone has to decide which one wins. Physics trained me to work without a textbook; McKinsey, to read a boardroom and a regulator; operating taught me the constraint is rarely the technology.",
+    "That pulls me toward the load-bearing work: the systems and teams a company depends on, built to keep working after I've left the room. The point was never to own everything. It was to leave behind an organisation that doesn't need me.",
   ],
   short:
     'I build and fix platform teams and the businesses they hold up. Currently SVP Product & Engineering at Pleo; previously McKinsey and a PhD in physics.',
@@ -84,12 +82,12 @@ export const STEFAN = {
     {
       quote:
         "He doesn't just solve technical problems; he solves business problems with technology. On complex decisions, Stefan brings both the technical rigor and the business judgment needed to get the right outcome.",
-      cite: 'Senior Finance Business Partner, cross-functional partner',
+      cite: 'Senior Finance Business Partner',
     },
     {
       quote:
         'One of the most capable leaders I have encountered in fintech engineering. When we were stuck, he made the tough decisions that moved us forward immediately — but never at the expense of long-term stability.',
-      cite: 'Staff Engineer & Architect, worked in his organisation',
+      cite: 'Staff Engineer & Architect',
     },
     {
       quote:
