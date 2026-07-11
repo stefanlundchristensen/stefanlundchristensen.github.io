@@ -12,7 +12,8 @@ const NAV_ITEMS = [
   { id: 'work', n: '01', label: 'The path here' },
   { id: 'about', n: '02', label: 'About' },
   { id: 'advisory', n: '03', label: "Where I'm strongest" },
-  { id: 'writing', n: '04', label: 'Writing' },
+  { id: 'testimonials', n: '04', label: 'Working with me' },
+  { id: 'writing', n: '05', label: 'Writing' },
 ];
 
 const SECTION_IDS = NAV_ITEMS.map((it) => it.id);
@@ -88,7 +89,7 @@ export default function RailClient() {
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
             <ThemeToggle />
-            <a className="link" href={`mailto:${s.contact.email}`} style={{ fontSize: 12 }}>Contact</a>
+            <a className="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12 }}>Contact</a>
           </div>
         </div>
         <nav style={{ display: 'flex', gap: 6, marginTop: 12, flexWrap: 'wrap' }}>
@@ -139,7 +140,7 @@ export default function RailClient() {
               <a className="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
                 {s.contact.linkedin}
               </a>
-              <a className="link" href={`https://${s.contact.writing}`}>
+              <a className="link" href="/posts/">
                 {s.contact.writing}
               </a>
             </div>

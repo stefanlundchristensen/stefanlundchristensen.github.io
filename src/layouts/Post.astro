@@ -10,11 +10,14 @@ interface Props {
   tags?: string[];
   categories?: string[];
   readingTime?: string;
+  ogImage?: string;
   morePosts?: Array<{ slug: string; title: string; description?: string; date: string }>;
 }
 
 const s = STEFAN;
-const { title, description, date, tags, categories, readingTime, morePosts } = Astro.props;
+const { title, description, date, tags, categories, readingTime, ogImage, morePosts } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
 const formattedDate = date
   ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
@@ -26,7 +29,27 @@ const initials = s.name
   .join('');
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} ogType="article" ogImage={ogImage}>
+  {date && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description: description,
+        datePublished: date.toISOString(),
+        url: canonicalUrl,
+        mainEntityOfPage: canonicalUrl,
+        author: {
+          '@type': 'Person',
+          name: s.name,
+          url: 'https://stefanchristensen.me',
+        },
+        keywords: [...(categories ?? []), ...(tags ?? [])].join(', '),
+      })}
+    />
+  )}
   <ReadingProgress client:load />
   <div class="post-page">
     <header class="post-topbar">
@@ -67,7 +90,6 @@ const initials = s.name
             {s.short}
           </div>
           <div style="display: flex; gap: 18px; font-size: 13px;">
-            <a class="link" href={`mailto:${s.contact.email}`}>{s.contact.email}</a>
             <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
               {s.contact.linkedin}
             </a>
