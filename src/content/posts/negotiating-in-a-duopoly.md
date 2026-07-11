@@ -1,36 +1,36 @@
 ---
-title: "Negotiating When the Other Side Knows You Can't Leave"
+title: "You Can't Win a Scheme Negotiation in the Room"
 date: 2026-07-11
 draft: true
-tags: ["payments", "negotiation", "card-schemes", "fintech", "cost-structure"]
+tags: ["payments", "negotiation", "card-schemes", "platform", "cost-structure"]
 categories: ["FinTech", "Payments"]
-description: "We took 70% out of our card scheme costs in a market where two networks hold all the cards. The leverage wasn't where everyone told us to look."
+description: "We took more than half out of our card scheme costs in a market where two networks hold all the cards. Almost none of it was won at the table."
 ---
 
-Two networks process essentially every card transaction in Europe. If you run a card programme, you pay what they ask. That's the received wisdom, and for years we treated scheme fees the way you treat weather: something that happens to you.
+Two networks process essentially every card transaction in Europe. If you run a card programme, the received wisdom is that you pay what they ask — they know you can't realistically leave, and they price like it. We took more than half out of our scheme costs anyway. Almost none of that was won in the room.
 
-Then the line item got big enough that ignoring it stopped being an option. Scheme costs scale with volume, and our volume had grown [TODO: rough multiple] since the original agreements were signed. Contracts that made sense for the company we were had become expensive for the company we'd become. We ended up taking roughly 70% out of those costs through direct negotiation. This is what I learned about negotiating when the other side knows you can't walk away.
+The leverage was built years earlier, in decisions that had nothing to do with negotiation: how we'd architected the platform, what we ran ourselves versus handed to a provider, whose phone numbers I had. By the time we sat down, the outcome was mostly already set. Here's where it actually gets decided.
 
-## Know their business better than their account team does
+## It starts with your architecture
 
-The first thing we got wrong was thinking of the schemes as monopolists with no reason to move. They're a duopoly, which is different in one crucial way: they compete ferociously with each other for issuing portfolios. Your volume is a trophy one of them shows to their shareholders. That competition is the only leverage you have, so the work is understanding exactly how your portfolio looks from their side of the table.
+Leverage in a scheme negotiation is optionality, and optionality is a build decision you make long before you need it. If your integration only speaks to one network cleanly, if switching would cost a year of engineering you can't spare, then you have no alternative and everyone in the room knows it. You'll pay accordingly.
 
-We spent weeks building that picture before we ever asked for a meeting. How our volumes ranked in their regional book. Which fee lines were standard and which were legacy artifacts nobody had questioned. What incentive structures they had offered companies like us, in deals we could learn about from [TODO: how you actually learned this — advisors, peers, hiring]. By the time we sat down, we could talk about their economics as fluently as ours.
+The choice sits inside every platform decision: go deep with one partner and take the simplicity and depth that come with it, or spend more to keep yourself able to move. Going all in is sometimes right — integrations are expensive to run in parallel, and a close partnership buys you things a hedged one never will. It is also the moment you quietly hand away every future negotiation. We paid to keep the optionality, and a large part of what we clawed back later was simply that investment paying out.
 
-## Your own numbers are half the negotiation
+## Know where the pain lands, and who owns that number
 
-The embarrassing discovery was internal: we couldn't initially say with precision what we were paying for. Scheme billing runs to hundreds of fee codes, invoiced in formats that seem designed to resist analysis. Before the negotiation could start, we had to rebuild our own cost picture from raw invoice data, fee code by fee code.
+The next thing is understanding their business well enough to know where a concession lands. A scheme isn't one monolithic counterparty; it's a set of regional P&Ls and global ones, and a give that's cheap at the global level can be painful to a specific regional office, or the reverse. Knowing which is which tells you what to ask for, and who to ask.
 
-That work paid for itself twice. Once because it told us where the money was, and which fee lines were worth fighting over. And once because it changed the dynamic in the room: when you can discuss individual fee codes from memory, the other side stops quoting list prices at you. Most companies don't do this work. The schemes know that, and price accordingly.
+It cuts the other way too — you have to know your own numbers cold. Scheme billing runs to hundreds of fee codes in formats that seem built to resist analysis, and until we'd rebuilt our own cost picture from raw invoice data, one fee code at a time, we couldn't say with precision what we were paying for. When you can discuss individual fee lines from memory, the other side stops quoting you list prices. Most companies never do this work, and the schemes price accordingly.
 
-## The alternative has to be real
+## Multi-thread by default
 
-Every negotiation book says you need a credible alternative. In a duopoly the alternative is obvious and drastic: move the portfolio to the other network. Saying it means nothing. What makes it credible is doing enough real work on it that the threat is visibly more than a bluff — technical scoping, commercial conversations with the other side, a genuine migration assessment. We knew what switching would cost us, which meant we also knew exactly how much pain we could threaten without bluffing.
+I never run one of these up a single channel. Multi-threading is the default: several conversations, at several levels, on both sides, running at once. Single-thread it and you've handed one account manager control of the tempo and the information — they decide what you hear and when. Thread it across the relationship and no one person can stall you or filter what reaches the people who decide.
 
-The cost of this was real and worth naming. Running a parallel commercial process is expensive in senior attention, and it strains a relationship you will still depend on for a decade regardless of the outcome. There were weeks where I wondered whether we were burning goodwill we'd need later, for savings we might not get.
+## Be known before you need to be
 
-## What I'd tell someone starting this
+All of that rests on something you cannot build once the negotiation starts: relationships, and the time behind them. Knowing who to call, and being someone worth taking the call, is the quiet work of years. The payoff arrives in a single moment. When your case finally lands on their CFO's desk, you want to be a company they recognise, with people they've met, not one more logo in a stack of renewal requests. That recognition decides more than the merits sometimes, and you can't manufacture it in the quarter you need it.
 
-The negotiation took [TODO: duration] from first analysis to signed agreement. The 70% didn't come from one dramatic concession; it came from a stack of individually defensible asks, each grounded in data, each of which the other side could grant without embarrassment. Nobody wants to lose a negotiation. Structuring it so the counterparty can say yes with dignity matters more than any tactic.
+## What it comes down to
 
-I keep coming back to how unglamorous the decisive work was. Not the meetings, which were few, but the invoice parsing, the fee-code spreadsheets, the migration scoping we hoped never to use. The negotiation was won months before it started, in work nobody saw. That has been true of most of the commercial wins I've been part of, and I expect it will be true of the next one.
+The meetings, when they finally happened, were almost anticlimactic. The win had already been banked — in an architecture that gave us somewhere to go, in knowing their business better than a customer should, in relationships built long before we needed to spend them. I've stopped thinking of negotiation as something that happens at a table. It's a position you build, quietly, over years, and then one day you collect.
