@@ -34,6 +34,7 @@ const morePosts = published.slice(0, 3).map((p) => ({
   tags={post.data.tags}
   categories={post.data.categories}
   readingTime={readingTime(post.body ?? '')}
+  ogImage={`/og/${post.id}.png`}
   morePosts={morePosts}
 >
   <Content />

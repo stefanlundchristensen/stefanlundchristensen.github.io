@@ -130,7 +130,7 @@ Link to external reports and sources (DX, DORA, Lenny's podcast, specific people
 - Vary closing section headings across posts — don't repeat the same formula title
 
 ## Analytics
-GoatCounter (privacy-focused): `superhuman.goatcounter.com`
+None. GoatCounter was removed in July 2026; the site currently runs without analytics.
 
 ## URL Structure
 - `/` — homepage (single-page with all sections)

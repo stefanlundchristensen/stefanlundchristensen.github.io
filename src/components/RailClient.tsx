@@ -89,7 +89,7 @@ export default function RailClient() {
           </div>
           <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
             <ThemeToggle />
-            <a className="link" href={`mailto:${s.contact.email}`} style={{ fontSize: 12 }}>Contact</a>
+            <a className="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12 }}>Contact</a>
           </div>
         </div>
         <nav style={{ display: 'flex', gap: 6, marginTop: 12, flexWrap: 'wrap' }}>
@@ -137,9 +137,6 @@ export default function RailClient() {
           <div style={{ marginBottom: 28 }}>
             <div className="lbl" style={{ marginBottom: 10 }}>Contact</div>
             <div style={{ display: 'grid', gap: 6, fontSize: 13 }}>
-              <a className="link" href={`mailto:${s.contact.email}`}>
-                {s.contact.email}
-              </a>
               <a className="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
                 {s.contact.linkedin}
               </a>

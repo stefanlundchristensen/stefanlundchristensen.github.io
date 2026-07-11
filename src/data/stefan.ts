@@ -3,17 +3,18 @@ export const STEFAN = {
   role: 'SVP Product & Engineering',
   subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
   city: 'Copenhagen',
-  headline: 'I lead platform, data, and AI infrastructure at Pleo.',
+  headline: 'I build the people, technology, and processes that let fintechs scale.',
+  openTo:
+    "I'm open to what's next — executive product and engineering roles in fintechs and scale-ups hitting the growth problems I know how to solve.",
   tagline:
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
     'I lead platform, data, AI infrastructure, and our regulated entities at Pleo — about 70 people. I joined in 2019 to migrate the payments stack and ended up building the platform that runs the company.',
-    "Most of what I've owned at Pleo started as something nobody else wanted to own — a payment-processor migration, a regulatory deadline, a market launch with weeks of runway. The pattern: go in, ship the unsexy thing, leave a team that doesn't need me anymore. Before Pleo: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.",
+    "Most of what I've owned at Pleo started as the problem everyone else was happy to leave on the table — a payment-processor migration, a regulatory deadline, a market launch with weeks of runway. The pattern: go in, ship the hard thing, leave a team that doesn't need me anymore. Before Pleo: McKinsey advising Tier 1 European banks, and a PhD in physics building atomic clocks.",
   ],
   short:
     'I build and fix platform teams and the businesses they hold up. Currently SVP Product & Engineering at Pleo; previously McKinsey and a PhD in physics.',
   contact: {
-    email: 'stefan_christensen@protonmail.com',
     linkedin: 'linkedin.com/in/stefanlchristensen',
     writing: 'stefanchristensen.me/posts',
     location: 'Copenhagen, DK',
@@ -22,7 +23,7 @@ export const STEFAN = {
     { value: '5 → 15', label: 'European markets, 11 months' },
     { value: '3×', label: 'Engineering throughput, flat headcount' },
     { value: '70%', label: 'Card scheme cost reduction' },
-    { value: '20pp', label: 'Margin uplift on a processor migration' },
+    { value: '20 pts', label: 'Margin uplift on a processor migration' },
   ],
   experience: [
     {
@@ -58,20 +59,20 @@ export const STEFAN = {
   ],
   proposition: [
     {
-      title: 'European payments, end-to-end',
-      body: "Built Pleo's payments platform from scratch, scaled it from 5 to 15 markets in 11 months, and took 70% out of card scheme costs in a duopoly through direct negotiation. The work no one wants to own and that determines whether the company can scale at all.",
-    },
-    {
-      title: 'Traditional companies going AI-first',
-      body: "I'm in the middle of this transition right now: rearchitecting data pipelines, compliance automation, and internal tooling at a company that started as a card programme. Not the chatbot layer — the work that decides whether AI becomes the default way an organisation operates or stays a side project. Most of it isn't sexy.",
-    },
-    {
       title: 'Platform organisations crossing 50 → 200 engineers',
       body: 'Tripled engineering throughput on flat headcount in the last cycle. The unlock was treating platform teams as product teams with real users and real outcomes — and being willing to sit in the org-politics rooms nobody else wanted to be in. This is the threshold where org structure starts driving the product roadmap, and where most companies break.',
     },
     {
+      title: 'European payments, end-to-end',
+      body: "Built Pleo's payments platform from scratch, scaled it from 5 to 15 markets in 11 months, and took 70% out of card scheme costs in a duopoly through direct negotiation. The kind of infrastructure work that decides whether the company can scale at all.",
+    },
+    {
+      title: 'Making AI the default way a company operates',
+      body: "I'm in the middle of this transition right now: rearchitecting data pipelines, compliance automation, and internal tooling at a company that started as a card programme. Not the chatbot layer — the pipelines, permissions, and tooling that decide whether AI sticks or stays a side project. Most of it isn't sexy.",
+    },
+    {
       title: 'Building product organisations through growth-stage',
-      body: "Joined Pleo at 100 people; helped take it past 850. Six years inside the product engine of a Series C fintech, plus five years at McKinsey before that advising European banks on payments and digital transformation. Product at growth-stage isn't the discovery loop — it's pricing, packaging, regulatory readiness, market launches with weeks of runway, and saying no to the things that don't compound. The companies that get this right keep momentum past Series B; the ones that don't, stall.",
+      body: "Joined Pleo at 100 people; helped take it past 850. Six years inside the product engine of a Series C fintech, after five at McKinsey advising European banks. Product at growth-stage isn't the discovery loop — it's pricing, packaging, regulatory readiness, and saying no to the things that don't compound. Get it right and momentum survives Series B; get it wrong and the company stalls.",
     },
   ],
   testimonials: [
