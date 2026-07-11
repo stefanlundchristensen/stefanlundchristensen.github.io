@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stefanchristensen.me/sitemap.xml
+Sitemap: https://stefanchristensen.me/sitemap-index.xml
