@@ -3,7 +3,7 @@ export const STEFAN = {
   role: 'SVP Product & Engineering',
   subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
   city: 'Copenhagen',
-  headline: 'I build the platforms — and the organisations — that fintechs run on.',
+  headline: 'I own the platform and the P&L, and build the organisation that connects them.',
   tagline:
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
   longBio: [
