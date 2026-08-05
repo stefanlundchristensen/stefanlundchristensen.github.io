@@ -17,14 +17,17 @@ import { getCollection } from 'astro:content';
 import { CANDIDATES } from '../../lib/visuals/candidates.mjs';
 import { HYBRIDS } from '../../lib/visuals/hybrids.mjs';
 import { STRUCTURAL } from '../../lib/visuals/structural.mjs';
+import { COMPOSED } from '../../lib/visuals/composed.mjs';
 import { analyze } from '../../lib/visuals/structure.mjs';
 import { LIGHT, DARK } from '../../lib/visuals/palette.mjs';
 import { composeOgCard } from '../../lib/visuals/ogcard.mjs';
 
 // Round 3: marks driven by each post's own structure rather than a slug hash.
 // CANDIDATES and HYBRIDS stay imported only until the pick is final.
-void CANDIDATES; void HYBRIDS;
-const ROUND2 = STRUCTURAL;
+// Round 4: same structural data, composed rather than plotted, so none of it
+// reads as a chart. Earlier rounds stay imported only until the pick is final.
+void CANDIDATES; void HYBRIDS; void STRUCTURAL;
+const ROUND2 = COMPOSED;
 
 export function getStaticPaths() {
   if (!import.meta.env.DEV) return [];
