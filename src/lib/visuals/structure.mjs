@@ -15,6 +15,23 @@
 /** Numerals per 100 words above which a passage reads as quantitative. */
 const QUANT_THRESHOLD = 1.5;
 
+/**
+ * Remove everything that isn't prose before measuring.
+ *
+ * Posts carrying an inline SVG diagram would otherwise have thousands of path
+ * coordinates and attribute tokens counted as words, which inflates their word
+ * count, their numeral density and their paragraph count — and the mark is
+ * meant to describe the writing, not the markup.
+ */
+function stripNonProse(s) {
+  return s
+    .replace(/<figure[\s\S]*?<\/figure>/gi, '')
+    .replace(/<svg[\s\S]*?<\/svg>/gi, '')
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<[^>]+>/g, '');
+}
+
 function countWords(s) {
   return s.split(/\s+/).filter(Boolean).length;
 }
@@ -51,7 +68,7 @@ function countParagraphs(s) {
  * @returns {Structure}
  */
 export function analyze(md) {
-  const body = String(md ?? '').replace(/^---\n[\s\S]*?\n---\n?/, '');
+  const body = stripNonProse(String(md ?? '').replace(/^---\n[\s\S]*?\n---\n?/, ''));
 
   // Split on h2 only. h3s belong to their parent section — the mark reflects
   // the post's top-level argument, not every subdivision.

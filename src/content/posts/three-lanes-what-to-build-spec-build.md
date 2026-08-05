@@ -25,6 +25,38 @@ Build is the third lane. It picks up the spec from the second lane and ships it.
 
 What ties the three together is what crosses the boundary: an artifact, not a meeting.
 
+<figure class="post-diagram">
+<svg viewBox="0 0 640 260" role="img" aria-label="Three lanes — what to build, spec built, and build — connected not by meetings but by artifacts: a structured item passes from the first lane to the second, a spec from the second to the third, and when something ships the loop closes back to the first lane.">
+<defs><marker id="tl-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head--key"/></marker><marker id="tl-b" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head"/></marker></defs>
+<rect x="0" y="26" width="188" height="112" class="d-node"/>
+<text x="16" y="18" class="d-tag">Lane one</text>
+<text x="16" y="52" class="d-label">What to build</text>
+<text x="16" y="72" class="d-sub">Customer signal, ideas,</text><text x="16" y="87" class="d-sub">competitor research, gaps</text>
+<text x="16" y="122" class="d-tag">Owner: signal holder</text>
+<rect x="226" y="26" width="188" height="112" class="d-node"/>
+<text x="242" y="18" class="d-tag">Lane two</text>
+<text x="242" y="52" class="d-label">Spec built</text>
+<text x="242" y="72" class="d-sub">The user, the interaction,</text><text x="242" y="87" class="d-sub">success criteria, constraints</text>
+<text x="242" y="122" class="d-tag">Owner: product + taste</text>
+<rect x="452" y="26" width="188" height="112" class="d-node"/>
+<text x="468" y="18" class="d-tag">Lane three</text>
+<text x="468" y="52" class="d-label">Build</text>
+<text x="468" y="72" class="d-sub">Implementation plan, agents,</text><text x="468" y="87" class="d-sub">review, merge, deploy</text>
+<text x="468" y="122" class="d-tag">Owner: conductor</text>
+<line x1="190" y1="82" x2="222" y2="82" class="d-line d-line--key" marker-end="url(#tl-a)"/>
+<line x1="416" y1="82" x2="448" y2="82" class="d-line d-line--key" marker-end="url(#tl-a)"/>
+<text x="206" y="166" class="d-tag d-tag--key" text-anchor="middle">Item</text>
+<text x="432" y="166" class="d-tag d-tag--key" text-anchor="middle">Spec</text>
+<line x1="206" y1="88" x2="206" y2="152" class="d-line d-line--key"/>
+<line x1="432" y1="88" x2="432" y2="152" class="d-line d-line--key"/>
+<path d="M546 142 L546 206 L94 206 L94 144" class="d-line d-line--back" marker-end="url(#tl-b)"/>
+<text x="320" y="200" class="d-sub" text-anchor="middle">When it ships, the loop closes back to the source that asked for it</text>
+<line x1="0" y1="228" x2="640" y2="228" class="d-line" style="stroke-width:1;stroke:rgba(var(--ink-rgb),0.15)"/>
+<text x="0" y="250" class="d-label">What crosses the boundary is the artifact, not the meeting.</text>
+</svg>
+<figcaption>Each lane runs at its own cadence. The only things crossing a boundary are the item and the spec — bridge the lanes with standups and handoff meetings instead, and they collapse back into one undifferentiated process.</figcaption>
+</figure>
+
 ## Lane One: What to Build
 
 The job of this lane is connecting the team to the signal it already generates and turning that signal into a structured view of what to build next.
