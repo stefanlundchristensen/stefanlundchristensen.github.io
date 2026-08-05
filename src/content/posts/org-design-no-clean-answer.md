@@ -24,30 +24,20 @@ Pick any one of those frameworks and run with it, and you'll do well on that dim
 The frameworks are right. They're also incomplete on their own.
 
 <figure class="post-diagram">
-<svg viewBox="0 0 640 300" role="img" aria-label="Four framework lenses pulling one organisation in four directions: people asks about span of control, product asks about journeys and personas, Team Topologies asks about team types, and architecture asks that team boundaries follow system boundaries.">
+<svg viewBox="0 0 640 176" role="img" aria-label="One organisation design pulled in four directions at once — by people, by product, by Team Topologies, and by architecture.">
 <defs><marker id="od-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head--key"/></marker></defs>
-<rect x="248" y="126" width="144" height="48" class="d-node d-node--key"/>
-<text x="320" y="147" class="d-label d-label--key" text-anchor="middle">One org design</text>
-<text x="320" y="163" class="d-sub" text-anchor="middle">one shape, four claims</text>
-<rect x="0" y="14" width="196" height="62" class="d-node"/>
-<text x="14" y="36" class="d-label">People</text>
-<text x="14" y="54" class="d-sub">Symmetric teams, defensible</text><text x="14" y="68" class="d-sub">manager spans, a clean tree</text>
-<rect x="444" y="14" width="196" height="62" class="d-node"/>
-<text x="458" y="36" class="d-label">Product</text>
-<text x="458" y="54" class="d-sub">Teams close to outcomes, end</text><text x="458" y="68" class="d-sub">to end on a journey or problem</text>
-<rect x="0" y="224" width="196" height="62" class="d-node"/>
-<text x="14" y="246" class="d-label">Team Topologies</text>
-<text x="14" y="264" class="d-sub">Honest team types, clean</text><text x="14" y="278" class="d-sub">boundaries between them</text>
-<rect x="444" y="224" width="196" height="62" class="d-node"/>
-<text x="458" y="246" class="d-label">Architecture</text>
-<text x="458" y="264" class="d-sub">Team boundaries following</text><text x="458" y="278" class="d-sub">system boundaries</text>
-<line x1="252" y1="132" x2="200" y2="80" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="388" y1="132" x2="440" y2="80" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="252" y1="168" x2="200" y2="220" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="388" y1="168" x2="440" y2="220" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<text x="320" y="262" class="d-sub" text-anchor="middle">Each lens is right. They point four different ways.</text>
+<rect x="248" y="64" width="144" height="46" class="d-node d-node--key"/>
+<text x="320" y="92" class="d-label d-label--key" text-anchor="middle">One org design</text>
+<text x="0" y="24" class="d-label">People</text><text x="0" y="40" class="d-sub">span of control</text>
+<text x="640" y="24" class="d-label" text-anchor="end">Product</text><text x="640" y="40" class="d-sub" text-anchor="end">journeys, personas</text>
+<text x="0" y="150" class="d-label">Team Topologies</text><text x="0" y="166" class="d-sub">team types</text>
+<text x="640" y="150" class="d-label" text-anchor="end">Architecture</text><text x="640" y="166" class="d-sub" text-anchor="end">system boundaries</text>
+<line x1="252" y1="70" x2="176" y2="34" class="d-line d-line--key" marker-end="url(#od-a)"/>
+<line x1="388" y1="70" x2="464" y2="34" class="d-line d-line--key" marker-end="url(#od-a)"/>
+<line x1="252" y1="104" x2="176" y2="140" class="d-line d-line--key" marker-end="url(#od-a)"/>
+<line x1="388" y1="104" x2="464" y2="140" class="d-line d-line--key" marker-end="url(#od-a)"/>
 </svg>
-<figcaption>Run with any single one of these and you do well on that dimension and badly on the other three: the HR-clean org stretches product teams across journeys they don't own, the product-clean org grows wild manager spans, and the architecture-clean org puts people on work they never signed up for.</figcaption>
+<figcaption>Each lens is right, and they point four different ways. Run with any single one and you do well on that dimension and badly on the other three.</figcaption>
 </figure>
 
 ## The Setup
