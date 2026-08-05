@@ -1,0 +1,428 @@
+---
+/**
+ * STYLE LAB — not part of the site.
+ *
+ * Five candidate visual directions, rendered across the sizes they would have
+ * to survive: post hero, listing thumbnail, OG card, and in context under a
+ * real post header. Pick one direction (or one hybrid), then this page and
+ * src/lib/visuals/candidates.mjs are deleted and the winner graduates into a
+ * primitives library.
+ *
+ * Dev only. This is a dynamic route purely so getStaticPaths can return nothing
+ * in a production build — the page is served at /lab/visuals under `astro dev`
+ * and emits no file at all under `astro build`.
+ */
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { CANDIDATES } from '../../lib/visuals/candidates.mjs';
+import { LIGHT, DARK } from '../../lib/visuals/palette.mjs';
+import { composeOgCard } from '../../lib/visuals/ogcard.mjs';
+
+export function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  return [{ params: { slug: 'visuals' } }];
+}
+
+const all = await getCollection('posts');
+const pick = (slug) => all.find((p) => p.id === slug);
+
+// Three posts spanning the categories and the genres: an operational case
+// study, a conceptual argument, and a personal essay.
+const SAMPLE_SLUGS = ['european-payment-rails', 'org-design-no-clean-answer', 'what-i-listen-to'];
+const samples = SAMPLE_SLUGS.map(pick)
+  .filter(Boolean)
+  .map((p) => ({
+    slug: p.id,
+    title: p.data.title,
+    category: p.data.categories?.[0],
+    description: p.data.description,
+  }));
+
+const HERO = { width: 720, height: 180 };
+const THUMB = { width: 104, height: 104 };
+
+const THEMES = [
+  { key: 'light', label: 'Light', P: LIGHT },
+  { key: 'dark', label: 'Dark', P: DARK },
+];
+
+const lead = samples[0];
+---
+
+<Base title="Visual style lab" description="Candidate visual directions for post marks.">
+  <div class="lab">
+    <header class="lab-head">
+      <div class="lbl" style="color: var(--accent);">Style lab · not shipped</div>
+      <h1 class="h-display" style="font-size: 40px; line-height: 1.1; margin: 10px 0 14px;">
+        Five directions for post visuals
+      </h1>
+      <p class="lab-intro">
+        Each direction is one function drawing only from the existing tokens — bone, ink, clay,
+        Fraunces. Nothing new. The same function has to hold up as a 720px hero, a 104px thumbnail
+        and a 1200×630 OG card, so every composition is expressed as fractions of the frame rather
+        than fixed coordinates.
+      </p>
+      <p class="lab-intro">
+        Judge them in this order: <strong>section 3 first</strong> — whether the mark fights the
+        title is the only question that really matters — then the thumbnails, then the OG cards.
+        The heroes flatter everything.
+      </p>
+    </header>
+
+    <!-- 1. Quick compare ------------------------------------------------- -->
+    <section class="lab-section">
+      <h2 class="lab-h2"><span class="lab-num">1</span> Side by side</h2>
+      <p class="lab-note">All five on the same post — <em>{lead.title}</em> — at hero size.</p>
+
+      {THEMES.map((t) => (
+        <div class="lab-theme-block">
+          <div class="lbl lab-theme-label">{t.label}</div>
+          <div class="stack">
+            {CANDIDATES.map((c) => (
+              <figure class="fig">
+                <figcaption class="fig-cap">{c.name}</figcaption>
+                <div class="art" set:html={c.render(lead, t.P, HERO)} />
+              </figure>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- 2. Thumbnails ---------------------------------------------------- -->
+    <section class="lab-section">
+      <h2 class="lab-h2"><span class="lab-num">2</span> At 104px</h2>
+      <p class="lab-note">
+        The listing thumbnail, and the size that kills most ideas. Fine detail is dropped rather
+        than shrunk — each renderer has a reduced mode below 150px.
+      </p>
+
+      <div class="thumb-table">
+        <div class="thumb-row thumb-head">
+          <div />
+          {samples.map((s) => <div class="lbl">{s.slug}</div>)}
+          <div class="lbl">Dark</div>
+        </div>
+        {CANDIDATES.map((c) => (
+          <div class="thumb-row">
+            <div class="thumb-name">{c.name}</div>
+            {samples.map((s) => (
+              <div class="art thumb" set:html={c.render(s, LIGHT, THUMB)} />
+            ))}
+            <div class="art thumb" set:html={c.render(lead, DARK, THUMB)} />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 3. In context ---------------------------------------------------- -->
+    <section class="lab-section">
+      <h2 class="lab-h2"><span class="lab-num">3</span> Under a real post header</h2>
+      <p class="lab-note">
+        Actual post typography at actual size — 56px Fraunces title, 24px dek, the meta rule. This
+        is the test that matters: does the mark support the title or compete with it?
+      </p>
+
+      {CANDIDATES.map((c) => (
+        <div class="ctx">
+          <div class="lbl lab-theme-label">{c.name}</div>
+          <div class="ctx-page">
+            <div class="ctx-article">
+              <div class="lbl" style="margin-bottom: 18px; color: var(--accent);">{lead.category}</div>
+              <h3 class="h-display ctx-title">{lead.title}</h3>
+              <p class="h-display ctx-dek">{lead.description}</p>
+              <div class="art ctx-art" set:html={c.render(lead, LIGHT, { width: 720, height: 200 })} />
+              <div class="ctx-meta">
+                <span>By Stefan Christensen</span><span>January 28, 2026</span><span>6 min read</span>
+              </div>
+              <p class="ctx-body">
+                We did everything right. We ran a proper RFP when selecting a UK bank for Faster
+                Payments. We asked if they supported Faster Payments. We validated their answers in
+                writing.
+              </p>
+            </div>
+          </div>
+          <p class="lab-note lab-blurb">{c.blurb}</p>
+        </div>
+      ))}
+    </section>
+
+    <!-- 4. OG cards ------------------------------------------------------ -->
+    <section class="lab-section">
+      <h2 class="lab-h2"><span class="lab-num">4</span> OG cards</h2>
+      <p class="lab-note">
+        Two placements, both a real choice: <strong>panel</strong> gives the mark the right third
+        and narrows the title measure; <strong>band</strong> keeps the current measure and runs the
+        mark along the bottom. Rendered here in the browser — the PNG path goes through resvg,
+        which may differ on blend modes and fonts.
+      </p>
+
+      {CANDIDATES.map((c) => (
+        <div class="og-block">
+          <div class="lbl lab-theme-label">{c.name}</div>
+          <div class="og-pair">
+            <figure class="fig">
+              <figcaption class="fig-cap">Panel</figcaption>
+              <div
+                class="art"
+                set:html={composeOgCard(lead, LIGHT, {
+                  placement: 'panel',
+                  mark: (w, h) => c.render(lead, LIGHT, { width: w, height: h }),
+                })}
+              />
+            </figure>
+            <figure class="fig">
+              <figcaption class="fig-cap">Band</figcaption>
+              <div
+                class="art"
+                set:html={composeOgCard(lead, LIGHT, {
+                  placement: 'band',
+                  mark: (w, h) => c.render(lead, LIGHT, { width: w, height: h }),
+                })}
+              />
+            </figure>
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- 5. Consistency --------------------------------------------------- -->
+    <section class="lab-section">
+      <h2 class="lab-h2"><span class="lab-num">5</span> Across posts</h2>
+      <p class="lab-note">
+        The same direction over three different posts. Marks are seeded from the slug, so they are
+        stable across builds. The question here is whether they read as one family or as noise.
+      </p>
+
+      {CANDIDATES.map((c) => (
+        <div class="lab-theme-block">
+          <div class="lbl lab-theme-label">{c.name}</div>
+          <div class="stack">
+            {samples.map((s) => (
+              <figure class="fig">
+                <figcaption class="fig-cap">{s.title}</figcaption>
+                <div class="art" set:html={c.render(s, LIGHT, HERO)} />
+              </figure>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <footer class="lab-foot">
+      <p class="lab-note">
+        Once a direction is chosen: this page, <code>candidates.mjs</code> and the four losers are
+        deleted; the winner becomes <code>primitives.mjs</code> + <code>render.mjs</code>, with one
+        small hand-authored spec per post.
+      </p>
+    </footer>
+  </div>
+</Base>
+
+<style>
+  .lab {
+    width: 100%;
+    min-height: 100vh;
+    padding: 56px 48px 96px;
+    font-family: var(--font-body);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .lab-head {
+    max-width: 720px;
+    margin-bottom: 72px;
+  }
+
+  .lab-intro {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-70);
+    margin: 0 0 14px;
+  }
+
+  .lab-section {
+    margin-bottom: 88px;
+    padding-top: 32px;
+    border-top: 1px solid var(--ink-15);
+  }
+
+  .lab-h2 {
+    font-family: var(--font-display);
+    font-size: 27px;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .lab-num {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lab-note {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-65);
+    max-width: 660px;
+    margin: 0 0 32px;
+  }
+
+  .lab-blurb {
+    margin-top: 16px;
+    max-width: 720px;
+  }
+
+  .lab-theme-block,
+  .og-block,
+  .ctx {
+    margin-bottom: 44px;
+  }
+
+  .lab-theme-label {
+    margin-bottom: 14px;
+  }
+
+  .stack {
+    display: grid;
+    gap: 26px;
+  }
+
+  .fig {
+    margin: 0;
+  }
+
+  .fig-cap {
+    font-size: 12px;
+    color: var(--ink-50);
+    margin-bottom: 7px;
+  }
+
+  /* SVG strings carry width/height attributes for the OG path; scale them here.
+     Direct child only — the OG cards nest the mark in an inner <svg>, and
+     height:auto on that re-solves its viewport and pushes the mark out of the
+     card entirely. */
+  .art > :global(svg) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--ink-10);
+  }
+
+  .thumb-table {
+    display: grid;
+    gap: 12px;
+  }
+
+  .thumb-row {
+    display: grid;
+    grid-template-columns: 180px repeat(4, 104px);
+    gap: 18px;
+    align-items: center;
+  }
+
+  .thumb-head {
+    align-items: end;
+    margin-bottom: 4px;
+  }
+
+  .thumb-name {
+    font-size: 14px;
+    color: var(--ink-70);
+  }
+
+  .thumb > :global(svg) {
+    width: 104px;
+    height: 104px;
+  }
+
+  /* A slice of a real post page, with Post.astro's measurements. */
+  .ctx-page {
+    background: var(--bg);
+    border: 1px solid var(--ink-15);
+    padding: 44px 40px 40px;
+  }
+
+  .ctx-article {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .ctx-title {
+    font-size: 56px;
+    line-height: 1.06;
+    margin: 0 0 22px;
+  }
+
+  .ctx-dek {
+    font-size: 24px;
+    line-height: 1.36;
+    color: var(--ink-70);
+    margin: 0 0 36px;
+  }
+
+  .ctx-art {
+    margin-bottom: 36px;
+  }
+
+  /* No hairline here — everywhere else the border is a lab affordance marking
+     the frame, but in context the mark has to be judged as it would ship. */
+  .ctx-art > :global(svg) {
+    border: none;
+  }
+
+  .ctx-meta {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--ink-15);
+    font-size: 13px;
+    color: var(--ink-60);
+  }
+
+  .ctx-body {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-78);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .og-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .lab-foot {
+    padding-top: 28px;
+    border-top: 1px solid var(--ink-15);
+  }
+
+  code {
+    font-size: 13px;
+    background: var(--ink-05);
+    padding: 1px 5px;
+  }
+
+  @media (max-width: 900px) {
+    .lab {
+      padding: 32px 24px 64px;
+    }
+    .og-pair {
+      grid-template-columns: 1fr;
+    }
+    .thumb-row {
+      grid-template-columns: 130px repeat(4, 72px);
+      gap: 12px;
+    }
+    .thumb > :global(svg) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
