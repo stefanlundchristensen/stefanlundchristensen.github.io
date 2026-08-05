@@ -40,4 +40,22 @@ export const DARK = {
   blend: 'screen',
 };
 
+/**
+ * For marks inlined into the page. Emitting custom properties rather than hex
+ * means one render follows the theme toggle, instead of shipping a light and a
+ * dark copy of every mark. resvg cannot resolve these, so the PNG path uses
+ * LIGHT above.
+ *
+ * @type {Palette}
+ */
+export const CSSVARS = {
+  name: 'cssvars',
+  // Transparent, so the mark sits on whatever the page ground is.
+  bg: 'transparent',
+  accent: 'var(--accent)',
+  ink: (alpha) => `rgba(var(--ink-rgb), ${alpha})`,
+  tint: (alpha) => `rgba(var(--accent-rgb), ${alpha})`,
+  blend: 'normal',
+};
+
 export const PALETTES = { light: LIGHT, dark: DARK };

@@ -3,6 +3,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
 import wawoff2 from 'wawoff2';
+import { composeOgCard } from '../src/lib/visuals/ogcard.mjs';
+import { renderVisual } from '../src/lib/visuals/render.mjs';
+import { analyze } from '../src/lib/visuals/structure.mjs';
+import { LIGHT } from '../src/lib/visuals/palette.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -74,57 +78,27 @@ renderPng(defaultSvg, path.join(root, 'public/og-default.png'));
 // Per-post cards (published posts only)
 // ---------------------------------------------------------------------------
 
-function wrapTitle(title, maxChars) {
-  const words = title.split(' ');
-  const lines = [];
-  let line = '';
-  for (const word of words) {
-    if (line && (line + ' ' + word).length > maxChars) {
-      lines.push(line);
-      line = word;
-    } else {
-      line = line ? `${line} ${word}` : word;
-    }
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
-function postSvg({ title, category }) {
-  // Scale type to title length so long titles still fit four lines.
-  let fontSize = 68;
-  let maxChars = 28;
-  if (title.length > 45) { fontSize = 56; maxChars = 34; }
-  if (title.length > 90) { fontSize = 46; maxChars = 42; }
-  const lines = wrapTitle(title, maxChars).slice(0, 4);
-  const lineHeight = fontSize * 1.14;
-  const titleStartY = 250;
-  const titleLines = lines
-    .map((l, i) => `<text x="80" y="${Math.round(titleStartY + i * lineHeight)}" font-family="Fraunces" font-size="${fontSize}" font-weight="500" letter-spacing="-1" fill="#1a1a1a">${escapeXml(l)}</text>`)
-    .join('\n  ');
-
-  const kicker = category
-    ? `<text x="80" y="158" font-family="Inter" font-size="20" font-weight="600" letter-spacing="2.4" fill="#c2410c">${escapeXml(category.toUpperCase())}</text>`
-    : '';
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f5f3ee"/>
-  ${kicker}
-  <line x1="80" y1="182" x2="164" y2="182" stroke="#c2410c" stroke-width="3"/>
-  ${titleLines}
-  <text x="80" y="566" font-family="Fraunces" font-size="26" font-weight="500" letter-spacing="-0.5" fill="rgba(26,26,26,0.85)">Stefan Christensen</text>
-  <text x="1120" y="566" font-family="Inter" font-size="16" font-weight="400" fill="rgba(26,26,26,0.5)" text-anchor="end">stefanchristensen.me</text>
-</svg>`;
+// The card layout and the mark both come from src/lib/visuals, so the PNGs
+// stay in step with what the site renders. resvg cannot resolve CSS custom
+// properties, so this path passes the explicit LIGHT palette.
+function postSvg({ title, category, body }) {
+  return composeOgCard({ title, category }, LIGHT, {
+    mark: (w, h) =>
+      renderVisual({ title, structure: analyze(body) }, { palette: LIGHT, width: w, height: h }),
+  });
 }
 
 function parseFrontmatter(md) {
   const fm = md.match(/^---\n([\s\S]*?)\n---/);
   if (!fm) return null;
-  const body = fm[1];
-  const title = body.match(/^title:\s*["'](.*)["']\s*$/m)?.[1];
-  const draft = /^draft:\s*true\s*$/m.test(body);
-  const category = body.match(/^categories:\s*\[\s*["']([^"']+)["']/m)?.[1];
-  return { title, draft, category };
+  const head = fm[1];
+  // Quotes optional: an unquoted title used to fail the match and the post was
+  // skipped with only a console warning.
+  const raw = head.match(/^title:\s*(.+?)\s*$/m)?.[1];
+  const title = raw?.replace(/^["'](.*)["']$/, '$1');
+  const draft = /^draft:\s*true\s*$/m.test(head);
+  const category = head.match(/^categories:\s*\[\s*["']([^"']+)["']/m)?.[1];
+  return { title, draft, category, body: md.slice(fm[0].length) };
 }
 
 const postsDir = path.join(root, 'src/content/posts');
@@ -137,7 +111,9 @@ for (const file of readdirSync(postsDir).filter((f) => f.endsWith('.md'))) {
     console.warn(`Skipped (no title parsed): ${file}`);
     continue;
   }
-  if (meta.draft) continue;
+  // Drafts get cards too. The post page emits og:image for whatever it builds,
+  // so skipping drafts meant any post going live without a re-run pointed at a
+  // 404 with no fallback.
   const slug = file.replace(/\.md$/, '');
   renderPng(postSvg(meta), path.join(ogDir, `${slug}.png`));
 }

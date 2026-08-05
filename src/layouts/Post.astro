@@ -11,11 +11,13 @@ interface Props {
   categories?: string[];
   readingTime?: string;
   ogImage?: string;
+  /** Pre-rendered inline SVG mark. Absent when a post sets visual: none. */
+  mark?: string;
   morePosts?: Array<{ slug: string; title: string; description?: string; date: string }>;
 }
 
 const s = STEFAN;
-const { title, description, date, tags, categories, readingTime, ogImage, morePosts } = Astro.props;
+const { title, description, date, tags, categories, readingTime, ogImage, mark, morePosts } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 
@@ -69,6 +71,8 @@ const initials = s.name
       {description && (
         <p class="h-display post-dek">{description}</p>
       )}
+
+      {mark && <div class="post-mark" set:html={mark} />}
 
       {formattedDate && (
         <div class="post-meta">
@@ -156,6 +160,18 @@ const initials = s.name
     line-height: 1.36;
     color: var(--ink-70);
     margin: 0 0 36px;
+  }
+
+  /* Borderless and full measure: a frame here makes the mark read as an
+     inserted illustration rather than part of the page. */
+  .post-mark {
+    margin: 0 0 34px;
+  }
+
+  .post-mark > :global(svg) {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   .post-meta {

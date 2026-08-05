@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import Post from '../../layouts/Post.astro';
 import { readingTime } from '../../lib/readingTime';
+import { renderVisual } from '../../lib/visuals/render.mjs';
+import { CSSVARS } from '../../lib/visuals/palette.mjs';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -17,6 +19,19 @@ const allPosts = await getCollection('posts');
 const published = allPosts
   .filter((p) => !p.data.draft && p.id !== post.id)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// The mark is inlined rather than fetched, so it paints with the document and
+// costs no request. Colour comes from CSS custom properties on the <svg> so it
+// follows the theme toggle without a second render.
+const mark =
+  post.data.visual === 'none'
+    ? undefined
+    : renderVisual({ title: post.data.title, body: post.body ?? '' }, {
+        palette: CSSVARS,
+        width: 720,
+        height: 190,
+        inset: 0,
+      });
 
 const morePosts = published.slice(0, 3).map((p) => ({
   slug: p.id,
@@ -35,6 +50,7 @@ const morePosts = published.slice(0, 3).map((p) => ({
   categories={post.data.categories}
   readingTime={readingTime(post.body ?? '')}
   ogImage={`/og/${post.id}.png`}
+  mark={mark}
   morePosts={morePosts}
 >
   <Content />

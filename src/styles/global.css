@@ -353,9 +353,46 @@ a.link:hover {
   transition: background 0.15s, border-color 0.15s;
 }
 
+.featured-mark > svg {
+  display: block;
+  width: 104px;
+  height: 104px;
+}
+
 a.featured:hover {
   background: var(--ink-05);
   border-color: var(--accent);
+}
+
+/* Section break — a clay rule flanked by two ink ticks, quoting the margin
+   marks of the post mark above. Drawn in CSS so it costs no markup. */
+
+.post-body hr {
+  border: 0;
+  height: 3px;
+  width: 38px;
+  margin: 44px auto;
+  background: var(--accent);
+  position: relative;
+  overflow: visible;
+}
+
+.post-body hr::before,
+.post-body hr::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  width: 12px;
+  height: 1px;
+  background: var(--ink-30);
+}
+
+.post-body hr::before {
+  right: calc(100% + 12px);
+}
+
+.post-body hr::after {
+  left: calc(100% + 12px);
 }
 
 /* Drop cap */

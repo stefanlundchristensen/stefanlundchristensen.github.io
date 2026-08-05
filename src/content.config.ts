@@ -12,6 +12,9 @@ const posts = defineCollection({
     description: z.string().optional(),
     linkedinPost: z.string().optional(),
     twitterPost: z.string().optional(),
+    // Marks are derived from the post's own structure, so there is nothing to
+    // configure — only to suppress, for a post the mark doesn't suit.
+    visual: z.enum(['auto', 'none']).default('auto'),
   }),
 });
 

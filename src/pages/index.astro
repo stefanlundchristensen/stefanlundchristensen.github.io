@@ -5,6 +5,8 @@ import SectionObserver from '../components/SectionObserver.astro';
 import { STEFAN } from '../data/stefan';
 import { getCollection } from 'astro:content';
 import { readingTime } from '../lib/readingTime';
+import { renderVisual } from '../lib/visuals/render.mjs';
+import { CSSVARS } from '../lib/visuals/palette.mjs';
 
 const s = STEFAN;
 
@@ -14,6 +16,14 @@ const publishedPosts = allPosts
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const featured = publishedPosts[0];
+const featuredMark =
+  featured && featured.data.visual !== 'none'
+    ? renderVisual({ title: featured.data.title, body: featured.body ?? '' }, {
+        palette: CSSVARS,
+        width: 104,
+        height: 104,
+      })
+    : undefined;
 const restPosts = publishedPosts.slice(1);
 
 function formatDate(d: Date): string {
@@ -112,9 +122,9 @@ function formatDate(d: Date): string {
 
         {featured && (
           <a class="featured" href={`/posts/${featured.id}/`}>
-            <div style="width: 56px;">
-              <div class="lbl" style="color: var(--accent); margin-bottom: 6px;">Latest</div>
-              <div class="num h-display" style="font-size: 26px; color: var(--ink-30);">01</div>
+            <div style="width: 104px;">
+              <div class="lbl" style="color: var(--accent); margin-bottom: 10px;">Latest</div>
+              {featuredMark && <div class="featured-mark" set:html={featuredMark} />}
             </div>
             <div>
               <div class="h-display" style="font-size: 26px; line-height: 1.18; margin-bottom: 8px;">
