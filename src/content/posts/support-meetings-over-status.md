@@ -25,7 +25,7 @@ The dynamic is predictable. Teams prepare updates. Managers listen for problems.
 
 In a support meeting, the implicit message is different: *Tell us what you need. Let us help remove obstacles. We're here to support your work.*
 
-That shift in framing, from "report to us" to "let us help you", changes everything.
+That shift in framing, from "report to us" to "let us help you", changes what people bring to the room.
 
 ## Why Naming Matters
 
@@ -37,9 +37,7 @@ When you call something a "status meeting," you're establishing a reporting hier
 
 When you call something a "support meeting," you're establishing a helping relationship. The team states needs. Leadership problem-solves alongside them.
 
-The difference isn't semantic.
-
-When meetings feel like interrogations, people perform for the audience rather than tell the truth. The framing isn't cosmetic. It shapes behaviour.
+When meetings feel like interrogations, people perform for the audience rather than tell the truth. That's the whole difference, and it isn't a semantic one.
 
 ## What Changes
 
@@ -61,9 +59,9 @@ The distinction matters because support doesn't mean softness. The bar stays hig
 
 If leadership uses "support meetings" as a cover for the same old monitoring, just with softer language, the naming change will feel like manipulation, because it is. One leader renamed every meeting, changed nothing about how they ran them, and the team became more cynical than before. The naming only works when the behaviour matches it.
 
-## The Deeper Pattern
+## What the Naming Reveals
 
-The words we use in organisational structures don't just shape behaviour, they reveal what the organisation believes about the people doing the work. Neither framing is neutral. Organisations that pay attention to language tend to have healthier communication patterns. Not because language controls behaviour directly, but because it signals intent, and intent is what people respond to.
+The words we use in organisational structures shape behaviour, and they also reveal what the organisation believes about the people doing the work. Neither framing is neutral. In the organisations I've worked in, the ones that paid attention to language communicated better, not because language controls behaviour directly, but because it signals intent, and intent is what people respond to.
 
 ## When This Breaks Down
 

@@ -19,9 +19,9 @@ twitterPost: |
   When we set our geographic expansion strategy, a back-of-envelope look at the money flows answered it in an afternoon. The full model would have taken weeks and reached the same place.
 ---
 
-The most useful skill in business isn't precision. It's knowing when precision doesn't matter.
+The most useful skill in business is knowing when precision doesn't matter.
 
-I learned this in a physics lab, not in a McKinsey office with a great view.
+I learned it in a physics lab, not in a McKinsey office with a great view.
 
 ## A Real Example
 
@@ -41,9 +41,9 @@ I studied physics, not mathematics. The distinction matters more than it sounds.
 
 Mathematics demands logical completeness. If the derivation isn't sound, the result is wrong. It doesn't matter how well it describes the world. Math is precise by definition. An answer that works but can't be fully proved isn't an answer.
 
-Physics is different. If a model describes what happens, it's useful, even if it's incomplete, even if it's technically "sort of wrong." The goal isn't logical perfection. It's to describe reality well enough to do something with it.
+Physics is different. If a model describes what happens, it's useful, even if it's incomplete, even if it's technically "sort of wrong." The goal is to describe reality well enough to do something with it.
 
-In physics, approximations aren't failures of rigour. They're tools, considered choices about what the problem requires. The technique I lean on most is the Taylor expansion: when a function gets complicated, you write it as a sum of terms, look at the first-order term, then the second, and drop everything beyond once it stops moving the answer. The complicated function collapses into something simple, often something you already know how to work with. You've traded a small amount of precision for a large amount of leverage.
+In physics, an approximation is a tool, a considered choice about what the problem requires, and nobody treats it as a failure of rigour. The technique I lean on most is the Taylor expansion: when a function gets complicated, you write it as a sum of terms, look at the first-order term, then the second, and drop everything beyond once it stops moving the answer. The complicated function collapses into something simple, often something you already know how to work with. You've traded a small amount of precision for a large amount of leverage.
 
 ## The Business Translation
 
@@ -57,11 +57,11 @@ We weren't at the end of the calculation. We were at the start of it. The questi
 
 It was the Taylor expansion. We were at the first-order term, far enough from the details that they didn't matter yet. Act on the approximation. Get closer. Sharpen when it's worth it.
 
-That shift changed how I approached decisions under uncertainty. Not less rigour, appropriate rigour. Matched to where you are in the problem.
+That shift changed how I approached decisions under uncertainty. Not less rigour, but rigour matched to where you are in the problem.
 
 ## The False Precision Trap
 
-The failure mode I see most often in business isn't sloppy thinking. It's the opposite.
+The failure mode I see most often in business is the opposite of sloppy thinking.
 
 It's the Excel model where every cell links to another, assumptions buried so deep nobody can trace a number back to first principles. It looks rigorous. It feels authoritative. The output has three decimal places.
 
@@ -89,4 +89,4 @@ That's clarity about what the problem requires, not laziness. In a culture that 
 
 There's a stopping condition. Before sharpening any estimate, ask: would the decision change if the number were three times higher? Three times lower? If the answer is no, you already have enough. Document the assumptions and move. If the answer is yes, the detailed work is justified. Most of the time, the answer is no.
 
-The real skill isn't getting to the exact answer. It's knowing when the approximate one is already enough, and having the confidence to act on it.
+I still have to remind myself of that, usually about a week into work nobody needed. The lab instinct to keep refining doesn't leave you. What changes is how quickly you catch it.

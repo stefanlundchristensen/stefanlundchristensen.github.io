@@ -45,14 +45,14 @@ Many FinTech teams treat this as spreadsheet overhead and leave it to whoever ha
 
 ## Someone to Call
 
-The real test of a partnership is not the contract and not the integration. It is the evening something is broken in production and you need a human on the partner's side who understands your customer, understands what you're trying to solve, and will stay on the line until it's resolved. If you cannot name that person today, the partnership doesn't exist yet. You have a contract.
+A partnership gets tested on the evening something breaks in production and you need a human on the partner's side who understands your customer, understands what you're trying to solve, and will stay on the line until it's resolved. The contract and the integration tell you nothing about that. If you cannot name that person today, the partnership doesn't exist yet. You have a contract.
 
 This reshapes what due diligence looks like. The people selling you the deal are not the people you will call. Meet the ones who will own the relationship after the ink dries. Ask who runs the incident bridge on their side, who owns your account in practice, who has the authority to make a call when something ambiguous happens in the middle of the night. If the partner can't answer those questions cleanly, you've learned something important about what happens when you need them.
 
-The best partners I have worked with pass this test easily. The names come quickly, the handoffs are smooth, the first real incident is an exercise in coordination rather than an exercise in figuring out who to escalate to. That isn't luck — it's a partner who has built the same kind of relationship infrastructure on their side that you are trying to build on yours.
+The best partners I have worked with pass this test easily. The names come quickly, the handoffs are smooth, the first real incident is an exercise in coordination rather than an exercise in figuring out who to escalate to. That's a partner who has built the same relationship infrastructure on their side that you are trying to build on yours.
 
-## The Kind of Leader Who Builds This
+## What This Costs
 
-The leaders who are good at this are not the ones with the biggest partner rosters or the slickest integrations. They are the ones who walk away from the better-looking demo when the compliance answer is thin, who maintain real ownership of what the partner is doing on their behalf, and who know the humans on the other side of the API before anything is on fire.
+None of this is free, and the cost is mostly patience. Walking away from the better-looking demo means shipping later and explaining to your own engineers why they're integrating against something uglier. Maintaining real ownership of what a partner does on your behalf means paying people to understand a system they did not build and cannot change. Knowing the humans on the other side of the API means calls that produce nothing for quarters at a time.
 
-The leaders who build durable partnerships are the ones who understood early that the relationship is the infrastructure, and that the integration is just the part you can see from the outside.
+I have paid all three, and I have also skipped them and paid the other price instead: reconstructing, under someone else's timeline, a system we had been renting without understanding. I would rather spend the quarters.

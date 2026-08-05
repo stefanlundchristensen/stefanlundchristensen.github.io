@@ -27,11 +27,11 @@ But the underlying skills prove transferable: how you approach a problem, how yo
 
 ## The Lab Trains You to Think in Systems
 
-Physics is fundamentally about finding the coordinate system that makes a problem simple.
+Physics is about finding the coordinate system that makes a problem simple.
 
 Most problems, presented naively, are complicated. The variables interact in messy ways. The dynamics are hard to track. But if you choose the right frame, the right representation and decomposition, the structure becomes clear. What looked like noise becomes signal.
 
-You learn this not as an abstract principle but as a daily practice. You do it with differential equations. You do it with quantum states. You do it with experimental data. After years of this, it becomes instinctive: when you encounter a hard problem, the first question isn't "what's the answer?". It's "what frame makes this solvable?"
+You learn this not as an abstract principle but as a daily practice. You do it with differential equations. You do it with quantum states. You do it with experimental data. After years of this, it becomes instinctive. When you encounter a hard problem, the first question is "what frame makes this solvable?" rather than "what's the answer?"
 
 That instinct is unusually useful in business. Most business problems look complicated because they're poorly framed. The team is fighting about tactics when they haven't agreed on what success looks like. The roadmap feels impossible until you separate what's urgent from what's important. The organizational dysfunction resolves when you see that it's a misalignment on ownership, not a culture problem.
 
@@ -65,7 +65,7 @@ Working on AML models and payment infrastructure strategy at McKinsey was where 
 
 Building and leading a payments platform, the through-line became clear.
 
-The payments infrastructure problem is fundamentally a systems problem. You're designing interfaces between components that need to be reliable, composable, and resilient. You're reasoning about failure modes before they happen. You're building something that other things depend on, which means the architecture decisions are hard to reverse and the consequences of getting them wrong are large.
+The payments infrastructure problem is a systems problem. You're designing interfaces between components that need to be reliable, composable, and resilient. You're reasoning about failure modes before they happen. You're building something that other things depend on, which means the architecture decisions are hard to reverse and the consequences of getting them wrong are large.
 
 That's not so different from designing an experiment. The precision that matters is in the design, not the execution. Getting the structure right early is worth more than moving fast later.
 
@@ -89,7 +89,7 @@ Looking back, the path from atomic clocks to McKinsey to payments leadership was
 
 The PhD built a set of instincts that proved unusually applicable to the domain I ended up in: systems thinking, order-of-magnitude reasoning, comfort with uncertainty, looking for elegant structure in hard problems.
 
-The question isn't whether a non-linear background is an asset or a liability. It's whether you learn to use it consciously.
+Whether a non-linear background is an asset or a liability is the wrong question. What matters is whether you learn to use it consciously.
 
 The instincts are there either way. The choice is whether you apply them with awareness, knowing when the physics frame is useful and when it's getting in your way, or let them run on autopilot and hope for the best.
 

@@ -27,7 +27,7 @@ We were a platform in name. We were a service desk in practice.
 
 ## The Philosophical Shift
 
-The fix wasn't a reorganization. It was a decision.
+The fix was a decision rather than a reorganization, and it cost nothing to make and a great deal to hold.
 
 We are a platform. We offer APIs. Nothing else.
 
@@ -47,7 +47,7 @@ The hardest part of making this real was letting go of front-end ownership entir
 
 There were things the payments platform teams had historically owned that were really product features, just features that happened to touch payments. We handed those off. It was uncomfortable. Stream-aligned teams weren't always ready to take them. But keeping them would have undermined the whole model.
 
-Platform identity isn't just a strategy statement. You have to enforce it by what you keep and what you give away.
+You enforce platform identity by what you keep and what you give away. A strategy statement on its own does nothing.
 
 ## The Rules We Used
 
@@ -57,9 +57,9 @@ A few principles kept us honest:
 
 **APIs are the contract.** If a stream-aligned team can build what they need using your APIs without talking to you, the platform is working. If they need your team to build something for them every time, it's not.
 
-**Provide opinionated golden paths.** APIs alone aren't enough. The platform should offer well-documented, opinionated paths for the most common payment flows — paths that absorb the compliance complexity, handle the edge cases, and let a stream-aligned team go from intent to working integration without having to understand the settlement layer underneath. When the golden path is good enough, teams don't ask for help because they don't need to. When it's absent, every integration becomes a collaborative project, which is the bottleneck pattern returning under a different name.
+**Provide opinionated golden paths.** APIs alone aren't enough. The platform should offer well-documented, opinionated paths for the most common payment flows: paths that absorb the compliance complexity, handle the edge cases, and let a stream-aligned team go from intent to working integration without having to understand the settlement layer underneath. When the golden path is good enough, teams don't ask for help because they don't need to. When it's absent, every integration becomes a collaborative project, which is the bottleneck pattern returning under a different name.
 
-**Saying no is the job.** Every platform team will get requests they could technically fulfill. Most of them they shouldn't. The question isn't "can we do this?" It's "does this belong on our roadmap?" Platform teams that can't say no aren't platforms. They're just teams with more requests than capacity.
+**Saying no is the job.** Every platform team will get requests they could technically fulfill. Most of them they shouldn't. Replace "can we do this?" with "does this belong on our roadmap?" A platform team that can't say no is a team with more requests than capacity.
 
 **Stay two quarters ahead.** Platform teams should be building what stream-aligned teams will need, not what they're asking for right now. If your roadmap is driven by current feature requests, you're already behind.
 
@@ -79,7 +79,7 @@ The mistake I see most often when teams commit to platform identity is scoping i
 
 If those functions aren't part of the platform's shared understanding, you end up with engineers who don't know why a settlement failed (because the ops team handled it silently), ops teams who don't know a migration is coming (because engineering planned it without them), and partnership managers who learn about a technical change when the partner calls to complain.
 
-The teams that got this right brought engineering, operations, and partnerships into a joint operating model with shared goals. Not shared standups — shared objectives. The platform's reliability target was an ops target too. The partner scorecard was something engineering helped define. When a new payment rail was being evaluated, the partnership team, the compliance team, and the engineering team sat in the same room, because the decision was architectural, commercial, and regulatory all at once.
+The teams that got this right brought engineering, operations, and partnerships into a joint operating model with shared objectives, which is a different thing from shared standups. The platform's reliability target was an ops target too. The partner scorecard was something engineering helped define. When a new payment rail was being evaluated, the partnership team, the compliance team, and the engineering team sat in the same room, because the decision was architectural, commercial, and regulatory all at once.
 
 This is harder to maintain than a clean API boundary, because it requires people across functions to stay aligned on what the platform is for and where it's headed. But a payments platform that only the engineers understand is a platform that will surprise everyone else when something changes.
 
@@ -89,10 +89,10 @@ There's a structural challenge that follows from committing to platform identity
 
 Stream-aligned teams have clear metrics. Did adoption go up? Did revenue grow? Platform teams have indirect impact. They make other teams faster. They reduce incidents. They enable things that would have been hard. That impact is real, but it's diffuse. When a stream-aligned team ships something quickly, they take the credit. The platform team's contribution is invisible.
 
-This pulls platform teams toward visible work — features they can point to, things that generate gratitude. The teams doing the right work (deep infrastructure investment, reliability, capability building) often have less to show in a quarterly review. Good platform leaders understand this and fight against it, measuring the right things even when those metrics are harder to explain.
+This pulls platform teams toward visible work: features they can point to, things that generate gratitude. The teams doing the right work (deep infrastructure investment, reliability, capability building) often have less to show in a quarterly review. Good platform leaders understand this and fight against it, measuring the right things even when those metrics are harder to explain.
 
 ## The Lesson
 
-Becoming a platform isn't an organizational maneuver. You can rename teams, draw new org charts. None of it matters until you decide what you are and hold that line, even when holding it means disappointing people who have real needs and real timelines, and even when the impact of the work you're doing instead is harder to see from the outside.
+You can rename teams and draw new org charts, and none of it matters until you decide what you are and hold that line, even when holding it means disappointing people who have real needs and real timelines, and even when the impact of the work you're doing instead is harder to see from the outside.
 
-Platform clarity has a cost in the short term. The teams I've watched get this right accepted that cost early, and what they got back was a roadmap that was theirs, ownership that was real, and engineers who could build against clear interfaces without pulling the platform into every conversation.
+The part I'd underline for anyone about to try it is that the cost lands first and the payoff lands twelve months later. Everyone who pushed back on us was right about the short term. They were describing a real thing: their work got slower while we held the line. I didn't have a good answer for them at the time, and I'm not sure there is one beyond being willing to be the person who says no for a year.

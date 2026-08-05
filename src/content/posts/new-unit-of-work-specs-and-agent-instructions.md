@@ -9,7 +9,7 @@ description: "Tickets were the right unit when a day was the right scope. AI cha
 
 The ticket was the right unit when a day was about as much as one engineer could carry before needing to coordinate with someone else. The unit hasn't been right for a while now, and it's about to stop being the unit at all.
 
-What replaces it isn't a smaller version of itself; it's a larger artifact, with a different genre and a different set of authors.
+What replaces it is a larger artifact, in a different genre, with a different set of authors.
 
 ## Why the Ticket Was the Unit
 
@@ -23,7 +23,7 @@ When the contract is between two people, that infrastructure earns its keep. Whe
 
 ## The New Unit: The Project Spec
 
-The unit that matches AI-native development is roughly a project spec. Not a ticket. Not a sprint backlog. A specification of what one engineer with strong AI tooling can take from problem statement to shipped change as a coherent piece of work.
+The unit that matches AI-native development is roughly a project spec: a specification of what one engineer with strong AI tooling can take from problem statement to shipped change as a coherent piece of work.
 
 What goes in it is different from what goes in a ticket. A ticket says what to do. A spec says what outcome you want and what's in scope to get there. It captures intent, constraints, and the criteria for "done" in language specific enough to be useful and abstract enough to leave room for the implementation to be discovered.
 
@@ -33,13 +33,13 @@ There's a useful frame coming out of the AI labs around replacing roadmaps with 
 
 ## A Spec vs a Ticket
 
-The contrast is clearer in the concrete than the abstract.
+Two examples make the contrast clearer than any definition.
 
 A ticket might read: "Add validation to the email field on signup. Reject malformed addresses. Show inline error." Three sentences. It tells the engineer what to type. The author of that ticket has already made every decision that matters; the engineer is implementing.
 
-A project spec for the same area of work might read: "Reduce signup friction for mobile users. Prototype three approaches to input validation, including patterns that catch format errors at submit and patterns that catch them at field exit. Evaluate each on completion rate and on user recovery from a first error. Pick the one that wins on both. Aim to ship in the same sprint." Different genre. The decisions aren't made yet. The brief sets up the decisions.
+A project spec for the same area of work might read: "Reduce signup friction for mobile users. Prototype three approaches to input validation, including patterns that catch format errors at submit and patterns that catch them at field exit. Evaluate each on completion rate and on user recovery from a first error. Pick the one that wins on both. Aim to ship in the same sprint." A different genre entirely, in which the decisions haven't been made and the brief sets them up.
 
-The spec isn't a longer ticket; it's a different artifact. The ticket is a transcription of an already-made decision; the spec is a frame for a decision the team is about to make. When the implementation is cheap, the framing of the decision is where the leverage is.
+The spec is a different artifact rather than a longer ticket. The ticket transcribes a decision someone already made; the spec frames a decision the team is about to make. When the implementation is cheap, the framing of the decision is where the value sits.
 
 ## Agent Instruction Files
 
@@ -51,13 +51,13 @@ If you've used Claude Code or a similar agent stack with a CLAUDE.md file in the
 
 Two things matter about this file. It's executable: the agent reads it and behaves differently because of what's in it. That isn't true of most documentation. And it's durable: the chat session is ephemeral, but the instruction file survives, gets versioned, and improves over time. The agent gets better not only because the model gets better but because the instruction file accumulates knowledge of the team's standards, the system's quirks, and the patterns the team wants enforced.
 
-Who owns this file is one of the more interesting org-design questions of the next year. It isn't a pure spec, the way a PM might own a spec, and it isn't a pure system prompt, the way an engineer might own a prompt. It lives in the seam between them, and the team that figures out how to co-own it well will get more leverage out of their agent stack than the teams who treat it as one or the other.
+Who owns this file is one of the more interesting org-design questions of the next year. It isn't a pure spec, the way a PM might own a spec, and it isn't a pure system prompt, the way an engineer might own a prompt. It lives in the seam between them, and the team that figures out how to co-own it well will get more out of their agent stack than the teams who treat it as one or the other.
 
 ## Where These Artifacts Live
 
 The artifacts have to live somewhere durable, or they'll get lost.
 
-The most common mistake is treating the chat session as the artifact. The conversation in Claude or Cursor where the work happened is not the artifact. It's the workshop. The artifact is what survives the conversation: the project spec in the issue tracker, the agent instruction file in the repo, the design note that captures the decision someone might revisit in six months.
+The most common mistake is treating the chat session as the artifact. The conversation in Claude or Cursor where the work happened is the workshop. The artifact is what survives the conversation: the project spec in the issue tracker, the agent instruction file in the repo, the design note that captures the decision someone might revisit in six months.
 
 If you can't point to where the spec lives outside the chat, you don't have a spec. You have a transcript. The transcript decays with the next conversation, and you've lost the durable thing the team needed.
 
@@ -85,13 +85,13 @@ There's a movement in the developer-tooling world calling this spec-driven devel
 
 The reason the term is worth knowing is that it puts a name on a real shift. The reason to be careful with it is that, like every adopted term, it can collapse into a tool category, where you pick the right spec-driven dev tool and that's the answer, when the real work is harder and more organizational.
 
-The questions this post has been working through aren't about which tool to pick; they're about who writes the spec, who reviews it, where it lives, what its relationship is to the agent instruction file, and what reviews look like when the spec is the leverage point. Tooling supports those answers. It doesn't supply them.
+The questions this post has been working through are about who writes the spec, who reviews it, where it lives, what its relationship is to the agent instruction file, and what reviews look like when the spec carries the weight. Tooling supports those answers. It doesn't supply them.
 
 A team that picks the best spec tool and doesn't change anything else about how it operates will not be doing spec-driven development in the sense that matters. It'll be doing the old development with a new label.
 
 ## What Reviews Look Like Now
 
-When the spec is the leverage point, the review of the spec becomes more important than the review of the code.
+When the spec carries the decisions, reviewing it matters more than reviewing the code.
 
 This is hard for teams that have spent years building review culture around pull requests. The PR is where engineers earn their reputation, where senior engineers shape the team's standards, where bugs get caught and architecture gets debated. Telling that culture that spec review now matters more is uncomfortable, because the spec hasn't traditionally been where engineers spent their reputation-earning effort.
 
@@ -105,10 +105,8 @@ The teams that don't make this shift end up with a worst-of-both-worlds setup: a
 
 ## The Shift Starts With One Project
 
-The teams that get this right don't write fewer artifacts. They write different artifacts.
+The teams that get this right write different artifacts, not fewer of them. Fewer tickets and better specs. Co-owned agent instruction files. Those artifacts kept somewhere durable that survives a chat session, and reviewed with the seriousness the team used to reserve for code.
 
-They write fewer tickets and better specs. They co-own agent instruction files. They keep those artifacts in a durable place that survives a chat session, and they review the spec with the seriousness they used to reserve for the code.
+That can't be adopted in one big move. The instinct to keep writing tickets and reviewing PRs is strong because that's where the team's muscle memory lives.
 
-That's a different way of working than most teams have, and it can't be adopted in one big move. The instinct to keep doing what you've been doing, writing tickets and reviewing PRs, is strong because that's where the team's muscle memory lives.
-
-The shift starts with one project. Pick something the team is about to build. Write a project spec for it, not a ticket queue. Co-own the agent instruction file with whoever is going to do the work. Review the spec the way you used to review the code. Watch what happens to the work that ships out the other end.
+So it starts with one project. Something the team is about to build anyway: a project spec instead of a ticket queue, an agent instruction file co-owned with whoever is going to do the work, a spec review run the way a code review used to be. On the teams I've seen try this, the argument about whether it's worth it ends somewhere in the first spec review, when someone catches a scoping problem that would have cost a week.

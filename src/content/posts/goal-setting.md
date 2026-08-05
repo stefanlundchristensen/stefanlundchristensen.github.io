@@ -19,13 +19,13 @@ OKR workshops, SMART goals, BHAGs, MBOs, V2MOMs. Every year there's a new framew
 
 Most goal-setting becomes corporate theater. We craft goals that sound impressive but are too fluffy to drive decisions. We keep them "short and to the point" but lose clarity and ownership in the process.
 
-The structural problem with OKRs: they provide too much flexibility and too little guidance. In my experience, OKR systems start breaking down around 25–50 people. Complexity grows fast once teams need to coordinate across teams. The framework itself becomes the problem, not because it's wrong, but because it's so flexible that every organisation implements it differently, leading to endless trial and error.
+OKRs give you too much flexibility and too little guidance. In my experience, OKR systems start breaking down around 25–50 people. Complexity grows fast once teams need to coordinate across teams. The framework itself becomes the problem, not because it's wrong, but because it's so flexible that every organisation implements it differently, leading to endless trial and error.
 
-What nobody wants to say: we avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realise your teams aren't set up to be independent.
+We avoid assigning clear ownership because it forces us to confront something we don't want to see. When you try to name an owner, you realise your teams aren't set up to be independent.
 
 Instead of fixing that, we assign ownership to "areas" or "the VP of Engineering."
 
-Areas don't do work. VPs don't write code. Real work happens at team and IC level — they need to own these goals.
+Areas don't do work. VPs don't write code. Real work happens at team and IC level, so that's where the goals need to be owned.
 
 I've made all these mistakes. There's a simpler approach.
 
@@ -60,7 +60,7 @@ The format gives you the what and the when. Three more things make it work:
 Show how you'll achieve it:
 **By:** automated account setup flow, eliminating manual bank verification steps, pre-filling company data via integrations.
 
-These outputs create alignment — everyone understands what you're building, it feels achievable, and they open up the dependency conversation. The payments team can say "you'll affect us, we need to be involved." The integrations team can say "we're building that, we can help."
+These outputs create alignment: everyone understands what you're building, it feels achievable, and they open up the dependency conversation. The payments team can say "you'll affect us, we need to be involved." The integrations team can say "we're building that, we can help."
 
 ### 2. Named ownership
 
@@ -80,7 +80,7 @@ Track two things: progress and confidence. Progress is the metric. But confidenc
 
 Real-world goals don't progress linearly. Some sit at 0% for months while building infrastructure, then jump to 80% when you ship.
 
-If Sarah says "0% progress but highly confident—shipping in March," that's different from panic.
+If Sarah says "0% progress but highly confident, shipping in March," that's different from panic.
 
 Psychological safety matters here. If Sarah can't say she's not confident without fear, you won't get honest updates. I've watched this break in a specific way: an engineer said "I'm behind" in a goal review, and the VP immediately asked "Should we find someone else to own this?" The engineer never gave honest updates again. Low confidence should trigger help, not blame.
 
@@ -88,4 +88,4 @@ Meeting structure affects psychological safety, which drives performance. When g
 
 The other way to kill it: ignore your own cadence. If you set an update cadence, respect it. Don't ask for adhoc updates. Don't Slack "give me an update on goal Y?" If you've asked for monthly updates, follow that schedule yourself. Otherwise you're teaching everyone the cadence doesn't matter.
 
-The things a good goal needs are few: a clear statement of what you're achieving, a baseline you can point to, a person who owns it, tangible work that shows how you'll get there, and a cadence you keep. Most of the frameworks people reach for are ways of arriving at exactly these things. If you already have them, the framework is overhead. If you don't, no framework will give them to you. You have to do the thinking yourself.
+A good goal needs five things: a clear statement of what you're achieving, a baseline you can point to, a person who owns it, tangible work that shows how you'll get there, and a cadence you keep. Most of the frameworks people reach for are ways of arriving at those five. If you already have them, the framework is overhead. If you don't, no framework will give them to you.

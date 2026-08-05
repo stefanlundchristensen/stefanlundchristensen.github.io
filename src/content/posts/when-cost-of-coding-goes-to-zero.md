@@ -11,7 +11,7 @@ Most companies aren't getting much from AI in product development. A few are pul
 
 The vast majority are running pilots, getting some productivity uplift, calling it a win. The outliers look different. Their lifecycle has changed shape, not just sped up.
 
-Getting into the entry zone is easy. The next mile is brutal — the curve gets steep fast, and the reason is that going further means tearing apart how your company has done product development for the last twenty years.
+Getting into the entry zone is easy. The next mile is brutal, because going further means tearing apart how your company has done product development for the last twenty years.
 
 ## The Easy Mile
 
@@ -23,7 +23,7 @@ What this version of AI adoption doesn't change is the shape of the lifecycle. P
 
 Faster is still faster, but it's faster on the same shape. DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) names the gap directly: individual-level metrics improve sharply, but organizational delivery metrics stay flat. They call it the AI productivity paradox. The paradox is the easy mile. The outliers have a different shape.
 
-## The Assumption That Changes Everything
+## The Assumption Underneath
 
 Underneath all of this is one assumption: the cost of coding is going to zero.
 
@@ -53,7 +53,7 @@ Tickets were the right unit when a day was about as much as one engineer could c
 
 Code review used to be where quality lived, because that was where expensive mistakes got caught. When agents are writing meaningful chunks of the code, the gate moves to the inputs: the spec, the standards, the tests that exist before work starts, the context the agent has access to. Spec review starts to matter more than PR review.
 
-Single-threaded craft used to be the safe career shape — one role deep in its own domain, a clean career ladder within it. That's harder to make work now. The people pulling ahead have craft plus an adjacent dimension: engineers with product taste, PMs who can prototype, designers who can ship.
+Single-threaded craft used to be the safe career shape: one role deep in its own domain, a clean career ladder within it. That's harder to make work now. The people pulling ahead have craft plus an adjacent dimension: engineers with product taste, PMs who can prototype, designers who can ship.
 
 Each of these is its own essay. Together they answer what going further looks like in practice.
 
@@ -71,10 +71,10 @@ By the time you've walked one feature end to end with that question in mind, you
 
 ## What the Outliers Have
 
-The companies pulling ahead with AI aren't the ones with the most expensive tooling or the largest AI budget; they're the ones willing to pull their own process apart.
+The companies pulling ahead with AI are the ones willing to pull their own process apart, and their tooling budgets look much like everyone else's.
 
 That's a leadership move, not a tooling move. It means looking at artifacts you've built your career on, like the way tickets are written, the way teams are sized, the way reviews work, and being willing to say that some of them were designed for a world that's leaving. It means tolerating the discomfort of not knowing what the new shape is yet, while you walk through your own work to find it.
 
 Each of those strands deserves its own treatment, and I'll come back to them: the ratio shift, the new unit of work, the move from PR review to spec review, and the way agents are becoming users in their own right. They're all downstream of the same shift this post described.
 
-The easy mile is buying tools and pointing them at the existing process. Going further means admitting the process itself is what has to change, and then doing the slow, concrete work of redesigning it one feature at a time, with the people who run it, in ways that survive contact with the next quarter.
+What I keep noticing is how much easier it is to buy a tool than to admit an artifact has outlived its reason. The tool arrives on Monday. The admission costs you the argument with everyone who built their career on the artifact, including, most of the time, me.
