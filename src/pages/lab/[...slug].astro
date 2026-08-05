@@ -16,13 +16,15 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { CANDIDATES } from '../../lib/visuals/candidates.mjs';
 import { HYBRIDS } from '../../lib/visuals/hybrids.mjs';
+import { STRUCTURAL } from '../../lib/visuals/structural.mjs';
+import { analyze } from '../../lib/visuals/structure.mjs';
 import { LIGHT, DARK } from '../../lib/visuals/palette.mjs';
 import { composeOgCard } from '../../lib/visuals/ogcard.mjs';
 
-// Round 2: the three shortlisted directions and the four mergers of them.
-// Trace and flow are out — kept in candidates.mjs only until the pick is final.
-const SHORTLIST = ['ledger', 'block', 'riso'].map((id) => CANDIDATES.find((c) => c.id === id));
-const ROUND2 = [...SHORTLIST, ...HYBRIDS];
+// Round 3: marks driven by each post's own structure rather than a slug hash.
+// CANDIDATES and HYBRIDS stay imported only until the pick is final.
+void CANDIDATES; void HYBRIDS;
+const ROUND2 = STRUCTURAL;
 
 export function getStaticPaths() {
   if (!import.meta.env.DEV) return [];
@@ -42,6 +44,7 @@ const samples = SAMPLE_SLUGS.map(pick)
     title: p.data.title,
     category: p.data.categories?.[0],
     description: p.data.description,
+    structure: analyze(p.body ?? ''),
   }));
 
 const HERO = { width: 720, height: 180 };
