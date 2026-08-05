@@ -9,7 +9,7 @@ description: "CASS 15 gave us a hard deadline to rebuild safeguarding. We used i
 
 Nobody celebrates when the regulator rewrites the rulebook. When the FCA moved safeguarding for payments and e-money firms into a new chapter of its client assets regime, CASS 15, the default reaction across the industry was the usual one: a compliance project, a gap analysis, a binder of new procedures, and a collective sigh.
 
-I hold formal accountability to the UK regulator for our EMD licence, so this deadline had my name on it in a very literal way. But the longer we looked at the requirements, the clearer it became that the deadline was also an opportunity in disguise. The new regime demands daily reconciliation discipline, cleaner records, and faster evidence of where client funds sit. Those are properties of a well-built platform as much as they are compliance requirements, and we now had a mandate to build them.
+I hold formal accountability to the UK regulator for our EMD licence, so this deadline had my name on it in a very literal way. But the longer we looked at the requirements, the more they read like a platform roadmap someone else had funded. The new regime demands daily reconciliation discipline, cleaner records, and faster evidence of where client funds sit. Those are properties of a well-built platform as much as they are compliance requirements, and we now had a mandate to build them.
 
 ## The trap of the minimum viable compliance project
 
@@ -27,8 +27,8 @@ None of this is the glamorous end of AI. There's no agent autonomously moving cl
 
 ## What the deadline bought us
 
-Here's the uncomfortable truth about platform investment: the reconciliation rebuild had been on the backlog for [TODO: how long], and it kept losing prioritisation fights to revenue work, quarter after quarter. It was the right call every single quarter, and the wrong call cumulatively. The regulatory deadline ended the argument. Suddenly the work had a date, an executive owner, and a cost of failure that finance could price.
+The reconciliation rebuild had been on the backlog for [TODO: how long], losing prioritisation fights to revenue work quarter after quarter. It was the right call every single quarter and the wrong call cumulatively. The regulatory deadline ended the argument. Suddenly the work had a date, an executive owner, and a cost of failure that finance could price.
 
-That's the lesson I'd pass on to anyone staring down their own version of CASS 15. The deadline is leverage. Not just with the regulator, but inside your own company, for every piece of foundational work that never quite wins on its own merits. Spend it on process and you'll be back here in two years, with a taller pile. Spend it on the platform and the next rulebook change gets cheaper instead of more expensive.
+That's the lesson I'd pass on to anyone staring down their own version of CASS 15. The deadline is leverage inside your own company, for every piece of foundational work that never quite wins on its own merits, and not only with the regulator. Spend it on process and you'll be back here in two years, with a taller pile. Spend it on the platform and the next rulebook change gets cheaper instead of more expensive.
 
 We passed [TODO: audit/implementation milestone] with the new tooling in place. What I'm proudest of is that the daily reconciliation now runs in a way the team trusts, and that when the next regime lands, and it will, we'll be reading it for opportunities.

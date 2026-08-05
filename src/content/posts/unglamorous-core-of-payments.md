@@ -31,11 +31,11 @@ This is what most of the work in payments looks like. Not the smooth checkout. N
 
 This is also why payments is unforgiving in a way most software isn't. The customer cares about €29.15 of their own money more than they care about almost anything you'll ship this quarter. There is no graceful degradation, no "we'll get to it next sprint" that the customer will accept. The number is wrong, and the number is theirs, and they want it to be right today.
 
-And it isn't only the customer. When you run payments, the books have to balance. Not approximately, not by end of quarter — continuously. When they don't, the customer loses trust in your product, the partner loses trust in your operations, and the regulator loses trust in your controls. Reconciliation failures are not bugs in the usual sense. They are the moment the business stops being credible. A product team can ship a broken feature and fix it next week. A payments team that can't reconcile its own money has a different kind of problem, one that compounds every day it goes unanswered.
+And it isn't only the customer. When you run payments, the books have to balance continuously, not approximately and not by end of quarter. When they don't, the customer loses trust in your product, the partner loses trust in your operations, and the regulator loses trust in your controls. Reconciliation failures are not bugs in the usual sense. They are the moment the business stops being credible. A product team can ship a broken feature and fix it next week. A payments team that can't reconcile its own money has a different kind of problem, one that compounds every day it goes unanswered.
 
 ## Where Money Actually Moves
 
-Most people who build on top of payments rarely think about where money truly moves. The instinct is to imagine money flowing the way information does, through some abstract network, settling at the speed of the API call. That isn't what happens.
+Most people who build on top of payments rarely think about where money moves. The instinct is to imagine it flowing the way information does, through some abstract network, settling at the speed of the API call. That isn't what happens.
 
 Money, the actual currency, the kind you can't just journal in a database, moves between a small number of institutions that hold accounts at a central bank. In Europe, the ECB's instant payment settlement system, TIPS, has some 100 direct participants. The wholesale euro system, T2, sits in the low thousands. Card schemes settle through a handful of designated banks. Whichever rail you look at, the picture is similar: a small core of direct participants, and an enormous population of fintechs, processors, and indirect banks layered on top of them.
 
@@ -65,7 +65,7 @@ The other reasons live in the same place. A field in a payment message that the 
 
 ## The Ledger You Didn't Build
 
-Here is the contrarian view that follows from all of this. The ledger most teams need is not a record of money movements. It is a granular ledger that captures the full lifecycle: the authorisation, the clearing, the settlement, and every state in between. It follows the money flow end to end — from the moment a card is tapped or a payment is initiated, through every intermediary and fee, to the point where currency actually settles between institutions. That granularity is what matters, because the €29.15 gap lives in the space between authorisation and settlement, not in the final posting.
+All of this points somewhere most teams don't want to go. The ledger you need records the full lifecycle, not the money movements: the authorisation, the clearing, the settlement, and every state in between. It follows the money end to end, from the moment a card is tapped or a payment is initiated, through every intermediary and fee, to the point where currency settles between institutions. That granularity is what matters, because the €29.15 gap lives in the space between authorisation and settlement, not in the final posting.
 
 Almost every fintech, at almost any size, is too late to start building one. By the time the team agrees they need it, they have been running for years on a patchwork of partner reports, internal reconciliations, and brittle batch jobs. The cost of building it then is much higher than the cost of having built it earlier. And the product is shipping money on top of a system nobody can fully see.
 

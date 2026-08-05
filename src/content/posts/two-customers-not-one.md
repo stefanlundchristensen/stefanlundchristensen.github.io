@@ -13,7 +13,7 @@ The first time a regulator asked me who had signed off a change to our transacti
 
 If you've run product before but only outside a licensed entity, the first weeks inside one feel like a category error. Move fast and break things, the operating slogan a generation of product people grew up reciting, does not translate. Some of the instincts that made you good at the last job are now liabilities, and a few of the habits you suppressed are suddenly your most useful traits.
 
-The change is not that the work becomes slower. It's that the work becomes a different shape. You are not adding compliance on top of a product; you are building a product that exists because a license sits underneath it. Without that license you have no business, and the license is granted on conditions that cannot be negotiated by shipping faster. None of the discovery, prioritization, or build muscle goes away. It just stops being the only thing that decides whether your work survives.
+The work doesn't get slower so much as it changes shape. You are not adding compliance on top of a product; you are building a product that exists because a license sits underneath it. Without that license you have no business, and the license is granted on conditions that cannot be negotiated by shipping faster. None of the discovery, prioritization, or build muscle goes away. It just stops being the only thing that decides whether your work survives.
 
 The first lesson is the discomfort itself. Habits you can't shake are usually a sign that you've taken the constraint personally. The shape of the work has changed, and the discomfort is information about which of your old reflexes will need to be retrained before they get you in trouble.
 
@@ -37,7 +37,7 @@ The first is **clear accountability**. There must be a named person who can sign
 
 The second is **clear governance**. The right forum has to decide the right thing. A critical third-party provider is not signed by whoever negotiated the contract; it is approved by the board, or by a body the board has explicitly designated. Risk assessments are board-approved. Exit plans, the documents that describe how you wind the relationship down without harming customers, are board-approved. None of this directly benefits the end user, and it is not optional.
 
-The third is **documented decision-making**. A correct decision, taken by the wrong person, is still a problem. We changed our transaction monitoring rules once with what I was certain was the right answer; the issue was that the MLRO had not formally signed it. The decision was sound and the person who took it was wrong, and the second part is the part the regulator cared about. The fix was not to change the decision. It was to redo the path that produced it.
+The third is **documented decision-making**. A correct decision, taken by the wrong person, is still a problem. We changed our transaction monitoring rules once with what I was certain was the right answer; the issue was that the MLRO had not formally signed it. The decision was sound and the person who took it was wrong, and the second part is the part the regulator cared about. We didn't change the decision. We redid the path that produced it.
 
 The fourth is **risks and controls mapped to the regulation**. You start from the applicable text: the Danish hvidvask law (the country's anti-money-laundering statute), CASS 15 in the UK (the safeguarding rules for client money), the EU's Digital Operational Resilience Act (DORA), depending on your jurisdiction and product. You decide what applies. Where you've ruled something out, you write down why; "not in scope" without a reason is not an answer. You map the risks each applicable rule creates, knowing that one risk can sit under several rules. You define controls. A single control can mitigate several risks at once. Then you evidence them. Some controls are a sign-off, like the MLRO signing before a production push. Some are an automated setting in the system, a configuration that cannot be turned off without a ticket. The evidence is not a one-time artifact. It is the day-to-day work, captured as it happens.
 
@@ -53,7 +53,7 @@ None of that softened what the regulator could ask of us. It meant we knew, befo
 
 ## On the Front Foot
 
-What does it look like when customer two is on the customer list from the start?
+When customer two has been on the customer list from the start, the difference is visible in the ordinary weeks.
 
 The audit is not a fire drill. The license review is not a scramble. When the regulator sends a letter, the answer is written down somewhere already, and the work is just gathering it rather than constructing it under pressure. The MLRO sign-off has been part of the change process for so long that nobody remembers a time it wasn't. The board has seen the exit plan; the exit plan has seen daylight. The controls run in production every day, leaving evidence as a side effect.
 

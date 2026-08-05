@@ -7,9 +7,7 @@ categories: ["Leadership"]
 description: "A three-lane operating model for a small AI-native team: what to build, spec built, build. The shape fits one team. The diagnostic fits all of them."
 ---
 
-There is no operating model that just works.
-
-That's the thing nobody who sells you a methodology wants to say out loud. SAFe will tell you it scales agile to the enterprise. Scrum's promise is that the ceremonies get you there. Every pod-based reorg deck claims the structure is the answer. The deck never says "this depends entirely on your team's people and talent and the work in front of them," but it does, and it always has.
+There is no operating model that just works, and nobody selling you a methodology will say so. SAFe will tell you it scales agile to the enterprise. Scrum's promise is that the ceremonies get you there. Every pod-based reorg deck claims the structure is the answer. The deck never says "this depends entirely on your team's people and talent and the work in front of them," but it does, and it always has.
 
 In an earlier post I argued that the way to find out what your AI-native lifecycle should look like is to take one feature, walk it through your current process end to end, and find the bottlenecks. This post is what that exercise produced for one small team I worked with. The output, for that team in that context, was a three-lane operating model: what to build, spec built, build. The model fits a three-to-five-person team well. It probably generalizes upward. It almost certainly doesn't fit your team exactly, and that's the point. The shape and the principles are useful. Adapting them to your team is the work.
 
@@ -23,7 +21,7 @@ Spec built picks up an item from the first lane and turns it into a tangible pla
 
 Build is the third lane. It picks up the spec from the second lane and ships it. Implementation plan, agent execution, review, merge, deploy.
 
-What ties the three together is what crosses the boundary: an artifact, not a meeting.
+What ties the three together is that an artifact crosses each boundary, never a meeting.
 
 ## Lane One: What to Build
 
@@ -63,15 +61,13 @@ An agent breaks the project into discrete issues sized to be picked up independe
 
 Separate agents in different worktrees and different sessions then work the issues in parallel. The engineer's role here is keeping them unblocked.
 
-The engineer's real job, the one that determines whether this lane works at all, is no longer typing. It's keeping agents unblocked, reviewing PRs as they land, and continuously improving the environment so the next round runs smoother. The CLAUDE.md file, the team skills, the test coverage, the MCP setup. The engineer is no longer the typist; they're the conductor.
+The engineer's real job, the one that determines whether this lane works at all, is keeping agents unblocked, reviewing PRs as they land, and continuously improving the environment so the next round runs smoother. The CLAUDE.md file, the team skills, the test coverage, the MCP setup. The engineer conducts rather than types.
 
-That last part is where most teams stumble. The engineer's instinct, especially the experienced engineer's instinct, is to reach for the keyboard and write the code. The teams that work well in this lane have engineers who've accepted that the work has changed. Their leverage isn't in the typing anymore; it's in the orchestration.
+That last part is where most teams stumble. The engineer's instinct, especially the experienced engineer's instinct, is to reach for the keyboard and write the code. The teams that work well in this lane have engineers who've accepted that the work has changed, and who get more out of an hour spent on the environment than an hour spent in the editor.
 
 ## What Crosses the Boundary
 
-What crosses the boundary between the three lanes is the artifact. Not the meeting.
-
-This is the part most teams get wrong. They set up the lanes correctly, then bridge them with synchronous coordination (a daily standup that includes everyone, a weekly handoff meeting, a slack channel where the lanes ping each other constantly). That kind of coordination collapses the lanes back into one big undifferentiated process. The whole point of the lane structure is that each lane runs at its own cadence with its own rhythm, and the artifact is what carries information forward.
+An artifact crosses each boundary between the lanes, and this is the part most teams get wrong. They set up the lanes correctly, then bridge them with synchronous coordination (a daily standup that includes everyone, a weekly handoff meeting, a slack channel where the lanes ping each other constantly). That kind of coordination collapses the lanes back into one big undifferentiated process. The whole point of the lane structure is that each lane runs at its own cadence with its own rhythm, and the artifact is what carries information forward.
 
 The first handover, from "what to build" to "spec built," is a structured backlog. The author of the backlog and the author of the spec don't need to meet to do the handover; the backlog carries the intent.
 
@@ -115,12 +111,10 @@ The whole sequence takes weeks for a small team that's focused on it, months for
 
 ## Operating-Model Discipline
 
-The three-lane model in this post is a real artifact from a real team with specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) catalogues seven distinct team profiles, from "harmonious high-achievers" to teams stuck in a "legacy bottleneck," and most prescriptive operating models address only a couple of those profiles well. What carries across teams isn't the model; it's the diagnostic. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves.
+The three-lane model in this post is a real artifact from a real team with specific people, specific strengths, specific tooling, specific work. The lanes fit them. They might fit you with two lanes instead of three, or four, or with the boundaries drawn somewhere different. DORA's [ROI of AI-assisted software development report](https://services.google.com/fh/files/misc/dora-roi-of-ai-assisted-software-development-2026.pdf) catalogues seven distinct team profiles, from "harmonious high-achievers" to teams stuck in a "legacy bottleneck," and most prescriptive operating models address only a couple of those profiles well. What carries across teams is the diagnostic rather than the model. Take a feature, walk it end to end through your current process, ask at each step what would change if AI could be there, and the bottlenecks reveal themselves.
 
-The thing that separates teams that talk about AI-native development from teams that run it in practice is discipline about the operating model. That discipline isn't picking the right model; it's doing the diagnostic, finding what fits the team in front of you, and running it well.
+Most teams have someone who can use Claude Code and a CLAUDE.md file in the repo. Neither separates the teams that talk about AI-native development from the teams running it. What separates them is having a way of working that takes advantage of those tools and fits the people doing the work.
 
-Most teams have someone on them who can use Claude Code. That's not the differentiator. Most teams have a CLAUDE.md file in the repo. That's not the differentiator either. The differentiator is whether the team has a way of working that takes advantage of those tools and that fits the people doing the work.
+The three lanes were one shape that fit one team. The principles underneath them are more durable than the lanes: artifacts cross between lanes, each piece of work has an owner, each part of the system can be improved on its own.
 
-The three lanes were one shape that fit one team. The principles underneath them are more durable than the lanes themselves: artifacts cross between lanes, each piece of work has an owner, each part of the system can be improved on its own. The leaders I see getting this right aren't the ones who picked the right framework; they're the ones who walked their own team's work end to end, figured out what fit, and built around it.
-
-The reason most teams aren't running anything good is that the diagnostic takes more honesty than picking a model off a shelf. The model is comforting because it tells you what to do. The diagnostic tells you that you have to look at your own team and decide. That's the harder work, and it's the work that matters.
+I understand why teams reach for the shelf instead. A model tells you what to do by Monday. The diagnostic tells you to spend a week watching your own team work before you're allowed an opinion, and there is no deck at the end of it.

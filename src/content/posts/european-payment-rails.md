@@ -45,7 +45,7 @@ When we selected the second bank, we changed our approach entirely.
 
 We stopped talking to payments teams. We started talking to cash managers.
 
-The lesson wasn't about finding the perfect phrasing. It was about talking to the people who actually operate the systems, not the people who sell them.
+The lesson was about who you talk to, not about finding the perfect phrasing. Ask the people who operate the systems rather than the people who sell them.
 
 The bank's payments team gave us answers they believed were true. But they didn't understand the operational details of how Faster Payments worked across different account types and time windows. The people who know those details are cash managers, operations teams, the people who investigate failed payments every day.
 
@@ -61,7 +61,7 @@ The most important question of all: can we test this in UAT during off-hours and
 
 ## Why This Matters Beyond the UK
 
-The same gap shows up with SEPA Instant, with virtual IBANs across different European markets, with real-time payment rails that behave differently on weekends. Across Europe, the distance between what banks say they support and what works in production is larger than builders expect — especially coming from the US market, where banking infrastructure tends to be more standardized.
+The same gap shows up with SEPA Instant, with virtual IBANs across different European markets, with real-time payment rails that behave differently on weekends. Across Europe, the distance between what banks say they support and what works in production is larger than builders expect, especially builders coming from the US market, where banking infrastructure tends to be more standardized.
 
 The pattern is consistent: generic support and production-ready support for your exact scenario are different things. It's especially pronounced when you're doing something slightly non-standard: virtual IBANs, high transaction volumes, real-time requirements, operating outside standard business hours. The sales answer is "yes, we support that." The operational reality requires a different conversation.
 
@@ -69,7 +69,7 @@ The pattern is consistent: generic support and production-ready support for your
 
 The most important shift was in who we talked to. Operations teams, the people who investigate failed payments every day, know where the edge cases live. Partnerships teams know what's in the marketing deck. Those aren't the same conversation, and learning to ask for the former changed everything downstream.
 
-We'd also treat testing as a contract requirement, not an afterthought — exhaustive testing across hours and days, mornings, evenings, weekends, bank holidays, before commitments are made. And we'd negotiate exit clauses at the start, when you have leverage. We couldn't exit our first banking relationship quickly enough to avoid the cost of running two in parallel. Assume you'll eventually need a second partner anyway (we did) and plan for it rather than discovering it under pressure.
+We'd also write testing into the contract: exhaustive testing across hours and days, mornings, evenings, weekends, bank holidays, before commitments are made. And we'd negotiate exit clauses at the start, when you have leverage. We couldn't exit our first banking relationship quickly enough to avoid the cost of running two in parallel. Assume you'll eventually need a second partner anyway (we did) and plan for it rather than discovering it under pressure.
 
 ## The Broader Pattern
 

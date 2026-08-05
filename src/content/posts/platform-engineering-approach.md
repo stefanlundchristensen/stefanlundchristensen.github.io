@@ -35,7 +35,7 @@ The mistake was treating the platform as a service designed to minimize constrai
 
 ## The Reframe: Products, Not Processes
 
-The shift came from a question: **What if platform teams owned products instead of providing services?**
+The shift came from asking what would change if platform teams owned products instead of providing services.
 
 A product has users, clear value, iteration cycles, and accountability. "Using this tool, you get deployment with monitoring, alerting, and rollback for free" is a product. "We support teams in building things" is a mandate so broad it means almost nothing.
 
@@ -47,7 +47,7 @@ The old question was "How do we help people build?" The new one: "What product d
 
 The org chart looked almost identical before and after. The same teams had all been working on "developer enablement." After, each owned a specific product. Same people, different mandate.
 
-One change was critical: we hired leaders who thought like product managers. Not infrastructure leads who valued technical elegance above all, and not traditional product managers who lacked technical depth. People who could do user research with engineers, make opinionated prioritization decisions, and say no to requests that didn't fit the product vision. This was hard to hire for. The role doesn't have a standard career ladder. We had some misfires. But getting this right shaped everything downstream.
+One change was critical: we hired leaders who thought like product managers. We wanted people who could do user research with engineers, make opinionated prioritization decisions, and say no to requests that didn't fit the product vision. Infrastructure leads who valued technical elegance above all didn't fit, and neither did traditional product managers without technical depth. This was hard to hire for. The role doesn't have a standard career ladder. We had some misfires. But getting this right shaped everything downstream.
 
 The biggest practical change was moving from documentation to implementation.
 
@@ -65,7 +65,7 @@ That's the difference between enablement and product thinking. Enablement says "
 
 Two ideas ran through everything we built. The first was sensible defaults over maximum optionality: if there's no compelling reason to do something a particular way, do it that way. You get monitoring, alerting, logging, scaling for free. The golden path isn't a limitation, it's the fastest, most reliable way to get to production, and it handles compliance requirements the team would otherwise need to figure out themselves. Constraints create freedom.
 
-The second was building for humans, not in the abstract but by embedding with engineering teams. Watch them work. See where they get frustrated, confused, or stuck. One observation session is worth ten surveys. We stopped tracking how many features platform teams shipped and started tracking whether product teams moved faster — deployment frequency, cycle time, breakage rate. Outcome over output, measured by sitting with the people doing the work.
+The second was building for humans, not in the abstract but by embedding with engineering teams. Watch them work. See where they get frustrated, confused, or stuck. One observation session is worth ten surveys. We stopped tracking how many features platform teams shipped and started tracking whether product teams moved faster: deployment frequency, cycle time, breakage rate. Outcome over output, measured by sitting with the people doing the work.
 
 ## How We Made the Transition
 
@@ -75,7 +75,7 @@ The first two months were spent resetting how each team saw their work: running 
 
 Then each team had to articulate what their product was. Not vague ("developer enablement") but concrete ("the web framework that handles routing, state management, and deployment, giving teams X for free"). This was harder than expected. Some teams needed four or five attempts before the answer was specific enough to build against.
 
-Months three through six were user research, and this was the uncomfortable part. Teams that had been operating in abstract space now had to sit with engineers and watch them work. What they learned surprised them. The deployment tool that platform teams were proud of? Engineers avoided it because the error messages were incomprehensible. Nobody had told them because nobody thought it would change.
+Months three through six were user research, and this was the uncomfortable part. Teams that had been operating in abstract space now had to sit with engineers and watch them work. What they learned surprised them. Engineers were avoiding the deployment tool the platform team was proudest of, because its error messages were incomprehensible. Nobody had told them, because nobody thought it would change.
 
 The roadmap shift followed. Teams created roadmaps focused on their specific product, which meant saying "no" to things that didn't fit. A platform engineer came to me and said: "I got three requests this week that are all reasonable. But they don't fit our product roadmap. Am I allowed to say no?" That's the job.
 
@@ -85,7 +85,7 @@ The most effective thing we did was make the right path the easy path. "Do it th
 
 We also learned to build rather than document. Every time we replaced a guide with a tool, adoption went up. Stopping writing and starting building was the right call, even when the documentation felt more thorough.
 
-User research was more valuable than we expected, even at small scale. Embedding with teams for a day, watching an engineer onboard, sitting next to someone during a deploy — ten conversations gave us more signal than any survey. Small user populations enable high-touch research; you just have to do it.
+User research was more valuable than we expected, even at small scale. Embedding with teams for a day, watching an engineer onboard, sitting next to someone during a deploy: ten conversations gave us more signal than any survey. Small user populations enable high-touch research; you just have to do it.
 
 One structural change that helped: a single entry point. Engineers didn't need to know which sub-team owned what. They needed to get their work done.
 
@@ -109,12 +109,12 @@ The shift didn't require new hiring, new budgets, or major structural changes. I
 
 This approach assumes relatively homogeneous use cases and teams that are past the pure experimentation phase. If your teams have wildly diverse stacks or you're still figuring out your architecture, premature standardization will slow you down. The tradeoff between optionality and velocity is real, and the choice should be conscious.
 
-## The Test
+## Three Things to Check
 
-Are your platform teams measuring activity or impact? If they count docs written or workshops run, they're in enablement mode. If they measure adoption rates and engineer velocity, they're in product mode.
+Look at what your platform teams count. Docs written and workshops run means they're in enablement mode. Adoption rates and engineer velocity means they're in product mode.
 
-Can engineers use your platform without reading documentation? If the answer is no, you've chosen optionality over usability. Good platform products make the right thing the easy thing.
+Then try using the platform without reading the documentation. If you can't, you've chosen optionality over usability, and good platform products make the right thing the easy thing.
 
-Do your platform teams say no? If every request becomes a commitment, you're building a service desk, not a product organization.
+Then look at what the teams turn down. If every request becomes a commitment, you're running a service desk with a product org's name on it.
 
-When engineers stop thinking about the platform and start thinking about what they're building, that's the outcome the whole shift was after. We got close. It took longer than the six months suggest, and we're still reinforcing it, but the teams that came through it build differently now — and the ones who joined after don't know it was ever any other way.
+When engineers stop thinking about the platform and start thinking about what they're building, that's the outcome the whole shift was after. We got close. It took longer than the six months suggest, and we're still reinforcing it, but the teams that came through it build differently now, and the ones who joined after don't know it was ever any other way.

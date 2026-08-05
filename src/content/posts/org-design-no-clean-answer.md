@@ -9,7 +9,7 @@ description: "Every org design framework is right, and they each point you somew
 
 There is no clean way to design an organization. Every framework you can pick up is right, and they each point you somewhere different.
 
-If you come at it from the people side, you ask about span of control: how many reports per manager, what ratios are healthy, when does someone become a bottleneck. If you come at it from product, you ask about empowered teams and where you draw the boundaries — by customer persona, by user journey, by problem space. If you come at it from engineering, you reach for Team Topologies and ask which teams are stream-aligned, which are platform, which are enabling. And under all of that, the technical architecture is pulling at the shape too, asking to be respected.
+If you come at it from the people side, you ask about span of control: how many reports per manager, what ratios are healthy, when does someone become a bottleneck. If you come at it from product, you ask about empowered teams and where you draw the boundaries: by customer persona, by user journey, by problem space. If you come at it from engineering, you reach for Team Topologies and ask which teams are stream-aligned, which are platform, which are enabling. And under all of that, the technical architecture is pulling at the shape too, asking to be respected.
 
 Each lens gives you a defensible answer. The answers don't match. So what do you actually do?
 
@@ -51,9 +51,9 @@ A first view on people means knowing the leaders you have, the strengths they br
 
 A first view on technology means understanding what you've inherited and where it's going. Which systems are converging, which ones are being deprecated, where the boundaries are firming up and where they're still soft. The org you design has to live on top of the architecture you have, not the one in someone's whitepaper.
 
-These aren't side exercises; they're inputs the vision has to be tested against. The vision drives. Customers, people, and technology constrain. If any of the three is missing from the picture when you start drawing teams, the design that comes out of it is fiction.
+Treat all three as inputs the vision has to be tested against, not as side exercises. The vision drives. Customers, people, and technology constrain. If any of the three is missing from the picture when you start drawing teams, the design that comes out of it is fiction.
 
-None of this happens in one pass. As you dig into the customers, the people, and the technology, you'll learn things that don't fit the vision you started with, and when that happens you go back and change it. The vision shapes the buckets you sort customers and work into, and the buckets, once you've drawn them, sometimes tell you the vision was wrong. Don't be precious about any of it. A first cut on customers that survives contact with the second week is rare. Iterating the vision against what you find, and re-cutting the groups when they stop holding, isn't a sign you got it wrong the first time. It's the only way the design ends up true.
+None of this happens in one pass. As you dig into the customers, the people, and the technology, you'll learn things that don't fit the vision you started with, and when that happens you go back and change it. The vision shapes the buckets you sort customers and work into, and the buckets, once you've drawn them, sometimes tell you the vision was wrong. Don't be precious about any of it. A first cut on customers that survives contact with the second week is rare. Iterating the vision against what you find, and re-cutting the groups when they stop holding, is the only way the design ends up true. It isn't a sign you got it wrong the first time.
 
 ## The Paper Exercise
 
@@ -63,13 +63,13 @@ The paper exercise is laying every proposed team out and looking at it through e
 
 What you get when you do this honestly is a map of friction. Some teams come out clean. They're a clear archetype, they serve a clear customer group, they sit on a coherent piece of the stack, and the manager has the right number of reports. Most teams don't come out clean. Most teams have at least one dimension where they're awkward, and a few teams are awkward on all of them.
 
-The exercise is valuable even when it gives you a messy picture. Especially when it gives you a messy picture. The mess isn't a failure of the exercise; it's the real shape of the trade-offs you're being asked to make. Without the exercise, those trade-offs stay implicit. Someone makes a call about team boundaries and someone else complains about span of control later, and nobody can connect the two conversations because they happen in different rooms with different vocabulary. The paper exercise puts everything on one piece of paper and forces it into the open.
+The exercise is valuable even when it gives you a messy picture. Especially then. The mess is the real shape of the trade-offs you're being asked to make. Without the exercise, those trade-offs stay implicit. Someone makes a call about team boundaries and someone else complains about span of control later, and nobody can connect the two conversations because they happen in different rooms with different vocabulary. The paper exercise puts everything on one piece of paper and forces it into the open.
 
 ## Pick the Compromise
 
-Once you can see the friction, you have to decide what you're willing to live with. This is the part nobody really teaches.
+Once you can see the friction, you have to decide what you're willing to live with. I've never seen this taught anywhere, and I've never seen a design survive without it.
 
-Are you fine that one team serves multiple customer groups, because the alternative would split the technology in a way you can't afford? Are you fine that a span of control is wider than you'd like, because the leader you have can hold it? Are you fine that a team isn't a clean Team Topologies archetype, because the work itself is genuinely hybrid? You have to name these out loud — you have to say which dimension you're prioritizing for this team, and which dimension you're knowingly compromising on.
+Are you fine that one team serves multiple customer groups, because the alternative would split the technology in a way you can't afford? Are you fine that a span of control is wider than you'd like, because the leader you have can hold it? Are you fine that a team isn't a clean Team Topologies archetype, because the work itself is genuinely hybrid? Name these out loud. Say which dimension you're prioritizing for this team, and which dimension you're knowingly compromising on.
 
 If you can't say which compromise you're choosing, you haven't designed an organization. You've drawn a wishlist and convinced yourself it's a plan. The wishlist will get rebuilt the first time it meets reality, and you'll have lost the credibility you needed to make the next round of trade-offs.
 
@@ -89,7 +89,7 @@ There's also the retention question. Some of the people you most need are also t
 
 This is the part that makes org design feel uncomfortable to people who like clean answers. You're trading a small amount of structural elegance for execution capacity. That looks like compromise, and it is. It is also how the work gets done.
 
-It helps to separate where you want to be from what you can stand up next month. You can have the right long-term shape on paper, the one you'd defend to anyone, and still be unable to implement it now because the people to run it aren't in the building yet. That's a different kind of compromise from the ones above. It isn't that the design is wrong; it's that you can't execute it yet. So you stand up an interim shape that the team in front of you can run, and you're explicit that it's interim: this team is bigger than it should be until we hire the second leader, this scope sits here for now because the person who should own it hasn't joined. The long-term design stays on the wall as the thing you're moving toward. Confusing the two is how people either freeze, waiting for a structure they can't yet staff, or ship the interim version and forget it was ever meant to change.
+It helps to separate where you want to be from what you can stand up next month. You can have the right long-term shape on paper, the one you'd defend to anyone, and still be unable to implement it now because the people to run it aren't in the building yet. That's a different kind of compromise from the ones above. The design is right and you can't execute it yet. So you stand up an interim shape that the team in front of you can run, and you're explicit that it's interim: this team is bigger than it should be until we hire the second leader, this scope sits here for now because the person who should own it hasn't joined. The long-term design stays on the wall as the thing you're moving toward. Confusing the two is how people either freeze, waiting for a structure they can't yet staff, or ship the interim version and forget it was ever meant to change.
 
 ## Don't Do It Alone
 
@@ -113,12 +113,8 @@ There's a third thing sitting next to the shape and the rhythm, which is how you
 
 Org design has two layers: the shape and the rhythm. The shape is what people draw. The rhythm is what makes the shape work. Looking at one without the other is the most common mistake I see, and it is the one I most often have to remind myself not to make.
 
-## The Shape and the Rhythm
+## What I Would Tell Myself the First Time
 
-The leaders I've watched do this well aren't the ones who pick the cleanest framework and apply it.
+Folding those four areas into one, the part I got wrong was thinking the drawing was the work. I spent far more time on the paper exercise than on how the new organization would actually run, and the ratio should have been the other way around.
 
-What they share is something else. They hold a clear vision of where the organization is going, and they test it against what they see in their customers, their people, and their technology. They name the trade-offs out loud instead of pretending they don't exist, stay close enough to the staffing reality that the design can survive contact with the people in it, and pair the structure with a rhythm that lets the teams operate.
-
-The rhythm is the part that gets dropped most often, because it is the least visible part of the work. It is also the part that decides whether the design lives.
-
-Org design done well isn't a search for the perfect answer — it's the willingness to choose a coherent compromise, in front of the people it affects, and then run it well enough that it earns the right to exist.
+The frameworks were still right, each in its own direction. What I'd been looking for was permission to pick one and stop feeling the pull of the others, and there is no such permission. You choose a compromise, you say out loud which dimension you sacrificed and why, and then you run it in front of the people it affects until it earns the right to exist. It has never once felt clean while it was happening.

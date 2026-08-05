@@ -29,7 +29,7 @@ Most leaders who think they hold a high bar hold half of one. They're clear on e
 
 When you tell someone you expect a lot from them, you're making a commitment.
 
-The bar isn't just a demand, it's a deal. You're saying: I believe you're capable of this, and I'll be there to help you get there. When you set the bar and then disappear, you've broken your half of the deal.
+The bar is a deal as much as a demand. You're saying: I believe you're capable of this, and I'll be there to help you get there. When you set the bar and then disappear, you've broken your half of it.
 
 I've had and experienced both failure modes across many companies, including during my consulting years at McKinsey. Leaders who held people to an extremely high standard while offering no real support. The team delivered, for a while, until the best people started leaving. And leaders so careful not to push too hard that the bar quietly dropped. Everyone felt cared for. Very little excellent work was produced.
 
@@ -47,7 +47,7 @@ The problem was that documents have to work without your voice. People read befo
 
 I tried explaining this. It didn't land. The PM was polite about it but didn't really believe the investment was worth it.
 
-So we sat down together. Several hours in one week, working through an actual document, line by line. Not pair programming. Pair writing. Think of a parent sitting with a kid at the kitchen table, working through an essay together. Not writing it for them. Not reading it and handing back comments. Sitting there, working through the argument, finding where it breaks down, figuring out how to fix it. Unglamorous. Slow. Necessary.
+So we sat down together. Several hours in one week, working through an actual document, line by line. Not pair programming. Pair writing. Think of a parent sitting with a kid at the kitchen table, working through an essay together: not writing it for them, not reading it and handing back comments, but sitting there finding where the argument breaks down and figuring out how to fix it. It was slow and unglamorous and there was no faster version.
 
 ## The Moment the Bar Becomes Real
 
@@ -63,9 +63,9 @@ That's when the PM understood why the bar was where it was. Not because I'd expl
 
 You can't offer that level of support to everyone at the same time.
 
-You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar for growth isn't uniform across everyone. It's calibrated to how much you can be there for each person right now.
+You have multiple people, multiple teams, multiple pressures. Your time is finite. So the bar for growth gets calibrated to how much you can be there for each person right now, rather than held uniform across everyone.
 
-That's not lowering standards. It's being honest about the deal you're offering.
+That's honesty about the deal you're offering, not a lowered standard.
 
 If I'm giving someone significant time and attention this quarter, I can hold them to a very high standard and they know I mean it. If someone is relatively independent and not taking much of my attention, the growth bar I can fairly hold them to is correspondingly lower. I haven't earned the right to demand more.
 
@@ -77,7 +77,7 @@ I've erred on the softer side more than I'd like.
 
 There have been people I kept in high-support, high-belief mode for too long, long past the point where the honest answer was that the fit wasn't right. I stayed in "I'll help you get there" mode because I wanted to, and because acknowledging it wasn't working felt like giving up on someone.
 
-That's not kindness. It's avoidance. And it's unfair to the person, who deserves clarity over comfort.
+I told myself that was kindness. It was avoidance, and it was unfair to the person, who deserved clarity over comfort.
 
 ## The Real Standard
 

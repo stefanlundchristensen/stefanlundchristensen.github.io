@@ -4,7 +4,7 @@ date: 2026-01-22
 draft: false
 tags: ["leadership", "organizational-maturity", "management", "scale"]
 categories: ["Leadership"]
-description: "Five dimensions I track when I'm responsible for more than a single team. Not from a book — from doing the same thing in different areas and watching what moved."
+description: "Five dimensions I track when I'm responsible for more than a single team. Not from a book, but from doing the same thing in different areas and watching what moved."
 ---
 
 When you become a leader of leaders, the guidance gets vague. "Build organizational capability." "Develop your people." "Create strategy." I lacked a structured way to show how I improved things beyond "teams deliver and people are happy." Everyone says there's supposed to be something more when you're responsible for an entire area of the business. Nobody tells you what.
@@ -33,7 +33,7 @@ The pattern is consistent: leadership creates a strategy deck, sets OKRs, commun
 
 The problem is rarely that people don't understand the words. They can't see what actually changes in the world.
 
-I learned a structure from Ebi Atawodi on Lenny's Podcast that changed how I communicate direction — telling it as a story with three beats. Where we are now and what's broken. What we're going to do about it. How the world looks after. When you can tell your strategy as a story with a clear before, during, and after, people can retell it. They can explain it to new hires. They can make decisions aligned with it without asking you.
+I learned a structure from Ebi Atawodi on Lenny's Podcast that changed how I communicate direction: tell it as a story with three beats. Where we are now and what's broken. What we're going to do about it. How the world looks after. When you can tell your strategy as a story with a clear before, during, and after, people can retell it. They can explain it to new hires. They can make decisions aligned with it without asking you.
 
 Then you connect the story to concrete goals. The narrative shows where we're going. The goals show how we measure progress. Direction became something people could understand and act on, not just read and forget.
 
@@ -45,7 +45,7 @@ Improvement requires consistency. Clear cadences, structured agendas, clear role
 
 These foundations work for teams, but they also work for you. When you're starting in a new area, the early months should skew toward your own understanding: observing patterns, understanding the domain, building relationships. The cadences and structures are scaffolding for your own effectiveness as much as your teams'.
 
-When people know there's a weekly leadership sync, and it always has the same structure, and everyone knows their role, that predictability creates space for actual work. The shift I kept seeing: from "let me check with Stefan" to "here's how we handle this." The test is whether you can point to the structures and rhythms you established, or whether you're still the single point of coordination.
+When people know there's a weekly leadership sync, and it always has the same structure, and everyone knows their role, that predictability creates space for actual work. The shift I kept seeing was from "let me check with Stefan" to "here's how we handle this." You can measure it by whether you can point to the structures and rhythms you established, or whether you're still the single point of coordination.
 
 ## Team Health, Measured Not Assumed
 
@@ -67,12 +67,12 @@ When people see you as the person who turns things around, the real work is maki
 
 Many leaders set high expectations and then disappear. They make the standards clear and hold people accountable. Then when someone struggles, they're nowhere to be found.
 
-I made a different commitment: high expectations, and I'm there to help. Not as a safety net, but as someone who is there when people are pushing themselves — for the hard conversations, the technical problems, the decisions that matter.
+I made a different commitment: high expectations, and I'm there to help. Not as a safety net, but as someone present when people are pushing themselves, for the hard conversations, the technical problems, the decisions that matter.
 
 The version that worked was scaling this across the organization, not just from me. Everyone in the area held the same commitment: ambitious standards, active support. People knew the expectations were high and knew they wouldn't be alone reaching them. That's a different experience from the "demand excellence and disappear" model, and the teams that had it produced work they were proud of.
 
 ## The Scorecard Is Yours
 
-These five dimensions became my scorecard, not because they're universal but because they were the areas where I could take full responsibility and show real progress. They were within my control and they helped us as a collective.
+These five became my scorecard because they were the areas where I could take full responsibility and show real progress, not because they're universal. Yours will be different: different context, different challenges, different strengths. Pick dimensions you can own that help the collective succeed, name them, track them, and show progress.
 
-Your scorecard will be different. Different context, different challenges, different strengths. The principle is the same: pick dimensions you can own that help the collective succeed, name them, track them, and show progress. When someone asks "What did you improve?" the answer should be specific enough that they can see the change in how the organization runs, not just in what it shipped.
+The thing I underestimated for years is how much of this is just having an answer ready. Nobody schedules the question. It arrives in a hallway, or halfway through a promotion conversation, and you have about ninety seconds to say what you improved. Everything above is what I wish I'd been able to say the first few times I was asked.
