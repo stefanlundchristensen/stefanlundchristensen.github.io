@@ -27,23 +27,9 @@ Then you hit production. I've seen teams spend weeks debugging why ledgers don't
 
 ## See How Money Moves Before You Build
 
-<figure class="post-diagram">
-<svg viewBox="0 0 640 132" role="img" aria-label="Funds move from customer to payment service provider to an intermediate holding account, then to settlement and the merchant. Refunds, chargebacks and fees return into the holding account.">
-<defs><marker id="pf-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head"/></marker><marker id="pf-k" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head--key"/></marker></defs>
-<rect x="0" y="16" width="104" height="40" class="d-node"/><text x="52" y="41" class="d-label" text-anchor="middle">Customer</text>
-<line x1="110" y1="36" x2="128" y2="36" class="d-line" marker-end="url(#pf-a)"/>
-<rect x="134" y="16" width="104" height="40" class="d-node"/><text x="186" y="41" class="d-label" text-anchor="middle">PSP</text>
-<line x1="244" y1="36" x2="262" y2="36" class="d-line" marker-end="url(#pf-a)"/>
-<rect x="268" y="16" width="104" height="40" class="d-node d-node--key"/><text x="320" y="41" class="d-label d-label--key" text-anchor="middle">Holding</text>
-<line x1="378" y1="36" x2="396" y2="36" class="d-line" marker-end="url(#pf-a)"/>
-<rect x="402" y="16" width="104" height="40" class="d-node"/><text x="454" y="41" class="d-label" text-anchor="middle">Settlement</text>
-<line x1="512" y1="36" x2="530" y2="36" class="d-line" marker-end="url(#pf-a)"/>
-<rect x="536" y="16" width="104" height="40" class="d-node"/><text x="588" y="41" class="d-label" text-anchor="middle">Merchant</text>
-<path d="M588 60 L588 104 L320 104 L320 64" class="d-line d-line--key" marker-end="url(#pf-k)"/>
-<text x="306" y="100" class="d-sub" text-anchor="end">Refunds, chargebacks, fees</text>
-</svg>
-<figcaption>Money doesn't only run left to right. Refunds, chargebacks, partial settlements and fees re-enter at the intermediate holding account rather than reversing along the path they came in on — which is why leaving that account off the map is what stops a ledger balancing.</figcaption>
-</figure>
+<!-- DIAGRAM: drop the Excalidraw SVG export at public/diagrams/payment-flow.svg, then uncomment the line below.
+![Payment flow showing customer account, intermediate holding accounts, settlement, and merchant account, with refunds, partial settlements, and chargebacks branching off the happy path](/diagrams/payment-flow.svg)
+-->
 
 Before implementing anything, diagram which accounts funds move between, when transfers happen, and how balances change at each step. Not just the happy path: chargebacks, refunds, partial settlements, currency conversions. Every fund movement creates debits and credits across accounts. When you haven't mapped the state changes completely (the holds, the reversals, the fees), your ledger won't balance and reconciliation becomes manual detective work.
 

@@ -479,92 +479,9 @@ a.featured:hover {
   height: auto;
 }
 
-/* Explanatory diagrams — authored as inline SVG in the post so they follow the
-   theme toggle. An <img> could only follow prefers-color-scheme, which is the
-   OS setting and disagrees with the toggle whenever someone overrides it.
-   Styles live here rather than in each SVG: a <style> block inside inline SVG
-   is not scoped, so three copies would fight each other. */
-
-.post-diagram {
-  margin: 40px 0;
-  max-width: 100%;
-}
-
-.post-diagram svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.post-diagram figcaption {
-  margin-top: 14px;
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: var(--ink-60);
-  max-width: 560px;
-}
-
-.d-node {
-  fill: none;
-  stroke: rgba(var(--ink-rgb), 0.24);
-  stroke-width: 1;
-}
-
-.d-node--key {
-  stroke: var(--accent);
-  stroke-width: 1.6;
-}
-
-.d-line {
-  fill: none;
-  stroke: rgba(var(--ink-rgb), 0.3);
-  stroke-width: 1.2;
-}
-
-.d-line--key {
-  stroke: var(--accent);
-  stroke-width: 1.6;
-}
-
-.d-line--back {
-  stroke-dasharray: 4 4;
-}
-
-.d-head {
-  fill: rgba(var(--ink-rgb), 0.3);
-}
-
-.d-head--key {
-  fill: var(--accent);
-}
-
-.d-label {
-  font-family: var(--font-body);
-  font-size: 12px;
-  fill: rgba(var(--ink-rgb), 0.8);
-}
-
-.d-label--key {
-  fill: var(--accent);
-}
-
-.d-sub {
-  font-family: var(--font-body);
-  font-size: 10.5px;
-  fill: rgba(var(--ink-rgb), 0.5);
-}
-
-.d-tag {
-  font-family: var(--font-body);
-  font-size: 9.5px;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  fill: rgba(var(--ink-rgb), 0.45);
-}
-
-.d-tag--key {
-  fill: var(--accent);
+.post-body img[src*="/diagrams/"] {
+  padding: 24px 16px;
+  background: var(--bg);
 }
 
 /* Page body — same as post-body but no drop cap */

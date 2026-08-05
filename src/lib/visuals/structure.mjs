@@ -18,10 +18,10 @@ const QUANT_THRESHOLD = 1.5;
 /**
  * Remove everything that isn't prose before measuring.
  *
- * Posts carrying an inline SVG diagram would otherwise have thousands of path
- * coordinates and attribute tokens counted as words, which inflates their word
- * count, their numeral density and their paragraph count — and the mark is
- * meant to describe the writing, not the markup.
+ * A mark describes the writing, not the markup. Code fences, HTML comments and
+ * any raw HTML a post carries would otherwise be counted as words — and any
+ * digits inside them counted as numerals, which is what decides whether a
+ * section reads as quantitative.
  */
 function stripNonProse(s) {
   return s

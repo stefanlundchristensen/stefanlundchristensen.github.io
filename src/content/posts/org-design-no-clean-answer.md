@@ -23,23 +23,6 @@ Pick any one of those frameworks and run with it, and you'll do well on that dim
 
 The frameworks are right. They're also incomplete on their own.
 
-<figure class="post-diagram">
-<svg viewBox="0 0 640 176" role="img" aria-label="One organisation design pulled in four directions at once — by people, by product, by Team Topologies, and by architecture.">
-<defs><marker id="od-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head--key"/></marker></defs>
-<rect x="248" y="64" width="144" height="46" class="d-node d-node--key"/>
-<text x="320" y="92" class="d-label d-label--key" text-anchor="middle">One org design</text>
-<text x="0" y="24" class="d-label">People</text><text x="0" y="40" class="d-sub">span of control</text>
-<text x="640" y="24" class="d-label" text-anchor="end">Product</text><text x="640" y="40" class="d-sub" text-anchor="end">journeys, personas</text>
-<text x="0" y="150" class="d-label">Team Topologies</text><text x="0" y="166" class="d-sub">team types</text>
-<text x="640" y="150" class="d-label" text-anchor="end">Architecture</text><text x="640" y="166" class="d-sub" text-anchor="end">system boundaries</text>
-<line x1="252" y1="70" x2="176" y2="34" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="388" y1="70" x2="464" y2="34" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="252" y1="104" x2="176" y2="140" class="d-line d-line--key" marker-end="url(#od-a)"/>
-<line x1="388" y1="104" x2="464" y2="140" class="d-line d-line--key" marker-end="url(#od-a)"/>
-</svg>
-<figcaption>Each lens is right, and they point four different ways. Run with any single one and you do well on that dimension and badly on the other three.</figcaption>
-</figure>
-
 ## The Setup
 
 The hardest version of this I've worked on came when I was asked to fold four separate areas into one. The output had to be a single company-wide technology platform that served every team in the company, on every kind of work they did.

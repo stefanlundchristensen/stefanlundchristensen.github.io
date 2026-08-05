@@ -25,20 +25,6 @@ Build is the third lane. It picks up the spec from the second lane and ships it.
 
 What ties the three together is what crosses the boundary: an artifact, not a meeting.
 
-<figure class="post-diagram">
-<svg viewBox="0 0 640 108" role="img" aria-label="Three lanes in sequence — what to build, spec built, build — joined by two artifacts: an item passes from the first lane to the second, and a spec from the second to the third.">
-<defs><marker id="tl-a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" class="d-head--key"/></marker></defs>
-<rect x="0" y="26" width="176" height="56" class="d-node"/><text x="88" y="59" class="d-label" text-anchor="middle">What to build</text>
-<rect x="232" y="26" width="176" height="56" class="d-node"/><text x="320" y="59" class="d-label" text-anchor="middle">Spec built</text>
-<rect x="464" y="26" width="176" height="56" class="d-node"/><text x="552" y="59" class="d-label" text-anchor="middle">Build</text>
-<line x1="182" y1="54" x2="226" y2="54" class="d-line d-line--key" marker-end="url(#tl-a)"/>
-<line x1="414" y1="54" x2="458" y2="54" class="d-line d-line--key" marker-end="url(#tl-a)"/>
-<text x="204" y="18" class="d-tag d-tag--key" text-anchor="middle">Item</text>
-<text x="436" y="18" class="d-tag d-tag--key" text-anchor="middle">Spec</text>
-</svg>
-<figcaption>The only things crossing a boundary are the item and the spec. Bridge the lanes with standups and handoff meetings instead and they collapse back into one undifferentiated process.</figcaption>
-</figure>
-
 ## Lane One: What to Build
 
 The job of this lane is connecting the team to the signal it already generates and turning that signal into a structured view of what to build next.
