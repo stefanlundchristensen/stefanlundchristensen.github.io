@@ -15,8 +15,14 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { CANDIDATES } from '../../lib/visuals/candidates.mjs';
+import { HYBRIDS } from '../../lib/visuals/hybrids.mjs';
 import { LIGHT, DARK } from '../../lib/visuals/palette.mjs';
 import { composeOgCard } from '../../lib/visuals/ogcard.mjs';
+
+// Round 2: the three shortlisted directions and the four mergers of them.
+// Trace and flow are out — kept in candidates.mjs only until the pick is final.
+const SHORTLIST = ['ledger', 'block', 'riso'].map((id) => CANDIDATES.find((c) => c.id === id));
+const ROUND2 = [...SHORTLIST, ...HYBRIDS];
 
 export function getStaticPaths() {
   if (!import.meta.env.DEV) return [];
@@ -78,7 +84,7 @@ const lead = samples[0];
         <div class="lab-theme-block">
           <div class="lbl lab-theme-label">{t.label}</div>
           <div class="stack">
-            {CANDIDATES.map((c) => (
+            {ROUND2.map((c) => (
               <figure class="fig">
                 <figcaption class="fig-cap">{c.name}</figcaption>
                 <div class="art" set:html={c.render(lead, t.P, HERO)} />
@@ -103,7 +109,7 @@ const lead = samples[0];
           {samples.map((s) => <div class="lbl">{s.slug}</div>)}
           <div class="lbl">Dark</div>
         </div>
-        {CANDIDATES.map((c) => (
+        {ROUND2.map((c) => (
           <div class="thumb-row">
             <div class="thumb-name">{c.name}</div>
             {samples.map((s) => (
@@ -123,7 +129,7 @@ const lead = samples[0];
         is the test that matters: does the mark support the title or compete with it?
       </p>
 
-      {CANDIDATES.map((c) => (
+      {ROUND2.map((c) => (
         <div class="ctx">
           <div class="lbl lab-theme-label">{c.name}</div>
           <div class="ctx-page">
@@ -157,7 +163,7 @@ const lead = samples[0];
         which may differ on blend modes and fonts.
       </p>
 
-      {CANDIDATES.map((c) => (
+      {ROUND2.map((c) => (
         <div class="og-block">
           <div class="lbl lab-theme-label">{c.name}</div>
           <div class="og-pair">
@@ -194,7 +200,7 @@ const lead = samples[0];
         stable across builds. The question here is whether they read as one family or as noise.
       </p>
 
-      {CANDIDATES.map((c) => (
+      {ROUND2.map((c) => (
         <div class="lab-theme-block">
           <div class="lbl lab-theme-label">{c.name}</div>
           <div class="stack">
