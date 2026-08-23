@@ -137,4 +137,13 @@ None. GoatCounter was removed in July 2026; the site currently runs without anal
 - `/about/`, `/experience/`, `/now/` — static pages
 - `/posts/` — writing index
 - `/posts/[slug]/` — individual posts
-- `/rss.xml` — RSS feed
+- `/posts/[slug].md` — markdown mirror of each published post (for AI retrieval)
+- `/rss.xml` — RSS feed (full post content)
+- `/llms.txt`, `/llms-full.txt` — AI-readable site index / full corpus, generated from `stefan.ts` + the content collection
+- `/sitemap.xml` — custom endpoint (`src/pages/sitemap.xml.ts`) with per-post `<lastmod>`; not `@astrojs/sitemap`
+
+## SEO / GEO
+- Site-wide JSON-LD `@graph` (WebSite + Person, stable `@id`s) in `Base.astro`; BlogPosting + BreadcrumbList on posts, ProfilePage on `/about/`, Blog on `/posts/` — all via `src/components/Schema.astro` into the `head` slot
+- `public/robots.txt` explicitly welcomes AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.)
+- Person `sameAs` lists only real, owned profiles (currently LinkedIn) — never add unverified profile URLs
+- `npm run favicons` regenerates the PNG favicon fallbacks from `favicon.svg`

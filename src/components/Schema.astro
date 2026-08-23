@@ -1,0 +1,13 @@
+---
+interface Props {
+  schema: Record<string, unknown>;
+}
+
+const { schema } = Astro.props;
+
+// The < escape keeps a "</script>"-shaped title or description from
+// terminating the script element early.
+const json = JSON.stringify(schema).replace(/</g, '\\u003c');
+---
+
+<script type="application/ld+json" set:html={json} />

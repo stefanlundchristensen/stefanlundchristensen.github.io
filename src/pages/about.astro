@@ -1,8 +1,23 @@
 ---
 import Page from '../layouts/Page.astro';
+import Schema from '../components/Schema.astro';
+
+const siteUrl = Astro.site!.toString().replace(/\/$/, '');
 ---
 
 <Page title="About" description="About Stefan Christensen — SVP Product & Engineering, scaling FinTech organisations.">
+  <Schema
+    slot="head"
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'ProfilePage',
+      '@id': `${siteUrl}/about/#profilepage`,
+      url: `${siteUrl}/about/`,
+      name: 'About Stefan Christensen',
+      mainEntity: { '@id': `${siteUrl}/#person` },
+      isPartOf: { '@id': `${siteUrl}/#website` },
+    }}
+  />
   <p>I've spent my career solving problems others haven't figured out yet. Started in a physics lab building atomic clocks beyond the quantum limit. Moved to McKinsey advising Tier 1 European banks on payments, regulatory strategy, and digital transformation. Been at Pleo since 2019, scaling the company from 100 to 850+ people while building payment infrastructure across 15+ European markets.</p>
 
   <p>The through-line: I'm drawn to hard problems in complex systems. Quantum mechanics taught me to work with ambiguity. Consulting taught me how to navigate boardrooms and regulatory regimes. Operating taught me how to build customer-centric solutions on top of legacy infrastructure and technical constraints — whether that's fragmented European payment rails or regulatory complexity across markets.</p>

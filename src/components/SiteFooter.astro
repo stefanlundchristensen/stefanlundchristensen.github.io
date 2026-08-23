@@ -1,0 +1,49 @@
+---
+import { STEFAN } from '../data/stefan';
+
+const s = STEFAN;
+---
+
+<footer class="global-footer">
+  <nav class="global-footer-links" aria-label="Site">
+    <a class="link" href="/about/">About</a>
+    <a class="link" href="/experience/">Experience</a>
+    <a class="link" href="/now/">Now</a>
+    <a class="link" href="/posts/">Writing</a>
+    <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="link" href="/rss.xml">RSS</a>
+  </nav>
+  <span class="global-footer-meta">© 2026 {s.name} · {s.contact.location}</span>
+</footer>
+
+<style>
+  .global-footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 24px 56px;
+    border-top: 1px solid var(--ink-15);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 18px;
+    font-family: var(--font-body);
+    font-size: 13px;
+  }
+
+  .global-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .global-footer-meta {
+    margin-left: auto;
+    color: var(--ink-50);
+  }
+
+  @media (max-width: 719px) {
+    .global-footer-meta {
+      margin-left: 0;
+    }
+  }
+</style>

@@ -3,6 +3,8 @@ import '@fontsource-variable/fraunces';
 import '@fontsource-variable/inter';
 import '../styles/global.css';
 import { STEFAN } from '../data/stefan';
+import Schema from '../components/Schema.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
   title?: string;
@@ -10,6 +12,10 @@ interface Props {
   isHome?: boolean;
   ogType?: 'website' | 'article' | 'profile';
   ogImage?: string;
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  articleTags?: string[];
+  noindex?: boolean;
 }
 
 const {
@@ -18,11 +24,72 @@ const {
   isHome = false,
   ogType = 'website',
   ogImage = '/og-default.png',
+  publishedTime,
+  modifiedTime,
+  articleTags,
+  noindex = false,
 } = Astro.props;
 
 const fullTitle = isHome ? STEFAN.name : `${title} — ${STEFAN.name}`;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(ogImage, Astro.site).toString();
+const siteUrl = Astro.site!.toString().replace(/\/$/, '');
+
+const siteGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: STEFAN.name,
+      description: STEFAN.tagline,
+      inLanguage: 'en',
+      publisher: { '@id': `${siteUrl}/#person` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: STEFAN.name,
+      url: `${siteUrl}/`,
+      image: new URL('/og-default.png', Astro.site).toString(),
+      jobTitle: STEFAN.role,
+      description: STEFAN.tagline,
+      homeLocation: {
+        '@type': 'Place',
+        name: 'Copenhagen, Denmark',
+      },
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Pleo',
+        url: 'https://www.pleo.io',
+      },
+      alumniOf: [
+        {
+          '@type': 'CollegeOrUniversity',
+          name: 'University of Copenhagen',
+          url: 'https://www.ku.dk',
+        },
+        {
+          '@type': 'Organization',
+          name: 'McKinsey & Company',
+          url: 'https://www.mckinsey.com',
+        },
+      ],
+      sameAs: [
+        `https://${STEFAN.contact.linkedin}`,
+      ],
+      knowsAbout: [
+        'FinTech',
+        'Payments Infrastructure',
+        'Platform Engineering',
+        'Organizational Design',
+        'European Payment Rails',
+        'Engineering Leadership',
+      ],
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -32,17 +99,42 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={STEFAN.name} />
+    <meta
+      name="robots"
+      content={noindex
+        ? 'noindex, nofollow'
+        : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+    />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="me" href={`https://${STEFAN.contact.linkedin}`} />
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={STEFAN.name} />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={`${STEFAN.name} — ${STEFAN.role} at Pleo`} />
+
+    {ogType === 'article' && publishedTime && (
+      <meta property="article:published_time" content={publishedTime.toISOString()} />
+    )}
+    {ogType === 'article' && modifiedTime && (
+      <meta property="article:modified_time" content={modifiedTime.toISOString()} />
+    )}
+    {ogType === 'article' && (
+      <meta property="article:author" content={`${siteUrl}/`} />
+    )}
+    {ogType === 'article' && articleTags?.map((tag) => (
+      <meta property="article:tag" content={tag} />
+    ))}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
@@ -58,47 +150,7 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
       })();
     </script>
 
-    {isHome && (
-      <script
-        type="application/ld+json"
-        set:html={JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Person',
-          name: STEFAN.name,
-          url: 'https://stefanchristensen.me',
-          jobTitle: STEFAN.role,
-          description: STEFAN.tagline,
-          worksFor: {
-            '@type': 'Organization',
-            name: 'Pleo',
-            url: 'https://www.pleo.io',
-          },
-          alumniOf: [
-            {
-              '@type': 'CollegeOrUniversity',
-              name: 'University of Copenhagen',
-              url: 'https://www.ku.dk',
-            },
-            {
-              '@type': 'Organization',
-              name: 'McKinsey & Company',
-              url: 'https://www.mckinsey.com',
-            },
-          ],
-          sameAs: [
-            `https://${STEFAN.contact.linkedin}`,
-          ],
-          knowsAbout: [
-            'FinTech',
-            'Payments Infrastructure',
-            'Platform Engineering',
-            'Organizational Design',
-            'European Payment Rails',
-            'Engineering Leadership',
-          ],
-        })}
-      />
-    )}
+    <Schema schema={siteGraph} />
 
     <link
       rel="alternate"
@@ -106,8 +158,10 @@ const ogImageUrl = new URL(ogImage, Astro.site).toString();
       title={STEFAN.name}
       href="/rss.xml"
     />
+    <slot name="head" />
   </head>
   <body>
     <slot />
+    {!isHome && <SiteFooter />}
   </body>
 </html>
