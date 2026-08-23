@@ -46,6 +46,8 @@ const morePosts = published.slice(0, 3).map((p) => ({
   title={post.data.title}
   description={post.data.description}
   date={post.data.date}
+  updated={post.data.updated}
+  slug={post.id}
   tags={post.data.tags}
   categories={post.data.categories}
   readingTime={readingTime(post.body ?? '')}

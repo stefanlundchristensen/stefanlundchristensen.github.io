@@ -1,12 +1,15 @@
 ---
 import Base from './Base.astro';
 import ReadingProgress from '../components/ReadingProgress.tsx';
+import Schema from '../components/Schema.astro';
 import { STEFAN } from '../data/stefan';
 
 interface Props {
   title: string;
   description?: string;
   date?: Date;
+  updated?: Date;
+  slug?: string;
   tags?: string[];
   categories?: string[];
   readingTime?: string;
@@ -17,9 +20,10 @@ interface Props {
 }
 
 const s = STEFAN;
-const { title, description, date, tags, categories, readingTime, ogImage, mark, morePosts } = Astro.props;
+const { title, description, date, updated, slug, tags, categories, readingTime, ogImage, mark, morePosts } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const siteUrl = Astro.site!.toString().replace(/\/$/, '');
 
 const formattedDate = date
   ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
@@ -31,25 +35,54 @@ const initials = s.name
   .join('');
 ---
 
-<Base title={title} description={description} ogType="article" ogImage={ogImage}>
+<Base
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={ogImage}
+  publishedTime={date}
+  modifiedTime={updated}
+  articleTags={[...(categories ?? []), ...(tags ?? [])]}
+>
   {date && (
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
+    <Schema
+      slot="head"
+      schema={{
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: title,
         description: description,
+        image: ogImage ? new URL(ogImage, Astro.site).toString() : undefined,
         datePublished: date.toISOString(),
+        dateModified: (updated ?? date).toISOString(),
         url: canonicalUrl,
         mainEntityOfPage: canonicalUrl,
-        author: {
-          '@type': 'Person',
-          name: s.name,
-          url: 'https://stefanchristensen.me',
-        },
+        author: { '@id': `${siteUrl}/#person` },
+        publisher: { '@id': `${siteUrl}/#person` },
+        isPartOf: { '@id': `${siteUrl}/#website` },
         keywords: [...(categories ?? []), ...(tags ?? [])].join(', '),
-      })}
+      }}
+    />
+  )}
+  <Schema
+    slot="head"
+    schema={{
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: 'Writing', item: `${siteUrl}/posts/` },
+        { '@type': 'ListItem', position: 3, name: title, item: canonicalUrl },
+      ],
+    }}
+  />
+  {slug && (
+    <link
+      slot="head"
+      rel="alternate"
+      type="text/markdown"
+      title="Markdown version"
+      href={`/posts/${slug}.md`}
     />
   )}
   <ReadingProgress client:load />
