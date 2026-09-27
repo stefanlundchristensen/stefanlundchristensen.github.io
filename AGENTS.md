@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The design is "AB1 v2 — Anchored Column": a warm editorial layout with a sticky collapsible left identity rail and a generous serif reading column. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
+Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The current branch explores a principles-first homepage: a sticky collapsible identity rail, a seed-inspired visual grammar, and a serif reading column that puts Stefan's operating philosophy before job-market proof points. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
 
 ## Development Commands
 

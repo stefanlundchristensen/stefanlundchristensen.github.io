@@ -57,7 +57,7 @@ The GitHub Actions workflow runs `npm ci` and `npm run validate`, then deploys `
 
 Confirm these owner decisions before treating the public site as current:
 
-- Whether the homepage “open to what is next” positioning fits the audience.
+- Whether the homepage principles-first positioning fits the audience.
 - Whether `/now/` should still show “Last updated: July 2026”.
 - Whether LinkedIn-only contact is enough, or whether direct email/calendaring should be added.
 - Whether the displayed metrics and testimonials are approved for public use as written.
