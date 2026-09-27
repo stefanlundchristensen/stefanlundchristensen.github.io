@@ -12,7 +12,7 @@ const s = STEFAN;
 
 const seed = 'ayPQMEDkTFIRt5hk3hkuqPKUEqQeCynS8uSiGKMuObOBNPMfIPJ5jqkFg95vYUHXCbEdpHB4sEY4MxVXuDj7OTPLAQCnhBD4AdJUpntRPWSGgQHfSGnFLmvq42Iyno8cHH5qXxi0awB4jA0LnqqEkTN6xp5zLxf7llj8blNE2wqfSFFymi8YEuMpqdgvumPyextPkNTImTELmU2HT0p56BFCDAuDL1Q0oPm99rTRoRYAfTB1idPosgDhVBmPBs4c40R7a4DoD33s2zfYczrj8vIqychdOVnikFpRUSF8LETt1VS8tCdSpf65K2FNKzNSS0qrTVm60fWxDmnuZz11xhrvzvCaeG4I1DNv4esI';
 const seedBands = seed.match(/.{1,24}/g) ?? [];
-const seedNeedles = ['PQ', 'hku', 'OB', 'qQ', '70', 'AI', 'Iyno', 'SFF', 'D33', 'LET', '11'];
+const seedNeedles = ['PQ', 'hku', 'OB', 'qQ', 'Iyno', 'SFF', 'D33', 'LET', '11'];
 
 const allPosts = await getCollection('posts');
 const publishedPosts = allPosts
