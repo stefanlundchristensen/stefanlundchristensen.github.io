@@ -1,11 +1,11 @@
 export const STEFAN = {
   name: 'Stefan Christensen',
   role: 'SVP Product & Engineering',
-  subtitle: 'Product & engineering leader. Payments, platforms, the org work underneath.',
+  subtitle: 'Physics, payments, platforms, and the organisation underneath.',
   city: 'Copenhagen',
-  headline: 'I own the platform and the P&L, and build the organisation that connects them.',
+  headline: 'I build load-bearing systems, then try to make myself unnecessary.',
   tagline:
-    'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
+    'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years across physics, European fintech, payment rails, platform scale, and org design. Based in Copenhagen.',
   longBio: [
     "I'm drawn to problems that sit between disciplines — where the cleanest technical answer and the right business answer pull in opposite directions, and someone has to decide which one wins. Physics trained me to work without a textbook; McKinsey, to read a boardroom and a regulator; operating taught me the constraint is rarely the technology.",
     "That pulls me toward the load-bearing work: the systems and teams a company depends on, built to keep working after I've left the room. The point was never to own everything. It was to leave behind an organisation that doesn't need me.",
@@ -22,6 +22,28 @@ export const STEFAN = {
     { value: '3×', label: 'Engineering throughput, flat headcount' },
     { value: '70%', label: 'Card scheme cost reduction' },
     { value: '20 pts', label: 'Margin uplift on a processor migration' },
+  ],
+  operatingPrinciples: [
+    {
+      title: 'Work on the load-bearing layer',
+      body: 'I am drawn to the systems and teams a company depends on: payments, platforms, data, regulatory entities, and the org design underneath them.',
+      proof: 'Pleo payments, platform engineering, data, AI infrastructure, regulated entities',
+    },
+    {
+      title: 'Treat constraints as information',
+      body: 'Physics trained me to work without a textbook; McKinsey taught me to read the room; operating taught me that the constraint is rarely only technical.',
+      proof: 'Atomic clocks, European banking, fragmented payment rails',
+    },
+    {
+      title: 'Run platform as a product',
+      body: 'Internal teams have real users, real alternatives, and real feedback. Adoption problems are often product problems with a different customer.',
+      proof: 'Developer experience, infrastructure, security, TechOps',
+    },
+    {
+      title: 'Make the organisation work without me',
+      body: "The point is not to own everything. It is to leave behind leaders, systems, and decisions that keep working after I've left the room.",
+      proof: 'Teams across payments, platform, data, and AI infrastructure',
+    },
   ],
   experience: [
     {

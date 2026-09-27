@@ -10,6 +10,10 @@ import { CSSVARS } from '../lib/visuals/palette.mjs';
 
 const s = STEFAN;
 
+const seed = 'ayPQMEDkTFIRt5hk3hkuqPKUEqQeCynS8uSiGKMuObOBNPMfIPJ5jqkFg95vYUHXCbEdpHB4sEY4MxVXuDj7OTPLAQCnhBD4AdJUpntRPWSGgQHfSGnFLmvq42Iyno8cHH5qXxi0awB4jA0LnqqEkTN6xp5zLxf7llj8blNE2wqfSFFymi8YEuMpqdgvumPyextPkNTImTELmU2HT0p56BFCDAuDL1Q0oPm99rTRoRYAfTB1idPosgDhVBmPBs4c40R7a4DoD33s2zfYczrj8vIqychdOVnikFpRUSF8LETt1VS8tCdSpf65K2FNKzNSS0qrTVm60fWxDmnuZz11xhrvzvCaeG4I1DNv4esI';
+const seedBands = seed.match(/.{1,24}/g) ?? [];
+const seedNeedles = ['PQ', 'hku', 'OB', 'qQ', '70', 'AI', 'Iyno', 'SFF', 'D33', 'LET', '11'];
+
 const allPosts = await getCollection('posts');
 const publishedPosts = allPosts
   .filter((p) => !p.data.draft)
@@ -24,7 +28,7 @@ const featuredMark =
         height: 104,
       })
     : undefined;
-const restPosts = publishedPosts.slice(1);
+const restPosts = publishedPosts.slice(1, 5);
 
 function formatDate(d: Date): string {
   return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
@@ -35,73 +39,113 @@ function formatDate(d: Date): string {
   <div class="home-grid" id="home-root">
     <RailClient client:load />
 
-    <main style="max-width: 720px;">
-      <p class="h-display" style="font-size: 32px; line-height: 1.18; margin: 0 0 22px;">
-        {s.headline}
-      </p>
-      <p style="margin: 0 0 18px; color: var(--ink-70); max-width: 620px;">
-        SVP Product &amp; Engineering at Pleo. Fifteen years in European fintech. Most of what I do is the work nobody else wants to own — the migrations, the cleanups, the org designs that decide whether a company scales or stalls.
-      </p>
-      <p style="margin: 0 0 28px; max-width: 620px; font-size: 13.5px; color: var(--ink-55);">
-        Open to what's next: executive product and engineering roles in fintechs and scale-ups facing the growth problems I know how to solve.
-      </p>
-
-      <div class="metric-strip" aria-label="Selected outcomes">
-        {s.metrics.map((m) => (
-          <div class="metric-cell">
-            <div class="metric-value">{m.value}</div>
-            <div class="metric-label">{m.label}</div>
+    <main class="principles-page">
+      <section id="field" class="hero-grid fade-section">
+        <div class="hero-copy">
+          <div class="kicker">Copenhagen · physics → payments → platform</div>
+          <h1 class="h-display hero-title">{s.headline}</h1>
+          <p class="hero-deck">
+            {s.longBio[0]}
+          </p>
+          <p class="hero-note">
+            The proof points matter, but they are not the starting point. The starting point is how Stefan works with constraints, taste, operating judgment, and the decisions that remain after the obvious plan runs out.
+          </p>
+          <div class="hero-links" aria-label="Primary links">
+            <a class="link" href="/about/">Read the longer about page</a>
+            <a class="link" href="/posts/">Browse writing</a>
+            <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-        ))}
-      </div>
+        </div>
 
-      <section id="work" class="fade-section" style="margin-top: 56px;">
-        <h2 class="section-head">The path here</h2>
-        <p style="margin: 0 0 18px;">
-          I joined Pleo in 2019 at around 100 people, looking to get hands-on after five years advising banks at McKinsey. My first job was migrating 20,000 customers to a new payment processor and unlocking a 20-point margin uplift. That turned into building the entire payments platform from scratch. We went from five European markets to fifteen in eleven months.
-        </p>
-        <p style="margin: 0 0 18px;">
-          As the platform matured, the scope grew. I took on data, developer experience, infrastructure, security, eventually leading 100+ people through a period where we tripled engineering throughput without adding headcount. What made it work was stripping friction out of the path to production and running platform the way you'd run a product.
-        </p>
-        <p style="margin: 0 0 18px;">
-          Today I lead ~70 people across platform engineering, data, AI infrastructure, and regulated entities. The recent win I'm proudest of: a 70% reduction in card scheme costs through direct negotiation in a duopoly market where you have almost no leverage.
-        </p>
-        <p style="margin: 0 0 24px;">
-          Before Pleo: McKinsey, advising Tier 1 European banks on payments and regulatory strategy. Before that: a PhD in physics at the University of Copenhagen, building atomic clocks beyond the quantum limit.
-        </p>
-        <a class="link" href="/experience/" style="font-size: 14px;">Full experience →</a>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="about" class="fade-section">
-        <h2 class="section-head">About</h2>
-        <p style="margin: 0 0 18px;">
-          {s.longBio[0]}
-        </p>
-        <p style="margin: 0;">{s.longBio[1]}</p>
-      </section>
-
-      <div class="rule"></div>
-
-      <section id="advisory" class="fade-section">
-        <h2 class="section-head">Where I'm strongest</h2>
-        {s.proposition.map((p, i) => (
-          <div style={`padding: 18px 0;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}>
-            <div class="h-display" style="font-size: 21px; margin-bottom: 6px;">{p.title}</div>
-            <div style="color: var(--ink-78);">{p.body}</div>
+        <aside class="seed-card" aria-label="Seed-derived visual system">
+          <div class="seed-topline">
+            <span class="lbl">Seed rhythm</span>
+            <span class="num">360 chars</span>
           </div>
-        ))}
+          <div class="seed-stream" aria-hidden="true">
+            {seedBands.slice(0, 9).map((band) => <span>{band}</span>)}
+          </div>
+          <div class="seed-legend">
+            {seedNeedles.map((needle) => <span>{needle}</span>)}
+          </div>
+          <p>
+            Dense alphanumeric noise becomes a page grammar: compressed code strips, sudden warm marks, alternating serif/mono textures, and evidence kept as a ledger rather than a billboard.
+          </p>
+        </aside>
       </section>
 
-      <div class="rule"></div>
+      <section id="principles" class="fade-section principle-stack">
+        <div class="section-rubric">
+          <span class="lbl">Operating philosophy</span>
+          <h2 class="h-display">Principles before positioning</h2>
+        </div>
+        <div class="principle-grid">
+          {s.operatingPrinciples.map((p, i) => (
+            <article class="principle-card">
+              <div class="card-index num">{String(i + 1).padStart(2, '0')}</div>
+              <h3 class="h-display">{p.title}</h3>
+              <p>{p.body}</p>
+              <div class="proof-line">{p.proof}</div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <section id="testimonials" class="fade-section">
-        <h2 class="section-head">Working with me</h2>
+      <section class="fade-section taste-panel" aria-labelledby="taste-heading">
         <div>
-          {s.testimonials.map((t, i) => (
-            <div class="testimonial">
-              <blockquote style={i === 0 ? 'font-size: 23px; line-height: 1.42; color: var(--ink);' : undefined}>"{t.quote}"</blockquote>
+          <span class="lbl">Taste</span>
+          <h2 id="taste-heading" class="h-display">The work should become calmer as it gets harder.</h2>
+        </div>
+        <div class="taste-copy">
+          <p>{s.longBio[1]}</p>
+          <p>
+            That taste shows up in the topics Stefan writes about: payment systems, platform teams, AI as an operating layer, decision-making, and leadership without heroics.
+          </p>
+        </div>
+      </section>
+
+      <section id="proof" class="fade-section evidence-ledger">
+        <div class="section-rubric">
+          <span class="lbl">Evidence ledger</span>
+          <h2 class="h-display">Proof, lower in the stack</h2>
+          <p>
+            The numbers still matter. They just support the story rather than carrying it.
+          </p>
+        </div>
+
+        <div class="ledger-grid" aria-label="Selected outcomes">
+          {s.metrics.map((m) => (
+            <div class="ledger-row">
+              <div class="metric-value">{m.value}</div>
+              <div class="metric-label">{m.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="timeline-ledger">
+          {s.experience.map((item) => (
+            <article>
+              <div class="num years">{item.years}</div>
+              <div>
+                <h3>{item.role}</h3>
+                <div class="org">{item.org}</div>
+                <p>{item.note}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <a class="link" href="/experience/">Full experience →</a>
+      </section>
+
+      <section id="work" class="fade-section testimonials-panel">
+        <div class="section-rubric">
+          <span class="lbl">Working with me</span>
+          <h2 class="h-display">What colleagues have noticed</h2>
+        </div>
+        <div class="testimonial-grid">
+          {s.testimonials.slice(0, 4).map((t, i) => (
+            <div class="testimonial tile">
+              <blockquote style={i === 0 ? 'font-size: 22px; line-height: 1.42; color: var(--ink);' : undefined}>"{t.quote}"</blockquote>
               <cite>{t.cite}</cite>
             </div>
           ))}
@@ -111,34 +155,28 @@ function formatDate(d: Date): string {
           href={`https://${s.contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          style="font-size: 14px;"
-        >11 recommendations on LinkedIn →</a>
+        >More recommendations on LinkedIn →</a>
       </section>
 
-      <div class="rule"></div>
-
-      <section id="writing" class="fade-section">
-        <h2 class="section-head">Writing</h2>
+      <section id="writing" class="fade-section writing-panel">
+        <div class="section-rubric">
+          <span class="lbl">Writing</span>
+          <h2 class="h-display">How the thinking shows its work</h2>
+        </div>
 
         {featured && (
           <a class="featured" href={`/posts/${featured.id}/`}>
-            <div style="width: 104px;">
-              <div class="lbl" style="color: var(--accent); margin-bottom: 10px;">Latest</div>
+            <div class="featured-visual">
+              <div class="lbl">Latest</div>
               {featuredMark && <div class="featured-mark" set:html={featuredMark} />}
             </div>
             <div>
-              <div class="h-display" style="font-size: 26px; line-height: 1.18; margin-bottom: 8px;">
-                {featured.data.title}
-              </div>
+              <div class="h-display featured-title">{featured.data.title}</div>
               {featured.data.description && (
-                <div style="color: var(--ink-70); font-size: 15px; margin-bottom: 10px;">
-                  {featured.data.description}
-                </div>
+                <div class="featured-desc">{featured.data.description}</div>
               )}
-              <div style="display: flex; gap: 14px; font-size: 11.5px;">
-                {featured.data.categories?.[0] && (
-                  <span class="lbl" style="color: var(--accent);">{featured.data.categories[0]}</span>
-                )}
+              <div class="post-meta">
+                {featured.data.categories?.[0] && <span class="lbl">{featured.data.categories[0]}</span>}
                 <span class="lbl">{formatDate(featured.data.date)}</span>
                 <span class="lbl">{readingTime(featured.body ?? '')}</span>
               </div>
@@ -146,30 +184,18 @@ function formatDate(d: Date): string {
           </a>
         )}
 
-        {restPosts.map((w, i) => (
-          <a
-            href={`/posts/${w.id}/`}
-            style={`display: block; padding: 20px 0; color: inherit;${i > 0 ? ' border-top: 1px solid var(--ink-10);' : ''}`}
-          >
-            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 4px;">
-              <div class="h-display" style="font-size: 21px;">{w.data.title}</div>
-              <div class="num" style="font-size: 12px; color: var(--ink-50); white-space: nowrap;">
-                {formatDate(w.data.date)}
+        <div class="post-list">
+          {restPosts.map((w) => (
+            <a href={`/posts/${w.id}/`}>
+              <div>
+                <div class="h-display">{w.data.title}</div>
+                {w.data.description && <p>{w.data.description}</p>}
               </div>
-            </div>
-            {w.data.description && (
-              <div style="color: var(--ink-65); font-size: 15px; margin-bottom: 6px;">
-                {w.data.description}
-              </div>
-            )}
-            <div style="display: flex; gap: 14px;">
-              {w.data.categories?.[0] && (
-                <span class="lbl" style="color: var(--accent);">{w.data.categories[0]}</span>
-              )}
-              <span class="lbl">{readingTime(w.body ?? '')}</span>
-            </div>
-          </a>
-        ))}
+              <span class="num">{formatDate(w.data.date)}</span>
+            </a>
+          ))}
+        </div>
+        <a class="link" href="/posts/">All writing →</a>
       </section>
 
       <footer class="site-footer">
@@ -189,19 +215,359 @@ function formatDate(d: Date): string {
 <style>
   .home-grid {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: var(--rail-width-open) 1fr;
-    column-gap: var(--column-gap-open);
+    grid-template-columns: var(--rail-width-open) minmax(0, 1fr);
+    column-gap: 56px;
     padding: var(--page-pt) var(--page-pr) var(--page-pb) var(--page-pl);
     transition: var(--rail-transition);
   }
 
   :global([data-rail='collapsed']) .home-grid {
-    grid-template-columns: var(--rail-width-collapsed) 1fr;
+    grid-template-columns: var(--rail-width-collapsed) minmax(0, 1fr);
     column-gap: var(--column-gap-collapsed);
+  }
+
+  .principles-page {
+    --grid-line: rgba(var(--accent-rgb), 0.2);
+    max-width: 860px;
+    min-width: 0;
+    position: relative;
+  }
+
+  .principles-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(90deg, transparent 0 88px, var(--grid-line) 89px, transparent 90px),
+      linear-gradient(180deg, transparent 0 88px, rgba(var(--ink-rgb), 0.05) 89px, transparent 90px);
+    background-size: 180px 180px;
+    mask-image: linear-gradient(90deg, transparent, black 20%, black 78%, transparent);
+    opacity: 0.55;
+    z-index: -1;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .kicker,
+  .proof-line {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 650;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: 0.92;
+    margin: 14px 0 24px;
+    max-width: 760px;
+  }
+
+  .hero-deck {
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.55;
+    margin: 0 0 18px;
+    color: var(--ink-78);
+    max-width: 700px;
+  }
+
+  .hero-note {
+    margin: 0 0 28px;
+    color: var(--ink-60);
+    max-width: 660px;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 24px;
+    font-size: 14px;
+  }
+
+  .seed-card,
+  .principle-card,
+  .taste-panel,
+  .ledger-row,
+  .tile {
+    border: 1px solid var(--ink-10);
+    background: linear-gradient(135deg, rgba(var(--ink-rgb), 0.035), rgba(var(--accent-rgb), 0.045));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+  }
+
+  .seed-card {
+    padding: 18px;
+    position: sticky;
+    top: 64px;
+    overflow: hidden;
+  }
+
+  .seed-card::after {
+    content: '';
+    position: absolute;
+    inset: auto -24px -24px auto;
+    width: 140px;
+    height: 140px;
+    border: 1px solid rgba(var(--accent-rgb), 0.35);
+    transform: rotate(17deg);
+  }
+
+  .seed-topline,
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  .seed-stream {
+    display: grid;
+    gap: 3px;
+    margin: 18px 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.1;
+    color: var(--ink-55);
+    word-break: break-all;
+  }
+
+  .seed-stream span:nth-child(2n) { color: var(--ink); }
+  .seed-stream span:nth-child(3n) { color: var(--accent); }
+
+  .seed-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .seed-legend span {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 11px;
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
+    color: var(--accent);
+    padding: 2px 6px;
+  }
+
+  .seed-card p {
+    margin: 0;
+    color: var(--ink-65);
+    font-size: 13.5px;
+  }
+
+  .principle-stack,
+  .evidence-ledger,
+  .testimonials-panel,
+  .writing-panel {
+    margin-top: 76px;
+  }
+
+  .section-rubric {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+
+  .section-rubric h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1;
+    margin: 0;
+  }
+
+  .section-rubric p {
+    grid-column: 2;
+    margin: -12px 0 0;
+    color: var(--ink-60);
+  }
+
+  .principle-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .principle-card {
+    min-height: 280px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .card-index {
+    color: var(--accent);
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+
+  .principle-card h3 {
+    font-size: 29px;
+    line-height: 1.05;
+    margin: 0 0 14px;
+  }
+
+  .principle-card p {
+    color: var(--ink-70);
+    margin: 0 0 20px;
+  }
+
+  .proof-line {
+    margin-top: auto;
+    color: var(--ink-45);
+    letter-spacing: 0.08em;
+    line-height: 1.45;
+  }
+
+  .taste-panel {
+    margin-top: 24px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .taste-panel h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.02;
+    margin: 8px 0 0;
+  }
+
+  .taste-copy p {
+    margin: 0 0 16px;
+    color: var(--ink-70);
+  }
+
+  .ledger-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .ledger-row {
+    padding: 18px 16px;
+  }
+
+  .timeline-ledger {
+    border-top: 1px solid var(--ink-15);
+    margin-bottom: 20px;
+  }
+
+  .timeline-ledger article {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 24px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--ink-10);
+  }
+
+  .timeline-ledger h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .timeline-ledger .org,
+  .timeline-ledger .years {
+    color: var(--accent);
+    font-size: 13px;
+  }
+
+  .timeline-ledger p {
+    margin: 8px 0 0;
+    color: var(--ink-65);
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .tile {
+    padding: 22px;
+    border-top: 1px solid var(--ink-10);
+  }
+
+  .featured {
+    margin-bottom: 18px;
+  }
+
+  .featured-visual {
+    width: 104px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .featured-title {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .featured-desc {
+    color: var(--ink-70);
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .post-list {
+    display: grid;
+    border-top: 1px solid var(--ink-10);
+    margin-bottom: 18px;
+  }
+
+  .post-list a {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--ink-10);
+  }
+
+  .post-list .h-display {
+    font-size: 21px;
+  }
+
+  .post-list p {
+    margin: 4px 0 0;
+    color: var(--ink-65);
+    font-size: 14.5px;
+  }
+
+  @media (max-width: 1023px) {
+    .home-grid {
+      column-gap: 36px;
+    }
+
+    .hero-grid,
+    .taste-panel {
+      grid-template-columns: 1fr;
+    }
+
+    .seed-card {
+      position: relative;
+      top: auto;
+    }
+
+    .ledger-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 719px) {
@@ -209,6 +575,28 @@ function formatDate(d: Date): string {
       display: flex;
       flex-direction: column;
       gap: 32px;
+    }
+
+    .principle-grid,
+    .testimonial-grid,
+    .ledger-grid,
+    .section-rubric {
+      grid-template-columns: 1fr;
+    }
+
+    .section-rubric p {
+      grid-column: auto;
+      margin-top: -8px;
+    }
+
+    .timeline-ledger article {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .featured,
+    .post-list a {
+      grid-template-columns: 1fr;
     }
   }
 </style>

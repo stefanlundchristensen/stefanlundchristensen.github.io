@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stefan website principles redesign review</title>
+  <style>
+    :root{--bg:#f5f3ee;--ink:#1a1a1a;--muted:rgba(26,26,26,.65);--faint:rgba(26,26,26,.1);--accent:#c2410c;--paper:rgba(255,255,255,.35)}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,-apple-system,sans-serif} main{max-width:1180px;margin:auto;padding:48px 28px 72px} h1,h2,h3{font-family:Georgia,serif;font-weight:400;letter-spacing:-.025em} h1{font-size:clamp(44px,7vw,88px);line-height:.92;margin:10px 0 20px;max-width:900px} h2{font-size:36px;line-height:1;margin:0 0 18px}.kicker,.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700}.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.7fr);gap:28px;align-items:start}.deck{font-size:20px;color:var(--muted);max-width:760px}.card{border:1px solid var(--faint);background:linear-gradient(135deg,rgba(26,26,26,.035),rgba(194,65,12,.05));padding:22px}.seed{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;word-break:break-all;color:rgba(26,26,26,.48);display:grid;gap:3px}.seed span:nth-child(2n){color:var(--ink)}.seed span:nth-child(3n){color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.section{margin-top:54px}.beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:16px}.before{opacity:.75}.pill{display:inline-block;border:1px solid rgba(194,65,12,.35);color:var(--accent);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;padding:3px 7px;margin:3px}.metric{font-family:Georgia,serif;font-size:34px;line-height:1}.small{color:var(--muted);font-size:14px}.callout{border-left:4px solid var(--accent);padding:14px 18px;background:rgba(194,65,12,.05)}@media(max-width:760px){.hero,.beforeafter,.twocol,.grid{grid-template-columns:1fr}main{padding:32px 18px}}</style>
+</head>
+<body>
+<main>
+  <div class="hero">
+    <section>
+      <div class="kicker">Review surface · branch fm/website-principles-redesign</div>
+      <h1>Principles before positioning</h1>
+      <p class="deck">A first-pass branch that makes Stefan's operating philosophy, judgment, and taste the homepage center of gravity. Career proof remains present, but appears as supporting evidence rather than the opening sales pitch.</p>
+    </section>
+    <aside class="card">
+      <div class="lbl">Seed rhythm translated</div>
+      <div class="seed" aria-label="seed sample">
+        <span>ayPQMEDkTFIRt5hk3hkuqPKU</span><span>EqQeCynS8uSiGKMuObOBNPMf</span><span>IPJ5jqkFg95vYUHXCbEdpHB4</span><span>sEY4MxVXuDj7OTPLAQCnhBD4</span><span>AdJUpntRPWSGgQHfSGnFLmv</span><span>q42Iyno8cHH5qXxi0awB4jA</span>
+      </div>
+      <p class="small">Dense code strips, sudden clay marks, alternating serif/mono textures, and a ledger for evidence.</p>
+    </aside>
+  </div>
+
+  <section class="section beforeafter">
+    <div class="card before"><div class="lbl">Before</div><h2>Executive proof first</h2><p>Hero copy led with platform, P&amp;L, market proof, and openness to the next role. Metrics sat directly under the headline.</p></div>
+    <div class="card"><div class="lbl">Now</div><h2>How Stefan thinks first</h2><p>Hero copy leads with load-bearing systems, constraints, judgment, and the through-line from physics to payments to platforms.</p></div>
+  </section>
+
+  <section class="section">
+    <div class="lbl">Homepage structure implemented</div>
+    <div class="grid">
+      <div class="card"><h3>01 Field notes</h3><p>Personal philosophy and seed-derived visual grammar.</p></div>
+      <div class="card"><h3>02 Principles</h3><p>Four supported operating principles from existing site content.</p></div>
+      <div class="card"><h3>03 Evidence ledger</h3><p>Metrics and career path moved lower as substantiation.</p></div>
+      <div class="card"><h3>04 Writing</h3><p>Writing framed as the place where the thinking shows its work.</p></div>
+    </div>
+  </section>
+
+  <section class="section twocol">
+    <div class="card"><div class="lbl">Principles added</div><p><span class="pill">load-bearing layer</span><span class="pill">constraints as information</span><span class="pill">platform as product</span><span class="pill">organisation without me</span></p></div>
+    <div class="card"><div class="lbl">Proof demoted, not removed</div><div class="grid" style="grid-template-columns:repeat(2,1fr)"><div><div class="metric">5→15</div><p class="small">markets</p></div><div><div class="metric">3×</div><p class="small">throughput</p></div><div><div class="metric">70%</div><p class="small">cost reduction</p></div><div><div class="metric">20 pts</div><p class="small">margin uplift</p></div></div></div>
+  </section>
+
+  <section class="section callout">
+    <h2>Open iteration questions</h2>
+    <ul>
+      <li>Should the experimental branch sentence remain visible on the homepage or live only in review notes?</li>
+      <li>Should the next pass go more radical: diagrams, marginalia, or a denser coded visual field?</li>
+      <li>Should metrics move even lower, inside experience rows only?</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

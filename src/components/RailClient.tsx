@@ -9,10 +9,10 @@ const initials = s.name
   .join('');
 
 const NAV_ITEMS = [
-  { id: 'work', n: '01', label: 'The path here' },
-  { id: 'about', n: '02', label: 'About' },
-  { id: 'advisory', n: '03', label: "Where I'm strongest" },
-  { id: 'testimonials', n: '04', label: 'Working with me' },
+  { id: 'field', n: '01', label: 'Field notes' },
+  { id: 'principles', n: '02', label: 'Principles' },
+  { id: 'proof', n: '03', label: 'Evidence ledger' },
+  { id: 'work', n: '04', label: 'Working with me' },
   { id: 'writing', n: '05', label: 'Writing' },
 ];
 
