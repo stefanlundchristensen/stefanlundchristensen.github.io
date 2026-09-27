@@ -12,8 +12,8 @@ Personal professional website for Stefan Christensen, built with Astro and deplo
 # Local development server
 npm run dev
 
-# Build for production (output to dist/)
-npm run build
+# Production validation gate: audit, Astro check, OG freshness, build
+npm run validate
 
 # Preview production build locally
 npm run preview
@@ -56,7 +56,7 @@ Defined in `src/styles/tokens.css` as CSS custom properties:
 ### Deployment
 GitHub Actions workflow at `.github/workflows/astro.yaml`:
 1. Triggers on push to `main` or manual dispatch
-2. `npm ci` → `npx astro build`
+2. `npm ci` → `npm run validate`
 3. Deploys `dist/` to GitHub Pages
 
 Custom domain: `stefanchristensen.me` (configured via `public/CNAME`)
