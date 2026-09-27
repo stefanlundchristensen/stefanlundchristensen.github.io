@@ -28,8 +28,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Build
-        run: npx astro build
+      - name: Validate and build
+        run: npm run validate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

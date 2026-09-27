@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Resvg } from '@resvg/resvg-js';
@@ -10,6 +10,7 @@ import { LIGHT } from '../src/lib/visuals/palette.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
+const checkMode = process.argv.includes('--check');
 const cacheDir = path.join(__dirname, '.fonts');
 mkdirSync(cacheDir, { recursive: true });
 
@@ -39,6 +40,8 @@ const fontOptions = {
   loadSystemFonts: false,
 };
 
+const mismatches = [];
+
 function renderPng(svg, outPath) {
   const resvg = new Resvg(svg, {
     font: fontOptions,
@@ -46,17 +49,26 @@ function renderPng(svg, outPath) {
     fitTo: { mode: 'width', value: 1200 },
   });
   const pngBuffer = resvg.render().asPng();
-  writeFileSync(outPath, pngBuffer);
-  console.log(`Generated: ${path.relative(root, outPath)} (${pngBuffer.length} bytes)`);
-}
+  const relativePath = path.relative(root, outPath);
 
-function escapeXml(s) {
-  return s
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&apos;');
+  if (checkMode) {
+    if (!existsSync(outPath)) {
+      mismatches.push(`missing ${relativePath}`);
+      return;
+    }
+
+    const current = readFileSync(outPath);
+    if (!current.equals(pngBuffer)) {
+      mismatches.push(`stale ${relativePath}`);
+      return;
+    }
+
+    console.log(`Fresh: ${relativePath}`);
+    return;
+  }
+
+  writeFileSync(outPath, pngBuffer);
+  console.log(`Generated: ${relativePath} (${pngBuffer.length} bytes)`);
 }
 
 // ---------------------------------------------------------------------------
@@ -75,7 +87,7 @@ const defaultSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height=
 renderPng(defaultSvg, path.join(root, 'public/og-default.png'));
 
 // ---------------------------------------------------------------------------
-// Per-post cards (published posts only)
+// Per-post cards
 // ---------------------------------------------------------------------------
 
 // The card layout and the mark both come from src/lib/visuals, so the PNGs
@@ -111,9 +123,22 @@ for (const file of readdirSync(postsDir).filter((f) => f.endsWith('.md'))) {
     console.warn(`Skipped (no title parsed): ${file}`);
     continue;
   }
-  // Drafts get cards too. The post page emits og:image for whatever it builds,
-  // so skipping drafts meant any post going live without a re-run pointed at a
-  // 404 with no fallback.
+  if (checkMode && meta.draft) continue;
+
+  // Generation mode writes draft cards too. The post page emits og:image for
+  // whatever it builds, so skipping drafts meant any post going live without a
+  // re-run pointed at a 404 with no fallback.
   const slug = file.replace(/\.md$/, '');
   renderPng(postSvg(meta), path.join(ogDir, `${slug}.png`));
+}
+
+if (checkMode) {
+  if (mismatches.length > 0) {
+    console.error('OG assets are missing or stale:');
+    for (const mismatch of mismatches) console.error(`- ${mismatch}`);
+    console.error('Run `npm run og` and commit the refreshed assets.');
+    process.exit(1);
+  }
+
+  console.log('OG assets are fresh for the site default card and published posts.');
 }
