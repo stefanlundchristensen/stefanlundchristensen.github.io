@@ -26,7 +26,7 @@ Astro with React islands for interactive components. Static output deployed to G
 
 ### Content Structure
 - **Blog posts**: `src/content/posts/*.md` — standard markdown with frontmatter (title, date, draft, tags, categories, description)
-- **Site data**: `src/data/stefan.ts` — bio, experience, contact, propositions
+- **Site data**: `src/data/stefan.ts` — bio, experience, contact, operating principles, propositions
 - **Static pages**: `src/pages/about.astro`, `experience.astro`, `now.astro` — HTML content in Astro components
 
 ### Key Directories

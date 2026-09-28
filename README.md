@@ -1,6 +1,6 @@
 # stefanchristensen.me
 
-Personal website built with [Astro](https://astro.build). Editorial design with Fraunces + Inter typography, collapsible identity rail, and markdown-based blog posts.
+Personal website built with [Astro](https://astro.build). Current branch explores a point-of-view homepage with Fraunces + Inter typography, a collapsible identity rail, seed-derived visual grammar, and markdown-based blog posts.
 
 ## Requirements
 
