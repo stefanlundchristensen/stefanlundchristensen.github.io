@@ -11,8 +11,12 @@ import { CSSVARS } from '../lib/visuals/palette.mjs';
 const s = STEFAN;
 
 const seed = 'ayPQMEDkTFIRt5hk3hkuqPKUEqQeCynS8uSiGKMuObOBNPMfIPJ5jqkFg95vYUHXCbEdpHB4sEY4MxVXuDj7OTPLAQCnhBD4AdJUpntRPWSGgQHfSGnFLmvq42Iyno8cHH5qXxi0awB4jA0LnqqEkTN6xp5zLxf7llj8blNE2wqfSFFymi8YEuMpqdgvumPyextPkNTImTELmU2HT0p56BFCDAuDL1Q0oPm99rTRoRYAfTB1idPosgDhVBmPBs4c40R7a4DoD33s2zfYczrj8vIqychdOVnikFpRUSF8LETt1VS8tCdSpf65K2FNKzNSS0qrTVm60fWxDmnuZz11xhrvzvCaeG4I1DNv4esI';
-const seedBands = seed.match(/.{1,24}/g) ?? [];
 const seedNeedles = ['PQ', 'hku', 'OB', 'qQ', 'Iyno', 'SFF', 'D33', 'LET', '11'];
+const seedCells = [...seed].slice(0, 216).map((ch, i) => ({
+  ch,
+  kind: /\d/.test(ch) ? 'digit' : ch === ch.toUpperCase() ? 'upper' : 'lower',
+  hot: seedNeedles.some((needle) => seed.slice(i, i + needle.length) === needle),
+}));
 
 const allPosts = await getCollection('posts');
 const publishedPosts = allPosts
@@ -39,50 +43,54 @@ function formatDate(d: Date): string {
   <div class="home-grid" id="home-root">
     <RailClient client:load />
 
-    <main class="principles-page">
-      <section id="field" class="hero-grid fade-section">
-        <div class="hero-copy">
-          <div class="kicker">Copenhagen · physics → payments → platform</div>
+    <main class="pov-page">
+      <section id="field" class="field-board fade-section">
+        <div class="field-copy">
+          <div class="kicker">Point-of-view index · authored by Stefan Christensen</div>
           <h1 class="h-display hero-title">{s.headline}</h1>
           <p class="hero-deck">
-            {s.longBio[0]}
+            A more neutral surface for the recurring arguments in the work: platform is product, constraints are signal, decisions beat theatre, and useful organisations become calmer as the systems get harder.
           </p>
-          <p class="hero-note">
-            The proof points matter, but they are not the starting point. The starting point is how Stefan works with constraints, taste, operating judgment, and the decisions that remain after the obvious plan runs out.
-          </p>
-          <div class="hero-links" aria-label="Primary links">
-            <a class="link" href="/about/">Read the longer about page</a>
-            <a class="link" href="/posts/">Browse writing</a>
-            <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <div class="byline-panel" aria-label="Author context">
+            <span>{s.role} at Pleo</span>
+            <span>Physics → banking → European fintech</span>
+            <span>{s.contact.location}</span>
           </div>
         </div>
 
-        <aside class="seed-card" aria-label="Seed-derived visual system">
-          <div class="seed-topline">
-            <span class="lbl">Seed rhythm</span>
+        <aside class="seed-system" aria-label="Seed-derived redesign system">
+          <div class="seed-head">
+            <span class="lbl">Seed algorithm</span>
             <span class="num">360 chars</span>
           </div>
-          <div class="seed-stream" aria-hidden="true">
-            {seedBands.slice(0, 9).map((band) => <span>{band}</span>)}
+          <div class="seed-map" aria-hidden="true">
+            {seedCells.map((cell) => (
+              <span class={`seed-cell seed-cell--${cell.kind}${cell.hot ? ' seed-cell--hot' : ''}`}>{cell.ch}</span>
+            ))}
           </div>
-          <div class="seed-legend">
+          <div class="seed-key">
+            <span><b></b> lowercase = quiet tissue</span>
+            <span><b></b> uppercase = structural stress</span>
+            <span><b></b> digit = interruption</span>
+          </div>
+          <div class="seed-needles">
             {seedNeedles.map((needle) => <span>{needle}</span>)}
           </div>
-          <p>
-            Dense alphanumeric noise becomes a page grammar: compressed code strips, sudden warm marks, alternating serif/mono textures, and evidence kept as a ledger rather than a billboard.
-          </p>
         </aside>
       </section>
 
-      <section id="principles" class="fade-section principle-stack">
+      <section id="principles" class="fade-section theses-section">
         <div class="section-rubric">
-          <span class="lbl">Operating philosophy</span>
-          <h2 class="h-display">Principles before positioning</h2>
+          <span class="lbl">Working theses</span>
+          <h2 class="h-display">Arguments, not positioning</h2>
+          <p>
+            The page is organised as a set of points of view. Stefan is present as the author and evidence source, not the product being sold.
+          </p>
         </div>
-        <div class="principle-grid">
+        <div class="thesis-grid">
           {s.operatingPrinciples.map((p, i) => (
-            <article class="principle-card">
-              <div class="card-index num">{String(i + 1).padStart(2, '0')}</div>
+            <article class="thesis-card">
+              <div class="thesis-index num">{String(i + 1).padStart(2, '0')}</div>
               <h3 class="h-display">{p.title}</h3>
               <p>{p.body}</p>
               <div class="proof-line">{p.proof}</div>
@@ -91,25 +99,36 @@ function formatDate(d: Date): string {
         </div>
       </section>
 
-      <section class="fade-section taste-panel" aria-labelledby="taste-heading">
+      <section class="fade-section lens-strip" aria-labelledby="lens-heading">
         <div>
-          <span class="lbl">Taste</span>
-          <h2 id="taste-heading" class="h-display">The work should become calmer as it gets harder.</h2>
+          <span class="lbl">Lenses</span>
+          <h2 id="lens-heading" class="h-display">Three ways of reading a messy system</h2>
         </div>
-        <div class="taste-copy">
-          <p>{s.longBio[1]}</p>
-          <p>
-            That taste shows up in the topics Stefan writes about: payment systems, platform teams, AI as an operating layer, decision-making, and leadership without heroics.
-          </p>
+        <div class="lens-grid">
+          <article>
+            <span class="num">01</span>
+            <h3>Physics</h3>
+            <p>When there is no textbook, isolate the constraint and build the experiment.</p>
+          </article>
+          <article>
+            <span class="num">02</span>
+            <h3>Boardrooms and regulators</h3>
+            <p>The right answer has to survive incentives, governance, and the room it is decided in.</p>
+          </article>
+          <article>
+            <span class="num">03</span>
+            <h3>Operating</h3>
+            <p>The clean technical answer and the useful business answer often pull in different directions.</p>
+          </article>
         </div>
       </section>
 
       <section id="proof" class="fade-section evidence-ledger">
-        <div class="section-rubric">
-          <span class="lbl">Evidence ledger</span>
-          <h2 class="h-display">Proof, lower in the stack</h2>
+        <div class="section-rubric compact">
+          <span class="lbl">Evidence, if needed</span>
+          <h2 class="h-display">Outcomes as footnotes</h2>
           <p>
-            The numbers still matter. They just support the story rather than carrying it.
+            Metrics are kept as provenance for the theses above, not as the opening claim.
           </p>
         </div>
 
@@ -137,31 +156,28 @@ function formatDate(d: Date): string {
         <a class="link" href="/experience/">Full experience →</a>
       </section>
 
-      <section id="work" class="fade-section testimonials-panel">
-        <div class="section-rubric">
-          <span class="lbl">Working with me</span>
-          <h2 class="h-display">What colleagues have noticed</h2>
+      <section id="work" class="fade-section working-notes">
+        <div class="section-rubric compact">
+          <span class="lbl">Operating style</span>
+          <h2 class="h-display">Signals from people who shared the work</h2>
         </div>
-        <div class="testimonial-grid">
-          {s.testimonials.slice(0, 4).map((t, i) => (
-            <div class="testimonial tile">
-              <blockquote style={i === 0 ? 'font-size: 22px; line-height: 1.42; color: var(--ink);' : undefined}>"{t.quote}"</blockquote>
+        <div class="note-grid">
+          {s.testimonials.slice(0, 3).map((t) => (
+            <div class="testimonial note-tile">
+              <blockquote>"{t.quote}"</blockquote>
               <cite>{t.cite}</cite>
             </div>
           ))}
         </div>
-        <a
-          class="link"
-          href={`https://${s.contact.linkedin}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >More recommendations on LinkedIn →</a>
       </section>
 
       <section id="writing" class="fade-section writing-panel">
-        <div class="section-rubric">
-          <span class="lbl">Writing</span>
-          <h2 class="h-display">How the thinking shows its work</h2>
+        <div class="section-rubric compact">
+          <span class="lbl">Writing archive</span>
+          <h2 class="h-display">The longer-form version</h2>
+          <p>
+            Essays and operational case studies are the less compressed form of the same point-of-view system.
+          </p>
         </div>
 
         {featured && (
@@ -172,9 +188,7 @@ function formatDate(d: Date): string {
             </div>
             <div>
               <div class="h-display featured-title">{featured.data.title}</div>
-              {featured.data.description && (
-                <div class="featured-desc">{featured.data.description}</div>
-              )}
+              {featured.data.description && <div class="featured-desc">{featured.data.description}</div>}
               <div class="post-meta">
                 {featured.data.categories?.[0] && <span class="lbl">{featured.data.categories[0]}</span>}
                 <span class="lbl">{formatDate(featured.data.date)}</span>
@@ -215,7 +229,7 @@ function formatDate(d: Date): string {
 <style>
   .home-grid {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1320px;
     margin: 0 auto;
     min-height: 100vh;
     display: grid;
@@ -230,32 +244,32 @@ function formatDate(d: Date): string {
     column-gap: var(--column-gap-collapsed);
   }
 
-  .principles-page {
-    --grid-line: rgba(var(--accent-rgb), 0.2);
-    max-width: 860px;
+  .pov-page {
+    --grid-line: rgba(var(--accent-rgb), 0.18);
+    max-width: 940px;
     min-width: 0;
     position: relative;
   }
 
-  .principles-page::before {
+  .pov-page::before {
     content: '';
     position: fixed;
     inset: 0;
     pointer-events: none;
     background:
-      linear-gradient(90deg, transparent 0 88px, var(--grid-line) 89px, transparent 90px),
-      linear-gradient(180deg, transparent 0 88px, rgba(var(--ink-rgb), 0.05) 89px, transparent 90px);
-    background-size: 180px 180px;
-    mask-image: linear-gradient(90deg, transparent, black 20%, black 78%, transparent);
-    opacity: 0.55;
+      linear-gradient(90deg, transparent 0 71px, var(--grid-line) 72px, transparent 73px),
+      linear-gradient(180deg, transparent 0 71px, rgba(var(--ink-rgb), 0.05) 72px, transparent 73px);
+    background-size: 144px 144px;
+    mask-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent);
+    opacity: 0.7;
     z-index: -1;
   }
 
-  .hero-grid {
+  .field-board {
     display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
-    gap: 32px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    gap: 34px;
+    align-items: stretch;
   }
 
   .kicker,
@@ -269,61 +283,56 @@ function formatDate(d: Date): string {
   }
 
   .hero-title {
-    font-size: clamp(48px, 7vw, 86px);
-    line-height: 0.92;
-    margin: 14px 0 24px;
-    max-width: 760px;
+    font-size: clamp(54px, 7.8vw, 104px);
+    line-height: 0.88;
+    margin: 16px 0 24px;
+    max-width: 820px;
   }
 
   .hero-deck {
-    font-size: clamp(18px, 2vw, 22px);
-    line-height: 1.55;
-    margin: 0 0 18px;
-    color: var(--ink-78);
-    max-width: 700px;
-  }
-
-  .hero-note {
+    font-size: clamp(19px, 2.2vw, 25px);
+    line-height: 1.45;
     margin: 0 0 28px;
+    color: var(--ink-78);
+    max-width: 760px;
+  }
+
+  .byline-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--ink-15);
+    border-bottom: 1px solid var(--ink-15);
     color: var(--ink-60);
-    max-width: 660px;
+    font-size: 13px;
   }
 
-  .hero-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px 24px;
-    font-size: 14px;
+  .byline-panel span {
+    padding: 12px 14px 12px 0;
+    border-right: 1px solid var(--ink-10);
   }
 
-  .seed-card,
-  .principle-card,
-  .taste-panel,
+  .byline-panel span + span { padding-left: 14px; }
+  .byline-panel span:last-child { border-right: 0; }
+
+  .seed-system,
+  .thesis-card,
+  .lens-strip,
   .ledger-row,
-  .tile {
+  .note-tile {
     border: 1px solid var(--ink-10);
     background: linear-gradient(135deg, rgba(var(--ink-rgb), 0.035), rgba(var(--accent-rgb), 0.045));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
   }
 
-  .seed-card {
-    padding: 18px;
-    position: sticky;
-    top: 64px;
+  .seed-system {
+    padding: 16px;
     overflow: hidden;
+    display: grid;
+    gap: 14px;
+    align-content: start;
   }
 
-  .seed-card::after {
-    content: '';
-    position: absolute;
-    inset: auto -24px -24px auto;
-    width: 140px;
-    height: 140px;
-    border: 1px solid rgba(var(--accent-rgb), 0.35);
-    transform: rotate(17deg);
-  }
-
-  .seed-topline,
+  .seed-head,
   .post-meta {
     display: flex;
     justify-content: space-between;
@@ -331,28 +340,69 @@ function formatDate(d: Date): string {
     align-items: baseline;
   }
 
-  .seed-stream {
+  .seed-map {
     display: grid;
+    grid-template-columns: repeat(18, minmax(0, 1fr));
     gap: 3px;
-    margin: 18px 0;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 12px;
-    line-height: 1.1;
-    color: var(--ink-55);
-    word-break: break-all;
   }
 
-  .seed-stream span:nth-child(2n) { color: var(--ink); }
-  .seed-stream span:nth-child(3n) { color: var(--accent); }
+  .seed-cell {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 8px;
+    color: transparent;
+    background: rgba(var(--ink-rgb), 0.11);
+    border-radius: 1px;
+  }
 
-  .seed-legend {
+  .seed-cell--upper {
+    background: rgba(var(--ink-rgb), 0.42);
+    transform: scaleY(1.55);
+    transform-origin: center;
+  }
+
+  .seed-cell--digit {
+    background: rgba(var(--accent-rgb), 0.75);
+    border-radius: 50%;
+  }
+
+  .seed-cell--hot {
+    outline: 1px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  .seed-key {
+    display: grid;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--ink-60);
+  }
+
+  .seed-key span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .seed-key b {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: rgba(var(--ink-rgb), 0.11);
+  }
+
+  .seed-key span:nth-child(2) b { background: rgba(var(--ink-rgb), 0.42); }
+  .seed-key span:nth-child(3) b { background: rgba(var(--accent-rgb), 0.75); border-radius: 50%; }
+
+  .seed-needles {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-bottom: 16px;
   }
 
-  .seed-legend span {
+  .seed-needles span {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 11px;
     border: 1px solid rgba(var(--accent-rgb), 0.4);
@@ -360,66 +410,63 @@ function formatDate(d: Date): string {
     padding: 2px 6px;
   }
 
-  .seed-card p {
-    margin: 0;
-    color: var(--ink-65);
-    font-size: 13.5px;
-  }
-
-  .principle-stack,
+  .theses-section,
   .evidence-ledger,
-  .testimonials-panel,
+  .working-notes,
   .writing-panel {
-    margin-top: 76px;
+    margin-top: 78px;
   }
 
   .section-rubric {
     display: grid;
-    grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+    grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr);
     gap: 24px;
     align-items: baseline;
     margin-bottom: 24px;
   }
 
   .section-rubric h2 {
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 0.95;
     margin: 0;
   }
 
   .section-rubric p {
     grid-column: 2;
-    margin: -12px 0 0;
+    margin: -10px 0 0;
     color: var(--ink-60);
   }
 
-  .principle-grid {
+  .section-rubric.compact h2 {
+    font-size: clamp(30px, 4vw, 46px);
+  }
+
+  .thesis-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
   }
 
-  .principle-card {
-    min-height: 280px;
-    padding: 22px;
+  .thesis-card {
+    min-height: 300px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
-  .card-index {
+  .thesis-index {
     color: var(--accent);
     font-size: 13px;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
   }
 
-  .principle-card h3 {
-    font-size: 29px;
-    line-height: 1.05;
+  .thesis-card h3 {
+    font-size: 31px;
+    line-height: 1.02;
     margin: 0 0 14px;
   }
 
-  .principle-card p {
+  .thesis-card p {
     color: var(--ink-70);
     margin: 0 0 20px;
   }
@@ -431,24 +478,33 @@ function formatDate(d: Date): string {
     line-height: 1.45;
   }
 
-  .taste-panel {
-    margin-top: 24px;
+  .lens-strip {
+    margin-top: 18px;
     padding: 28px;
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr);
     gap: 28px;
   }
 
-  .taste-panel h2 {
-    font-size: clamp(28px, 4vw, 44px);
-    line-height: 1.02;
+  .lens-strip h2 {
+    font-size: clamp(30px, 4.4vw, 50px);
+    line-height: 0.98;
     margin: 8px 0 0;
   }
 
-  .taste-copy p {
-    margin: 0 0 16px;
-    color: var(--ink-70);
+  .lens-grid {
+    display: grid;
+    gap: 14px;
   }
+
+  .lens-grid article {
+    border-top: 1px solid var(--ink-10);
+    padding-top: 14px;
+  }
+
+  .lens-grid article:first-child { border-top: 0; padding-top: 0; }
+  .lens-grid h3 { font-family: var(--font-display); font-weight: 400; font-size: 22px; margin: 4px 0 4px; }
+  .lens-grid p { margin: 0; color: var(--ink-65); }
 
   .ledger-grid {
     display: grid;
@@ -457,9 +513,7 @@ function formatDate(d: Date): string {
     margin-bottom: 32px;
   }
 
-  .ledger-row {
-    padding: 18px 16px;
-  }
+  .ledger-row { padding: 18px 16px; }
 
   .timeline-ledger {
     border-top: 1px solid var(--ink-15);
@@ -492,21 +546,18 @@ function formatDate(d: Date): string {
     color: var(--ink-65);
   }
 
-  .testimonial-grid {
+  .note-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
-    margin-bottom: 18px;
   }
 
-  .tile {
+  .note-tile {
     padding: 22px;
     border-top: 1px solid var(--ink-10);
   }
 
-  .featured {
-    margin-bottom: 18px;
-  }
+  .featured { margin-bottom: 18px; }
 
   .featured-visual {
     width: 104px;
@@ -540,9 +591,7 @@ function formatDate(d: Date): string {
     border-bottom: 1px solid var(--ink-10);
   }
 
-  .post-list .h-display {
-    font-size: 21px;
-  }
+  .post-list .h-display { font-size: 21px; }
 
   .post-list p {
     margin: 4px 0 0;
@@ -551,23 +600,11 @@ function formatDate(d: Date): string {
   }
 
   @media (max-width: 1023px) {
-    .home-grid {
-      column-gap: 36px;
-    }
-
-    .hero-grid,
-    .taste-panel {
-      grid-template-columns: 1fr;
-    }
-
-    .seed-card {
-      position: relative;
-      top: auto;
-    }
-
-    .ledger-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    .home-grid { column-gap: 36px; }
+    .field-board,
+    .lens-strip { grid-template-columns: 1fr; }
+    .ledger-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .note-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 719px) {
@@ -577,12 +614,21 @@ function formatDate(d: Date): string {
       gap: 32px;
     }
 
-    .principle-grid,
-    .testimonial-grid,
+    .byline-panel,
+    .thesis-grid,
     .ledger-grid,
     .section-rubric {
       grid-template-columns: 1fr;
     }
+
+    .byline-panel span,
+    .byline-panel span + span {
+      padding: 10px 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--ink-10);
+    }
+
+    .byline-panel span:last-child { border-bottom: 0; }
 
     .section-rubric p {
       grid-column: auto;

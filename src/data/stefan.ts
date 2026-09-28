@@ -1,9 +1,9 @@
 export const STEFAN = {
   name: 'Stefan Christensen',
   role: 'SVP Product & Engineering',
-  subtitle: 'Physics, payments, platforms, and the organisation underneath.',
+  subtitle: 'Notes on payments, platforms, organisations, and constraints.',
   city: 'Copenhagen',
-  headline: 'I build load-bearing systems, then try to make myself unnecessary.',
+  headline: 'A notebook for load-bearing systems and the decisions underneath.',
   tagline:
     'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years across physics, European fintech, payment rails, platform scale, and org design. Based in Copenhagen.',
   longBio: [
@@ -25,23 +25,23 @@ export const STEFAN = {
   ],
   operatingPrinciples: [
     {
-      title: 'Work on the load-bearing layer',
-      body: 'I am drawn to the systems and teams a company depends on: payments, platforms, data, regulatory entities, and the org design underneath them.',
+      title: 'The load-bearing layer is the product',
+      body: 'Payment rails, developer platforms, data systems, regulatory entities, and org design decide what the customer experience can become.',
       proof: 'Pleo payments, platform engineering, data, AI infrastructure, regulated entities',
     },
     {
-      title: 'Treat constraints as information',
-      body: 'Physics trained me to work without a textbook; McKinsey taught me to read the room; operating taught me that the constraint is rarely only technical.',
+      title: 'Constraints are design material',
+      body: 'A regulator, a legacy rail, a boardroom, or a physical limit is not just a blocker. It is information about the shape a good system can take.',
       proof: 'Atomic clocks, European banking, fragmented payment rails',
     },
     {
-      title: 'Run platform as a product',
-      body: 'Internal teams have real users, real alternatives, and real feedback. Adoption problems are often product problems with a different customer.',
+      title: 'Internal platforms have customers',
+      body: 'Developer experience, infrastructure, security, and TechOps work best when treated as products with users, feedback, adoption, and alternatives.',
       proof: 'Developer experience, infrastructure, security, TechOps',
     },
     {
-      title: 'Make the organisation work without me',
-      body: "The point is not to own everything. It is to leave behind leaders, systems, and decisions that keep working after I've left the room.",
+      title: 'The system should survive the author',
+      body: 'The useful end state is not dependency on one leader. It is leaders, systems, and decisions that keep working after the room changes.',
       proof: 'Teams across payments, platform, data, and AI infrastructure',
     },
   ],

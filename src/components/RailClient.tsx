@@ -9,11 +9,11 @@ const initials = s.name
   .join('');
 
 const NAV_ITEMS = [
-  { id: 'field', n: '01', label: 'Field notes' },
-  { id: 'principles', n: '02', label: 'Principles' },
-  { id: 'proof', n: '03', label: 'Evidence ledger' },
-  { id: 'work', n: '04', label: 'Working with me' },
-  { id: 'writing', n: '05', label: 'Writing' },
+  { id: 'field', n: '01', label: 'POV index' },
+  { id: 'principles', n: '02', label: 'Working theses' },
+  { id: 'proof', n: '03', label: 'Evidence' },
+  { id: 'work', n: '04', label: 'Operating style' },
+  { id: 'writing', n: '05', label: 'Writing archive' },
 ];
 
 const SECTION_IDS = NAV_ITEMS.map((it) => it.id);

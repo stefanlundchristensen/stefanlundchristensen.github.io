@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The current branch explores a principles-first homepage: a sticky collapsible identity rail, a seed-inspired visual grammar, and a serif reading column that puts Stefan's operating philosophy before job-market proof points. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
+Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The current branch explores a neutral point-of-view homepage: a sticky collapsible identity rail, a seed-derived visual grammar, and a serif reading column organised around working theses before biographical proof points. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
 
 ## Development Commands
 
