@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getCollection } from 'astro:content';
+import { colleagueQuotes } from '../data/workingWithMe';
 import { readingTime } from '../lib/readingTime';
 const posts=(await getCollection('posts')).filter(p=>!p.data.draft);
 const picks=['unglamorous-core-of-payments','approximations-underrated-in-business','physicist-path-to-fintech-leadership','org-design-no-clean-answer'];
@@ -22,6 +23,10 @@ const tracks=picks.flatMap((id,i)=>{
       <section id="panel-a" role="tabpanel" aria-labelledby="tab-a" tabindex="0" class="side-panel">
         <div class="side-opening"><div class="opening-copy"><h2>I like knowing<br/><em>how things work.</em></h2><p>Especially when they don’t. A payment comes back short. A framework doesn’t fit. There’s usually something worth understanding if I keep pulling at the thread.</p></div></div>
         <div class="work-layout"><section class="track-list" aria-labelledby="track-heading"><h3 class="micro" id="track-heading">Selected writing</h3>{tracks.map((post,i)=><a class:list={["essay-track",{"lead-track":i===0}]} href={`/posts/${post.id}/`}><span class="track-no">0{i+1}</span><div>{i===0 && <span class="track-kicker">A place to begin · {post.duration}</span>}<h4>{post.label}</h4><p>{i===0 ? post.data.description : post.note}</p>{i===0 && <span class="read-essay">Read the essay →</span>}</div><span class="track-arrow" aria-hidden="true">↗</span></a>)}<a class="all-writing" href="/posts/">All writing <span aria-hidden="true">↗</span></a></section><aside class="liner"><p class="micro">A note on the work</p><blockquote>“In payments, someone else’s money gives that curiosity an obligation.”</blockquote><a href="/posts/unglamorous-core-of-payments/">The unglamorous core of payments ↗</a><div class="career-note"><p>Now: Pleo.<br/>Before that: McKinsey.<br/>Before that: atomic clocks.</p><a href="/experience/">The work along the way ↗</a></div></aside></div>
+        <section class="working-preview" aria-labelledby="working-title">
+          <div><p class="micro">Working together</p><h3 id="working-title">Working with me</h3><p>How to bring me an idea, give me feedback, and make sense of my first reaction.</p><a href="/working-with-me/">Read the practical guide & colleague reflections →</a></div>
+          <figure><blockquote>“{colleagueQuotes[3].quote}”</blockquote><figcaption>{colleagueQuotes[3].role}</figcaption></figure>
+        </section>
         <button class="other-side" data-turn="b"><span class="other-side-label">On Side B</span><span>The records that stayed with me.</span><span aria-hidden="true">→</span></button>
       </section>
       <section id="panel-b" role="tabpanel" aria-labelledby="tab-b" tabindex="0" class="side-panel" hidden>
@@ -84,4 +89,6 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 @media(max-width:360px){.side-tabs button{display:block;font-size:13px;padding:16px 10px}.side-letter{margin-bottom:10px}.side-label small{font-size:11px}.lead-track h4{font-size:27px}}
 @media(prefers-reduced-motion:reduce){.side-panel:not([hidden]){animation:none}.track-arrow,.other-side>span:last-child{transition:none}}
 @media print{#panel-a,#panel-b{display:block!important}.side-tabs,.other-side{display:none}}
+.working-preview{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;padding-top:32px;border-top:1px solid var(--ink-20)}.working-preview h3{font:400 28px/1.25 var(--font-body);letter-spacing:-.035em;margin:0 0 16px}.working-preview p:not(.micro){font-size:14px;line-height:1.8;max-width:370px;color:var(--ink-65)}.working-preview a{display:inline-block;font-size:13px;line-height:1.8;color:var(--accent);margin-top:10px}.working-preview figure{margin:0;padding-left:28px;border-left:1px solid var(--ink-15)}.working-preview blockquote{margin:0;font-size:19px;line-height:1.65;letter-spacing:-.02em}.working-preview figcaption{margin-top:18px;font-size:12px;color:var(--ink-65)}
+@media(max-width:580px){.working-preview{grid-template-columns:1fr;gap:28px;margin-top:32px}.working-preview figure{border-left:0;padding-left:0}.working-preview blockquote{font-size:18px}}
 </style>

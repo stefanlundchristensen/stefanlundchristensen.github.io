@@ -25,6 +25,7 @@ export async function GET(context: APIContext) {
     '## Pages',
     '',
     `- [About](${siteUrl}/about/): background, beliefs, and what's next`,
+    `- [Working with me](${siteUrl}/working-with-me/): communication, feedback, availability, and colleague reflections`,
     `- [Experience](${siteUrl}/experience/): career history with dates and outcomes`,
     `- [Now](${siteUrl}/now/): current focus`,
     `- [Writing index](${siteUrl}/posts/)`,

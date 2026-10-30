@@ -4,7 +4,7 @@ import { getPublishedPosts } from '../lib/publishedPosts';
 // Replaces @astrojs/sitemap: the integration's serialize() never sees post
 // dates, and per-post <lastmod> is the point of having a sitemap at all.
 // Static pages get no lastmod rather than a fabricated build date.
-const STATIC_PAGES = ['/', '/about/', '/experience/', '/now/', '/posts/'];
+const STATIC_PAGES = ['/', '/about/', '/working-with-me/', '/experience/', '/now/', '/posts/'];
 
 export async function GET(context: APIContext) {
   const siteUrl = context.site!.toString().replace(/\/$/, '');
