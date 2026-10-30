@@ -14,7 +14,6 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.55;
-  transition: background 0.3s, color 0.3s;
 }
 
 body::before {
@@ -364,47 +363,7 @@ a.featured:hover {
   border-color: var(--accent);
 }
 
-/* Section break — a clay rule flanked by two ink ticks, quoting the margin
-   marks of the post mark above. Drawn in CSS so it costs no markup. */
-
-.post-body hr {
-  border: 0;
-  height: 3px;
-  width: 38px;
-  margin: 44px auto;
-  background: var(--accent);
-  position: relative;
-  overflow: visible;
-}
-
-.post-body hr::before,
-.post-body hr::after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  width: 12px;
-  height: 1px;
-  background: var(--ink-30);
-}
-
-.post-body hr::before {
-  right: calc(100% + 12px);
-}
-
-.post-body hr::after {
-  left: calc(100% + 12px);
-}
-
-/* Drop cap */
-
-.dropcap-a {
-  float: left;
-  font-family: var(--font-display);
-  font-size: 92px;
-  line-height: 0.84;
-  padding: 8px 12px 0 0;
-  color: var(--accent);
-}
+.post-body hr { border:0; height:1px; width:64px; margin:44px auto; background:var(--ink-20); }
 
 /* Post body styles */
 
@@ -462,15 +421,7 @@ a.featured:hover {
   color: var(--ink);
 }
 
-.post-body > p:first-child::first-letter {
-  float: left;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 92px;
-  line-height: 0.86;
-  padding: 8px 12px 0 0;
-  color: var(--accent);
-}
+
 
 .post-body img {
   display: block;
@@ -579,3 +530,31 @@ a.featured:hover {
   font-size: 13px;
   color: var(--ink-55);
 }
+
+/* Personal collection: quiet chrome, direct links, continuous reading. */
+body { font-size:15px; -webkit-font-smoothing:antialiased; }
+body::before { display:none; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+a:hover { color:var(--accent); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+.theme-toggle { border:0; background:transparent; border-radius:50%; width:28px; height:28px; font-size:18px; }
+
+.post-body { font-family:var(--font-body); font-size:16px; line-height:1.85; }
+.post-body h2, .page-body h2 { font-family:var(--font-body); font-size:22px; font-weight:500; line-height:1.4; letter-spacing:-.035em; margin-top:40px; }
+.post-body blockquote { font-size:24px; line-height:1.5; border-left:2px solid var(--accent); }
+.post-body a, .page-body a { text-decoration:underline; text-underline-offset:4px; text-decoration-color:var(--ink-30); }
+.post-body pre { overflow-x:auto; padding:20px; background:var(--ink-05); font-size:12px; line-height:1.7; }
+.post-body code { overflow-wrap:anywhere; }
+.post-body li strong, .page-body li strong { display:inline; font-family:inherit; font-size:inherit; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition:none !important; } }
+
+/* Shared reading rhythm and accessible lists. */
+.post-body ul,.post-body ol{list-style:revert;padding-left:1.4em;margin:16px 0 28px}
+.post-body li{padding:4px 0;border:0}.post-body li>p{margin-bottom:10px}
+.post-body blockquote{font-size:20px;line-height:1.65;border-left:1px solid var(--ink-30);padding-left:24px;color:var(--ink-78)}
+.post-body h3{font-size:19px;line-height:1.45;font-weight:500;margin:32px 0 14px}
+.post-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:14px}.post-body th,.post-body td{padding:12px;border-bottom:1px solid var(--ink-15);text-align:left}
+.post-body,.page-body{overflow-wrap:break-word}.post-body pre code{overflow-wrap:normal}
+button,a{-webkit-tap-highlight-color:transparent}.theme-toggle{min-width:36px;min-height:36px}
+.reading-progress{height:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}

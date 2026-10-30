@@ -1,6 +1,6 @@
 # stefanchristensen.me
 
-Personal website built with [Astro](https://astro.build). Editorial design with Fraunces + Inter typography, collapsible identity rail, and markdown-based blog posts.
+Personal website built with [Astro](https://astro.build). Copenhagen fog design: soft white and blue-grey, a slate dark theme, Inter typography, and markdown-based essays. The homepage has two sides: Work & ideas and Music & life.
 
 ## Requirements
 
@@ -36,7 +36,7 @@ Open `http://127.0.0.1:4322/` and walk the main demo surface:
 Browser QA checklist before an external demo:
 
 - Desktop and mobile widths render without horizontal overflow.
-- Rail collapse/expand, section tracking, and theme toggle work.
+- Side A / Side B navigation, direct Side B links, and theme toggle work.
 - Post reading progress moves while scrolling a post.
 - CV PDF link resolves.
 - RSS, sitemap, `llms.txt`, and markdown post mirrors return HTTP 200.
@@ -81,3 +81,15 @@ Your markdown content here.
 ```
 
 Set `draft: false` when ready to publish.
+
+## Design
+
+- Shared colours and typography: `src/styles/tokens.css`.
+- Reading styles: `src/styles/global.css`; page layouts in `src/layouts/`.
+- Shared navigation: `src/components/SiteHeader.astro` and `SiteFooter.astro`.
+- Homepage: `src/pages/index.astro`. Side B can be linked directly with `/#side-b`.
+- Social images: `npm run og`; favicon fallbacks: `npm run favicons`.
+
+Before publishing, run `npm run build` and check the homepage, archive, an essay,
+and a personal page on mobile and desktop in both themes. Existing URLs, RSS,
+Markdown mirrors, and structured metadata are retained.

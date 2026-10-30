@@ -5,7 +5,7 @@ export const STEFAN = {
   city: 'Copenhagen',
   headline: 'I own the platform and the P&L, and build the organisation that connects them.',
   tagline:
-    'Stefan Christensen — SVP Product & Engineering at Pleo. Fifteen years in European fintech: payment rails, platform scale, org design. Based in Copenhagen.',
+    'Stefan Christensen. Writing on physics, payments, working with people, and music. Based in Copenhagen.',
   longBio: [
     "I'm drawn to problems that sit between disciplines — where the cleanest technical answer and the right business answer pull in opposite directions, and someone has to decide which one wins. Physics trained me to work without a textbook; McKinsey, to read a boardroom and a regulator; operating taught me the constraint is rarely the technology.",
     "That pulls me toward the load-bearing work: the systems and teams a company depends on, built to keep working after I've left the room. The point was never to own everything. It was to leave behind an organisation that doesn't need me.",

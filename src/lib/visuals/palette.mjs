@@ -23,20 +23,20 @@ function rgba(r, g, b) {
 /** @type {Palette} */
 export const LIGHT = {
   name: 'light',
-  bg: '#f5f3ee',
-  accent: '#c2410c',
-  ink: rgba(26, 26, 26),
-  tint: rgba(194, 65, 12),
+  bg: '#f0f1ee',
+  accent: '#566e79',
+  ink: rgba(52, 61, 64),
+  tint: rgba(86, 110, 121),
   blend: 'multiply',
 };
 
 /** @type {Palette} */
 export const DARK = {
   name: 'dark',
-  bg: '#1a1a1a',
-  accent: '#e07a3a',
-  ink: rgba(232, 228, 220),
-  tint: rgba(224, 122, 58),
+  bg: '#222a2e',
+  accent: '#a6bac3',
+  ink: rgba(220, 226, 226),
+  tint: rgba(166, 186, 195),
   blend: 'screen',
 };
 

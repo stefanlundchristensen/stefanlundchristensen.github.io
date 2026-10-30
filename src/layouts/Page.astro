@@ -1,6 +1,6 @@
 ---
 import Base from './Base.astro';
-import { STEFAN } from '../data/stefan';
+import SiteHeader from '../components/SiteHeader.astro';
 
 interface Props {
   title: string;
@@ -8,19 +8,15 @@ interface Props {
   noindex?: boolean;
 }
 
-const s = STEFAN;
 const { title, description, noindex } = Astro.props;
 ---
 
 <Base title={title} description={description} noindex={noindex}>
   <slot name="head" slot="head" />
   <div class="page-wrap">
-    <header class="page-topbar">
-      <a href="/" class="h-display" style="font-size: 17px;">{s.name}</a>
-      <a href="/" class="lbl" style="text-decoration: none;">← Home</a>
-    </header>
+    <SiteHeader />
 
-    <article class="page-article">
+    <article class="page-article" id="main">
       <h1 class="h-display page-title">{title}</h1>
       <div class="page-body">
         <slot />
@@ -32,29 +28,26 @@ const { title, description, noindex } = Astro.props;
 <style>
   .page-wrap {
     width: 100%;
-    min-height: 100vh;
+
     background: var(--bg);
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.7;
-    padding: 64px 64px 96px;
+    padding: 68px 24px 64px;
   }
 
-  .page-topbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    max-width: 880px;
-    margin: 0 auto 64px;
-  }
+
 
   .page-article {
-    max-width: 720px;
+    max-width: var(--reading-width);
     margin: 0 auto;
   }
 
   .page-title {
-    font-size: 42px;
+    font-size: var(--page-title-size);
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: -.04em;
     line-height: 1.1;
     margin: 0 0 36px;
   }
@@ -65,7 +58,7 @@ const { title, description, noindex } = Astro.props;
     }
 
     .page-title {
-      font-size: 30px;
+      font-size: var(--page-title-size);
     }
   }
 </style>

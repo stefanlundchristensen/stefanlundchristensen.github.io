@@ -41,4 +41,4 @@ function renderPng(size, outPath, background) {
 // Tab icon stays transparent like the SVG; the touch icon gets the site
 // background because iOS composites onto black.
 renderPng(96, path.join(root, 'public/favicon-96.png'), undefined);
-renderPng(180, path.join(root, 'public/apple-touch-icon.png'), '#f5f3ee');
+renderPng(180, path.join(root, 'public/apple-touch-icon.png'), '#f0f1ee');

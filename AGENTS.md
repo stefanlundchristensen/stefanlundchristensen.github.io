@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The design is "AB1 v2 — Anchored Column": a warm editorial layout with a sticky collapsible left identity rail and a generous serif reading column. Typography uses Fraunces (display) + Inter (body) with a Clay (#c2410c) accent.
+Personal professional website for Stefan Christensen, built with Astro and deployed to GitHub Pages. The design is "Copenhagen fog": soft white and blue-grey, a slate dark theme, and Inter typography. The homepage uses Side A (Work & ideas) and Side B (Music & life), with quiet record details. Interior pages share a 640px reading column and common header/footer.
 
 ## Development Commands
 
@@ -48,8 +48,8 @@ public/              ← CNAME, robots.txt, cv.json, files/
 
 ### Design Tokens
 Defined in `src/styles/tokens.css` as CSS custom properties:
-- Colors: `--bg` (#f5f3ee), `--ink` (#1a1a1a), `--accent` (#c2410c), plus opacity variants
-- Typography: `--font-display` (Fraunces), `--font-body` (Inter)
+- Colors: `--bg` (#f0f1ee), `--ink` (#343d40), `--accent` (#566e79), plus opacity variants; slate dark equivalents
+- Typography: `--font-body` (Inter); `--font-display` aliases the body family
 - Spacing: page padding, rail widths, section gaps
 - Motion: rail transition, hover speeds
 
@@ -133,7 +133,7 @@ Link to external reports and sources (DX, DORA, Lenny's podcast, specific people
 None. GoatCounter was removed in July 2026; the site currently runs without analytics.
 
 ## URL Structure
-- `/` — homepage (single-page with all sections)
+- `/` — two-sided homepage; `/#side-b` opens Music & life
 - `/about/`, `/experience/`, `/now/` — static pages
 - `/posts/` — writing index
 - `/posts/[slug]/` — individual posts

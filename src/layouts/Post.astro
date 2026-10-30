@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import ReadingProgress from '../components/ReadingProgress.tsx';
+import SiteHeader from '../components/SiteHeader.astro';
 import Schema from '../components/Schema.astro';
 import { STEFAN } from '../data/stefan';
 
@@ -20,7 +21,7 @@ interface Props {
 }
 
 const s = STEFAN;
-const { title, description, date, updated, slug, tags, categories, readingTime, ogImage, mark, morePosts } = Astro.props;
+const { title, description, date, updated, slug, tags, categories, readingTime, ogImage, morePosts } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const siteUrl = Astro.site!.toString().replace(/\/$/, '');
@@ -29,10 +30,6 @@ const formattedDate = date
   ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
   : undefined;
 
-const initials = s.name
-  .split(' ')
-  .map((p: string) => p[0])
-  .join('');
 ---
 
 <Base
@@ -87,12 +84,9 @@ const initials = s.name
   )}
   <ReadingProgress client:load />
   <div class="post-page">
-    <header class="post-topbar">
-      <a href="/" class="h-display" style="font-size: 17px;">{s.name}</a>
-      <a href="/#writing" class="lbl" style="text-decoration: none;">← Back to writing</a>
-    </header>
+    <SiteHeader />
 
-    <article class="post-article">
+    <article class="post-article" id="main">
       {categories?.[0] && (
         <div class="lbl" style="margin-bottom: 18px; color: var(--accent);">
           {categories[0]}
@@ -105,7 +99,7 @@ const initials = s.name
         <p class="h-display post-dek">{description}</p>
       )}
 
-      {mark && <div class="post-mark" set:html={mark} />}
+
 
       {formattedDate && (
         <div class="post-meta">
@@ -119,20 +113,7 @@ const initials = s.name
         <slot />
       </div>
 
-      <div class="post-author">
-        <div class="post-avatar">{initials}</div>
-        <div>
-          <div class="h-display" style="font-size: 18px; margin-bottom: 4px;">{s.name}</div>
-          <div style="font-size: 15px; color: var(--ink-70); margin-bottom: 12px; max-width: 540px;">
-            {s.short}
-          </div>
-          <div style="display: flex; gap: 18px; font-size: 13px;">
-            <a class="link" href={`https://${s.contact.linkedin}`} target="_blank" rel="noopener noreferrer">
-              {s.contact.linkedin}
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="author-note">Written by <a href="/about/">{s.name}</a>, in Copenhagen.<br /><a href="/posts/">More writing ↗</a></div>
 
       {morePosts && morePosts.length > 0 && (
         <div class="post-more">
@@ -159,57 +140,50 @@ const initials = s.name
 </Base>
 
 <style>
+  .author-note { border-top:1px solid var(--ink-15); padding-top:24px; margin-top:48px; font-size:12px; line-height:1.9; color:var(--ink-65); }
   .post-page {
     width: 100%;
-    min-height: 100vh;
+
     background: var(--bg);
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.7;
-    padding: 64px 64px 96px;
+    padding: 68px 24px 64px;
   }
 
-  .post-topbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    max-width: 880px;
-    margin: 0 auto 64px;
-  }
+
 
   .post-article {
-    max-width: 720px;
+    max-width: var(--reading-width);
     margin: 0 auto;
   }
 
   .post-title {
-    font-size: 56px;
-    line-height: 1.06;
+    font-size: var(--page-title-size);
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: -.045em;
+    line-height: 1.2;
     margin: 0 0 22px;
   }
 
   .post-dek {
-    font-size: 24px;
-    line-height: 1.36;
+    font-size: 18px;
+    line-height: 1.6;
     color: var(--ink-70);
     margin: 0 0 36px;
   }
 
   /* Borderless and full measure: a frame here makes the mark read as an
      inserted illustration rather than part of the page. */
-  .post-mark {
-    margin: 0 0 34px;
-  }
 
-  .post-mark > :global(svg) {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+
+
 
   .post-meta {
     display: flex;
-    gap: 18px;
+    flex-wrap: wrap;
+    gap: 8px 18px;
     padding-bottom: 28px;
     margin-bottom: 48px;
     border-bottom: 1px solid var(--ink-15);
@@ -217,27 +191,9 @@ const initials = s.name
     color: var(--ink-60);
   }
 
-  .post-author {
-    margin-top: 64px;
-    padding-top: 36px;
-    border-top: 1px solid var(--ink-15);
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 24px;
-  }
 
-  .post-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 24px;
-  }
+
+
 
   .post-more {
     margin-top: 48px;
@@ -260,16 +216,14 @@ const initials = s.name
     }
 
     .post-title {
-      font-size: 36px;
+      font-size: var(--page-title-size);
     }
 
     .post-dek {
-      font-size: 20px;
+      font-size: 18px;
     }
 
-    .post-author {
-      grid-template-columns: 1fr;
-    }
+
 
     .post-more-item {
       flex-direction: column;

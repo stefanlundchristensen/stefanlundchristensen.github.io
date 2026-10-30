@@ -11,11 +11,11 @@ export default function ThemeToggle() {
     const next = !dark;
     setDark(next);
     document.documentElement.setAttribute('data-theme', next ? 'dark' : '');
-    localStorage.setItem('theme', next ? 'dark' : 'light');
+    try { localStorage.setItem('theme', next ? 'dark' : 'light'); } catch {}
   };
 
   return (
-    <button className="theme-toggle" onClick={toggle} title={dark ? 'Light mode' : 'Dark mode'}>
+    <button className="theme-toggle" onClick={toggle} aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'} title={dark ? 'Light mode' : 'Dark mode'}>
       {dark ? '☀' : '☽'}
     </button>
   );

@@ -3,9 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Schema from '../../components/Schema.astro';
 import { STEFAN } from '../../data/stefan';
 import { getCollection } from 'astro:content';
-import { readingTime } from '../../lib/readingTime';
-import { renderVisual } from '../../lib/visuals/render.mjs';
-import { CSSVARS } from '../../lib/visuals/palette.mjs';
+import SiteHeader from '../../components/SiteHeader.astro';
 
 const s = STEFAN;
 
@@ -14,22 +12,11 @@ const posts = allPosts
   .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const marks = new Map(
-  posts
-    .filter((p) => p.data.visual !== 'none')
-    .map((p) => [
-      p.id,
-      renderVisual({ title: p.data.title, body: p.body ?? '' }, {
-        palette: CSSVARS,
-        width: 104,
-        height: 104,
-      }),
-    ]),
-);
+const years = [...new Set(posts.map(p => p.data.date.getUTCFullYear()))];
 const siteUrl = Astro.site!.toString().replace(/\/$/, '');
 ---
 
-<Base title="Writing" description="Essays on org design, payments, and scaling teams.">
+<Base title="Writing" description="Writing on physics, payments, working with people, and music.">
   <Schema
     slot="head"
     schema={{
@@ -38,7 +25,7 @@ const siteUrl = Astro.site!.toString().replace(/\/$/, '');
       '@id': `${siteUrl}/posts/#blog`,
       url: `${siteUrl}/posts/`,
       name: `Writing — ${s.name}`,
-      description: 'Essays on org design, payments infrastructure, and scaling teams.',
+      description: 'Writing on physics, payments, working with people, and music.',
       inLanguage: 'en',
       author: { '@id': `${siteUrl}/#person` },
       publisher: { '@id': `${siteUrl}/#person` },
@@ -52,92 +39,31 @@ const siteUrl = Astro.site!.toString().replace(/\/$/, '');
     }}
   />
   <div class="posts-page">
-    <header class="posts-topbar">
-      <a href="/" class="h-display" style="font-size: 17px;">{s.name}</a>
-      <a href="/" class="lbl" style="text-decoration: none;">← Home</a>
-    </header>
-
-    <div class="posts-content">
-      <h1 class="h-display" style="font-size: 42px; line-height: 1.1; margin: 0 0 12px;">Writing</h1>
-      <p style="color: var(--ink-70); margin: 0 0 48px; max-width: 540px;">
-        Essays on org design, payments infrastructure, and scaling teams.
-      </p>
-
-      {posts.map((post, i) => (
-        <a href={`/posts/${post.id}/`} class="post-row" style={i > 0 ? 'border-top: 1px solid var(--ink-10);' : ''}>
-          {marks.has(post.id) && <div class="post-row-mark" set:html={marks.get(post.id)} />}
-          <div class="post-row-text">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 4px;">
-            <div class="h-display" style="font-size: 21px;">{post.data.title}</div>
-            <div class="num" style="font-size: 12px; color: var(--ink-50); white-space: nowrap;">
-              {post.data.date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
-            </div>
-          </div>
-          {post.data.description && (
-            <div style="color: var(--ink-65); font-size: 15px; margin-bottom: 6px;">{post.data.description}</div>
-          )}
-          <div style="display: flex; gap: 14px;">
-            {post.data.categories[0] && (
-              <span class="lbl" style="color: var(--accent);">{post.data.categories[0]}</span>
-            )}
-            <span class="lbl">{readingTime(post.body ?? '')}</span>
-          </div>
-          </div>
-        </a>
+    <SiteHeader />
+    <main id="main">
+      <h1>Writing</h1>
+      <p class="intro">Notes from the lab, the work, and everything around it.</p>
+      {years.map(year => (
+        <section class="year-group" aria-label={`Writing from ${year}`}>
+          <h2>{year}</h2>
+          <div>{posts.filter(p => p.data.date.getUTCFullYear() === year).map(post => (
+            <a class="archive-entry" href={`/posts/${post.id}/`}>
+              <span>{post.data.title}</span>
+              <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('en-GB', { month:'short', day:'numeric', timeZone:'UTC' })}</time>
+            </a>
+          ))}</div>
+        </section>
       ))}
-    </div>
+    </main>
   </div>
 </Base>
-
 <style>
-  .posts-page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 64px 64px 96px;
-  }
-
-  .posts-topbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    max-width: 880px;
-    margin: 0 auto 64px;
-  }
-
-  .posts-content {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .post-row {
-    display: grid;
-    grid-template-columns: 104px 1fr;
-    gap: 24px;
-    align-items: start;
-    padding: 20px 0;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .post-row-mark > :global(svg) {
-    display: block;
-    width: 104px;
-    height: 104px;
-  }
-
-  /* Below this the mark would shrink past the size its reduced mode is drawn
-     for, so the row goes back to text only. */
-  @media (max-width: 719px) {
-    .post-row {
-      display: block;
-    }
-
-    .post-row-mark {
-      display: none;
-    }
-
-    .posts-page {
-      padding: 32px 24px 48px;
-    }
-  }
+.posts-page { max-width:688px; margin:0 auto; padding:68px 24px 32px; }
+h1 { font-size:var(--page-title-size); font-weight:400; letter-spacing:-.04em; margin:0 0 12px; }
+.intro { font-size:14px; color:var(--ink-65); margin:0 0 40px; }
+.year-group { display:grid; grid-template-columns:60px 1fr; gap:22px; margin-bottom:32px; }
+h2 { font-size:12px; font-weight:400; color:var(--ink-55); margin:13px 0 0; }
+.archive-entry { display:grid; grid-template-columns:1fr 48px; gap:20px; font-size:15px; line-height:1.65; padding:12px 0; border-bottom:1px solid var(--ink-10); }
+time { font-size:11px; text-align:right; color:var(--ink-55); white-space:nowrap; padding-top:2px; }
+@media(max-width:480px) { .posts-page { padding-top:32px; } .year-group { grid-template-columns:1fr; gap:7px; } }
 </style>

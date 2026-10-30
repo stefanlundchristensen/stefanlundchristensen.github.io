@@ -1,36 +1,43 @@
 :root {
-  /* Colors — light */
-  --bg: #f5f3ee;
-  --ink: #1a1a1a;
-  --accent: #c2410c;
+  /* Copenhagen fog */
+  color-scheme: light;
+  --bg: #f0f1ee;
+  --ink: #343d40;
+  --accent: #566e79;
 
-  --ink-78: rgba(26, 26, 26, 0.78);
-  --ink-70: rgba(26, 26, 26, 0.7);
-  --ink-65: rgba(26, 26, 26, 0.65);
-  --ink-60: rgba(26, 26, 26, 0.6);
-  --ink-55: rgba(26, 26, 26, 0.55);
-  --ink-50: rgba(26, 26, 26, 0.5);
-  --ink-45: rgba(26, 26, 26, 0.45);
-  --ink-30: rgba(26, 26, 26, 0.3);
-  --ink-20: rgba(26, 26, 26, 0.2);
-  --ink-15: rgba(26, 26, 26, 0.15);
-  --ink-10: rgba(26, 26, 26, 0.1);
-  --ink-05: rgba(26, 26, 26, 0.05);
-  --ink-04: rgba(26, 26, 26, 0.04);
+  --ink-78: rgba(52, 61, 64, .78);
+  --ink-70: rgba(52, 61, 64, .78);
+  --ink-65: rgba(52, 61, 64, .78);
+  --ink-60: rgba(52, 61, 64, .75);
+  --ink-55: rgba(52, 61, 64, .75);
+  --ink-50: rgba(52, 61, 64, .75);
+  --ink-45: rgba(52, 61, 64, .75);
+  --ink-30: rgba(52, 61, 64, 0.3);
+  --ink-20: rgba(52, 61, 64, 0.2);
+  --ink-15: rgba(52, 61, 64, 0.15);
+  --ink-10: rgba(52, 61, 64, 0.1);
+  --ink-05: rgba(52, 61, 64, 0.05);
+  --ink-04: rgba(52, 61, 64, 0.04);
 
   /* Channels, for the inline post marks: they need ink and accent at opacities
      the fixed steps above don't cover, and they must follow the theme toggle
      without being re-rendered. */
-  --ink-rgb: 26, 26, 26;
-  --accent-rgb: 194, 65, 12;
+  --ink-rgb: 52, 61, 64;
+  --accent-rgb: 86, 110, 121;
   --white-glaze: rgba(255, 255, 255, 0.4);
 
   --bg-wash-1: rgba(180, 160, 130, 0.06);
   --bg-wash-2: rgba(120, 100, 80, 0.05);
+  --record: #343d40;
+  --record-groove: #7c8a90;
+  --record-label: #829aa5;
 
   /* Typography */
-  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-display: var(--font-body);
   --font-body: 'Inter Variable', -apple-system, sans-serif;
+
+  --reading-width: 640px;
+  --page-title-size: clamp(32px, 4.5vw, 42px);
 
   /* Spacing */
   --page-pt: 64px;
@@ -51,26 +58,30 @@
 
 /* Dark mode */
 [data-theme='dark'] {
-  --bg: #1a1a1a;
-  --ink: #e8e4dc;
-  --accent: #e07a3a;
+  color-scheme: dark;
+  --record: #222a2e;
+  --record-groove: #52616a;
+  --record-label: #a6bac3;
+  --bg: #222a2e;
+  --ink: #dce2e2;
+  --accent: #a6bac3;
 
-  --ink-rgb: 232, 228, 220;
-  --accent-rgb: 224, 122, 58;
+  --ink-rgb: 220, 226, 226;
+  --accent-rgb: 166, 186, 195;
 
-  --ink-78: rgba(232, 228, 220, 0.78);
-  --ink-70: rgba(232, 228, 220, 0.7);
-  --ink-65: rgba(232, 228, 220, 0.65);
-  --ink-60: rgba(232, 228, 220, 0.6);
-  --ink-55: rgba(232, 228, 220, 0.55);
-  --ink-50: rgba(232, 228, 220, 0.5);
-  --ink-45: rgba(232, 228, 220, 0.45);
-  --ink-30: rgba(232, 228, 220, 0.3);
-  --ink-20: rgba(232, 228, 220, 0.2);
-  --ink-15: rgba(232, 228, 220, 0.15);
-  --ink-10: rgba(232, 228, 220, 0.1);
-  --ink-05: rgba(232, 228, 220, 0.05);
-  --ink-04: rgba(232, 228, 220, 0.04);
+  --ink-78: rgba(220, 226, 226, .78);
+  --ink-70: rgba(220, 226, 226, .78);
+  --ink-65: rgba(220, 226, 226, .78);
+  --ink-60: rgba(220, 226, 226, .75);
+  --ink-55: rgba(220, 226, 226, .72);
+  --ink-50: rgba(220, 226, 226, .70);
+  --ink-45: rgba(220, 226, 226, .65);
+  --ink-30: rgba(220, 226, 226, 0.3);
+  --ink-20: rgba(220, 226, 226, 0.2);
+  --ink-15: rgba(220, 226, 226, 0.15);
+  --ink-10: rgba(220, 226, 226, 0.1);
+  --ink-05: rgba(220, 226, 226, 0.05);
+  --ink-04: rgba(220, 226, 226, 0.04);
   --white-glaze: rgba(40, 38, 34, 0.5);
 
   --bg-wash-1: rgba(60, 50, 40, 0.15);

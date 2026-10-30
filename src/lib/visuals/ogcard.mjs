@@ -8,7 +8,7 @@
 
 import { escapeXml } from './format.mjs';
 
-const DISPLAY = 'Fraunces Variable, Fraunces, Georgia, serif';
+const DISPLAY = 'Inter Variable, Inter, sans-serif';
 const BODY = 'Inter Variable, Inter, -apple-system, sans-serif';
 
 export const OG_W = 1200;
@@ -44,9 +44,9 @@ export function wrapTitle(title, maxChars) {
 export function composeOgCard(spec, P, opts = {}) {
   // Title steps down as it lengthens, against the 620px measure the mark leaves.
   const steps = [
-    { max: 40, size: 60, chars: 22 },
-    { max: 80, size: 50, chars: 27 },
-    { max: Infinity, size: 42, chars: 33 },
+    { max: 40, size: 60, chars: 30 },
+    { max: 80, size: 50, chars: 37 },
+    { max: Infinity, size: 42, chars: 43 },
   ];
   const step = steps.find((s) => spec.title.length <= s.max);
   const lines = wrapTitle(spec.title, step.chars).slice(0, 4);
@@ -62,20 +62,20 @@ export function composeOgCard(spec, P, opts = {}) {
 
   if (spec.category) {
     parts.push(
-      `<text x="80" y="158" font-family="${BODY}" font-size="20" font-weight="600" letter-spacing="2.4" fill="${P.accent}">${escapeXml(spec.category.toUpperCase())}</text>`,
+      `<text x="80" y="158" font-family="${BODY}" font-size="20" font-weight="400" letter-spacing="2.4" fill="${P.accent}">${escapeXml(spec.category.toUpperCase())}</text>`,
     );
   }
-  parts.push(`<line x1="80" y1="182" x2="164" y2="182" stroke="${P.accent}" stroke-width="3"/>`);
+  parts.push(`<line x1="80" y1="182" x2="164" y2="182" stroke="${P.accent}" stroke-width="1"/>`);
 
   lines.forEach((l, i) => {
     parts.push(
-      `<text x="80" y="${Math.round(titleStartY + i * lineHeight)}" font-family="${DISPLAY}" font-size="${step.size}" font-weight="500" letter-spacing="-1" fill="${P.ink(1)}">${escapeXml(l)}</text>`,
+      `<text x="80" y="${Math.round(titleStartY + i * lineHeight)}" font-family="${DISPLAY}" font-size="${step.size}" font-weight="400" letter-spacing="-1" fill="${P.ink(1)}">${escapeXml(l)}</text>`,
     );
   });
 
   parts.push(
-    `<text x="80" y="566" font-family="${DISPLAY}" font-size="26" font-weight="500" letter-spacing="-0.5" fill="${P.ink(0.85)}">Stefan Christensen</text>`,
-    `<text x="680" y="566" font-family="${BODY}" font-size="16" fill="${P.ink(0.5)}" text-anchor="end">stefanchristensen.me</text>`,
+    `<text x="80" y="566" font-family="${DISPLAY}" font-size="26" font-weight="400" letter-spacing="-0.5" fill="${P.ink(0.85)}">Stefan Christensen</text>`,
+    `<text x="1120" y="566" font-family="${BODY}" font-size="16" fill="${P.ink(0.5)}" text-anchor="end">stefanchristensen.me</text>`,
   )
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${OG_W}" height="${OG_H}" viewBox="0 0 ${OG_W} ${OG_H}">${parts.join('')}</svg>`;
