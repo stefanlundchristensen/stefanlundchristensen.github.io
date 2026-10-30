@@ -4,7 +4,7 @@ const { home = false } = Astro.props;
 const current = Astro.url.pathname;
 ---
 <header class:list={["site-header", { "home-header": home }]}>
-  <a href="/" class="site-name" aria-label="Stefan Christensen, home">Stefan Christensen{home && <small>Copenhagen, Denmark</small>}</a>
+  <a href="/" class="site-name" aria-label="Stefan Christensen, home">{home ? 'Copenhagen' : 'Stefan Christensen'}</a>
   <nav aria-label="Main navigation">
     <a href="/posts/" aria-current={current === '/posts/' ? 'page' : undefined}>Writing</a>
     <a href="/about/" aria-current={current === '/about/' ? 'page' : undefined}>About</a>

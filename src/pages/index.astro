@@ -3,38 +3,36 @@ import Base from '../layouts/Base.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getCollection } from 'astro:content';
-import { colleagueQuotes } from '../data/workingWithMe';
-import { readingTime } from '../lib/readingTime';
-const posts=(await getCollection('posts')).filter(p=>!p.data.draft);
-const picks=['unglamorous-core-of-payments','approximations-underrated-in-business','physicist-path-to-fintech-leadership','org-design-no-clean-answer'];
-const names=['The kind of person who likes this.','Approximate correctly.','What followed me out of the lab.','When the frameworks disagree.'];
-const notes=['Payments, and the obligation to understand.','What physics taught me about business decisions.','From atomic clocks to product and engineering.','Designing an organisation without a clean answer.'];
-const tracks=picks.flatMap((id,i)=>{
-  const post=posts.find(p=>p.id===id);
-  return post ? [{...post,label:names[i],note:notes[i],duration:readingTime(post.body ?? '')}] : [];
-});
+const posts = (await getCollection('posts')).filter(p => !p.data.draft);
+const picks = ['unglamorous-core-of-payments', 'approximations-underrated-in-business', 'physicist-path-to-fintech-leadership', 'org-design-no-clean-answer'];
+const essays = picks.flatMap(id => { const post = posts.find(p => p.id === id); return post ? [post] : []; });
 ---
-<Base isHome description="Stefan Christensen. Experimental physicist by training. Product and engineering at Pleo. Personal essays, things learned, and music that stayed.">
-  <div class="home-shell sleeve" data-side="a">
+<Base isHome description="Stefan Christensen. Physicist by training. Product and engineering at Pleo. Writing and music from Copenhagen.">
+  <div class="home-shell sleeve">
     <SiteHeader home />
     <main id="main">
-      <section class="identity" aria-label="Introduction"><div><p class="micro">Notes on work and life</p><h1>Stefan<br/><em>Christensen</em></h1></div><div class="intro-copy"><p>An experimental physicist by training.<br/>And still by nature.</p><p>These days I lead product and engineering at Pleo. I’m also a dad, and someone who still goes to shows.</p></div></section>
-      <div class="side-bar"><div class="side-tabs" role="tablist" aria-label="Choose a side"><button id="tab-a" role="tab" aria-selected="true" aria-controls="panel-a" tabindex="0" data-side-tab="a"><span class="side-letter">A</span><span class="side-label">Work & ideas<small>Physics, payments, working with people</small></span></button><button id="tab-b" role="tab" aria-selected="false" aria-controls="panel-b" tabindex="-1" data-side-tab="b"><span class="side-letter">B</span><span class="side-label">Music & life<small>Records, influences, life in Copenhagen</small></span></button></div></div>
+      <section class="identity" aria-label="Introduction">
+        <h1>Stefan Christensen</h1>
+        <p>A physicist by training, and still by nature. I lead product and engineering at Pleo. A dad in Copenhagen who still goes to shows.</p>
+      </section>
+      <div class="side-tabs" role="tablist" aria-label="Choose a side">
+        <button id="tab-a" role="tab" aria-selected="true" aria-controls="panel-a" tabindex="0" data-side-tab="a"><span>A</span> Writing</button>
+        <button id="tab-b" role="tab" aria-selected="false" aria-controls="panel-b" tabindex="-1" data-side-tab="b"><span>B</span> Music</button>
+      </div>
       <section id="panel-a" role="tabpanel" aria-labelledby="tab-a" tabindex="0" class="side-panel">
-        <div class="side-opening"><div class="opening-copy"><h2>I like knowing<br/><em>how things work.</em></h2><p>Especially when they don’t. A payment comes back short. A framework doesn’t fit. There’s usually something worth understanding if I keep pulling at the thread.</p></div></div>
-        <div class="work-layout"><section class="track-list" aria-labelledby="track-heading"><h3 class="micro" id="track-heading">Selected writing</h3>{tracks.map((post,i)=><a class:list={["essay-track",{"lead-track":i===0}]} href={`/posts/${post.id}/`}><span class="track-no">0{i+1}</span><div>{i===0 && <span class="track-kicker">A place to begin · {post.duration}</span>}<h4>{post.label}</h4><p>{i===0 ? post.data.description : post.note}</p>{i===0 && <span class="read-essay">Read the essay →</span>}</div><span class="track-arrow" aria-hidden="true">↗</span></a>)}<a class="all-writing" href="/posts/">All writing <span aria-hidden="true">↗</span></a></section><aside class="liner"><p class="micro">A note on the work</p><blockquote>“In payments, someone else’s money gives that curiosity an obligation.”</blockquote><a href="/posts/unglamorous-core-of-payments/">The unglamorous core of payments ↗</a><div class="career-note"><p>Now: Pleo.<br/>Before that: McKinsey.<br/>Before that: atomic clocks.</p><a href="/experience/">The work along the way ↗</a></div></aside></div>
-        <section class="working-preview" aria-labelledby="working-title">
-          <div><p class="micro">Working together</p><h3 id="working-title">Working with me</h3><p>How to bring me an idea, give me feedback, and make sense of my first reaction.</p><a href="/working-with-me/">Read the practical guide & colleague reflections →</a></div>
-          <figure><blockquote>“{colleagueQuotes[3].quote}”</blockquote><figcaption>{colleagueQuotes[3].role}</figcaption></figure>
-        </section>
-        <button class="other-side" data-turn="b"><span class="other-side-label">On Side B</span><span>The records that stayed with me.</span><span aria-hidden="true">→</span></button>
+        <ul class="essays">{essays.map(post => <li><a href={`/posts/${post.id}/`}>{post.data.title}</a></li>)}</ul>
+        <a class="more" href="/posts/">All writing →</a>
+        <a class="working" href="/working-with-me/"><h2>Working with me <span aria-hidden="true">→</span></h2><p>Ideas, feedback, and what to expect.</p></a>
       </section>
-      <section id="panel-b" role="tabpanel" aria-labelledby="tab-b" tabindex="0" class="side-panel" hidden>
-        <div class="side-opening"><div class="opening-copy"><h2>The music<br/><em>I grew up with.</em></h2><p>My father played records the way other people read. Neil Young, Pink Floyd, Bruce Springsteen. I absorbed more from that than I realised at the time.</p></div></div>
-        <div class="life-layout"><section class="music-essay"><p class="micro">What stayed with me</p><h3>Music that<br/>doesn’t hedge.</h3><p>“Songs made by people who put something real into them and trust you to meet them there.”</p><a class="all-writing" href="/posts/what-i-listen-to/">What I listen to <span aria-hidden="true">↗</span></a><div class="personal-links"><a href="/about/"><span>01</span>More about me ↗</a><a href="/now/"><span>02</span>What I’m doing now ↗</a></div></section><aside class="listening-notes"><p class="micro">A few names along the way</p><dl><div><dt>At home, growing up</dt><dd>Neil Young<br/>Pink Floyd<br/>Bruce Springsteen</dd></div><div><dt>Finding my own way</dt><dd>The National<br/>The Walkmen</dd></div><div><dt>The quieter end</dt><dd>Bill Callahan<br/>Bonnie “Prince” Billy</dd></div><div class="return-to"><dt>The one I return to</dt><dd>Sufjan Stevens <span aria-hidden="true">↺</span></dd></div></dl><p class="live-note">I still go to shows. The ones I remember aren’t usually the loudest.</p></aside></div>
-        <button class="other-side" data-turn="a"><span class="other-side-label">On Side A</span><span>Notes from the lab and the work.</span><span aria-hidden="true">→</span></button>
+      <section id="panel-b" role="tabpanel" aria-labelledby="tab-b" tabindex="0" class="side-panel music" hidden>
+        <p>My father played records the way other people read. That was part of how I learned to listen.</p>
+        <dl>
+          <div><dt>Growing up</dt><dd>Neil Young · Pink Floyd · Bruce Springsteen</dd></div>
+          <div><dt>Finding my own way</dt><dd>The National · The Walkmen</dd></div>
+          <div><dt>Coming back to</dt><dd>Sufjan Stevens · Bill Callahan · Bonnie “Prince” Billy</dd></div>
+        </dl>
+        <a class="more" href="/posts/what-i-listen-to/">What I listen to →</a>
       </section>
-      <div class="end-note"><p>Essays by Stefan Christensen.</p><a href="/rss.xml">Follow the writing via RSS ↗</a></div>
     </main>
     <SiteFooter />
   </div>
@@ -49,46 +47,19 @@ const tracks=picks.flatMap((id,i)=>{
       if(updateUrl)history.replaceState(null,'',next==='b'?'#side-b':location.pathname+location.search);
     }
     tabs.forEach(tab=>{tab.addEventListener('click',()=>chooseSide(tab.dataset.sideTab!));tab.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();chooseSide(e.key==='Home'?'a':e.key==='End'?'b':tab.dataset.sideTab==='a'?'b':'a',true);}});});
-    document.querySelectorAll<HTMLButtonElement>('[data-turn]').forEach(button=>button.addEventListener('click',()=>chooseSide(button.dataset.turn!,true)));
     chooseSide(location.hash==='#side-b'?'b':'a',false,false);
     window.addEventListener('hashchange',()=>{if(['','#side-a','#side-b'].includes(location.hash))chooseSide(location.hash==='#side-b'?'b':'a',false,false);});
   </script>
 </Base>
 <style>
-.home-shell{max-width:1120px;margin:auto;padding:34px 48px 0}
-.identity{display:grid;grid-template-columns:1.6fr 1fr;gap:60px;align-items:end;margin:64px 0 48px}
-.micro{font:400 11px/1.6 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-65);margin:0 0 20px}
-h1{font:350 clamp(52px,6.8vw,78px)/1.06 var(--font-body);letter-spacing:-.055em;margin:0}h1 em{font-style:normal}
-.intro-copy{max-width:320px;padding-bottom:5px}.intro-copy p{font-size:16px;line-height:1.7;margin:0}.intro-copy p+p{font-size:14px;color:var(--ink-65);margin-top:18px}
-.side-bar{border-top:1px solid var(--ink-20);border-bottom:1px solid var(--ink-20)}
-.side-tabs{display:grid;grid-template-columns:1fr 1fr}
-.side-tabs button{display:flex;align-items:center;gap:18px;position:relative;border:0;background:transparent;color:var(--ink);font:400 16px var(--font-body);text-align:left;padding:22px 20px;cursor:pointer;transition:background .18s}
-.side-tabs button+button{border-left:1px solid var(--ink-15)}.side-tabs button:hover{background:var(--ink-04)}.side-tabs button[aria-selected=true]{background:var(--ink-05)}
-.side-tabs button[aria-selected=true]:after{content:'';position:absolute;bottom:-1px;left:20px;right:20px;height:2px;background:var(--accent)}
-.side-letter{width:40px;height:40px;flex-shrink:0;display:grid;place-items:center;border:1px solid var(--ink-30);border-radius:50%;font-size:14px;box-shadow:0 0 0 5px var(--ink-04)}
-.side-tabs button[aria-selected=true] .side-letter{border-color:var(--accent);color:var(--accent)}.side-label small{display:block;font-size:12px;color:var(--ink-65);margin-top:7px;line-height:1.5}
-.side-panel{outline-offset:8px}.side-panel[hidden]{display:none}
-.side-opening{margin:36px 0}.opening-copy{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
-.opening-copy h2{font:400 29px/1.2 var(--font-body);letter-spacing:-.035em;margin:0}.opening-copy h2 em{font-style:normal}.opening-copy>p{font-size:14px;line-height:1.8;margin:0;color:var(--ink-65);max-width:470px}
-.work-layout,.life-layout{display:grid;grid-template-columns:1.8fr 1fr;gap:56px;border-top:1px solid var(--ink-20);padding-top:30px}
-.track-list>.micro{margin-bottom:4px}.essay-track{display:grid;grid-template-columns:24px 1fr 16px;gap:14px;padding:24px 0;border-bottom:1px solid var(--ink-10);align-items:baseline}.track-no{font-size:11px;color:var(--accent);font-variant-numeric:tabular-nums}
-.essay-track h4{font:400 22px/1.35 var(--font-body);letter-spacing:-.03em;margin:0}.essay-track p{font-size:13px;color:var(--ink-65);line-height:1.7;margin:9px 0 0}.track-arrow{font-size:16px;color:var(--accent);transition:transform .2s}.essay-track:hover .track-arrow{transform:translate(3px,-3px)}
-.track-kicker{display:block;font-size:11px;line-height:1.5;color:var(--accent);margin-bottom:14px}.lead-track{padding:22px 0 30px}.lead-track h4{font-size:34px;line-height:1.15;letter-spacing:-.04em;max-width:410px}.lead-track p{font-size:14px;margin-top:16px;max-width:460px}.read-essay{display:block;font-size:12px;margin-top:20px;color:var(--accent)}.lead-track>.track-arrow{visibility:hidden}
-.all-writing{display:flex;justify-content:space-between;gap:20px;color:var(--accent);font-size:13px;margin-top:24px;padding:5px 0}
-.liner{padding-left:27px;border-left:1px solid var(--ink-15)}.liner blockquote{font:400 23px/1.5 var(--font-body);letter-spacing:-.035em;margin:24px 0;padding:0;border:0}.liner>a,.career-note a{font-size:12px;color:var(--accent);line-height:1.8}.career-note{margin-top:38px;padding-top:24px;border-top:1px solid var(--ink-15)}.career-note p{font-size:13px;line-height:1.9;color:var(--ink-65);margin:0 0 18px}
-.life-layout{grid-template-columns:1.3fr 1fr;gap:72px}.music-essay h3{font:400 36px/1.15 var(--font-body);letter-spacing:-.04em;margin:0}.music-essay>p:not(.micro){font-size:21px;line-height:1.65;max-width:410px;margin:25px 0;color:var(--ink-65)}
-.personal-links{border-top:1px solid var(--ink-15);margin-top:36px;padding-top:16px}.personal-links a{display:flex;gap:20px;font-size:13px;padding:12px 0}.personal-links span{font-size:11px;color:var(--accent)}
-.listening-notes{border-left:1px solid var(--ink-15);padding-left:30px}.listening-notes dl{margin:0}.listening-notes dl>div{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;padding-bottom:24px}.listening-notes dt{font-size:12px;line-height:1.6;color:var(--ink-65);padding-top:3px}.listening-notes dd{font-size:17px;line-height:1.6;margin:0;letter-spacing:-.02em}.listening-notes .return-to{border-top:1px solid var(--ink-15);padding-top:20px}.return-to dd{color:var(--accent)}.return-to span{margin-left:8px}.live-note{font-size:13px;line-height:1.8;color:var(--ink-65);margin:0}
-.other-side{display:grid;grid-template-columns:110px 1fr 20px;gap:24px;align-items:center;text-align:left;width:100%;margin-top:44px;padding:26px 0;border:0;border-top:1px solid var(--ink-20);border-bottom:1px solid var(--ink-20);color:var(--ink);background:transparent;font:400 18px/1.5 var(--font-body);cursor:pointer}.other-side-label{font-size:12px;color:var(--accent)}.other-side:hover{color:var(--accent)}.other-side>span:last-child{transition:transform .2s}.other-side:hover>span:last-child{transform:translateX(4px)}
-.end-note{display:flex;align-items:center;gap:16px;padding:28px 0}.end-note p,.end-note a{font-size:12px;color:var(--ink-65);margin:0}.end-note a{margin-left:auto}
-.home-shell :global(.global-footer){max-width:none;margin:0;border-top:0;padding-top:12px}.home-shell :global(.global-footer-meta){width:auto;margin-left:auto}
-.side-panel:not([hidden]){animation:side-in .24s ease-out}@keyframes side-in{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}
+.home-shell{max-width:736px;margin:auto;padding:48px 28px 0}
+.identity{margin:72px 0 48px}h1{font:400 clamp(32px,5vw,48px)/1.15 var(--font-body);letter-spacing:-.045em;margin:0 0 24px}.identity p{max-width:570px;font-size:18px;line-height:1.75;color:var(--ink-65);margin:0}
+.side-tabs{display:flex;gap:32px;border-bottom:1px solid var(--ink-15)}.side-tabs button{border:0;border-bottom:2px solid transparent;background:none;color:var(--ink-65);font:400 15px/1.5 var(--font-body);padding:0 0 15px;cursor:pointer}.side-tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}.side-tabs span{font-size:11px;color:var(--accent);margin-right:10px}.side-panel[hidden]{display:none}.side-panel{outline-offset:6px}
+.essays{list-style:none;padding:0;margin:12px 0 0}.essays li{border-bottom:1px solid var(--ink-10)}.essays a{display:block;padding:22px 0;font-size:21px;line-height:1.45;letter-spacing:-.025em}.essays a:hover,.working:hover h2{color:var(--accent)}.more{display:inline-block;margin-top:24px;font-size:14px;color:var(--accent)}
+.working{display:block;margin-top:44px;padding-top:28px;border-top:1px solid var(--ink-15)}.working h2{font-size:20px;font-weight:400;letter-spacing:-.025em;margin:0}.working h2 span{font-size:15px;color:var(--accent);margin-left:8px}.working p{font-size:14px;color:var(--ink-65);margin:8px 0 0}
+.music{padding-top:24px}.music>p{font-size:18px;line-height:1.75;margin:0 0 30px}.music dl{margin:0}.music dl>div{padding:16px 0;border-bottom:1px solid var(--ink-10)}.music dt{font-size:12px;color:var(--ink-65);margin-bottom:8px}.music dd{font-size:17px;line-height:1.7;margin:0}
+.home-shell :global(.global-footer){max-width:none;margin:48px 0 0}.home-shell :global(.site-name){font-size:12px}
 button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
-@media(max-width:850px){.home-shell{padding:28px 30px 0}.identity{grid-template-columns:1fr;gap:26px;margin-top:48px}.intro-copy{max-width:480px}.opening-copy{gap:30px}.work-layout,.life-layout{gap:30px}.side-tabs button{padding:20px 14px;gap:14px}.side-label small{font-size:11px}.listening-notes dl>div{grid-template-columns:1fr;gap:4px}.liner{padding-left:22px}}
-@media(max-width:580px){.home-shell{padding:24px 23px 0}.identity{margin:36px 0 32px;gap:24px}.identity .micro{font-size:10px;margin-bottom:16px}h1{font-size:clamp(40px,11vw,62px)}.intro-copy p{font-size:15px}.intro-copy p+p{font-size:14px;margin-top:14px}.side-tabs button{font-size:14px;gap:12px;align-items:start;padding:18px 10px}.side-letter{height:26px;width:26px;font-size:11px;box-shadow:none}.side-label small{font-size:11px;margin-top:6px}.side-tabs button[aria-selected=true]:after{left:10px;right:10px}.opening-copy{display:block}.opening-copy h2{font-size:27px}.opening-copy>p{margin-top:16px;font-size:14px}.side-opening{margin:28px 0}.work-layout,.life-layout{grid-template-columns:1fr;gap:32px;padding-top:24px}.essay-track{grid-template-columns:20px 1fr 12px;gap:10px;padding:21px 0}.essay-track h4{font-size:21px}.lead-track h4{font-size:30px}.lead-track{padding-bottom:27px}.lead-track p{font-size:14px}.liner,.listening-notes{padding:24px 0 0;border-left:0;border-top:1px solid var(--ink-15)}.liner blockquote{font-size:23px}.career-note{margin-top:24px}.music-essay h3{font-size:31px}.listening-notes dl>div{grid-template-columns:1fr 1.2fr;gap:18px}.other-side{grid-template-columns:1fr 20px;gap:8px 16px;font-size:18px;margin-top:32px;padding:22px 0}.other-side-label{grid-column:1/-1}.end-note{align-items:start}.end-note p,.end-note a{font-size:11px;line-height:1.7;max-width:150px}.end-note a{text-align:right}.home-shell :global(.global-footer-meta){width:100%;margin-left:0}}
-@media(max-width:360px){.side-tabs button{display:block;font-size:13px;padding:16px 10px}.side-letter{margin-bottom:10px}.side-label small{font-size:11px}.lead-track h4{font-size:27px}}
-@media(prefers-reduced-motion:reduce){.side-panel:not([hidden]){animation:none}.track-arrow,.other-side>span:last-child{transition:none}}
-@media print{#panel-a,#panel-b{display:block!important}.side-tabs,.other-side{display:none}}
-.working-preview{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;padding-top:32px;border-top:1px solid var(--ink-20)}.working-preview h3{font:400 28px/1.25 var(--font-body);letter-spacing:-.035em;margin:0 0 16px}.working-preview p:not(.micro){font-size:14px;line-height:1.8;max-width:370px;color:var(--ink-65)}.working-preview a{display:inline-block;font-size:13px;line-height:1.8;color:var(--accent);margin-top:10px}.working-preview figure{margin:0;padding-left:28px;border-left:1px solid var(--ink-15)}.working-preview blockquote{margin:0;font-size:19px;line-height:1.65;letter-spacing:-.02em}.working-preview figcaption{margin-top:18px;font-size:12px;color:var(--ink-65)}
-@media(max-width:580px){.working-preview{grid-template-columns:1fr;gap:28px;margin-top:32px}.working-preview figure{border-left:0;padding-left:0}.working-preview blockquote{font-size:18px}}
+@media(max-width:580px){.home-shell{padding:28px 24px 0}.identity{margin:44px 0 36px}.identity p{font-size:17px}.essays a{font-size:19px;padding:20px 0}}
+@media print{#panel-a,#panel-b{display:block!important}.side-tabs{display:none}}
 </style>

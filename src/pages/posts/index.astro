@@ -42,7 +42,6 @@ const siteUrl = Astro.site!.toString().replace(/\/$/, '');
     <SiteHeader />
     <main id="main">
       <h1>Writing</h1>
-      <p class="intro">Notes from the lab, the work, and everything around it.</p>
       {years.map(year => (
         <section class="year-group" aria-label={`Writing from ${year}`}>
           <h2>{year}</h2>
