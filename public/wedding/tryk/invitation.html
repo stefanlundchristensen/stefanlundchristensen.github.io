@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>S + C · Invitationen</title>
+<link rel="icon" href="assets/embrace.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Square gatefold (portfals) invitation: 120 × 120 mm closed, 240 × 120 mm open (a standard square gatefold size at online printers).
+   1 mm = var(--mm). Everything printed is sized in --u = 1 % of the closed width
+   (1.2 mm), so the same panels can be shown folded, open and flat at any scale. */
+:root{
+  --paper:#f3eedf;--card:#fffaf0;--ink:#641b33;--red:#bd2944;--powder:#9bbbd4;--rule:#641b3340;--table:#e5dac6;
+  --serif:Georgia,'Times New Roman',serif;--hand:'Caveat','Bradley Hand',cursive;--sans:'DM Sans',Arial,sans-serif;
+  --gutter:max(16px,env(safe-area-inset-left,0px),env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,dl,dd{margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance}
+em{font-family:var(--hand);font-style:normal}
+a{color:inherit}
+
+.top{max-width:1180px;margin:auto;padding:calc(28px + env(safe-area-inset-top,0px)) var(--gutter) 10px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--rule)}
+.logo{font:italic 32px/1 var(--serif);letter-spacing:-.05em}
+.logo span{display:block;font:500 11px/1 var(--sans);letter-spacing:.16em;margin-top:8px;font-style:normal}
+.top a{font-size:14px;text-decoration:none;border-bottom:1px solid var(--rule);min-height:44px;display:inline-flex;align-items:center}
+.intro{max-width:1180px;margin:auto;padding:40px var(--gutter) 24px}
+.intro .hand{font:28px/1.2 var(--hand);display:inline-block;transform:rotate(-4deg);margin-bottom:14px}
+.intro h1{font-size:clamp(46px,7vw,92px);line-height:.95;letter-spacing:-.045em;margin-bottom:18px}
+.intro p{font-size:18px;max-width:58ch}
+
+section{max-width:1180px;margin:0 auto;padding:36px var(--gutter) 6px}
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:600;margin-bottom:10px}
+section>h2{font-size:clamp(34px,4.6vw,54px);letter-spacing:-.04em;line-height:1;margin-bottom:10px}
+section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
+.scene{background:var(--table);border-radius:6px;padding:clamp(22px,4vw,48px) 0}
+
+/* ---------- printed panels ---------- */
+.card{--u:calc(1.2 * var(--mm))}
+.panel{position:relative;overflow:hidden;background:var(--card);color:var(--ink);height:calc(100 * var(--u))}
+.panel::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(115deg,#57152d03 0 2px,#0000 2px 5px)}
+.w50{width:calc(50 * var(--u))}.w100{width:calc(100 * var(--u))}
+.ey{font:600 calc(1.9 * var(--u))/1.25 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+
+/* outside: the two doors carry one heart, split at the opening */
+.door .heart{position:absolute;top:calc(17 * var(--u));width:calc(64 * var(--u));max-width:none}
+.door.l .heart{left:calc(18 * var(--u))}
+.door.r .heart{left:calc(-32 * var(--u))}
+.door .say{position:absolute;top:calc(84 * var(--u));left:0;right:0;font:calc(10.5 * var(--u))/1 var(--serif);letter-spacing:-.045em;white-space:nowrap}
+.door.l .say{text-align:right;padding-right:calc(.9 * var(--u))}
+.door.r .say{text-align:left;padding-left:calc(.6 * var(--u));font-family:var(--hand);font-size:calc(15.5 * var(--u));letter-spacing:0;top:calc(81.5 * var(--u))}
+.door .ini{position:absolute;top:calc(35 * var(--u));left:0;right:0;font:calc(25 * var(--u))/1 var(--hand);color:#2a0d16;white-space:nowrap}
+.door.l .ini{text-align:right;padding-right:calc(1.2 * var(--u))}
+.door.l .ini i{font-style:normal;font-size:.5em;vertical-align:.18em;margin-left:calc(.5 * var(--u))}
+.door.r .ini{text-align:left;padding-left:calc(3.4 * var(--u))}
+.door .ey{position:absolute;top:calc(6.5 * var(--u))}
+.door.l .ey{left:calc(6.5 * var(--u))}
+.door.r .ey{right:calc(6.5 * var(--u))}
+.door.l{box-shadow:inset calc(-.25 * var(--u)) 0 0 #641b3312}
+.back{display:grid;place-items:center;text-align:center}
+.back img{width:calc(15 * var(--u));margin:0 auto calc(3 * var(--u))}
+.back .sc{font:italic calc(6 * var(--u))/1 var(--serif);letter-spacing:-.05em}
+.back .ey{margin-top:calc(3 * var(--u))}
+
+/* inside */
+.in{padding:calc(8 * var(--u)) calc(6.5 * var(--u));display:flex;flex-direction:column}
+.in.mid{padding:calc(9 * var(--u)) calc(10 * var(--u))}
+.greet{font:calc(6.4 * var(--u))/1.1 var(--hand);display:flex;align-items:flex-end;gap:calc(1.5 * var(--u));transform:rotate(-2deg);transform-origin:left;max-width:78%}
+.greet span{flex:1;border-bottom:1px solid var(--powder);margin-bottom:calc(1.3 * var(--u))}
+.mid h3{font-size:calc(12.5 * var(--u));line-height:.94;letter-spacing:-.05em;margin:calc(8 * var(--u)) 0 calc(5 * var(--u))}
+.mid h3 em{font-size:1.06em}
+.mid .body{font-size:calc(2.75 * var(--u));line-height:1.5;max-width:calc(62 * var(--u))}
+.mid .sign{font:calc(6.4 * var(--u))/1 var(--hand);margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end}
+.mid .sign img{width:calc(13 * var(--u))}
+.prog{list-style:none;padding:0;margin-top:calc(4 * var(--u));border-top:1px solid var(--rule)}
+.prog li{padding:calc(2.6 * var(--u)) 0;border-bottom:1px solid var(--rule);font:calc(3.9 * var(--u))/1.1 var(--serif);letter-spacing:-.03em}
+.prog small{display:block;font:calc(2.2 * var(--u))/1.3 var(--sans);letter-spacing:0;margin-top:calc(.8 * var(--u))}
+.in .note{font:calc(4.6 * var(--u))/1.1 var(--hand);margin-top:auto;transform:rotate(-3deg);transform-origin:left}
+.facts{display:grid;gap:calc(3.6 * var(--u))}
+.facts dt{font:600 calc(1.75 * var(--u))/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:calc(1 * var(--u));color:#641b33b3}
+.facts dd{font-size:calc(2.4 * var(--u));line-height:1.35}
+.facts strong{font:400 calc(3.9 * var(--u))/1.08 var(--serif);letter-spacing:-.03em;display:block}
+.qr{margin-top:auto;display:flex;align-items:center;gap:calc(2 * var(--u));font-size:calc(1.75 * var(--u));line-height:1.35}.qr span{min-width:0}
+.qr i{flex:none;width:calc(12 * var(--u));aspect-ratio:1;border:1px solid var(--ink);display:grid;place-items:center;font:600 calc(1.7 * var(--u))/1 var(--sans);font-style:normal;letter-spacing:.08em;background:repeating-conic-gradient(#641b330d 0 25%,#0000 0 50%) 0 0/calc(2 * var(--u)) calc(2 * var(--u))}
+
+/* ---------- 1. folding card ---------- */
+.stage{--mm:min(2.9px,calc((100vw - 2 * var(--gutter) - 16px) / 211));display:flex;flex-direction:column;align-items:center;gap:22px}
+.fold{position:relative;width:calc(120 * var(--mm));height:calc(120 * var(--mm));perspective:calc(450 * var(--mm));cursor:pointer;margin:calc(4 * var(--mm)) 0}
+.fold .base{position:absolute;inset:0;box-shadow:0 10px 30px -12px #57152d55,0 30px 60px -36px #57152d55}
+.flap{position:absolute;top:0;width:50%;height:100%;transform-style:preserve-3d;transition:transform 1s var(--ease)}
+.flap.l{left:0;transform-origin:left center}
+.flap.r{right:0;transform-origin:right center}
+.fold.open .flap.l{transform:rotateY(-122deg)}
+.fold.open .flap.r{transform:rotateY(122deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.inner{transform:rotateY(180deg)}
+.face.inner .panel{filter:brightness(.965)}
+.fold:focus-visible{outline:3px solid #686fa6;outline-offset:6px}
+@media (prefers-reduced-motion:reduce){.flap{transition:none}}
+.toggle{font:500 16px/1 var(--sans);color:var(--paper);background:var(--ink);border:0;min-height:48px;padding:0 24px;border-radius:99px;cursor:pointer;touch-action:manipulation;transition:transform .12s var(--ease)}
+.toggle:active{transform:scale(.97)}
+
+/* ---------- 2. flat sheets ---------- */
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 clamp(12px,3vw,40px)}
+.sheet-wrap{--mm:min(2.9px,max(2.4px,calc((100vw - 2 * var(--gutter) - 2 * clamp(12px,3vw,40px)) / 240)));width:calc(240 * var(--mm));margin:auto}
+.sheet{display:flex;box-shadow:0 6px 18px -6px #57152d33,0 18px 40px -24px #57152d40}
+.sheet .panel+.panel{border-left:1px dashed #641b3340}
+.cols{display:grid;grid-template-columns:1fr 2fr 1fr;margin-top:10px;font-size:12.5px;line-height:1.35;text-align:center;gap:0}
+.cols b{display:block;font-weight:600}
+.swipe{display:none;font-size:13px;text-align:center;margin:10px 0 0}
+@media (max-width:640px){.swipe{display:block}}
+
+/* ---------- 3. specs ---------- */
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+.specs h3{font-size:23px;margin-bottom:6px}
+.specs p,.specs li{font-size:15px}
+.specs ul{margin:0;padding-left:18px}
+.specs .dims{font:400 clamp(30px,4vw,44px)/1 var(--serif);letter-spacing:-.04em;margin-bottom:6px}
+footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);font-size:14px}
+@media (max-width:760px){.specs{grid-template-columns:1fr;gap:22px}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="logo">S + C<span>INVITATIONEN · UDKAST</span></div>
+  <a href="index.html">Alle tryksager →</a>
+</div>
+
+<div class="intro">
+  <p class="hand">Åbn hjertet.</p>
+  <h1>Kvadratisk <em>portfals.</em></h1>
+  <p>To låger, der mødes på midten. Lukket holder de to hænder om ét hjerte. Når man åbner lågerne, slipper hænderne, og invitationen står i midten.</p>
+</div>
+
+<!-- Panel content, written once and placed in every view below -->
+<template id="t-door-l"><div class="panel w50 door l"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">S <i>+</i></p><p class="say">Bryllups</p><p class="ey">Pakhus 11</p></div></template>
+<template id="t-door-r"><div class="panel w50 door r"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">C</p><p class="say">fest</p><p class="ey">6.3.2027</p></div></template>
+<template id="t-back"><div class="panel w100 back"><div><img src="assets/hjerte.webp" alt=""><p class="sc">S + C</p><p class="ey">stefanchristensen.me/wedding</p></div></div></template>
+<template id="t-in-l"><div class="panel w50 in">
+  <p class="ey">Dagen</p>
+  <ol class="prog">
+    <li>Vi mødes<small>Kl. 15:00 på Pakhus 11</small></li>
+    <li>En lille ceremoni<small>Uofficiel og helt vores egen</small></li>
+    <li>Snack &amp; bobler</li>
+    <li>Mad</li>
+    <li>Fest &amp; dans<small>Til kl. 02:00</small></li>
+  </ol>
+  <p class="note">Vi glæder os!</p>
+</div></template>
+<template id="t-in-c"><div class="panel w100 in mid">
+  <p class="greet">Kære <span></span></p>
+  <h3>Et stort ja. <em>Og en fest med jer.</em></h3>
+  <p class="body">Vi skal giftes, og vi vil så gerne fejre det med vores yndlingsmennesker. Kom til en lille ceremoni, snacks og bobler, god mad og dans, til det bliver nat.</p>
+  <p class="sign"><span>Kærlig hilsen S + C</span><img src="assets/hjerte.webp" alt=""></p>
+</div></template>
+<template id="t-in-r"><div class="panel w50 in">
+  <dl class="facts">
+    <div><dt>Hvornår</dt><dd><strong>Lørdag 6. marts 2027</strong>Kl. 15:00 til 02:00</dd></div>
+    <div><dt>Hvor</dt><dd><strong>Pakhus 11</strong>Dampfærgevej 2<br>2100 København Ø</dd></div>
+    <div><dt>Påklædning</dt><dd>Helt afslappet. Kom i det, du har det bedst i.</dd></div>
+    <div><dt>Svar senest</dt><dd><strong>15. januar 2027</strong></dd></div>
+  </dl>
+  <div class="qr"><i>QR</i><span>Svar og se det hele på<br><b>stefanchristensen.me/wedding</b></span></div>
+</div></template>
+
+<section>
+  <p class="eyebrow">01 / FOLDET</p>
+  <h2>Luk op.</h2>
+  <p>Tryk på kortet for at åbne og lukke lågerne.</p>
+  <div class="scene">
+    <div class="stage card">
+      <div class="fold" id="fold" role="button" tabindex="0" aria-pressed="false" aria-label="Åbn eller luk invitationen">
+        <div class="base" data-t="t-in-c"></div>
+        <div class="flap l"><div class="face" data-t="t-door-l"></div><div class="face inner" data-t="t-in-l"></div></div>
+        <div class="flap r"><div class="face" data-t="t-door-r"></div><div class="face inner" data-t="t-in-r"></div></div>
+      </div>
+      <button class="toggle" id="toggle" type="button">Åbn invitationen</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">02 / INDERSIDEN</p>
+  <h2>Foldet helt ud.</h2>
+  <p>Dagens program på venstre låge, selve invitationen i midten og det praktiske på højre låge. Navnet skrives i hånden.</p>
+  <div class="scene">
+    <div class="scroll"><div class="sheet-wrap card">
+      <div class="sheet"><div data-t="t-in-l"></div><div data-t="t-in-c"></div><div data-t="t-in-r"></div></div>
+      <div class="cols"><span><b>Venstre låge</b>60 mm</span><span><b>Midte</b>120 mm</span><span><b>Højre låge</b>60 mm</span></div>
+    </div></div>
+    <p class="swipe">Træk til siden for at se hele arket →</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">03 / YDERSIDEN</p>
+  <h2>Den anden side af arket.</h2>
+  <p>Set udefra bytter lågerne plads: den højre halvdel af hjertet står yderst til venstre på arket, og bagsiden er i midten. Sådan skal trykfilen se ud.</p>
+  <div class="scene">
+    <div class="scroll"><div class="sheet-wrap card">
+      <div class="sheet"><div data-t="t-door-r"></div><div data-t="t-back"></div><div data-t="t-door-l"></div></div>
+      <div class="cols"><span><b>Højre låge</b>forside</span><span><b>Bagside</b>120 mm</span><span><b>Venstre låge</b>forside</span></div>
+    </div></div>
+    <p class="swipe">Træk til siden for at se hele arket →</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">04 / MÅL OG TRYK</p>
+  <h2>Det, trykkeriet skal vide.</h2>
+  <div class="specs">
+    <div><p class="dims">120 × 120 mm</p><h3>Format</h3><p>Lukket 120 × 120 mm, åben 240 × 120 mm. Det er et standardmål for kvadratisk portfals hos onlinetrykkerier. Hele arket kan ligge på ét A4-ark på langs, så en prøve kan printes derhjemme i 100 %.</p></div>
+    <div><p class="dims">2 rillelinjer</p><h3>Fals</h3><ul><li>Rilles 60 mm fra hver kant, foldes ind mod midten</li><li>Lågerne gøres cirka 1 mm kortere, så de ikke støder sammen</li><li>Ingen tekst hen over midten; hjertet tåler en lille forskydning</li></ul></div>
+    <div><p class="dims">300 g</p><h3>Papir og kuvert</h3><p>Varmt, ubestrøget papir i creme, cirka 300 g, trykt på begge sider. Kvadratisk kuvert 130 × 130 mm. Tjek portoen for kvadratiske breve, før I vælger.</p></div>
+  </div>
+</section>
+
+<footer>Tekst, program og QR-kode er udkast. Stil: 01 Supper Club fra <a href="https://stefanchristensen.me/wedding/">hjemmesiden</a>.</footer>
+
+<script>
+document.querySelectorAll('[data-t]').forEach(function (slot) {
+  slot.appendChild(document.getElementById(slot.dataset.t).content.cloneNode(true));
+});
+var fold = document.getElementById('fold'), toggle = document.getElementById('toggle');
+function flip() {
+  var open = fold.classList.toggle('open');
+  fold.setAttribute('aria-pressed', open);
+  toggle.textContent = open ? 'Luk invitationen' : 'Åbn invitationen';
+}
+fold.addEventListener('click', flip);
+toggle.addEventListener('click', flip);
+fold.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+</script>
+</body>
+</html>

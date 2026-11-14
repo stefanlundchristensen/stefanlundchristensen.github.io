@@ -87,7 +87,7 @@ def page(theme,num,name,prefix):
 <section id="praktisk" class="section practical">
 <p class="eyebrow">03 / GODT AT VIDE</p>
 <div class="two-column">
-<div class="practical-intro"><h2>De små<br><em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="{prefix}assets/embrace.svg" width="160" height="165" alt=""></div>
+<div class="practical-intro"><h2>De små<br><em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="{prefix}assets/hjerte.webp" width="480" height="499" alt=""></div>
 <div class="questions">
 <details open><summary>Hvor og hvornår?<span aria-hidden="true">+</span></summary><p>Lørdag den 6. marts 2027 kl. 15:00 på Pakhus 11, Dampfærgevej 2, 2100 København Ø. Festen slutter kl. 02:00.</p><p><a class="mail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pakhus+11%2C+Dampf%C3%A6rgevej+2%2C+2100+K%C3%B8benhavn+%C3%98" target="_blank" rel="noopener">Åbn i kort <span aria-hidden="true">↗</span></a></p></details>
 <details><summary>Find vej<span aria-hidden="true">+</span></summary><p>Pakhus 11 ligger på Dampfærgevej 2 ved Amerika Plads. Nærmeste station er Nordhavn, cirka 10 minutters gang derfra. Indgang og parkering skriver vi her, når dagen nærmer sig.</p></details>

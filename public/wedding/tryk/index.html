@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>S + C · Tryksager</title>
+<link rel="icon" href="assets/embrace.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Print suite preview in the 01 Supper Club style of stefanchristensen.me/wedding.
+   Every object is drawn at its real proportions: 1 mm = var(--mm). Text inside an
+   object is sized in cqw (percent of the object's width), so it scales with it. */
+:root{
+  --paper:#f3eedf;--card:#fffaf0;--ink:#641b33;--red:#bd2944;--blue:#a8b7c5;--purple:#686fa6;--powder:#9bbbd4;
+  --rule:#641b3340;--table:#e5dac6;
+  --serif:Georgia,'Times New Roman',serif;--hand:'Caveat','Bradley Hand',cursive;--sans:'DM Sans',Arial,sans-serif;
+  --gutter:max(16px,env(safe-area-inset-left,0px),env(safe-area-inset-right,0px));
+  --mm:min(2.5px,calc((100vw - 2 * var(--gutter) - 24px) / 214));
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance}
+em{font-family:var(--hand);font-style:normal}
+
+/* Page frame */
+.top{max-width:1180px;margin:auto;padding:calc(28px + env(safe-area-inset-top,0px)) var(--gutter) 10px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--rule)}
+.logo{font:italic 32px/1 var(--serif);letter-spacing:-.05em}
+.logo span{display:block;font:500 11px/1 var(--sans);letter-spacing:.16em;margin-top:8px;font-style:normal}
+.top a{font-size:14px;border-bottom:1px solid var(--rule);min-height:44px;display:inline-flex;align-items:center;color:inherit;text-decoration:none}
+.intro{max-width:1180px;margin:auto;padding:56px var(--gutter) 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.intro h1{font-size:clamp(54px,8vw,104px);line-height:.95;letter-spacing:-.045em}
+.intro h1 em{font-weight:400}
+.intro p{font-size:18px;max-width:46ch}
+.intro .hand{font:28px/1.2 var(--hand);display:inline-block;transform:rotate(-4deg);margin-bottom:18px}
+.index{max-width:1180px;margin:0 auto;padding:0 var(--gutter) 30px;display:flex;flex-wrap:wrap;gap:8px}
+.index a{font-size:14px;border:1px solid var(--rule);padding:0 14px;min-height:40px;display:inline-flex;align-items:center;color:inherit;text-decoration:none;border-radius:99px;background:var(--card)}
+.index a:active{background:var(--ink);color:var(--paper)}
+
+section{max-width:1180px;margin:0 auto;padding:44px var(--gutter) 10px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px;flex-wrap:wrap}
+.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:600;margin-bottom:10px}
+.head h2{font-size:clamp(38px,5vw,60px);letter-spacing:-.04em;line-height:1}
+.head p:last-child{max-width:40ch;font-size:16px}
+
+/* The table the paper lies on */
+.scene{background:var(--table);border-radius:6px;padding:clamp(20px,4vw,48px) clamp(12px,3vw,40px);display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:clamp(24px,4vw,48px) clamp(18px,3vw,40px)}
+.item{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:100%}
+.label{font-size:13px;line-height:1.4;text-align:center;max-width:34ch}
+.label b{display:block;font-size:14px;font-weight:600}
+.group{display:flex;gap:calc(6 * var(--mm));align-items:flex-end;flex-wrap:wrap;justify-content:center}
+
+/* Paper */
+.pc{container-type:inline-size;position:relative;background:var(--card);color:var(--ink);overflow:hidden;flex:none;
+  box-shadow:0 1px 1px #57152d14,0 6px 18px -6px #57152d33,0 18px 40px -24px #57152d40}
+.pc::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 20% 0%,#fff6 0,#0000 60%),repeating-linear-gradient(115deg,#57152d03 0 2px,#0000 2px 5px)}
+.tilt-l{transform:rotate(-1.6deg)}.tilt-r{transform:rotate(1.3deg)}
+@media (prefers-reduced-motion:no-preference){.pc{transition:transform .35s cubic-bezier(.23,1,.32,1)}@media (hover:hover){.pc:hover{transform:rotate(0) translateY(-4px)}}}
+
+/* Sizes, real millimetres */
+.a6l{width:calc(148 * var(--mm));aspect-ratio:148/105}
+.a6p{width:calc(105 * var(--mm));aspect-ratio:105/148.5}
+.a5open{width:calc(210 * var(--mm));aspect-ratio:210/148.5}
+.c6{width:calc(130 * var(--mm));aspect-ratio:1}
+.sq{width:calc(120 * var(--mm));aspect-ratio:1}
+.sq::before{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:1px solid #641b3322;z-index:1}
+.heartbox{position:relative;margin:auto 0 3cqw;line-height:0}.sq.cover .heartbox .mark{margin:0}.heartbox span{position:absolute;left:0;right:0;top:27%;text-align:center;font:19cqw/1 var(--hand);color:#2a0d16;white-space:nowrap}.heartbox i{font-style:normal;font-size:.5em;vertical-align:.18em}
+.sq.cover .pad{inset:8cqw}.sq.cover .mark{width:50cqw;margin:auto 0 3cqw}.sq.cover h3{font-size:12cqw}
+.menu{width:calc(70 * var(--mm));aspect-ratio:70/210}
+.place{width:calc(88 * var(--mm));aspect-ratio:88/40}
+.a5p{width:calc(148 * var(--mm) * .78);aspect-ratio:148/210}
+.a2{width:calc(420 * var(--mm) * .42);aspect-ratio:420/594}
+.seal{width:calc(38 * var(--mm));aspect-ratio:1;border-radius:50%}
+
+/* Shared print typography (all in cqw) */
+.pad{position:absolute;inset:7cqw;display:flex;flex-direction:column}
+.frame{position:absolute;inset:3.6cqw;border:1px solid var(--rule);pointer-events:none}
+.ey{font:600 3.1cqw/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.sans{font-family:var(--sans)}
+.hand{font-family:var(--hand)}
+.mark{display:block}
+.line{border-bottom:1px solid var(--powder);height:0}
+.skel{height:2.2cqw;background:#641b331f;border-radius:2px}
+.ph{color:#641b3399}
+
+/* Save the date */
+.std .pad{inset:8cqw 8cqw 7cqw}
+.std .hand{font-size:8cqw;transform:rotate(-4deg);transform-origin:left;line-height:1}
+.std .big{font:400 25cqw/.86 var(--serif);letter-spacing:-.06em;margin-top:2.5cqw}
+.std .big em{font-size:.62em;letter-spacing:0}
+.std .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end}
+.std .foot p{font:500 3cqw/1.45 var(--sans);letter-spacing:.06em}
+.std .mark{width:20cqw}
+.std-back .pad{flex-direction:row;gap:6cqw}
+.std-back .l{flex:1.1;display:flex;flex-direction:column;gap:2.4cqw}
+.std-back .l h3{font-size:6.4cqw;line-height:1.02;letter-spacing:-.03em}
+.std-back .l p{font-size:3.15cqw;line-height:1.45}
+.std-back .l .hand{font-size:5.6cqw;margin-top:auto}
+.std-back .r{flex:1;border-left:1px solid var(--rule);padding-left:6cqw;display:flex;flex-direction:column;gap:6.5cqw;padding-top:4cqw}
+.stamp{align-self:flex-end;width:15cqw;aspect-ratio:4/5;border:1px dashed var(--rule);display:grid;place-items:center;margin-bottom:2cqw}
+.stamp img{width:70%}
+
+/* Invitation */
+.cover .pad{inset:9cqw;align-items:center;text-align:center}
+.cover .ey{margin-top:2cqw}
+.cover .mark{width:58cqw;margin:auto 0 4cqw}
+.cover h3{font-size:13.5cqw;line-height:.95;letter-spacing:-.05em}
+.cover h3 em{font-size:1.05em}
+.cover .sc{font:italic 7cqw/1 var(--serif);margin-top:7cqw;letter-spacing:-.04em}
+.inside{display:grid;grid-template-columns:1fr 1fr}
+.inside>div{position:relative;container-type:inline-size}
+.inside>div+div{border-left:1px dashed #641b3326}
+.inside .pad{inset:7.5cqw 7cqw}
+.inside .greet{font:7.6cqw/1.1 var(--hand);display:flex;align-items:flex-end;gap:2cqw;transform:rotate(-2deg);transform-origin:left}
+.inside .greet span{flex:1;margin-bottom:1.6cqw}
+.inside h3{font-size:10.6cqw;line-height:.96;letter-spacing:-.045em;margin:8cqw 0 5cqw}
+.inside h3 em{font-size:1.05em}
+.inside .body{font-size:3.55cqw;line-height:1.5}
+.inside .sign{font:7cqw/1 var(--hand);margin-top:auto}
+.facts{display:grid;gap:3.6cqw;font-size:3.4cqw;line-height:1.35}
+.facts dt{font:600 2.6cqw/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1cqw;color:#641b33b3}
+.facts dd{margin:0}
+.facts dd strong{font:400 5.4cqw/1.05 var(--serif);letter-spacing:-.03em;display:block}
+.qr{margin-top:auto;display:flex;align-items:center;gap:3.5cqw;font-size:3cqw;line-height:1.3}
+.qr i{flex:none;width:17cqw;aspect-ratio:1;border:1px solid var(--ink);display:grid;place-items:center;font:600 2.3cqw/1.1 var(--sans);font-style:normal;text-align:center;letter-spacing:.08em;background:repeating-conic-gradient(#641b330d 0 25%,#0000 0 50%) 0 0/2.6cqw 2.6cqw}
+
+/* Envelope and seal */
+.env{background:#efe3cf}
+.env::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,#0000 calc(50% - .5px),#641b3318 50%,#0000 calc(50% + .5px)) left/50.5% 100% no-repeat,linear-gradient(to bottom left,#0000 calc(50% - .5px),#641b3318 50%,#0000 calc(50% + .5px)) right/50.5% 100% no-repeat}
+.env .to{position:absolute;left:36cqw;top:52cqw;right:10cqw;font:6.4cqw/1.5 var(--hand)}
+.env .to .line{margin-top:-1.4cqw}
+.env .lbl{position:absolute;left:8cqw;top:8cqw;font:italic 5cqw/1 var(--serif);letter-spacing:-.04em}
+.env .lbl span{display:block;font:600 1.9cqw/1 var(--sans);letter-spacing:.18em;margin-top:1.3cqw;font-style:normal}
+.seal{background:var(--red);color:#fff5ef;display:grid;place-items:center;text-align:center}
+.seal::after{border-radius:50%}
+.seal div{font:italic 24cqw/1 var(--serif);letter-spacing:-.05em}
+.seal span{display:block;font:600 7.5cqw/1 var(--sans);letter-spacing:.14em;margin-top:5cqw;font-style:normal}
+.seal-wrap{display:flex;flex-direction:column;align-items:center;gap:calc(4 * var(--mm))}
+
+/* Welcome sign */
+.welcome .pad{inset:9cqw 9cqw 8cqw}
+
+.welcome .hand{font-size:6.5cqw;transform:rotate(-4deg);transform-origin:left;line-height:1}
+.welcome h3{font-size:15.5cqw;line-height:.9;letter-spacing:-.055em;margin:2cqw 0 2cqw}
+.welcome h3 em{font-size:1.05em}
+.welcome .toprow{display:flex;justify-content:space-between;align-items:flex-start;gap:4cqw}.welcome .mark{width:17cqw;flex:none}
+.prog{list-style:none;padding:0;margin:2cqw 0 0;border-top:1px solid var(--rule)}
+.prog li{display:grid;grid-template-columns:15cqw 1fr;gap:3cqw;align-items:baseline;padding:2.5cqw 0;border-bottom:1px solid var(--rule)}
+.prog b{font:600 2.7cqw/1 var(--sans);letter-spacing:.12em}
+.prog span{font:5cqw/1.1 var(--serif);letter-spacing:-.03em}
+.prog small{display:block;font:3cqw/1.3 var(--sans);letter-spacing:0;margin-top:1cqw}
+.welcome .foot{margin-top:auto;display:flex;justify-content:space-between;font:500 2.7cqw/1.3 var(--sans);letter-spacing:.1em}
+
+/* Table plan */
+.plan .pad{inset:8cqw}
+.plan h3{font-size:11cqw;line-height:.95;letter-spacing:-.05em}
+.plan h3 em{font-size:1.05em}
+.plan .sub{font-size:3cqw;margin:2cqw 0 4cqw}
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:4cqw 6cqw}
+.tbl h4{margin:0 0 2.2cqw;font:400 5cqw/1 var(--serif);letter-spacing:-.03em;border-bottom:1px solid var(--rule);padding-bottom:1.6cqw;display:flex;justify-content:space-between;align-items:baseline}
+.tbl h4 em{font-size:4.4cqw}
+.tbl .skel{height:1.5cqw;margin:1.7cqw 0}
+.plan .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;font:500 2.6cqw/1.3 var(--sans);letter-spacing:.1em}
+.plan .foot img{width:13cqw}
+
+/* Menu */
+.menu .pad{inset:12cqw 11cqw;align-items:center;text-align:center}
+.menu .mark{width:36cqw}
+.menu h3{font-size:17cqw;line-height:.95;letter-spacing:-.05em;margin:7cqw 0 2cqw}
+.menu .hand{font-size:11cqw;line-height:1}
+.course{margin-top:9cqw;width:100%}
+.course .ey{font-size:5cqw}
+.course p{font:7.6cqw/1.22 var(--serif);margin-top:2.6cqw}
+.course small{display:block;font:5.2cqw/1.35 var(--sans);margin-top:1.4cqw}
+.dot{width:4cqw;aspect-ratio:1;border-radius:50%;background:var(--red);margin:8cqw auto 0}
+.menu .foot{margin-top:auto;font:600 4.4cqw/1.3 var(--sans);letter-spacing:.14em}
+
+/* Table number and place cards */
+.tno .pad{inset:9cqw;align-items:center;text-align:center;justify-content:center}
+.tno .ey{font-size:3.6cqw}
+.tno .n{font:400 60cqw/1 var(--serif);letter-spacing:-.06em;margin:0 0 4cqw}
+.tno .hand{font-size:9cqw}
+.tno .mark{width:16cqw;margin-top:7cqw}
+.place .pad{inset:0 9cqw;flex-direction:row;align-items:center;gap:6cqw}
+.place .mark{width:15cqw;flex:none}
+.place .nm{font:13cqw/1 var(--hand);flex:1;border-bottom:1px solid var(--powder);padding-bottom:1.5cqw}
+.place .nm.blank{color:transparent}
+.place .t{font:600 3.6cqw/1.2 var(--sans);letter-spacing:.14em;text-align:right}
+
+/* Small signs */
+.sign .pad{inset:11cqw 10cqw}
+.sign .ey{font-size:3.5cqw}
+.sign h3{font-size:15.5cqw;line-height:.92;letter-spacing:-.05em;margin:6cqw 0 5cqw}
+.sign h3 em{font-size:1.06em}
+.sign p{font-size:4.4cqw;line-height:1.45}
+.sign .hand{max-width:66%;font-size:8cqw;line-height:1.1;transform:rotate(-3deg);transform-origin:left;margin-top:auto}
+.sign .mark{position:absolute;right:9cqw;bottom:9cqw;width:22cqw}
+.sign .lines{display:grid;gap:8cqw;margin-top:8cqw}
+.sign.red{background:var(--ink);color:#fbefe6}
+.sign.red .frame{border-color:#fbefe655}
+.sign.red .line{border-color:#fbefe666}
+
+/* Thank you card */
+.ty-front .pad{inset:8cqw;align-items:center;justify-content:center;text-align:center}
+.ty-front .mark{width:22cqw;margin-bottom:3cqw}
+.ty-front h3{font-size:15cqw;line-height:.9;letter-spacing:-.05em}
+.ty-front h3 em{font-size:1.05em}
+.ty-front .ey{margin-top:5cqw}
+.ty-back .pad{inset:9cqw}
+.ty-back h3{font-size:16cqw;line-height:.9;letter-spacing:-.05em}
+.ty-back h3 em{font-size:1.05em}
+.ty-back p{font-size:3.4cqw;margin-top:3cqw;max-width:60%}
+.ty-back .lines{display:grid;gap:7cqw;margin-top:6cqw}
+.ty-back .mark{position:absolute;right:9cqw;bottom:9cqw;width:15cqw}
+.ty-back .lines{max-width:68%}
+
+/* Notes */
+.notes{max-width:1180px;margin:0 auto;padding:60px var(--gutter) calc(60px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1px solid var(--rule);margin-top:50px}
+.notes h3{font-size:24px;margin-bottom:8px}
+.notes p,.notes li{font-size:15px}
+.notes ul{margin:0;padding-left:18px}
+
+@media (max-width:760px){
+  .intro{grid-template-columns:1fr;gap:18px;padding-top:36px}
+  .notes{grid-template-columns:1fr;gap:24px}
+  .a2{width:calc(420 * var(--mm) * .5)}
+  .a5p{width:calc(148 * var(--mm) * 1.05)}
+  .tilt-l,.tilt-r{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="logo">S + C<span>TRYKSAGER · UDKAST</span></div>
+  <a href="https://stefanchristensen.me/wedding/">Se hjemmesiden ↗</a>
+</div>
+
+<div class="intro">
+  <div>
+    <p class="hand">Fra hjemmesiden til bordkortet.</p>
+    <h1>Alt det, der <em>skal trykkes.</em></h1>
+  </div>
+  <p>Stilen fra hjemmesiden (01 Supper Club) brugt på papiret: varmt papir, bordeauxrød skrift, Georgia til overskrifter, håndskrift til det personlige og hjertet med de to hænder. Alt er tegnet i de rigtige proportioner. Grå streger og [klammer] er pladsholdere.</p>
+</div>
+
+<nav class="index" aria-label="Spring til">
+  <a href="https://stefanchristensen.me/wedding/">Hjemmesiden ↗</a><a href="invitation.html">Invitationen</a><a href="hearts.html">Hjerterne</a><a href="#foer">Før festen</a><a href="#doeren">Ved døren</a><a href="#bordet">Ved bordet</a><a href="#rummet">Rundt i rummet</a><a href="#efter">Efter festen</a>
+</nav>
+
+<!-- 1 -->
+<section id="foer">
+  <div class="head">
+    <div><p class="eyebrow">01 / FØR FESTEN</p><h2>Sæt kryds, <em>og så invitationen.</em></h2></div>
+    <p>Save the date sendes først. Invitationen følger med alle detaljer og en QR-kode til tilmeldingen på hjemmesiden.</p>
+  </div>
+  <div class="scene">
+    <div class="item">
+      <div class="group">
+        <div class="pc a6l std tilt-l"><div class="frame"></div><div class="pad">
+          <p class="hand">Sæt et kryds!</p>
+          <p class="big">6.3.<em>27</em></p>
+          <div class="foot"><p>S + C BLIVER GIFT<br>PAKHUS 11 · KØBENHAVN Ø</p><img class="mark" src="assets/hjerte.webp" alt=""></div>
+        </div></div>
+        <div class="pc a6l std-back tilt-r"><div class="pad">
+          <div class="l">
+            <p class="ey">Save the date</p>
+            <h3>Hold dagen fri. Vi skal giftes!</h3>
+            <p>Lørdag den 6. marts 2027 fra kl. 15:00 til langt ud på natten. Invitationen kommer senere.</p>
+            <p class="hand">Kærlig hilsen S + C</p>
+          </div>
+          <div class="r">
+            <div class="stamp"><img src="assets/hjerte.webp" alt=""></div>
+            <div class="line"></div><div class="line"></div><div class="line"></div>
+          </div>
+        </div></div>
+      </div>
+      <p class="label"><b>Save the date</b>Postkort A6, 148 × 105 mm. Forside og bagside, enkeltark.</p>
+    </div>
+
+    <div class="item">
+      <a class="group" href="invitation.html" style="text-decoration:none;color:inherit">
+        <div class="pc sq cover"><div class="pad">
+          <p class="ey">6. marts 2027</p>
+          <div class="heartbox"><img class="mark" src="assets/hjerte.webp" alt=""><span>S <i>+</i> C</span></div>
+          <h3>Bryllups<em>fest</em></h3>
+        </div></div>
+      </a>
+      <p class="label"><b>Invitation</b>Kvadratisk portfals, 120 × 120 mm lukket. To låger åbner hjertet på midten. <a href="invitation.html" style="color:inherit">Se den foldet ud →</a></p>
+    </div>
+
+    <div class="item">
+      <div class="group">
+        <div class="pc c6 env tilt-r">
+          <div class="lbl">S + C<span>6.3.2027</span></div>
+          <div class="to">Til<div class="line" style="margin-left:9cqw"></div><br><div class="line"></div><br><div class="line"></div></div>
+        </div>
+        <div class="seal-wrap">
+          <div class="pc seal"><div>S+C<span>6.3.27</span></div></div>
+        </div>
+      </div>
+      <p class="label"><b>Kuvert og lukkemærke</b>Kvadratisk kuvert i varm creme, 130 × 130 mm. Rundt rødt mærke, Ø 38 mm, på klistermærkeark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="doeren">
+  <div class="head">
+    <div><p class="eyebrow">02 / VED DØREN</p><h2>Velkommen <em>indenfor.</em></h2></div>
+    <p>To store plakater på staffeli ved indgangen: dagens program og bordplanen.</p>
+  </div>
+  <div class="scene">
+    <div class="item">
+      <div class="pc a2 welcome"><div class="frame"></div><div class="pad">
+        <div class="toprow"><p class="hand">Kære alle jer, vi holder af.</p><img class="mark" src="assets/hjerte.webp" alt=""></div>
+        <h3>Velkommen <em>til festen.</em></h3>
+        <ol class="prog">
+          <li><b>15:00</b><span>Vi mødes<small>Find en drink og et kram.</small></span></li>
+          <li><b>&nbsp;</b><span>En lille ceremoni<small>Uofficiel og helt vores egen.</small></span></li>
+          <li><b>&nbsp;</b><span>Snack &amp; bobler</span></li>
+          <li><b>&nbsp;</b><span>Mad<small>Vi sætter os til bords.</small></span></li>
+          <li><b>– 02:00</b><span>Fest &amp; dans</span></li>
+        </ol>
+        <div class="foot"><span>S + C · 6. MARTS 2027</span><span>PAKHUS 11</span></div>
+      </div></div>
+      <p class="label"><b>Velkomstskilt</b>A2, 420 × 594 mm. Monteres på skumplade. Tider tilføjes, når de er på plads.</p>
+    </div>
+
+    <div class="item">
+      <div class="pc a2 plan"><div class="frame"></div><div class="pad">
+        <p class="ey">Find din plads</p>
+        <h3 style="margin-top:3cqw">Hvem sidder <em>hvor?</em></h3>
+        <p class="sub">Find dit navn, og sæt dig til bords.</p>
+        <div class="tables">
+          <div class="tbl"><h4>Bord 1 <em>Os to</em></h4><div class="skel" style="width:80%"></div><div class="skel" style="width:62%"></div><div class="skel" style="width:74%"></div><div class="skel" style="width:58%"></div><div class="skel" style="width:70%"></div></div>
+          <div class="tbl"><h4>Bord 2</h4><div class="skel" style="width:70%"></div><div class="skel" style="width:78%"></div><div class="skel" style="width:60%"></div><div class="skel" style="width:72%"></div><div class="skel" style="width:64%"></div></div>
+          <div class="tbl"><h4>Bord 3</h4><div class="skel" style="width:66%"></div><div class="skel" style="width:74%"></div><div class="skel" style="width:58%"></div><div class="skel" style="width:80%"></div><div class="skel" style="width:62%"></div></div>
+          <div class="tbl"><h4>Bord 4</h4><div class="skel" style="width:76%"></div><div class="skel" style="width:60%"></div><div class="skel" style="width:70%"></div><div class="skel" style="width:64%"></div><div class="skel" style="width:78%"></div></div>
+          <div class="tbl"><h4>Bord 5</h4><div class="skel" style="width:62%"></div><div class="skel" style="width:72%"></div><div class="skel" style="width:80%"></div><div class="skel" style="width:58%"></div><div class="skel" style="width:68%"></div></div>
+          <div class="tbl"><h4>Bord 6</h4><div class="skel" style="width:74%"></div><div class="skel" style="width:66%"></div><div class="skel" style="width:60%"></div><div class="skel" style="width:76%"></div><div class="skel" style="width:70%"></div></div>
+        </div>
+        <div class="foot"><span>S + C · 6. MARTS 2027</span><img src="assets/hjerte.webp" alt=""></div>
+      </div></div>
+      <p class="label"><b>Bordplan</b>A2, 420 × 594 mm. Seks borde vist som eksempel; antal og navne kommer, når svarene er inde.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="bordet">
+  <div class="head">
+    <div><p class="eyebrow">03 / VED BORDET</p><h2>Til bords, <em>og skål.</em></h2></div>
+    <p>Én menu pr. kuvert, et bordnummer pr. bord og et bordkort med navn til hver gæst.</p>
+  </div>
+  <div class="scene">
+    <div class="item">
+      <div class="pc menu tilt-l"><div class="frame"></div><div class="pad">
+        <img class="mark" src="assets/hjerte.webp" alt="">
+        <h3>Menu</h3>
+        <p class="hand">Lørdag den 6. marts</p>
+        <div class="course"><p class="ey">Snack &amp; bobler</p><p class="ph">[Snacks]</p><small class="ph">[Kort beskrivelse]</small></div>
+        <div class="course"><p class="ey">Forret</p><p class="ph">[Ret]</p><small class="ph">[Kort beskrivelse]</small></div>
+        <div class="course"><p class="ey">Hovedret</p><p class="ph">[Ret]</p><small class="ph">[Kort beskrivelse]</small></div>
+        <div class="course"><p class="ey">Dessert</p><p class="ph">[Ret]</p><small class="ph">[Kort beskrivelse]</small></div>
+        <div class="dot"></div>
+        <p class="foot">S + C · PAKHUS 11</p>
+      </div></div>
+      <p class="label"><b>Menu</b>70 × 210 mm, lægges på tallerkenen. To pr. A4-ark.</p>
+    </div>
+
+    <div class="item">
+      <div class="pc a6p tno tilt-r"><div class="frame"></div><div class="pad">
+        <p class="ey">Bord</p>
+        <p class="n">3</p>
+        <p class="hand">Skål for kærligheden!</p>
+        <img class="mark" src="assets/hjerte.webp" alt="">
+      </div></div>
+      <p class="label"><b>Bordnummer</b>A6, 105 × 148 mm, i en lille holder. Ét pr. bord.</p>
+    </div>
+
+    <div class="item">
+      <div style="display:grid;gap:calc(5 * var(--mm))">
+        <div class="pc place tilt-l"><div class="pad"><img class="mark" src="assets/hjerte.webp" alt=""><span class="nm">Jonas</span><span class="t">BORD<br>1</span></div></div>
+        <div class="pc place"><div class="pad"><img class="mark" src="assets/hjerte.webp" alt=""><span class="nm">Mormor</span><span class="t">BORD<br>3</span></div></div>
+        <div class="pc place tilt-r"><div class="pad"><img class="mark" src="assets/hjerte.webp" alt=""><span class="nm blank">.</span><span class="t">BORD<br>&nbsp;</span></div></div>
+      </div>
+      <p class="label"><b>Bordkort</b>88 × 40 mm, flade kort. Navne trykt eller skrevet i hånden på det tomme kort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section id="rummet">
+  <div class="head">
+    <div><p class="eyebrow">04 / RUNDT I RUMMET</p><h2>Små skilte, <em>store smil.</em></h2></div>
+    <p>A5-skilte ved baren, ved DJ'en og ved gæstebogen. Ønskesange-skiltet passer til sangfeltet i tilmeldingen.</p>
+  </div>
+  <div class="scene">
+    <div class="item">
+      <div class="pc a5p sign tilt-l"><div class="frame"></div><div class="pad">
+        <p class="ey">Baren</p>
+        <h3>Bobler &amp; <em>noget i glasset.</em></h3>
+        <p>Tag et glas, og find nogen, du ikke har krammet endnu.</p>
+        <p class="hand">Skål!</p>
+      </div><img class="mark" src="assets/hjerte.webp" alt=""></div>
+      <p class="label"><b>Bar</b>A5, 148 × 210 mm.</p>
+    </div>
+    <div class="item">
+      <div class="pc a5p sign red"><div class="frame"></div><div class="pad">
+        <p class="ey">Til dansegulvet</p>
+        <h3>Ønske&shy;sange.</h3>
+        <p>Hvilken sang får dig på dansegulvet? Skriv den her, så sørger vi for den.</p>
+        <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+      </div></div>
+      <p class="label"><b>Ønskesange</b>A5 i bordeaux med creme skrift. Lægges ved DJ'en med en pen.</p>
+    </div>
+    <div class="item">
+      <div class="pc a5p sign tilt-r"><div class="frame"></div><div class="pad">
+        <p class="ey">Gæstebog</p>
+        <h3>En lille <em>hilsen</em> til os.</h3>
+        <p>Et godt råd, et minde eller bare et hej. Vi læser dem alle sammen.</p>
+        <p class="hand">Tak, fordi du er her.</p>
+      </div><img class="mark" src="assets/hjerte.webp" alt=""></div>
+      <p class="label"><b>Gæstebog</b>A5, 148 × 210 mm.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="efter">
+  <div class="head">
+    <div><p class="eyebrow">05 / EFTER FESTEN</p><h2>Tak, <em>fordi I kom.</em></h2></div>
+    <p>Et enkelt takkekort med hjertet på forsiden og plads til en personlig hilsen bagpå.</p>
+  </div>
+  <div class="scene">
+    <div class="item">
+      <div class="group">
+        <div class="pc a6l ty-front tilt-l"><div class="frame"></div><div class="pad"><img class="mark" src="assets/hjerte.webp" alt=""><h3>Tak, <em>fordi I kom.</em></h3><p class="ey">S + C · 6. marts 2027</p></div></div>
+        <div class="pc a6l ty-back tilt-r"><div class="frame"></div><div class="pad">
+          <h3>Tusind <em>tak.</em></h3>
+          <p>For at feste, danse og fejre os. Det var den bedste dag.</p>
+          <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+        </div><img class="mark" src="assets/hjerte.webp" alt=""></div>
+      </div>
+      <p class="label"><b>Takkekort</b>A6, 148 × 105 mm. Hjertet på forsiden, plads til en personlig hilsen på bagsiden.</p>
+    </div>
+  </div>
+</section>
+
+<div class="notes">
+  <div><h3>Papir</h3><p>Varmt, ubestrøget papir i creme eller råhvid, cirka 300 g til kort og 350 g til skilte. Papiret giver cremefarven; der trykkes ingen baggrund. Store skilte monteres på skumplade hos trykkeriet.</p></div>
+  <div><h3>Det, der mangler</h3><ul><li>Tider for ceremoni, mad og dans</li><li>Menuen</li><li>Bordantal og navne til bordplan og bordkort</li><li>Tekst til save the date og invitation godkendes</li><li>En rigtig QR-kode til /wedding</li></ul></div>
+  <div><h3>Næste skridt</h3><p>Når stilen er valgt, laves trykfilerne som PDF i de rigtige mål (de findes allerede for hjerte-identiteten i <b>wedding-identity/</b>). Print altid ét prøveark i 100 % før hele oplaget.</p></div>
+</div>
+
+</body>
+</html>
