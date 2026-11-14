@@ -65,6 +65,12 @@ nav a:last-child:active{transform:scale(.97);background:var(--ink);color:var(--p
 .button:active{transform:translate(2px,2px) scale(.98);box-shadow:2px 2px 0 var(--blue)}
 .art{margin:0 -16px 0 -24px;position:relative}
 .art>img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.heart-art{margin:0 auto;width:min(100%,560px)}
+.heart-wrap{position:relative;container-type:inline-size}
+.heart-wrap img{display:block;width:100%;height:auto}
+.heart-wrap span{position:absolute;left:0;right:0;top:31cqw;text-align:center;font:38cqw/1 var(--hand);color:#2a0d16;white-space:nowrap;pointer-events:none}
+.heart-wrap i{font-style:normal;font-size:.45em;vertical-align:.2em}
+.intro{max-width:34ch}
 .art figcaption{display:flex;justify-content:space-between;align-items:center;margin:4px 8% 0}
 .art figcaption .hand{margin:0}
 .art figcaption>b{font:34px var(--hand);transform:rotate(8deg);background:var(--blue);padding:6px 18px}
@@ -87,6 +93,13 @@ nav a:last-child:active{transform:scale(.97);background:var(--ink);color:var(--p
 .story>p:last-child,.programme p:last-child,.reply-copy>p:last-child{margin-bottom:0}
 
 .day{background:#eadbd4}
+.after{background:var(--ink);color:var(--paper);padding:var(--pad);text-align:center}
+.after .hand{transform:rotate(-3deg);display:inline-block;margin-bottom:14px}
+.after h2 em{display:block}
+.after p:not(.hand){max-width:44ch;margin-inline:auto}
+.after .button{background:var(--paper);color:var(--ink);margin:10px auto 0}
+.after .small{opacity:.8;margin:12px auto 0}
+[hidden]{display:none!important}
 .date-card{display:grid;grid-template-columns:1fr 2fr;row-gap:6px;border-block:1px solid var(--rule);padding:18px 0;margin:26px 0 0;align-items:baseline}
 .date-card>span{font-size:12px;letter-spacing:.16em;font-weight:600}
 .date-card>b{font:400 34px/1.2 var(--serif);text-align:right;font-variant-numeric:tabular-nums}
@@ -285,6 +298,7 @@ footer>a:last-child{display:inline-flex;align-items:center;min-height:44px;font-
   .art{margin:0 -12px}
   .art figcaption{margin-top:6px}
   .art figcaption>b{font-size:28px}
+  .heart-art{width:min(100%,420px)}
   .hero-bottom{justify-content:center;margin-top:12px;padding:4px 0}
   .ticker{font-size:23px;padding:9px 0;margin-top:14px}
   .ticker i{margin:0 16px}

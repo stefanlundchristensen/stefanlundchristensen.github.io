@@ -18,24 +18,24 @@ def page(theme,num,name,prefix):
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:url" content="https://stefanchristensen.me/wedding/">
-<meta property="og:title" content="S + C · Vi skal giftes!">
+<meta property="og:title" content="S + C · Bryllupsfest 6. marts 2027">
 <meta property="og:description" content="Lørdag den 6. marts 2027 kl. 15 på Pakhus 11. Find detaljerne, og svar på invitationen her.">
-<meta property="og:image" content="https://stefanchristensen.me/wedding/assets/share.jpg">
+<meta property="og:image" content="https://stefanchristensen.me/wedding/assets/share-2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Papircollage af et rødt hjerte med to hænder på et festbord med lys, blomster og vinglas.">
+<meta property="og:image:alt" content="Et rødt akvarelhjerte med S + C, holdt af to hænder, og ordet Bryllupsfest.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
 {fonts}
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20261114b">
-<script defer src="{prefix}assets/config.js?v=20261114b"></script>
-<script defer src="{prefix}assets/site.js?v=20261114b"></script>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20261115a">
+<script defer src="{prefix}assets/config.js?v=20261115a"></script>
+<script defer src="{prefix}assets/site.js?v=20261115a"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
 <header>
 <a class="logo" href="#top">S + C<span>6. marts 2027</span></a>
-<nav aria-label="Navigation"><a href="#dagen">Dagen</a><a href="#praktisk">Godt at vide</a><a href="#svar">Svar på invitationen</a></nav>
+<nav aria-label="Navigation"><a href="#dagen">Dagen</a><a href="#praktisk">Godt at vide</a><a href="#svar" data-before>Svar på invitationen</a></nav>
 </header>
 <main id="top">
 
@@ -44,18 +44,26 @@ def page(theme,num,name,prefix):
 <div class="hero-grid">
 <div class="hero-copy">
 <p class="hand">Kære alle jer, vi holder af.</p>
-<h1>Vi skal<br><em>giftes!</em></h1>
-<p class="intro">Et stort ja. Et langt kram.<br>Og en fest med jer.</p>
-<a class="button" href="#svar">Vi håber, du kommer <span aria-hidden="true">→</span></a>
+<h1>Bryllups<br><em>fest!</em></h1>
+<p class="intro">Vi har inviteret dig og en masse andre dejlige mennesker – alle vores yndlingsmennesker – til bryllupsfest. Vi blev gift for syv år siden, så vi tænker, at det må være tid nok.</p>
+<a class="button" href="#svar" data-before>Vi håber, du kommer <span aria-hidden="true">→</span></a>
 </div>
-<figure class="art">
-<img src="{prefix}assets/banquet.webp" srcset="{prefix}assets/banquet-800.webp 800w, {prefix}assets/banquet.webp 1536w" sizes="(max-width: 760px) 100vw, 56vw" width="1536" height="1024" fetchpriority="high" alt="Papircollage af et rødt hjerte med en lyseblå hånd lavere til venstre og en lilla hånd højere til højre. Omkring hjertet står farvede lys, blomster og vinglas på et festbord.">
-<figcaption><span class="hand">Lige fra hjertet.</span><b>S + C</b></figcaption>
+<figure class="art heart-art">
+<div class="heart-wrap"><img src="{prefix}assets/hjerte-stor.webp" width="900" height="936" fetchpriority="high" alt="Et rødt hjerte malet i akvarel, holdt af en lyseblå og en lilla hånd."><span aria-hidden="true">S <i>+</i> C</span></div>
+<figcaption><span class="hand">Lige fra hjertet.</span><b>6.3.27</b></figcaption>
 </figure>
 </div>
 <div class="hero-bottom"><span>INVITATIONEN FORTSÆTTER HER</span><a href="#dagen">Alle de små detaljer ↓</a></div>
 </section>
 
+
+<section id="efter" class="section after" hidden>
+<p class="hand">Tak for i går.</p>
+<h2>Tusind tak, <em>fordi I kom.</em></h2>
+<p>Vi har samlet billederne fra festen ét sted. Læg gerne dine egne derind, så vi alle kan se natten fra hinandens vinkler.</p>
+<a class="button" id="album-link" href="#" target="_blank" rel="noopener" hidden>Se og del billederne <span aria-hidden="true">→</span></a>
+<p class="small" id="album-pending">Billedalbummet kommer her, så snart det er klar.</p>
+</section>
 
 <section id="dagen" class="section day">
 <p class="eyebrow">01 / SÆT ET KRYDS</p>
@@ -101,7 +109,7 @@ def page(theme,num,name,prefix):
 </div>
 </section>
 
-<section id="svar" class="section reply">
+<section id="svar" class="section reply" data-before>
 <p class="eyebrow">04 / ET LILLE SVAR BETYDER MEGET</p>
 <div class="two-column">
 <div class="reply-copy">

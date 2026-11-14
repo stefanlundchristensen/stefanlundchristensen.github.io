@@ -28,7 +28,7 @@ The included `.github/workflows/wedding-pages.yml` is a **manual preview deploym
 GitHub Pages hosts static files; it does not receive form submissions. The form posts to a small Google Apps Script (`wedding-tools/rsvp-apps-script.gs`) that adds a row to a Google Sheet and sends a notification mail. It stays closed until the steps below are done.
 
 1. Create a new Google Sheet (any name, e.g. "S + C svar") in the Google account that should own the answers.
-2. In the Sheet: Extensions → Apps Script. Replace the sample code with the contents of `rsvp-apps-script.gs`. Optionally set `NOTIFY_EMAIL` at the top (empty = the account's own address). Save.
+2. In the Sheet: Extensions → Apps Script. Replace the sample code with the contents of `rsvp-apps-script.gs`. Optionally set `NOTIFY_EMAIL` at the top (empty = the account's own address). Save. Then pick `setup` in the function menu and press Run once: it creates the "Svar" tab and an "Overblik" tab with live totals, all allergies and all song wishes.
 3. Deploy → New deployment → type "Web app". Execute as: **Me**. Who has access: **Anyone**. Approve the permissions Google asks for (edit this spreadsheet, send mail as you).
 4. Copy the web app URL (`https://script.google.com/macros/s/…/exec`). Opening it in a browser should show `{"ok":true,"service":"S + C RSVP"}`.
 5. Paste the URL into `public/wedding/assets/config.js` as `rsvpEndpoint` and set `rsvpOpen: true`.

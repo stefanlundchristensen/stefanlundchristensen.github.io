@@ -42,6 +42,21 @@
       countdown.hidden = false;
     }
   }
+  // After the party (from 06:00 on 7 March 2027, or ?efter for a preview): thank-you and photo album first,
+  // RSVP and its links out of the way.
+  const after = Date.now() >= Date.UTC(2027, 2, 7, 5) || /[?&]efter\b/.test(location.search);
+  const thanks = document.querySelector('#efter');
+  if (after && thanks) {
+    thanks.hidden = false;
+    document.querySelectorAll('[data-before]').forEach((el) => { el.hidden = true; });
+    if (countdown) countdown.hidden = true;
+    const album = document.querySelector('#album-link');
+    if (album && /^https:\/\/\S+$/.test(config.albumUrl || '')) {
+      album.href = config.albumUrl;
+      album.hidden = false;
+      document.querySelector('#album-pending').hidden = true;
+    }
+  }
   const extras = document.querySelector('#attending-fields');
   function updateAttendance() {
     const yes = form.elements.attendance.value === 'yes';

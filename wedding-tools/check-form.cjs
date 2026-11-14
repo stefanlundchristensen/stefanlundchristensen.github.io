@@ -10,7 +10,7 @@ function mount(config,fetcher){
  const fields={disabled:true};const notice={textContent:''};
  const nodes={'#rsvp-form':form,'#rsvp-fields':fields,'#form-result':status,'#form-notice':notice,'#deadline':{},'#attending-fields':extras,'#calendar':{addEventListener(){}},'#toast':{}};
  let calls=0;
- const ctx={window:{WEDDING_CONFIG:config},document:{querySelector:s=>nodes[s]},fetch:async(...args)=>{calls++;return fetcher(...args)},FormData:class{},URLSearchParams:class{},AbortController,setTimeout,clearTimeout};
+ const ctx={window:{WEDDING_CONFIG:config},document:{querySelector:s=>nodes[s]},fetch:async(...args)=>{calls++;return fetcher(...args)},FormData:class{},URLSearchParams:class{},AbortController,setTimeout,clearTimeout,location:{search:''}};
  vm.runInNewContext(source,ctx);
  return {form,fields,notice,status,submit,count,diet,extras,listeners,calls:()=>calls,send:()=>listeners.submit({preventDefault(){}})};
 }
