@@ -153,7 +153,7 @@
     a.href = url; a.download = 'S-og-C-bryllup.ics'; a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     const toast = document.querySelector('#toast');
-    toast.textContent = 'Kalenderfilen er klar ♥';
+    toast.textContent = 'Kalenderfilen er klar \u2665\uFE0E';
     setTimeout(() => { toast.textContent = ''; }, 5000);
   });
 })();

@@ -130,6 +130,8 @@ nav a:last-child:active{transform:scale(.97);background:var(--ink);color:var(--p
 .timeline article{border-top:1px dashed var(--ink);padding-top:12px}
 .timeline article>span{font-size:12px;font-weight:600;letter-spacing:.1em}
 .timeline b{display:block;font:400 44px/1.3 var(--serif);color:var(--red);white-space:nowrap}
+.timeline b svg{display:block;width:1em;height:1em;margin:.15em 0}
+.ext{display:inline-block;width:.72em;height:.72em;vertical-align:.02em;margin-left:.15em}
 .timeline h3{font-size:22px}
 .timeline p{font-size:15px;margin:0}
 
@@ -298,6 +300,7 @@ footer>a:last-child{display:inline-flex;align-items:center;min-height:44px;font-
   .timeline article{display:grid;grid-template-columns:52px 1fr;column-gap:12px;align-items:center;padding:12px 0}
   .timeline article>span,.timeline h3,.timeline p{grid-column:2}
   .timeline b{grid-column:1;grid-row:1/4;font-size:34px;line-height:1;text-align:center}
+  .timeline b svg{margin:0 auto}
   .timeline h3{font-size:23px;margin:0}
   /* practical: drop the frame so the questions get the full width */
   .practical{border:0;border-top:1px solid var(--rule);padding-inline:0;padding-bottom:0}
