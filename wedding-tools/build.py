@@ -1,9 +1,16 @@
-<!doctype html>
-<html lang="da" data-theme="gazette">
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent/'public'/'wedding'
+directions=[('supper','01','Supper Club','Et langt bord. Et stort hjerte.','Papircollage, bordeaux og den lange, levende middag.'),('letter','02','Love Letter','Et kærligt brev til jer.','Luftigt, håndskrevet og intimt. Som at folde invitationen ud.'),('gazette','05','Wedding Gazette','En ganske særlig lørdag.','Aviskolonner, små rubrikker og et festligt tillæg.')]
+theme_colors={'supper':'#f3eedf','letter':'#f7f1e7','gazette':'#eae2d1'}
+fonts='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap">'
+viewport='<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+def page(theme,num,name,prefix):
+ return f"""<!doctype html>
+<html lang="da" data-theme="{theme}">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#eae2d1">
+{viewport}
+<meta name="theme-color" content="{theme_colors[theme]}">
 <meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow">
 <title>S + C · Bryllupsfest · 6. marts 2027</title>
@@ -18,11 +25,11 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Papircollage af et rødt hjerte med to hænder på et festbord med lys, blomster og vinglas.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../assets/embrace.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css">
-<script defer src="../assets/config.js"></script>
-<script defer src="../assets/site.js"></script>
+<link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
+{fonts}
+<link rel="stylesheet" href="{prefix}assets/site.css">
+<script defer src="{prefix}assets/config.js"></script>
+<script defer src="{prefix}assets/site.js"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
@@ -42,14 +49,13 @@
 <a class="button" href="#svar">Vi håber, du kommer <span aria-hidden="true">→</span></a>
 </div>
 <figure class="art">
-<img src="../assets/banquet.webp" srcset="../assets/banquet-800.webp 800w, ../assets/banquet.webp 1536w" sizes="(max-width: 760px) 100vw, 56vw" width="1536" height="1024" fetchpriority="high" alt="Papircollage af et rødt hjerte med en lyseblå hånd lavere til venstre og en lilla hånd højere til højre. Omkring hjertet står farvede lys, blomster og vinglas på et festbord.">
+<img src="{prefix}assets/banquet.webp" srcset="{prefix}assets/banquet-800.webp 800w, {prefix}assets/banquet.webp 1536w" sizes="(max-width: 760px) 100vw, 56vw" width="1536" height="1024" fetchpriority="high" alt="Papircollage af et rødt hjerte med en lyseblå hånd lavere til venstre og en lilla hånd højere til højre. Omkring hjertet står farvede lys, blomster og vinglas på et festbord.">
 <figcaption><span class="hand">Lige fra hjertet.</span><b>S + C</b></figcaption>
 </figure>
 </div>
 <div class="hero-bottom"><span>INVITATIONEN FORTSÆTTER HER</span><a href="#dagen">Alle de små detaljer ↓</a></div>
 </section>
 
-<div class="ticker" aria-hidden="true"><div class="ticker-track"><span class="ticker-group">JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> </span><span class="ticker-group">JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> JA TIL KÆRLIGHED <i>✳</i> JA TIL EN FEST <i>✳</i> JA TIL JER <i>✳</i> </span></div></div>
 
 <section id="dagen" class="section day">
 <p class="eyebrow">01 / SÆT ET KRYDS</p>
@@ -62,22 +68,6 @@
 <div class="date-card"><span>LØRDAG</span><b>06.03.27</b><span>START</span><b>kl. 15:00</b><span>STED</span><b>Pakhus 11</b><button type="button" id="calendar">Gem datoen i kalenderen <span aria-hidden="true">↓</span></button></div>
 <p class="small address">Dampfærgevej 2, 2100 København Ø · <a href="https://www.google.com/maps/search/?api=1&amp;query=Pakhus+11%2C+Dampf%C3%A6rgevej+2%2C+2100+K%C3%B8benhavn+%C3%98" target="_blank" rel="noopener">Se på kort ↗</a></p>
 </div>
-</div>
-</section>
-
-<section class="section photos">
-<div class="photos-copy">
-<p class="hand">Os to, undervejs.</p>
-<h2>Nu <em>fest.</em></h2>
-</div>
-<div class="collage" role="group" aria-label="Billeder af os">
-<figure class="c2"><img src="../assets/photos/os-2.webp" width="675" height="900" loading="lazy" decoding="async" alt="S og C smiler til kameraet i en efterårsskov."></figure>
-<figure class="c3"><img src="../assets/photos/os-3.webp" width="900" height="675" loading="lazy" decoding="async" alt="S og C i solbriller på en båd i solskin."></figure>
-<figure class="c5"><img src="../assets/photos/os-5.webp" width="900" height="600" loading="lazy" decoding="async" alt="S og C side om side med en buket i røde og grønne farver."></figure>
-<figure class="c9"><img src="../assets/photos/os-9.webp" width="900" height="677" loading="lazy" decoding="async" alt="S og C griner i en bil med en flod og skov udenfor."></figure>
-<figure class="c7"><img src="../assets/photos/os-7.webp" width="675" height="900" loading="lazy" decoding="async" alt="S og C skåler i bobler ved kanalen."></figure>
-<figure class="c11"><img src="../assets/photos/os-11.webp" width="900" height="675" loading="lazy" decoding="async" alt="S og C i en kano på en turkis sø."></figure>
-<figure class="c4"><img src="../assets/photos/os-4.webp" width="900" height="675" loading="lazy" decoding="async" alt="S giver C et kys på kinden i en solrig have."></figure>
 </div>
 </section>
 
@@ -97,7 +87,7 @@
 <section id="praktisk" class="section practical">
 <p class="eyebrow">03 / GODT AT VIDE</p>
 <div class="two-column">
-<div class="practical-intro"><h2>De små<br><em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="../assets/embrace.svg" width="160" height="165" alt=""></div>
+<div class="practical-intro"><h2>De små<br><em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="{prefix}assets/embrace.svg" width="160" height="165" alt=""></div>
 <div class="questions">
 <details open><summary>Hvor og hvornår?<span aria-hidden="true">+</span></summary><p>Lørdag den 6. marts 2027 kl. 15:00 på Pakhus 11, Dampfærgevej 2, 2100 København Ø. Festen slutter kl. 02:00.</p><p><a class="mail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pakhus+11%2C+Dampf%C3%A6rgevej+2%2C+2100+K%C3%B8benhavn+%C3%98" target="_blank" rel="noopener">Åbn i kort <span aria-hidden="true">↗</span></a></p></details>
 <details><summary>Find vej<span aria-hidden="true">+</span></summary><p>Pakhus 11 ligger på Dampfærgevej 2 ved Amerika Plads. Nærmeste station er Nordhavn, cirka 10 minutters gang derfra. Indgang og parkering skriver vi her, når dagen nærmer sig.</p></details>
@@ -177,6 +167,8 @@
 </main>
 <footer><a class="logo" href="#top">S + C</a><p>6. marts 2027<br><span class="hand">Vi glæder os til at se jer.</span></p><a href="#top">Til toppen ↑</a></footer>
 <div id="toast" role="status" aria-live="polite"></div>
-<aside class="review-link"><a href="../variations.html">Se de 3 designretninger →</a></aside>
 </body>
 </html>
+"""
+(root/'index.html').write_text(page('supper','01','Supper Club',''))
+print('Built the wedding page (01 Supper Club).')
