@@ -26,5 +26,5 @@ for path in root.rglob('*.html'):
  assert all(c in page.labels for c in page.controls),f'{path}: unlabelled control'
  assert all('alt' in img for img in page.images),f'{path}: missing image alternative'
  assert len(page.ids)==len(set(page.ids))
-assert sorted(str(p.relative_to(root)) for p in root.rglob('*.html'))==['index.html','tryk/hearts.html','tryk/index.html','tryk/invitation.html']
+assert sorted(str(p.relative_to(root)) for p in root.rglob('*.html'))==['index.html','tryk/hearts.html','tryk/index.html','tryk/invitation.html','tryk/spec.html']
 print('PASS: wedding page and three print-preview pages; local assets, navigation, anchors, labelled fields and image alternatives.')

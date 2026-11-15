@@ -17,12 +17,21 @@
   // Toastmaster: a pre-filled email, shown only when an address is configured.
   const mail = document.querySelector('#toastmaster-mail');
   if (mail && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(config.toastmasterEmail || '')) {
-    const subject = 'S & C Bryllup | Spørgsmål til toastmaster';
-    const body = ['Hej Jonas', '', 'Jeg skriver om: (tale / indslag / spørgsmål)', 'Navn(e): ',
-      'Telefon: ', 'Ca. varighed: ', 'Det skal jeg bruge (mikrofon, skærm, musik …): ', '',
-      'Besked:', '', '', 'Kærlig hilsen', ''].join('\r\n');
+    const subject = 'Bryllupsfest S + C 6/3 · Tale, indslag eller spørgsmål';
+    const body = [
+      'Hej Jonas', '',
+      'Jeg vil gerne bidrage til S + C\'s bryllupsfest lørdag den 6. marts 2027.', '',
+      'Hvad: tale / sang / indslag / spørgsmål (slet det, der ikke passer)',
+      'Fra: ',
+      'Varighed, cirka: ___ minutter',
+      'Jeg har brug for: mikrofon / skærm / musik / andet: ',
+      'Mobilnummer: ', '',
+      'Kort om idéen:', '', '', '',
+      'Kærlig hilsen', ''].join('\r\n');
     mail.href = `mailto:${config.toastmasterEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     mail.hidden = false;
+    const plain = document.querySelector('#toastmaster-address');
+    if (plain) { plain.textContent = config.toastmasterEmail; plain.href = mail.href; plain.parentElement.hidden = false; }
     const pending = document.querySelector('#toastmaster-pending');
     if (pending) pending.hidden = true;
   }
