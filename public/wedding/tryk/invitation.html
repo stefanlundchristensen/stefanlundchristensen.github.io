@@ -10,9 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Square gatefold (portfals) invitation: 120 × 120 mm closed, 240 × 120 mm open (a standard square gatefold size at online printers).
+/* Square gatefold (portfals) invitation: A5 square, 148 × 148 mm closed, 296 × 148 mm open (Stefan, 2026-11-17).
    1 mm = var(--mm). Everything printed is sized in --u = 1 % of the closed width
-   (1.2 mm), so the same panels can be shown folded, open and flat at any scale. */
+   (1.48 mm), so the same panels can be shown folded, open and flat at any scale. */
 :root{
   --paper:#f3eedf;--card:#fffaf0;--ink:#641b33;--red:#bd2944;--powder:#9bbbd4;--rule:#641b3340;--table:#e5dac6;
   --serif:Georgia,'Times New Roman',serif;--hand:'Caveat','Bradley Hand',cursive;--sans:'DM Sans',Arial,sans-serif;
@@ -43,7 +43,7 @@ section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
 .scene{background:var(--table);border-radius:6px;padding:clamp(22px,4vw,48px) 0}
 
 /* ---------- printed panels ---------- */
-.card{--u:calc(1.2 * var(--mm))}
+.card{--u:calc(1.48 * var(--mm))}
 .panel{position:relative;overflow:hidden;background:var(--card);color:var(--ink);height:calc(100 * var(--u))}
 .panel::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(115deg,#57152d03 0 2px,#0000 2px 5px)}
 .w50{width:calc(50 * var(--u))}.w100{width:calc(100 * var(--u))}
@@ -125,8 +125,8 @@ section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
 .in.prog2{padding:calc(6 * var(--u)) calc(4 * var(--u)) calc(6 * var(--u)) calc(3 * var(--u))}
 
 /* ---------- 1. folding card ---------- */
-.stage{--mm:min(2.9px,calc((100vw - 2 * var(--gutter) - 16px) / 211));display:flex;flex-direction:column;align-items:center;gap:22px}
-.fold{position:relative;width:calc(120 * var(--mm));height:calc(120 * var(--mm));perspective:calc(450 * var(--mm));cursor:pointer;margin:calc(4 * var(--mm)) 0}
+.stage{--mm:min(2.9px,calc((100vw - 2 * var(--gutter) - 16px) / 260));display:flex;flex-direction:column;align-items:center;gap:22px}
+.fold{position:relative;width:calc(148 * var(--mm));height:calc(148 * var(--mm));perspective:calc(555 * var(--mm));cursor:pointer;margin:calc(4 * var(--mm)) 0}
 .fold .base{position:absolute;inset:0;box-shadow:0 10px 30px -12px #57152d55,0 30px 60px -36px #57152d55}
 .flap{position:absolute;top:0;width:50%;height:100%;transform-style:preserve-3d;transition:transform 1s var(--ease)}
 .flap.l{left:0;transform-origin:left center}
@@ -143,7 +143,7 @@ section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
 
 /* ---------- 2. flat sheets ---------- */
 .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 clamp(12px,3vw,40px)}
-.sheet-wrap{--mm:min(2.9px,max(2.4px,calc((100vw - 2 * var(--gutter) - 2 * clamp(12px,3vw,40px)) / 240)));width:calc(240 * var(--mm));margin:auto}
+.sheet-wrap{--mm:min(2.4px,max(2px,calc((100vw - 2 * var(--gutter) - 2 * clamp(12px,3vw,40px)) / 296)));width:calc(296 * var(--mm));margin:auto}
 .sheet{display:flex;box-shadow:0 6px 18px -6px #57152d33,0 18px 40px -24px #57152d40}
 .sheet .panel+.panel{border-left:1px dashed #641b3340}
 .cols{display:grid;grid-template-columns:1fr 2fr 1fr;margin-top:10px;font-size:12.5px;line-height:1.35;text-align:center;gap:0}
@@ -218,7 +218,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
   <div class="scene">
     <div class="scroll"><div class="sheet-wrap card">
       <div class="sheet"><div data-t="t-in-l"></div><div data-t="t-in-c"></div><div data-t="t-in-r"></div></div>
-      <div class="cols"><span><b>Venstre låge</b>60 mm</span><span><b>Midte</b>120 mm</span><span><b>Højre låge</b>60 mm</span></div>
+      <div class="cols"><span><b>Venstre låge</b>74 mm</span><span><b>Midte</b>148 mm</span><span><b>Højre låge</b>74 mm</span></div>
     </div></div>
     <p class="swipe">Træk til siden for at se hele arket →</p>
   </div>
@@ -231,7 +231,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
   <div class="scene">
     <div class="scroll"><div class="sheet-wrap card">
       <div class="sheet"><div data-t="t-door-r"></div><div data-t="t-back"></div><div data-t="t-door-l"></div></div>
-      <div class="cols"><span><b>Højre låge</b>forside</span><span><b>Bagside</b>120 mm</span><span><b>Venstre låge</b>forside</span></div>
+      <div class="cols"><span><b>Højre låge</b>forside</span><span><b>Bagside</b>148 mm</span><span><b>Venstre låge</b>forside</span></div>
     </div></div>
     <p class="swipe">Træk til siden for at se hele arket →</p>
   </div>
@@ -241,9 +241,9 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
   <p class="eyebrow">04 / MÅL OG TRYK</p>
   <h2>Det, trykkeriet skal vide.</h2>
   <div class="specs">
-    <div><p class="dims">120 × 120 mm</p><h3>Format</h3><p>Lukket 120 × 120 mm, åben 240 × 120 mm. Det er et standardmål for kvadratisk portfals hos onlinetrykkerier. Hele arket kan ligge på ét A4-ark på langs, så en prøve kan printes derhjemme i 100 %.</p></div>
-    <div><p class="dims">2 rillelinjer</p><h3>Fals</h3><ul><li>Rilles 60 mm fra hver kant, foldes ind mod midten</li><li>Lågerne gøres cirka 1 mm kortere, så de ikke støder sammen</li><li>Ingen tekst hen over midten; hjertet tåler en lille forskydning</li></ul></div>
-    <div><p class="dims">300 g</p><h3>Papir og kuvert</h3><p>Varmt, ubestrøget papir i creme, cirka 300 g, trykt på begge sider. Kvadratisk kuvert 130 × 130 mm. Tjek portoen for kvadratiske breve, før I vælger.</p></div>
+    <div><p class="dims">148 × 148 mm</p><h3>Format</h3><p>A5 kvadrat: lukket 148 × 148 mm, åben 296 × 148 mm. Det er et standardformat for kvadratiske foldere. En prøve kan printes derhjemme på A4 på tværs i 100 %, men så er der kun 1 mm margen, så brug hellere A3 eller en kopishop.</p></div>
+    <div><p class="dims">2 rillelinjer</p><h3>Fals</h3><ul><li>Rilles 74 mm fra hver kant, foldes ind mod midten</li><li>Lågerne gøres cirka 1 mm kortere, så de ikke støder sammen</li><li>Ingen tekst hen over midten; hjertet tåler en lille forskydning</li></ul></div>
+    <div><p class="dims">300 g</p><h3>Papir og kuvert</h3><p>Varmt, ubestrøget papir i creme, cirka 300 g, trykt på begge sider. Kvadratisk kuvert 155 × 155 mm. Tjek portoen for kvadratiske breve, før I vælger.</p></div>
   </div>
 </section>
 
