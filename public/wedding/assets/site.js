@@ -8,7 +8,7 @@
   // The receiver is a Google Apps Script web app that writes to our Google Sheet.
   const endpointReady = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]{20,}\/exec$/.test(config.rsvpEndpoint || '');
   const enabled = config.rsvpOpen === true && endpointReady;
-  document.querySelector('#deadline').textContent = config.deadlineText || 'Svar senest 15. januar 2027.';
+  document.querySelector('#deadline').textContent = config.deadlineText || 'Svar senest 6. januar 2027.';
   if (enabled) {
     fields.disabled = false;
     form.action = config.rsvpEndpoint;

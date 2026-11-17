@@ -8,7 +8,7 @@ Plain HTML, CSS and JavaScript. No install, build dependencies, API keys or serv
 - `public/wedding/assets/config.js`: public RSVP settings.
 - `build.py`: generates the HTML from one shared template. Edit copy here and run `python3 wedding-tools/build.py` from repository root. CSS and JS are edited directly in `public/wedding/assets/`. The hero uses `banquet.webp` and `banquet-800.webp` (made with `cwebp` from `banquet.png`, which is no longer referenced by any page).
 
-All directions use the custom generated banquet illustration and preserve differently coloured hands at different heights. Date and initials come from the invitation. Confirmed: Pakhus 11, start 15:00, programme order, casual dress code, toastmaster Jonas Larsen. Also confirmed: Dampfærgevej 2, ends 02:00, RSVP deadline 15 January 2027, adults only except the very youngest, questions to Stefan by phone. Still open: the wish-list link (`wishlistUrl` in `config.js`) and the toastmaster's email (`toastmasterEmail` in `config.js`; the "Skriv til Jonas" button stays hidden until it is set).
+All directions use the custom generated banquet illustration and preserve differently coloured hands at different heights. Date and initials come from the invitation. Confirmed: Pakhus 11, start 15:00, programme order, casual dress code, toastmaster Jonas Larsen. Also confirmed: Dampfærgevej 2, ends 02:00, RSVP deadline 6 January 2027, adults only except the very youngest, questions to Stefan by phone. Still open: the wish-list link (`wishlistUrl` in `config.js`) and the toastmaster's email (`toastmasterEmail` in `config.js`; the "Skriv til Jonas" button stays hidden until it is set).
 
 ## Local preview
 

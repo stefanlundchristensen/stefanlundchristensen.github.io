@@ -27,9 +27,9 @@ def page(theme,num,name,prefix):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
 {fonts}
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20261115b">
-<script defer src="{prefix}assets/config.js?v=20261115b"></script>
-<script defer src="{prefix}assets/site.js?v=20261115b"></script>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117a">
+<script defer src="{prefix}assets/config.js?v=20261117a"></script>
+<script defer src="{prefix}assets/site.js?v=20261117a"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
@@ -116,7 +116,7 @@ def page(theme,num,name,prefix):
 <p class="hand">Ingen fest uden gæster.</p>
 <h2>Er du<br><em>med?</em></h2>
 <p>Ét svar pr. invitation. Skriv navnene på alle, svaret gælder for.</p>
-<p class="small" id="deadline">Svar senest 15. januar 2027.</p>
+<p class="small" id="deadline">Svar senest 6. januar 2027.</p>
 </div>
 <div class="form-paper">
 <p id="form-notice" class="form-notice" role="status">Tilmeldingen åbner snart. Indtil da kan du se, hvad vi spørger om.</p>
