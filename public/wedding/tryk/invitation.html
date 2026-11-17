@@ -90,6 +90,40 @@ section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
 .qr{margin-top:auto;display:flex;align-items:center;gap:calc(2 * var(--u));font-size:calc(1.75 * var(--u));line-height:1.35}.qr span{min-width:0}
 .qr i{flex:none;width:calc(15 * var(--u));aspect-ratio:1;border:1px solid var(--ink);display:grid;place-items:center;font:600 calc(1.7 * var(--u))/1 var(--sans);font-style:normal;letter-spacing:.08em;border:0;background:none}
 
+/* sketch layout (Stefan, 2026-11-17): heart only on the doors, QR on the back */
+.back .qrbig{width:calc(30 * var(--u));aspect-ratio:1;margin:0 auto calc(4 * var(--u))}
+.back .qrbig svg{display:block}
+.back .hand{font:calc(5.6 * var(--u))/1 var(--hand);margin-bottom:calc(1.6 * var(--u))}
+.back .url{font:500 calc(2.3 * var(--u))/1.3 var(--sans);letter-spacing:.02em}
+/* inside left: address, toastmaster, RSVP */
+.info{text-align:center;justify-content:space-between}
+.info .blk{display:flex;flex-direction:column;align-items:center;gap:calc(1.2 * var(--u))}
+.info .ey{color:#641b33b3;font-size:calc(1.75 * var(--u))}
+.info strong{font:400 calc(3.9 * var(--u))/1.08 var(--serif);letter-spacing:-.03em}
+.info .t{font-size:calc(2.4 * var(--u));line-height:1.35}
+.info .mail{font-size:calc(2.05 * var(--u));line-height:1.3;word-break:break-all}
+.info hr{width:100%;border:0;border-top:1px dashed #641b3366;margin:0}
+.info .su{font:calc(8 * var(--u))/1 var(--hand)}
+/* centre: the letter */
+.letter{text-align:center;align-items:center;justify-content:center;padding:calc(8 * var(--u)) calc(9 * var(--u))}
+.letter .greet2{font:calc(6.2 * var(--u))/1 var(--hand);margin-bottom:calc(4.5 * var(--u))}
+.letter .lead{font-size:calc(2.9 * var(--u));line-height:1.4}
+.letter h3{font-size:calc(12 * var(--u));line-height:.95;letter-spacing:-.05em;margin:calc(2.5 * var(--u)) 0 calc(2.6 * var(--u))}
+.letter h3 em{font-size:1.08em}
+.letter .when{font:600 calc(2 * var(--u))/1.35 var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:calc(5 * var(--u))}
+.letter .body{font-size:calc(2.75 * var(--u));line-height:1.5;max-width:calc(66 * var(--u))}
+.letter .sign2{font:calc(5.6 * var(--u))/1.05 var(--hand);margin-top:calc(5.5 * var(--u))}
+.letter .sign2 small{display:block;font:calc(2.4 * var(--u))/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;margin-bottom:calc(1.4 * var(--u))}
+/* inside right: the evening as a timeline */
+.tl{list-style:none;padding:0;margin:0;position:relative;display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.tl::before{content:"";position:absolute;left:calc(11 * var(--u));top:calc(2 * var(--u));bottom:calc(2 * var(--u));border-left:1px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:calc(8 * var(--u)) calc(6 * var(--u)) 1fr;align-items:center;position:relative;min-height:calc(9 * var(--u))}
+.tl li::after{content:"";position:absolute;left:calc(9.6 * var(--u));width:calc(2.8 * var(--u));border-top:1px solid var(--ink);top:50%}
+.tl svg{width:calc(7 * var(--u));height:calc(7 * var(--u));fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.tl span{grid-column:3;font:calc(3.1 * var(--u))/1.05 var(--serif);letter-spacing:-.03em}
+.tl b{display:block;font:600 calc(1.8 * var(--u))/1 var(--sans);letter-spacing:.14em;margin-bottom:calc(.7 * var(--u))}
+.in.prog2{padding:calc(6 * var(--u)) calc(4 * var(--u)) calc(6 * var(--u)) calc(3 * var(--u))}
+
 /* ---------- 1. folding card ---------- */
 .stage{--mm:min(2.9px,calc((100vw - 2 * var(--gutter) - 16px) / 211));display:flex;flex-direction:column;align-items:center;gap:22px}
 .fold{position:relative;width:calc(120 * var(--mm));height:calc(120 * var(--mm));perspective:calc(450 * var(--mm));cursor:pointer;margin:calc(4 * var(--mm)) 0}
@@ -137,39 +171,29 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
 <div class="intro">
   <p class="hand">Åbn hjertet.</p>
   <h1>Kvadratisk <em>portfals.</em></h1>
-  <p>To låger, der mødes på midten. Lukket holder de to hænder om ét hjerte. Når man åbner lågerne, slipper hænderne, og invitationen står i midten.</p>
+  <p>To låger, der mødes på midten. Lukket holder de to hænder om ét hjerte med S + C. Bagsiden har QR-koden. Indeni: det praktiske til venstre, invitationen i midten og aftenens forløb til højre.</p>
 </div>
 
 <!-- Panel content, written once and placed in every view below -->
-<template id="t-door-l"><div class="panel w50 door l"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">S <i>+</i></p><p class="say">Bryllups</p><p class="ey">Pakhus 11</p></div></template>
-<template id="t-door-r"><div class="panel w50 door r"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">C</p><p class="say">fest</p><p class="ey">6.3.2027</p></div></template>
-<template id="t-back"><div class="panel w100 back"><div><img src="assets/hjerte.webp" alt=""><p class="sc">S + C</p><p class="ey">stefanchristensen.me/wedding</p></div></div></template>
-<template id="t-in-l"><div class="panel w50 in">
-  <p class="ey">Dagen</p>
-  <ol class="prog">
-    <li>Vi mødes<small>Kl. 15:00 på Pakhus 11</small></li>
-    <li>En lille ceremoni<small>Uofficiel og helt vores egen</small></li>
-    <li>Snack &amp; bobler</li>
-    <li>Mad</li>
-    <li>Fest &amp; dans<small>Til kl. 02:00</small></li>
-  </ol>
-  <p class="note">Vi glæder os!</p>
+<template id="t-door-l"><div class="panel w50 door l"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">S <i>+</i></p></div></template>
+<template id="t-door-r"><div class="panel w50 door r"><img class="heart" src="assets/hjerte.webp" alt=""><p class="ini">C</p></div></template>
+<template id="t-back"><div class="panel w100 back"><div><div class="qrbig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" width="100%" height="100%" aria-label="QR-kode til svar"><path class="qrline" stroke="#641b33" d="M0 0.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h7m-29 1h1m5 0h1m1 0h5m3 0h5m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m4 0h2m5 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m1 0h2m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m4 0h3m2 0h2m2 0h1m1 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h1m1 0h2m1 0h2m2 0h1m-20 1h1m2 0h6m2 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h3m-29 1h1m1 0h1m2 0h1m1 0h3m1 0h1m3 0h1m1 0h3m3 0h2m1 0h2m-26 1h2m1 0h2m1 0h1m1 0h1m1 0h5m3 0h2m1 0h1m2 0h1m-26 1h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h1m1 0h3m1 0h3m1 0h2m2 0h1m-29 1h2m4 0h3m1 0h1m5 0h1m1 0h2m2 0h2m4 0h1m-28 1h1m3 0h1m1 0h1m3 0h3m1 0h4m3 0h7m-29 1h1m1 0h1m1 0h4m1 0h1m1 0h1m2 0h4m1 0h2m2 0h2m1 0h1m1 0h1m-29 1h4m1 0h1m1 0h3m1 0h1m2 0h1m3 0h3m2 0h2m1 0h1m1 0h1m-27 1h2m1 0h2m2 0h2m1 0h2m1 0h1m7 0h1m1 0h1m-26 1h1m2 0h2m2 0h2m1 0h2m3 0h1m2 0h3m3 0h1m1 0h2m-28 1h3m3 0h1m1 0h1m1 0h1m1 0h6m1 0h1m1 0h5m2 0h1m-29 1h2m1 0h1m4 0h4m1 0h1m2 0h1m2 0h8m-27 1h2m1 0h2m1 0h1m4 0h1m2 0h4m2 0h8m-20 1h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m3 0h2m-26 1h7m1 0h1m3 0h6m1 0h2m1 0h1m1 0h2m-26 1h1m5 0h1m1 0h2m1 0h1m5 0h1m1 0h2m3 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m4 0h4m1 0h8m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h4m2 0h6m1 0h1m1 0h1m4 0h1m-29 1h1m1 0h3m1 0h1m6 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h3m-29 1h1m5 0h1m3 0h2m3 0h1m3 0h1m3 0h1m1 0h2m1 0h1m-29 1h7m1 0h1m3 0h1m1 0h3m2 0h3m1 0h3"/></svg></div><p class="hand">Svar her</p><p class="url">stefanchristensen.me/wedding</p></div></div></template>
+<template id="t-in-l"><div class="panel w50 in info">
+  <div class="blk"><p class="ey">Adresse</p><strong>Pakhus 11</strong><p class="t">Dampfærgevej 2<br>2100 København Ø</p></div>
+  <hr>
+  <div class="blk"><p class="ey">Toastmaster</p><strong>Jonas Larsen</strong><p class="mail">jonaslarsen22@gmail.com</p></div>
+  <hr>
+  <div class="blk"><p class="ey">S.U.</p><p class="su">d. 6.1.27</p></div>
 </div></template>
-<template id="t-in-c"><div class="panel w100 in mid">
-  <p class="greet">Kære <span></span></p>
-  <h3>Et stort ja. <em>Og en fest med jer.</em></h3>
-  <p class="body">Vi har inviteret dig og en masse andre dejlige mennesker – alle vores yndlingsmennesker – til bryllupsfest. Vi blev gift for syv år siden, så vi tænker, at det må være tid nok. Kom til en lille ceremoni, bobler, god mad og dans, til det bliver nat.</p>
-  <p class="sign"><span>Kærlig hilsen S + C</span><img src="assets/hjerte.webp" alt=""></p>
+<template id="t-in-c"><div class="panel w100 in letter">
+  <p class="greet2">Kære familie &amp; venner</p>
+  <p class="lead">Med (kun) 7 års forsinkelse<br>inviteres I til</p>
+  <h3>Bryllups<em>fest…!</em></h3>
+  <p class="when">i Pakhus 11 · lørdag d. 6. marts 2027 · kl. 15.00</p>
+  <p class="body">Vi glæder os helt vildt til at fejre kærligheden, 7&nbsp;dejlige år – og de mange flere, der kommer – sammen med jer.</p>
+  <p class="sign2"><small>Kærlig hilsen</small>Stefan &amp; Cecilie</p>
 </div></template>
-<template id="t-in-r"><div class="panel w50 in">
-  <dl class="facts">
-    <div><dt>Hvornår</dt><dd><strong>Lørdag 6. marts 2027</strong>Kl. 15:00 til 02:00</dd></div>
-    <div><dt>Hvor</dt><dd><strong>Pakhus 11</strong>Dampfærgevej 2<br>2100 København Ø</dd></div>
-    <div><dt>Påklædning</dt><dd>Helt afslappet. Kom i det, du har det bedst i.</dd></div>
-    <div><dt>Svar senest</dt><dd><strong>15. januar 2027</strong></dd></div>
-  </dl>
-  <div class="qr"><i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" width="100%" height="100%" aria-label="QR-kode til svar"><path class="qrline" stroke="#641b33" d="M0 0.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h7m-29 1h1m5 0h1m1 0h5m3 0h5m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m4 0h2m5 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m2 0h3m1 0h2m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h4m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m4 0h3m2 0h2m2 0h1m1 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-19 1h1m1 0h2m1 0h2m2 0h1m-20 1h1m2 0h6m2 0h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h3m-29 1h1m1 0h1m2 0h1m1 0h3m1 0h1m3 0h1m1 0h3m3 0h2m1 0h2m-26 1h2m1 0h2m1 0h1m1 0h1m1 0h5m3 0h2m1 0h1m2 0h1m-26 1h1m1 0h1m1 0h1m4 0h1m1 0h1m1 0h1m1 0h3m1 0h3m1 0h2m2 0h1m-29 1h2m4 0h3m1 0h1m5 0h1m1 0h2m2 0h2m4 0h1m-28 1h1m3 0h1m1 0h1m3 0h3m1 0h4m3 0h7m-29 1h1m1 0h1m1 0h4m1 0h1m1 0h1m2 0h4m1 0h2m2 0h2m1 0h1m1 0h1m-29 1h4m1 0h1m1 0h3m1 0h1m2 0h1m3 0h3m2 0h2m1 0h1m1 0h1m-27 1h2m1 0h2m2 0h2m1 0h2m1 0h1m7 0h1m1 0h1m-26 1h1m2 0h2m2 0h2m1 0h2m3 0h1m2 0h3m3 0h1m1 0h2m-28 1h3m3 0h1m1 0h1m1 0h1m1 0h6m1 0h1m1 0h5m2 0h1m-29 1h2m1 0h1m4 0h4m1 0h1m2 0h1m2 0h8m-27 1h2m1 0h2m1 0h1m4 0h1m2 0h4m2 0h8m-20 1h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h1m3 0h2m-26 1h7m1 0h1m3 0h6m1 0h2m1 0h1m1 0h2m-26 1h1m5 0h1m1 0h2m1 0h1m5 0h1m1 0h2m3 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m4 0h4m1 0h8m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h4m2 0h6m1 0h1m1 0h1m4 0h1m-29 1h1m1 0h3m1 0h1m6 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h3m-29 1h1m5 0h1m3 0h2m3 0h1m3 0h1m3 0h1m1 0h2m1 0h1m-29 1h7m1 0h1m3 0h1m1 0h3m2 0h3m1 0h3"/></svg></i><span>Svar og se det hele på<br><b>stefanchristensen.me/wedding</b></span></div>
-</div></template>
+<template id="t-in-r"><div class="panel w50 in prog2"><ol class="tl"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4 4 0 0 1 12 7.4a4 4 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/></svg><span><b>15.00</b>Ceremoni</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h4.5l-.4 6a1.85 1.85 0 0 1-3.7 0z M9.25 11.4v8.6 M7 20h4.5"/><path d="M14 16.5h7l-.8 2.8h-5.4z M15 16.5c.4-1.4 1.6-2 2.5-2s2.1.6 2.5 2"/><circle cx="9" cy="6.3" r=".4"/><circle cx="10" cy="8.2" r=".4"/></svg><span><b>15.30</b>Sødt, salt &amp; bobler</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8h4l1.6-2.4h5.8L16.5 8h4v11h-17z"/><circle cx="12" cy="13.3" r="3.4"/><path d="M12 3.2v1.2 M8.6 2.6l.7 1 M15.4 2.6l-.7 1"/></svg><span>Fællesfoto</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5.6"/><circle cx="12" cy="12" r="3.2"/><path d="M3 4v4.5a1.4 1.4 0 0 0 2.8 0V4 M4.4 4v16 M20.5 4c-1.7 1.6-1.9 6.4 0 8.2V20"/></svg><span>Middag</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5v3"/><circle cx="12" cy="12" r="6.3"/><path d="M5.7 12h12.6 M6.6 8.8h10.8 M6.6 15.2h10.8 M12 5.7v12.6"/><ellipse cx="12" cy="12" rx="3" ry="6.3"/><path d="M2.5 6.5v-3l2.5-.6v3 M21 17v-3l1.8-.4"/><circle cx="1.9" cy="6.6" r=".7"/><circle cx="20.4" cy="17.1" r=".7"/></svg><span>Fest!</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 12.5c0-2 1.7-3.2 3.6-3.2h9.8c1.9 0 3.6 1.2 3.6 3.2s-1.7 3.2-3.6 3.2H7.1c-1.9 0-3.6-1.2-3.6-3.2z M2.5 12.5h19"/><path d="M6 11c1.2-.9 2.4.9 3.6 0s2.4.9 3.6 0 2.4.9 3.6 0"/></svg><span>Natmad</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6-4.5-4.1 6-.7z"/></svg><span>Godnat</span></li></ol></div></template>
 
 <section>
   <p class="eyebrow">01 / FOLDET</p>
@@ -190,7 +214,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
 <section>
   <p class="eyebrow">02 / INDERSIDEN</p>
   <h2>Foldet helt ud.</h2>
-  <p>Dagens program på venstre låge, selve invitationen i midten og det praktiske på højre låge. Navnet skrives i hånden.</p>
+  <p>Adresse, toastmaster og svarfrist på venstre låge, selve invitationen i midten og aftenens forløb på højre låge.</p>
   <div class="scene">
     <div class="scroll"><div class="sheet-wrap card">
       <div class="sheet"><div data-t="t-in-l"></div><div data-t="t-in-c"></div><div data-t="t-in-r"></div></div>
@@ -223,7 +247,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
   </div>
 </section>
 
-<footer>Tekst, program og QR-kode er udkast. Stil: 01 Supper Club fra <a href="https://stefanchristensen.me/wedding/">hjemmesiden</a>.</footer>
+<footer>Bygget efter Stefans skitse (17.11.2026). Stil: 01 Supper Club fra <a href="https://stefanchristensen.me/wedding/">hjemmesiden</a>.</footer>
 
 <script>
 document.querySelectorAll('[data-t]').forEach(function (slot) {
