@@ -1,9 +1,14 @@
 from pathlib import Path
+from icons import PROGRAMME, svg  # shared with the printed invitation (Bryllup/print-suite/icons)
 root=Path(__file__).resolve().parent.parent/'public'/'wedding'
 directions=[('supper','01','Supper Club','Et langt bord. Et stort hjerte.','Papircollage, bordeaux og den lange, levende middag.'),('letter','02','Love Letter','Et kærligt brev til jer.','Luftigt, håndskrevet og intimt. Som at folde invitationen ud.'),('gazette','05','Wedding Gazette','En ganske særlig lørdag.','Aviskolonner, små rubrikker og et festligt tillæg.')]
 theme_colors={'supper':'#f3eedf','letter':'#f7f1e7','gazette':'#eae2d1'}
-fonts='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;600;700&display=swap">'
+fonts='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">'
 viewport='<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+programme_html='<ol class="tl">'+''.join(
+  f'<li>{svg(icon, 34)}<span>' + (f'<b>{time}</b>' if time else '') + f'{title}</span></li>'
+  for icon, time, title in PROGRAMME)+'</ol>'
+
 def page(theme,num,name,prefix):
  return f"""<!doctype html>
 <html lang="da" data-theme="{theme}">
@@ -20,16 +25,16 @@ def page(theme,num,name,prefix):
 <meta property="og:url" content="https://stefanchristensen.me/wedding/">
 <meta property="og:title" content="S + C · Bryllupsfest 6. marts 2027">
 <meta property="og:description" content="Lørdag den 6. marts 2027 kl. 15 på Pakhus 11. Find detaljerne, og svar på invitationen her.">
-<meta property="og:image" content="https://stefanchristensen.me/wedding/assets/share-3.jpg">
+<meta property="og:image" content="https://stefanchristensen.me/wedding/assets/share-4.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Et rødt akvarelhjerte med S + C, holdt af to hænder, og ordet Bryllupsfest.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
 {fonts}
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117b">
-<script defer src="{prefix}assets/config.js?v=20261117b"></script>
-<script defer src="{prefix}assets/site.js?v=20261117b"></script>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117c">
+<script defer src="{prefix}assets/config.js?v=20261117c"></script>
+<script defer src="{prefix}assets/site.js?v=20261117c"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
@@ -68,7 +73,7 @@ def page(theme,num,name,prefix):
 <section id="dagen" class="section day">
 <p class="eyebrow">01 / SÆT ET KRYDS</p>
 <div class="two-column">
-<h2>En dag.<br>Et ja.<br><em>Og jer.</em></h2>
+<h2>En dag.<br>Et ja.<br> <em>Og jer.</em></h2>
 <div class="story">
 <p class="lead">Den 6. marts 2027 kl. 15 samler vi vores yndlingsmennesker på Pakhus 11.</p>
 <p>Her finder I alt det, der ikke kunne være på invitationen. Vi opdaterer siden, efterhånden som detaljerne falder på plads.</p>
@@ -82,20 +87,14 @@ def page(theme,num,name,prefix):
 <section class="section programme">
 <p class="eyebrow">02 / DER ER NOGET GODT I VENTE</p>
 <h2>Fra første kram<br>til <em>sidste dans.</em></h2>
-<p>Vi begynder kl. 15:00 på Pakhus 11. Resten tager vi i den rækkefølge:</p>
-<div class="timeline">
-<article><span>01</span><b aria-hidden="true"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v28M6 20h28M10.1 10.1l19.8 19.8M29.9 10.1 10.1 29.9"/></svg></b><h3>Vi mødes</h3><p>Kl. 15:00 på Pakhus 11.</p></article>
-<article><span>02</span><b aria-hidden="true"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 33C11 26 5 20.5 5 14a7.5 7.5 0 0 1 15-1.5A7.5 7.5 0 0 1 35 14c0 6.5-6 12-15 19Z"/></svg></b><h3>En lille ceremoni</h3><p>Uofficiel og helt vores egen.</p></article>
-<article><span>03</span><b aria-hidden="true"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14" r="5"/><circle cx="31" cy="13" r="5"/><circle cx="20" cy="28" r="3"/></svg></b><h3>Snack &amp; bobler</h3><p>Lidt at spise og noget i glasset.</p></article>
-<article><span>04</span><b aria-hidden="true"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="15"/><circle cx="20" cy="20" r="8.5"/></svg></b><h3>Mad</h3><p>Vi sætter os til bords.</p></article>
-<article><span>05</span><b aria-hidden="true"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22c4-7 8-7 12 0s8 7 12 0 6-6 8-3"/></svg></b><h3>Fest &amp; dans</h3><p>Til kl. 02:00.</p></article>
-</div>
+<p>Vi begynder kl. 15.00 på Pakhus 11 og slutter kl. 02.00.</p>
+{programme_html}
 </section>
 
 <section id="praktisk" class="section practical">
 <p class="eyebrow">03 / GODT AT VIDE</p>
 <div class="two-column">
-<div class="practical-intro"><h2>De små<br><em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="{prefix}assets/hjerte.webp" width="480" height="499" alt=""></div>
+<div class="practical-intro"><h2>De små<br> <em>detaljer.</em></h2><p>Så du kan bruge energien<br>på at glæde dig.</p><img class="small-embrace" src="{prefix}assets/hjerte.webp" width="480" height="499" alt=""></div>
 <div class="questions">
 <details open><summary>Hvor og hvornår?<span aria-hidden="true">+</span></summary><p>Lørdag den 6. marts 2027 kl. 15:00 på Pakhus 11, Dampfærgevej 2, 2100 København Ø. Festen slutter kl. 02:00.</p><p><a class="mail-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pakhus+11%2C+Dampf%C3%A6rgevej+2%2C+2100+K%C3%B8benhavn+%C3%98" target="_blank" rel="noopener">Åbn i kort <svg class="ext" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 9 3M4.2 3H9v4.8"/></svg></a></p></details>
 <details><summary>Find vej<span aria-hidden="true">+</span></summary><p>Pakhus 11 ligger på Dampfærgevej 2 ved Amerika Plads. Nærmeste station er Nordhavn, cirka 10 minutters gang derfra. Der er ret få parkeringspladser i området, så tag gerne metro, bus, cykel eller taxa. Indgangen skriver vi her, når dagen nærmer sig.</p></details>
@@ -114,7 +113,7 @@ def page(theme,num,name,prefix):
 <div class="two-column">
 <div class="reply-copy">
 <p class="hand">Ingen fest uden gæster.</p>
-<h2>Er du<br><em>med?</em></h2>
+<h2>Er du<br> <em>med?</em></h2>
 <p>Ét svar pr. invitation. Skriv navnene på alle, svaret gælder for.</p>
 <p class="small" id="deadline">Svar senest 6. januar 2027.</p>
 </div>
