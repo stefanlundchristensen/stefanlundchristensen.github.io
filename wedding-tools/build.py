@@ -27,9 +27,9 @@ def page(theme,num,name,prefix):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
 {fonts}
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117a">
-<script defer src="{prefix}assets/config.js?v=20261117a"></script>
-<script defer src="{prefix}assets/site.js?v=20261117a"></script>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117b">
+<script defer src="{prefix}assets/config.js?v=20261117b"></script>
+<script defer src="{prefix}assets/site.js?v=20261117b"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
