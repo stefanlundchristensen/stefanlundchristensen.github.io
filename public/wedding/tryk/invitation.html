@@ -124,6 +124,21 @@ section>p{max-width:60ch;font-size:16px;margin-bottom:20px}
 .tl b{display:block;font:600 calc(1.8 * var(--u))/1 var(--sans);letter-spacing:.14em;margin-bottom:calc(.7 * var(--u))}
 .in.prog2{padding:calc(6 * var(--u)) calc(4 * var(--u)) calc(6 * var(--u)) calc(3 * var(--u))}
 
+/* One font on the invitation (Stefan, 2026-11-17): Georgia throughout, no handwriting, no italics */
+.card .panel,.card .panel *{font-family:var(--serif)!important;font-style:normal!important}
+.card .ey,.info .ey,.letter .when,.letter .sign2 small,.tl b{font-weight:400;letter-spacing:.14em}
+.door .ini{font-size:calc(19 * var(--u));color:#2a0d16;letter-spacing:-.03em;top:calc(38 * var(--u))}
+.door.l .ini i{font-size:.6em;vertical-align:.12em}
+.back .hand{font-size:calc(3.6 * var(--u));margin-bottom:calc(1.2 * var(--u))}
+.back .url{font-size:calc(2.1 * var(--u))}
+.info .su{font-size:calc(5 * var(--u));letter-spacing:-.03em}
+.info .mail{font-size:calc(1.95 * var(--u))}
+.letter .greet2{font-size:calc(4.4 * var(--u));letter-spacing:-.02em}
+.letter .lead{font-size:calc(2.9 * var(--u))}
+.letter h3 em{font-size:1em}
+.letter .body{font-size:calc(2.75 * var(--u));text-wrap:balance;max-width:calc(70 * var(--u))}
+.letter .sign2{font-size:calc(4 * var(--u));letter-spacing:-.02em}
+
 /* ---------- 1. folding card ---------- */
 .stage{--mm:min(2.9px,calc((100vw - 2 * var(--gutter) - 16px) / 260));display:flex;flex-direction:column;align-items:center;gap:22px}
 .fold{position:relative;width:calc(148 * var(--mm));height:calc(148 * var(--mm));perspective:calc(555 * var(--mm));cursor:pointer;margin:calc(4 * var(--mm)) 0}
@@ -188,7 +203,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
 <template id="t-in-c"><div class="panel w100 in letter">
   <p class="greet2">Kære familie &amp; venner</p>
   <p class="lead">Med (kun) 7 års forsinkelse<br>inviteres I til</p>
-  <h3>Bryllups<em>fest…!</em></h3>
+  <h3>Bryllupsfest…!</h3>
   <p class="when">i Pakhus 11 · lørdag d. 6. marts 2027 · kl. 15.00</p>
   <p class="body">Vi glæder os helt vildt til at fejre kærligheden, 7&nbsp;dejlige år – og de mange flere, der kommer – sammen med jer.</p>
   <p class="sign2"><small>Kærlig hilsen</small>Stefan &amp; Cecilie</p>
