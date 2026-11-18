@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The seven programme icons, shared by the invitation and the website.
+"""The eight programme icons, shared by the invitation and the website.
 
 24 x 24 grid, round caps and joins, stroke only (colour = currentColor).
 Run: python3 print-suite/icons/icons.py  -> writes <name>.svg and preview.html here.
@@ -7,9 +7,12 @@ Run: python3 print-suite/icons/icons.py  -> writes <name>.svg and preview.html h
 import os
 
 ICONS = {
-    # 15.00 Ceremoni
+    # ca. 15.00 Ankomst: an open door
+    'ankomst': ('<path d="M3.6 20.4h16.8"/><path d="M7 20.4V3.6h10v16.8"/>'
+                '<path d="M7 3.6l5.6 1.8v13.4L7 20.4z"/><path d="M10.9 12.3v.01"/>'),
+    # 15.30 Ceremoni
     'ceremoni': '<path d="M12 20.2s-7.6-4.6-7.6-10.2A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.6 10c0 5.6-7.6 10.2-7.6 10.2z"/>',
-    # 15.30 Sødt, salt & bobler: flute with bubbles + a small bowl of snacks
+    # Sødt, salt & bobler: flute with bubbles + a small bowl of snacks
     'bobler': ('<path d="M5.4 3.2h5l-.35 5.7a2.15 2.15 0 0 1-4.3 0z"/><path d="M7.9 11.1v8.4M5.5 19.5h4.8"/>'
                '<path d="M7.3 5.7v.01M8.5 7.6v.01"/>'
                '<path d="M13.2 15.4h8a4 4 0 0 1-8 0z"/>'
@@ -34,13 +37,14 @@ ICONS = {
 }
 
 PROGRAMME = [  # (icon, time, title) — same order and words as the invitation
-    ('ceremoni', '15.00', 'Ceremoni'),
-    ('bobler', '15.30', 'Sødt, salt &amp; bobler'),
+    ('ankomst', 'ca. 15.00', 'Ankomst'),
+    ('ceremoni', '15.30', 'Ceremoni'),
+    ('bobler', '', 'Sødt, salt &amp; bobler'),
     ('foto', '', 'Fællesfoto'),
-    ('middag', '', 'Middag'),
-    ('fest', '', 'Fest!'),
-    ('natmad', '', 'Natmad'),
-    ('godnat', '', 'Godnat'),
+    ('middag', 'ca. 17.30', 'Middag'),
+    ('fest', '', 'Fest &amp; dans'),
+    ('natmad', 'ca. 24.00', 'Natmad'),
+    ('godnat', '02.00', 'Godnat'),
 ]
 
 

@@ -148,11 +148,19 @@
       // Apps Script answers 200 even when the script fails, so trust only its own "ok".
       const answer = response.ok ? await response.json() : null;
       if (!answer || answer.ok !== true) throw new Error('Submission rejected');
+      const coming = (form.elements.attendance && form.elements.attendance.value) === 'yes';
       form.reset();
       updateAttendance();
       fields.disabled = true;
       form.classList.add('done');
       result.textContent = 'Tak! Vi har modtaget jeres svar. Kærlig hilsen S + C';
+      if (coming && typeof document.createElement === 'function') {
+        const cue = document.createElement('a');
+        cue.href = '#tale';
+        cue.className = 'tale-after';
+        cue.textContent = 'Vil du holde tale eller lave et indslag? Skriv til toastmaster Jonas →';
+        result.append(document.createElement('br'), cue);
+      }
       notice.textContent = 'Jeres svar er sendt.';
     } catch (error) {
       result.textContent = error.name === 'AbortError'
@@ -180,4 +188,16 @@
     toast.textContent = 'Kalenderfilen er klar \u2665\uFE0E';
     setTimeout(() => { toast.textContent = ''; }, 5000);
   });
+})();
+
+// #tale (from the programme, the RSVP thank-you or a shared link) opens the toastmaster answer.
+(() => {
+  const openTale = () => {
+    if (typeof location === 'undefined' || location.hash !== '#tale') return;
+    const d = document.querySelector('#tale');
+    if (d) { d.open = true; d.scrollIntoView({ block: 'start' }); }
+  };
+  if (typeof window.addEventListener !== 'function') return;
+  window.addEventListener('hashchange', openTale);
+  openTale();
 })();

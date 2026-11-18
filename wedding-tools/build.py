@@ -32,9 +32,9 @@ def page(theme,num,name,prefix):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{prefix}assets/embrace.svg" type="image/svg+xml">
 {fonts}
-<link rel="stylesheet" href="{prefix}assets/site.css?v=20261117c">
-<script defer src="{prefix}assets/config.js?v=20261117c"></script>
-<script defer src="{prefix}assets/site.js?v=20261117c"></script>
+<link rel="stylesheet" href="{prefix}assets/site.css?v=20261118a">
+<script defer src="{prefix}assets/config.js?v=20261118a"></script>
+<script defer src="{prefix}assets/site.js?v=20261118a"></script>
 </head>
 <body>
 <a class="skip" href="#praktisk">Gå til praktisk information</a>
@@ -87,8 +87,9 @@ def page(theme,num,name,prefix):
 <section class="section programme">
 <p class="eyebrow">02 / DER ER NOGET GODT I VENTE</p>
 <h2>Fra første kram<br>til <em>sidste dans.</em></h2>
-<p>Vi begynder kl. 15.00 på Pakhus 11 og slutter kl. 02.00.</p>
+<p>Dørene åbner ca. kl. 15.00 på Pakhus 11, og vi slutter kl. 02.00.</p>
 {programme_html}
+<p class="tale-cue">Vil du holde tale eller lave et indslag? Jonas Larsen er toastmaster. <a href="#tale">Skriv til Jonas <span aria-hidden="true">→</span></a></p>
 </section>
 
 <section id="praktisk" class="section practical">
@@ -100,7 +101,7 @@ def page(theme,num,name,prefix):
 <details><summary>Find vej<span aria-hidden="true">+</span></summary><p>Pakhus 11 ligger på Dampfærgevej 2 ved Amerika Plads. Nærmeste station er Nordhavn, cirka 10 minutters gang derfra. Der er ret få parkeringspladser i området, så tag gerne metro, bus, cykel eller taxa. Indgangen skriver vi her, når dagen nærmer sig.</p></details>
 <details><summary>Påklædning<span aria-hidden="true">+</span></summary><p>Helt afslappet. Kom i det, du har det bedst i. Der er ingen grund til at finde det store frem. Alt foregår indenfor, men Pakhus 11 ligger smukt helt nede ved vandet, så tag en god jakke med, hvis du vil ud og trække vejret.</p></details>
 <details><summary>Allergier &amp; andre hensyn<span aria-hidden="true">+</span></summary><p>Skriv allergier og andre hensyn, vi skal tage, i dit svar nedenfor. Så sørger vi for, at der er noget godt til alle.</p></details>
-<details><summary>Taler &amp; indslag<span aria-hidden="true">+</span></summary><p>Jonas Larsen er toastmaster og holder styr på aftenens taler og indslag. Skriv til ham, hvis du vil sige noget, har planlagt et indslag eller har et spørgsmål.</p><p><a class="mail-link" id="toastmaster-mail" hidden>Skriv til Jonas <span aria-hidden="true">→</span></a><span id="toastmaster-pending">Jonas' mailadresse kommer her.</span></p><p class="small" hidden>Knappen åbner en færdig mail i dit mailprogram. Du kan også skrive direkte til <a id="toastmaster-address" href="#"></a>.</p></details>
+<details id="tale"><summary>Taler &amp; indslag<span aria-hidden="true">+</span></summary><p>Jonas Larsen er toastmaster og holder styr på aftenens taler og indslag. Skriv til ham, hvis du vil sige noget, har planlagt et indslag eller har et spørgsmål.</p><p><a class="mail-link" id="toastmaster-mail" hidden>Skriv til Jonas <span aria-hidden="true">→</span></a><span id="toastmaster-pending">Jonas' mailadresse kommer her.</span></p><p class="small" hidden>Knappen åbner en færdig mail i dit mailprogram. Du kan også skrive direkte til <a id="toastmaster-address" href="#"></a>.</p></details>
 <details><summary>Gaver &amp; ønsker<span aria-hidden="true">+</span></summary><p>Det vigtigste er, at I kommer. Har I lyst til at give en gave, samler vi vores ønsker ét sted.</p><p><a class="mail-link" id="wishlist-link" target="_blank" rel="noopener" hidden>Se ønskelisten <svg class="ext" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9 9 3M4.2 3H9v4.8"/></svg></a><span id="wishlist-pending">Ønskelisten kommer her.</span></p></details>
 <details><summary>Børn<span aria-hidden="true">+</span></summary><p>Festen er for de voksne. De allermindste, der endnu ikke kan undvære mor og far, er selvfølgelig velkomne.</p></details>
 <details><summary>Andre spørgsmål<span aria-hidden="true">+</span></summary><p>Ring eller skriv til Stefan, så finder vi ud af det.</p><p><a class="mail-link" href="tel:+4521725185">+45 21 72 51 85</a></p></details>

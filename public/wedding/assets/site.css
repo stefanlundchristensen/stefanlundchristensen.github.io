@@ -349,4 +349,10 @@ footer .hand{font-size:19px}
 .heart-wrap span{font-family:var(--serif);font-size:28cqw;top:35cqw;letter-spacing:-.03em}
 .art figcaption>b{font:400 24px var(--serif);transform:none}
 @media (max-width:760px){.hand,.hero-copy .hand,.reply-copy .hand{font-size:20px}}
-@media (min-width:900px){.programme{display:grid;grid-template-columns:1fr minmax(0,460px);column-gap:clamp(40px,6vw,96px);align-items:start}.programme>:not(.tl){grid-column:1}.programme>.tl{grid-column:2;grid-row:1/span 4;align-self:center;margin:0}}
+@media (min-width:900px){.programme{display:grid;grid-template-columns:1fr minmax(0,460px);column-gap:clamp(40px,6vw,96px);align-items:start}.programme>:not(.tl){grid-column:1}.programme>.tl{grid-column:2;grid-row:1/span 5;align-self:center;margin:0}}
+
+.tale-cue{margin-top:28px;max-width:520px;font:400 19px/1.4 var(--serif)}
+.tale-cue a,.tale-after{font:600 13px/1 var(--sans);letter-spacing:.08em;color:inherit;white-space:nowrap}
+.tale-after{display:inline-block;margin-top:12px;white-space:normal;line-height:1.4}
+#tale{scroll-margin-top:110px}
+@media (min-width:900px){.programme>.tale-cue{grid-column:1}}
