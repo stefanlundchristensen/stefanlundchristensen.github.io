@@ -184,6 +184,10 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
 .door .ini i{font-style:normal;font-size:.6em;vertical-align:.12em;margin:0 calc(.6 * var(--u))}
 .info{justify-content:center;gap:calc(9 * var(--u))}
 .letter .greet2 .blank{visibility:hidden}
+/* front frame (Stefan, 2026-11-19): one thin line round the closed card, split over the two doors */
+.door::before{content:"";position:absolute;top:calc(4.5 * var(--u));bottom:calc(4.5 * var(--u));border:calc(.2 * var(--mm)) solid var(--ink);z-index:2;pointer-events:none}
+.door.l::before{left:calc(4.5 * var(--u));right:calc(-3 * var(--mm));border-right:0}
+.door.r::before{left:calc(-3 * var(--mm));right:calc(4.5 * var(--u));border-left:0}
 </style>
 </head>
 <body>
@@ -211,7 +215,7 @@ footer{max-width:1180px;margin:40px auto 0;padding:24px var(--gutter) calc(48px 
 <template id="t-in-c"><div class="panel w100 in letter">
   <p class="greet2">Kære <span class="blank">familie &amp; venner</span></p>
   <p class="lead">Med (kun) 7 års forsinkelse<br>inviteres I til</p>
-  <h3>Bryllupsfest…</h3>
+  <h3>Bryllupsfest</h3>
   <p class="when">i Pakhus 11 · lørdag d. 6. marts 2027 · kl. 15.00</p>
   <p class="body">Vi glæder os helt vildt til at fejre kærligheden, 7&nbsp;dejlige år, og de mange flere, der kommer – sammen med jer.</p>
   <p class="sign2"><small>Kærlig hilsen</small><span class="nm">Stefan &amp; Cecilie</span></p>
