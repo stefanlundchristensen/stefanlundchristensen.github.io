@@ -87,7 +87,7 @@ def page(theme,num,name,prefix):
 <section class="section programme">
 <p class="eyebrow">02 / DER ER NOGET GODT I VENTE</p>
 <h2>Fra første kram<br>til <em>sidste dans.</em></h2>
-<p>Dørene åbner ca. kl. 15.00 på Pakhus 11, og vi slutter kl. 02.00.</p>
+<p>Dørene åbner kl. 15.00 på Pakhus 11, og vi slutter kl. 02.00.</p>
 {programme_html}
 <p class="tale-cue">Vil du holde tale eller lave et indslag? Jonas Larsen er toastmaster. <a href="#tale">Skriv til Jonas <span aria-hidden="true">→</span></a></p>
 </section>
